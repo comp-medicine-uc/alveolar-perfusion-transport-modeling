@@ -12,8 +12,6 @@ import numpy as np
 from fenics import *
 from dolfin import *
 from src.boundaries import *
-from ufl.algorithms.formtransformations import compute_form_arities
-
 
 class PerfusionGasExchangeModel():
     '''FEniCS simulater class for microscale alveolar perfusion and gas exchange
