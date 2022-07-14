@@ -11,7 +11,6 @@ from datetime import date
 import numpy as np
 from fenics import *
 from dolfin import *
-from mshr import Cylinder, generate_mesh
 from src.boundaries import *
 from ufl.algorithms.formtransformations import compute_form_arities
 
@@ -145,27 +144,6 @@ class PerfusionGasExchangeModel():
                 self.mesh, 'Lagrange', 1,
                 constrained_domain=self.gamma_pi
             )
-
-    def generate_cylinder_mesh(self, end, r, save=True):
-        '''Generates a cylindrical mesh for simulations on a tube.
-
-        end: endpoint. (tuple)
-        r: radius. (tuple)
-        save: save the generated mesh on a .pvd file. (bool)
-        '''
-        geometry = Cylinder(
-            Point(0, 0, 0), Point(*end), r, r, 200
-        )
-        self.mesh = generate_mesh(geometry, 50)
-        mesh_file = File(self.folder_path+'/mesh.pvd')
-        mesh_file << self.mesh
-        
-        # Assign values to flow direction range
-
-        self.dir_min = 0
-        self.dir_max = end[0]
-
-        self.periodic = False
 
     def sim_p(self, save=True, meshtype=None):
         '''Solves the perfusion (P) problem of the model.
