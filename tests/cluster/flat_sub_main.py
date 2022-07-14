@@ -16,12 +16,12 @@ from src.model import PerfusionGasExchangeModel
 from src.params import params
 
 print("Starting...")
-folder = "flattened-full-RVE"
+folder = "flattened-sun-RVE"
 path = os.path.join("../../raw-and-results-data", folder)
 model = PerfusionGasExchangeModel(folder_path=path, params=params)
 print("Model initialised")
 model.import_mesh(
-    os.path.join("../../raw-and-results-data/flattened-full-RVE", "flattened_sub_RVE_fixed.xdmf"), type="xdmf", 
+    os.path.join("../../raw-and-results-data/flattened-sub-RVE", "flattened_sub_RVE_fixed.xdmf"), type="xdmf", 
     periodic=False
 )
 print("Mesh imported")
