@@ -35,7 +35,7 @@ class PerfusionGasExchangeModel():
             for param in self.params:
                 file.write(f'Parameter {param}: {self.params[param]}\n')
 
-    def import_mesh(self, mesh_path, meshtype=None, type="h5", periodic=False):
+    def import_mesh(self, mesh_path, meshtype=None, type="h5", periodic=False, tol=1, side_length=40):
         '''Imports mesh from .h5 file for use in simulations.
 
         mesh_path: path to file. (string)
@@ -64,10 +64,18 @@ class PerfusionGasExchangeModel():
                 [coords[1] for coords in self.mesh.coordinates()]
         )
         # Node coordinates for principal (x) direction
-        self.dir_max_flow = np.max(dir_arr_flow)  # Maximum principal direction coordinate
-        self.dir_min_flow = np.min(dir_arr_flow)  # Minimum principal direction coordinate
-        self.dir_max = np.max(dir_arr_rest)
-        self.dir_min = np.min(dir_arr_rest)
+#         self.dir_max_flow = np.max(dir_arr_flow)  # Maximum principal direction coordinate
+#         self.dir_min_flow = np.min(dir_arr_flow)  # Minimum principal direction coordinate
+#         self.dir_max = np.max(dir_arr_rest)
+#         self.dir_min = np.min(dir_arr_rest)
+        self.tol = tol
+        self.side_length = side_length
+        print("fixed tol =", self.tol)
+        print("fixed side_length = ", self.side_length)
+        self.dir_max_flow = self.side_length + self.tol
+        self.dir_min_flow = - self.tol
+        self.dir_max = self.side_length + self.tol
+        self.dir_min = - self.tol
         print("self.dir_max_flow = ", self.dir_max_flow)
         print("self.dir_min_flow = ", self.dir_min_flow)
         print("self.dir_max = ", self.dir_max)
@@ -173,7 +181,7 @@ class PerfusionGasExchangeModel():
 
         self.p = Function(self.W_h)
         solve(
-            a == F, self.p, self.p_dbc, solver_parameters={'linear_solver':'mumps'}#,
+            a == F, self.p, self.p_dbc#,
             #solver_parameters={
             #    'linear_solver': 'gmres',
             #    'preconditioner': 'ilu'
@@ -192,9 +200,9 @@ class PerfusionGasExchangeModel():
 
             # Save solutions
             print("Saving solutions")
-            u_file = File(self.folder_path+'/p/u_all_flat_1_fixed.pvd')
+            u_file = File(self.folder_path+'/p/u.pvd')
             u_file << self.u
-            p_file = File(self.folder_path+'/p/p_all_flat_1_fixed.pvd')
+            p_file = File(self.folder_path+'/p/p.pvd')
             p_file << self.p
             print("saved")
 
@@ -431,10 +439,10 @@ class PerfusionGasExchangeModel():
         
             # Create files for output
 
-            p_O2_file = File(self.folder_path+'/sbst/pO2_all_flat_1_fixed.pvd')
-            p_CO2_file = File(self.folder_path+'/sbst/pCO2_all_flat_1_fixed.pvd')
-            c_HbO2_file = File(self.folder_path+'/sbst/cHbO2_all_flat_1_fixed.pvd')
-            c_HbCO2_file = File(self.folder_path+'/sbst/cHbCO2_all_flat_1_fixed.pvd')
+            p_O2_file = File(self.folder_path+'/sbst/pO2.pvd')
+            p_CO2_file = File(self.folder_path+'/sbst/pCO2.pvd')
+            c_HbO2_file = File(self.folder_path+'/sbst/cHbO2.pvd')
+            c_HbCO2_file = File(self.folder_path+'/sbst/cHbCO2.pvd')
 
         # Declare Dirichlet boundary conditions for (SBST)
 
