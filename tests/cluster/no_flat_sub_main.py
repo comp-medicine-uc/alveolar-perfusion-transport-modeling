@@ -15,6 +15,9 @@ import dolfin
 from src.model import PerfusionGasExchangeModel
 from src.params import params
 
+tol = 3
+side_length = 109
+
 print("Starting...")
 folder = "non-flattened-sub-RVE"
 path = os.path.join("../../raw-and-results-data", folder)
@@ -22,7 +25,7 @@ model = PerfusionGasExchangeModel(folder_path=path, params=params)
 print("Model initialised")
 model.import_mesh(
     os.path.join("../../raw-and-results-data/non-flattened-sub-RVE", "non_flattened_sub_RVE_fixed.xdmf"), type="xdmf", 
-    periodic=False
+    periodic=False, tol=tol, side_length=side_length
 )
 print("Mesh imported")
 model.mesh = dolfin.refine(model.mesh)
