@@ -15,7 +15,7 @@ import dolfin
 from src.model import PerfusionGasExchangeModel
 from src.params import params
 
-tol = 0.8
+tol = 1.5
 side_length = 46
 
 print("Starting...")
