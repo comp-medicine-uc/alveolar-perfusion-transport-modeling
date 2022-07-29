@@ -1,44 +1,44 @@
 Process 0: Solving linear variational problem.
-Process 15: Solving linear variational problem.
 Process 7: Solving linear variational problem.
-Process 2: Solving linear variational problem.
-Process 5: Solving linear variational problem.
-Process 9: Solving linear variational problem.
-Process 17: Solving linear variational problem.
-Process 10: Solving linear variational problem.
-Process 18: Solving linear variational problem.
-Process 4: Solving linear variational problem.
-Process 8: Solving linear variational problem.
 Process 6: Solving linear variational problem.
-Process 14: Solving linear variational problem.
-Process 19: Solving linear variational problem.
-Process 11: Solving linear variational problem.
-Process 16: Solving linear variational problem.Process 1: Solving linear variational problem.
-Process 3: Solving linear variational problem.
-
-Process 12: Solving linear variational problem.
+Process 17: Solving linear variational problem.
+Process 18: Solving linear variational problem.
+Process 8: Solving linear variational problem.
+Process 9: Solving linear variational problem.
+Process 1: Solving linear variational problem.
+Process 4: Solving linear variational problem.
+Process 2: Solving linear variational problem.
 Process 13: Solving linear variational problem.
+Process 14: Solving linear variational problem.
+Process 11: Solving linear variational problem.
+Process 19: Solving linear variational problem.
+Process 5: Solving linear variational problem.
+Process 10: Solving linear variational problem.
+Process 3: Solving linear variational problem.
+Process 15: Solving linear variational problem.
+Process 16: Solving linear variational problem.
+Process 12: Solving linear variational problem.
 Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
 Starting...
 Model initialised
 Mesh imported
-fixed tol = 3
-fixed side_length =  40
-self.dir_max_flow =  43
-self.dir_min_flow =  -3
-self.dir_max =  43
-self.dir_min =  -3
+fixed tol = 0.5
+fixed side_length =  46
+self.dir_max_flow =  46.5
+self.dir_min_flow =  -0.5
+self.dir_max =  46.5
+self.dir_min =  -0.5
 Mesh imported
 Mesh refined
 Starting (P) simulation
 began sim_p
 Instancing boundaries
-gamma_in.dir_min =  -3
-gamma_in.dir_max =  43
-gamma_out.dir_min =  -3
-gamma_out.dir_max =  43
-gamma_air.dir_min =  -3
-gamma_air.dir_max =  43
+gamma_in.dir_min =  -0.5
+gamma_in.dir_max =  46.5
+gamma_out.dir_min =  -0.5
+gamma_out.dir_max =  46.5
+gamma_air.dir_min =  -0.5
+gamma_air.dir_max =  46.5
 boundaries instanced
 P problem solved
 u problem solved
@@ -49,23 +49,23 @@ Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
 Starting...
 Model initialised
 Mesh imported
-fixed tol = 3
-fixed side_length =  40
-self.dir_max_flow =  43
-self.dir_min_flow =  -3
-self.dir_max =  43
-self.dir_min =  -3
+fixed tol = 0.5
+fixed side_length =  46
+self.dir_max_flow =  46.5
+self.dir_min_flow =  -0.5
+self.dir_max =  46.5
+self.dir_min =  -0.5
 Mesh imported
 Mesh refined
 Starting (P) simulation
 began sim_p
 Instancing boundaries
-gamma_in.dir_min =  -3
-gamma_in.dir_max =  43
-gamma_out.dir_min =  -3
-gamma_out.dir_max =  43
-gamma_air.dir_min =  -3
-gamma_air.dir_max =  43
+gamma_in.dir_min =  -0.5
+gamma_in.dir_max =  46.5
+gamma_out.dir_min =  -0.5
+gamma_out.dir_max =  46.5
+gamma_air.dir_min =  -0.5
+gamma_air.dir_max =  46.5
 boundaries instanced
 P problem solved
 u problem solved
@@ -76,23 +76,23 @@ Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
 Starting...
 Model initialised
 Mesh imported
-fixed tol = 3
-fixed side_length =  40
-self.dir_max_flow =  43
-self.dir_min_flow =  -3
-self.dir_max =  43
-self.dir_min =  -3
+fixed tol = 0.5
+fixed side_length =  46
+self.dir_max_flow =  46.5
+self.dir_min_flow =  -0.5
+self.dir_max =  46.5
+self.dir_min =  -0.5
 Mesh imported
 Mesh refined
 Starting (P) simulation
 began sim_p
 Instancing boundaries
-gamma_in.dir_min =  -3
-gamma_in.dir_max =  43
-gamma_out.dir_min =  -3
-gamma_out.dir_max =  43
-gamma_air.dir_min =  -3
-gamma_air.dir_max =  43
+gamma_in.dir_min =  -0.5
+gamma_in.dir_max =  46.5
+gamma_out.dir_min =  -0.5
+gamma_out.dir_max =  46.5
+gamma_air.dir_min =  -0.5
+gamma_air.dir_max =  46.5
 boundaries instanced
 P problem solved
 u problem solved
@@ -103,23 +103,23 @@ Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
 Starting...
 Model initialised
 Mesh imported
-fixed tol = 3
-fixed side_length =  40
-self.dir_max_flow =  43
-self.dir_min_flow =  -3
-self.dir_max =  43
-self.dir_min =  -3
+fixed tol = 0.5
+fixed side_length =  46
+self.dir_max_flow =  46.5
+self.dir_min_flow =  -0.5
+self.dir_max =  46.5
+self.dir_min =  -0.5
 Mesh imported
 Mesh refined
 Starting (P) simulation
 began sim_p
 Instancing boundaries
-gamma_in.dir_min =  -3
-gamma_in.dir_max =  43
-gamma_out.dir_min =  -3
-gamma_out.dir_max =  43
-gamma_air.dir_min =  -3
-gamma_air.dir_max =  43
+gamma_in.dir_min =  -0.5
+gamma_in.dir_max =  46.5
+gamma_out.dir_min =  -0.5
+gamma_out.dir_max =  46.5
+gamma_air.dir_min =  -0.5
+gamma_air.dir_max =  46.5
 boundaries instanced
 P problem solved
 u problem solved
@@ -130,23 +130,23 @@ Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
 Starting...
 Model initialised
 Mesh imported
-fixed tol = 3
-fixed side_length =  40
-self.dir_max_flow =  43
-self.dir_min_flow =  -3
-self.dir_max =  43
-self.dir_min =  -3
+fixed tol = 0.5
+fixed side_length =  46
+self.dir_max_flow =  46.5
+self.dir_min_flow =  -0.5
+self.dir_max =  46.5
+self.dir_min =  -0.5
 Mesh imported
 Mesh refined
 Starting (P) simulation
 began sim_p
 Instancing boundaries
-gamma_in.dir_min =  -3
-gamma_in.dir_max =  43
-gamma_out.dir_min =  -3
-gamma_out.dir_max =  43
-gamma_air.dir_min =  -3
-gamma_air.dir_max =  43
+gamma_in.dir_min =  -0.5
+gamma_in.dir_max =  46.5
+gamma_out.dir_min =  -0.5
+gamma_out.dir_max =  46.5
+gamma_air.dir_min =  -0.5
+gamma_air.dir_max =  46.5
 boundaries instanced
 P problem solved
 u problem solved
@@ -157,23 +157,23 @@ Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
 Starting...
 Model initialised
 Mesh imported
-fixed tol = 3
-fixed side_length =  40
-self.dir_max_flow =  43
-self.dir_min_flow =  -3
-self.dir_max =  43
-self.dir_min =  -3
+fixed tol = 0.5
+fixed side_length =  46
+self.dir_max_flow =  46.5
+self.dir_min_flow =  -0.5
+self.dir_max =  46.5
+self.dir_min =  -0.5
 Mesh imported
 Mesh refined
 Starting (P) simulation
 began sim_p
 Instancing boundaries
-gamma_in.dir_min =  -3
-gamma_in.dir_max =  43
-gamma_out.dir_min =  -3
-gamma_out.dir_max =  43
-gamma_air.dir_min =  -3
-gamma_air.dir_max =  43
+gamma_in.dir_min =  -0.5
+gamma_in.dir_max =  46.5
+gamma_out.dir_min =  -0.5
+gamma_out.dir_max =  46.5
+gamma_air.dir_min =  -0.5
+gamma_air.dir_max =  46.5
 boundaries instanced
 P problem solved
 u problem solved
@@ -184,23 +184,23 @@ Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
 Starting...
 Model initialised
 Mesh imported
-fixed tol = 3
-fixed side_length =  40
-self.dir_max_flow =  43
-self.dir_min_flow =  -3
-self.dir_max =  43
-self.dir_min =  -3
+fixed tol = 0.5
+fixed side_length =  46
+self.dir_max_flow =  46.5
+self.dir_min_flow =  -0.5
+self.dir_max =  46.5
+self.dir_min =  -0.5
 Mesh imported
 Mesh refined
 Starting (P) simulation
 began sim_p
 Instancing boundaries
-gamma_in.dir_min =  -3
-gamma_in.dir_max =  43
-gamma_out.dir_min =  -3
-gamma_out.dir_max =  43
-gamma_air.dir_min =  -3
-gamma_air.dir_max =  43
+gamma_in.dir_min =  -0.5
+gamma_in.dir_max =  46.5
+gamma_out.dir_min =  -0.5
+gamma_out.dir_max =  46.5
+gamma_air.dir_min =  -0.5
+gamma_air.dir_max =  46.5
 boundaries instanced
 P problem solved
 u problem solved
@@ -211,23 +211,23 @@ Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
 Starting...
 Model initialised
 Mesh imported
-fixed tol = 3
-fixed side_length =  40
-self.dir_max_flow =  43
-self.dir_min_flow =  -3
-self.dir_max =  43
-self.dir_min =  -3
+fixed tol = 0.5
+fixed side_length =  46
+self.dir_max_flow =  46.5
+self.dir_min_flow =  -0.5
+self.dir_max =  46.5
+self.dir_min =  -0.5
 Mesh imported
 Mesh refined
 Starting (P) simulation
 began sim_p
 Instancing boundaries
-gamma_in.dir_min =  -3
-gamma_in.dir_max =  43
-gamma_out.dir_min =  -3
-gamma_out.dir_max =  43
-gamma_air.dir_min =  -3
-gamma_air.dir_max =  43
+gamma_in.dir_min =  -0.5
+gamma_in.dir_max =  46.5
+gamma_out.dir_min =  -0.5
+gamma_out.dir_max =  46.5
+gamma_air.dir_min =  -0.5
+gamma_air.dir_max =  46.5
 boundaries instanced
 P problem solved
 u problem solved
@@ -238,23 +238,23 @@ Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
 Starting...
 Model initialised
 Mesh imported
-fixed tol = 3
-fixed side_length =  40
-self.dir_max_flow =  43
-self.dir_min_flow =  -3
-self.dir_max =  43
-self.dir_min =  -3
+fixed tol = 0.5
+fixed side_length =  46
+self.dir_max_flow =  46.5
+self.dir_min_flow =  -0.5
+self.dir_max =  46.5
+self.dir_min =  -0.5
 Mesh imported
 Mesh refined
 Starting (P) simulation
 began sim_p
 Instancing boundaries
-gamma_in.dir_min =  -3
-gamma_in.dir_max =  43
-gamma_out.dir_min =  -3
-gamma_out.dir_max =  43
-gamma_air.dir_min =  -3
-gamma_air.dir_max =  43
+gamma_in.dir_min =  -0.5
+gamma_in.dir_max =  46.5
+gamma_out.dir_min =  -0.5
+gamma_out.dir_max =  46.5
+gamma_air.dir_min =  -0.5
+gamma_air.dir_max =  46.5
 boundaries instanced
 P problem solved
 u problem solved
@@ -265,23 +265,23 @@ Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
 Starting...
 Model initialised
 Mesh imported
-fixed tol = 3
-fixed side_length =  40
-self.dir_max_flow =  43
-self.dir_min_flow =  -3
-self.dir_max =  43
-self.dir_min =  -3
+fixed tol = 0.5
+fixed side_length =  46
+self.dir_max_flow =  46.5
+self.dir_min_flow =  -0.5
+self.dir_max =  46.5
+self.dir_min =  -0.5
 Mesh imported
 Mesh refined
 Starting (P) simulation
 began sim_p
 Instancing boundaries
-gamma_in.dir_min =  -3
-gamma_in.dir_max =  43
-gamma_out.dir_min =  -3
-gamma_out.dir_max =  43
-gamma_air.dir_min =  -3
-gamma_air.dir_max =  43
+gamma_in.dir_min =  -0.5
+gamma_in.dir_max =  46.5
+gamma_out.dir_min =  -0.5
+gamma_out.dir_max =  46.5
+gamma_air.dir_min =  -0.5
+gamma_air.dir_max =  46.5
 boundaries instanced
 P problem solved
 u problem solved
@@ -292,23 +292,23 @@ Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
 Starting...
 Model initialised
 Mesh imported
-fixed tol = 3
-fixed side_length =  40
-self.dir_max_flow =  43
-self.dir_min_flow =  -3
-self.dir_max =  43
-self.dir_min =  -3
+fixed tol = 0.5
+fixed side_length =  46
+self.dir_max_flow =  46.5
+self.dir_min_flow =  -0.5
+self.dir_max =  46.5
+self.dir_min =  -0.5
 Mesh imported
 Mesh refined
 Starting (P) simulation
 began sim_p
 Instancing boundaries
-gamma_in.dir_min =  -3
-gamma_in.dir_max =  43
-gamma_out.dir_min =  -3
-gamma_out.dir_max =  43
-gamma_air.dir_min =  -3
-gamma_air.dir_max =  43
+gamma_in.dir_min =  -0.5
+gamma_in.dir_max =  46.5
+gamma_out.dir_min =  -0.5
+gamma_out.dir_max =  46.5
+gamma_air.dir_min =  -0.5
+gamma_air.dir_max =  46.5
 boundaries instanced
 P problem solved
 u problem solved
@@ -319,23 +319,23 @@ Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
 Starting...
 Model initialised
 Mesh imported
-fixed tol = 3
-fixed side_length =  40
-self.dir_max_flow =  43
-self.dir_min_flow =  -3
-self.dir_max =  43
-self.dir_min =  -3
+fixed tol = 0.5
+fixed side_length =  46
+self.dir_max_flow =  46.5
+self.dir_min_flow =  -0.5
+self.dir_max =  46.5
+self.dir_min =  -0.5
 Mesh imported
 Mesh refined
 Starting (P) simulation
 began sim_p
 Instancing boundaries
-gamma_in.dir_min =  -3
-gamma_in.dir_max =  43
-gamma_out.dir_min =  -3
-gamma_out.dir_max =  43
-gamma_air.dir_min =  -3
-gamma_air.dir_max =  43
+gamma_in.dir_min =  -0.5
+gamma_in.dir_max =  46.5
+gamma_out.dir_min =  -0.5
+gamma_out.dir_max =  46.5
+gamma_air.dir_min =  -0.5
+gamma_air.dir_max =  46.5
 boundaries instanced
 P problem solved
 u problem solved
@@ -346,23 +346,23 @@ Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
 Starting...
 Model initialised
 Mesh imported
-fixed tol = 3
-fixed side_length =  40
-self.dir_max_flow =  43
-self.dir_min_flow =  -3
-self.dir_max =  43
-self.dir_min =  -3
+fixed tol = 0.5
+fixed side_length =  46
+self.dir_max_flow =  46.5
+self.dir_min_flow =  -0.5
+self.dir_max =  46.5
+self.dir_min =  -0.5
 Mesh imported
 Mesh refined
 Starting (P) simulation
 began sim_p
 Instancing boundaries
-gamma_in.dir_min =  -3
-gamma_in.dir_max =  43
-gamma_out.dir_min =  -3
-gamma_out.dir_max =  43
-gamma_air.dir_min =  -3
-gamma_air.dir_max =  43
+gamma_in.dir_min =  -0.5
+gamma_in.dir_max =  46.5
+gamma_out.dir_min =  -0.5
+gamma_out.dir_max =  46.5
+gamma_air.dir_min =  -0.5
+gamma_air.dir_max =  46.5
 boundaries instanced
 P problem solved
 u problem solved
@@ -373,23 +373,23 @@ Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
 Starting...
 Model initialised
 Mesh imported
-fixed tol = 3
-fixed side_length =  40
-self.dir_max_flow =  43
-self.dir_min_flow =  -3
-self.dir_max =  43
-self.dir_min =  -3
+fixed tol = 0.5
+fixed side_length =  46
+self.dir_max_flow =  46.5
+self.dir_min_flow =  -0.5
+self.dir_max =  46.5
+self.dir_min =  -0.5
 Mesh imported
 Mesh refined
 Starting (P) simulation
 began sim_p
 Instancing boundaries
-gamma_in.dir_min =  -3
-gamma_in.dir_max =  43
-gamma_out.dir_min =  -3
-gamma_out.dir_max =  43
-gamma_air.dir_min =  -3
-gamma_air.dir_max =  43
+gamma_in.dir_min =  -0.5
+gamma_in.dir_max =  46.5
+gamma_out.dir_min =  -0.5
+gamma_out.dir_max =  46.5
+gamma_air.dir_min =  -0.5
+gamma_air.dir_max =  46.5
 boundaries instanced
 P problem solved
 u problem solved
@@ -400,23 +400,23 @@ Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
 Starting...
 Model initialised
 Mesh imported
-fixed tol = 3
-fixed side_length =  40
-self.dir_max_flow =  43
-self.dir_min_flow =  -3
-self.dir_max =  43
-self.dir_min =  -3
+fixed tol = 0.5
+fixed side_length =  46
+self.dir_max_flow =  46.5
+self.dir_min_flow =  -0.5
+self.dir_max =  46.5
+self.dir_min =  -0.5
 Mesh imported
 Mesh refined
 Starting (P) simulation
 began sim_p
 Instancing boundaries
-gamma_in.dir_min =  -3
-gamma_in.dir_max =  43
-gamma_out.dir_min =  -3
-gamma_out.dir_max =  43
-gamma_air.dir_min =  -3
-gamma_air.dir_max =  43
+gamma_in.dir_min =  -0.5
+gamma_in.dir_max =  46.5
+gamma_out.dir_min =  -0.5
+gamma_out.dir_max =  46.5
+gamma_air.dir_min =  -0.5
+gamma_air.dir_max =  46.5
 boundaries instanced
 P problem solved
 u problem solved
@@ -427,23 +427,23 @@ Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
 Starting...
 Model initialised
 Mesh imported
-fixed tol = 3
-fixed side_length =  40
-self.dir_max_flow =  43
-self.dir_min_flow =  -3
-self.dir_max =  43
-self.dir_min =  -3
+fixed tol = 0.5
+fixed side_length =  46
+self.dir_max_flow =  46.5
+self.dir_min_flow =  -0.5
+self.dir_max =  46.5
+self.dir_min =  -0.5
 Mesh imported
 Mesh refined
 Starting (P) simulation
 began sim_p
 Instancing boundaries
-gamma_in.dir_min =  -3
-gamma_in.dir_max =  43
-gamma_out.dir_min =  -3
-gamma_out.dir_max =  43
-gamma_air.dir_min =  -3
-gamma_air.dir_max =  43
+gamma_in.dir_min =  -0.5
+gamma_in.dir_max =  46.5
+gamma_out.dir_min =  -0.5
+gamma_out.dir_max =  46.5
+gamma_air.dir_min =  -0.5
+gamma_air.dir_max =  46.5
 boundaries instanced
 P problem solved
 u problem solved
@@ -454,23 +454,23 @@ Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
 Starting...
 Model initialised
 Mesh imported
-fixed tol = 3
-fixed side_length =  40
-self.dir_max_flow =  43
-self.dir_min_flow =  -3
-self.dir_max =  43
-self.dir_min =  -3
+fixed tol = 0.5
+fixed side_length =  46
+self.dir_max_flow =  46.5
+self.dir_min_flow =  -0.5
+self.dir_max =  46.5
+self.dir_min =  -0.5
 Mesh imported
 Mesh refined
 Starting (P) simulation
 began sim_p
 Instancing boundaries
-gamma_in.dir_min =  -3
-gamma_in.dir_max =  43
-gamma_out.dir_min =  -3
-gamma_out.dir_max =  43
-gamma_air.dir_min =  -3
-gamma_air.dir_max =  43
+gamma_in.dir_min =  -0.5
+gamma_in.dir_max =  46.5
+gamma_out.dir_min =  -0.5
+gamma_out.dir_max =  46.5
+gamma_air.dir_min =  -0.5
+gamma_air.dir_max =  46.5
 boundaries instanced
 P problem solved
 u problem solved
@@ -481,23 +481,23 @@ Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
 Starting...
 Model initialised
 Mesh imported
-fixed tol = 3
-fixed side_length =  40
-self.dir_max_flow =  43
-self.dir_min_flow =  -3
-self.dir_max =  43
-self.dir_min =  -3
+fixed tol = 0.5
+fixed side_length =  46
+self.dir_max_flow =  46.5
+self.dir_min_flow =  -0.5
+self.dir_max =  46.5
+self.dir_min =  -0.5
 Mesh imported
 Mesh refined
 Starting (P) simulation
 began sim_p
 Instancing boundaries
-gamma_in.dir_min =  -3
-gamma_in.dir_max =  43
-gamma_out.dir_min =  -3
-gamma_out.dir_max =  43
-gamma_air.dir_min =  -3
-gamma_air.dir_max =  43
+gamma_in.dir_min =  -0.5
+gamma_in.dir_max =  46.5
+gamma_out.dir_min =  -0.5
+gamma_out.dir_max =  46.5
+gamma_air.dir_min =  -0.5
+gamma_air.dir_max =  46.5
 boundaries instanced
 P problem solved
 u problem solved
@@ -508,23 +508,23 @@ Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
 Starting...
 Model initialised
 Mesh imported
-fixed tol = 3
-fixed side_length =  40
-self.dir_max_flow =  43
-self.dir_min_flow =  -3
-self.dir_max =  43
-self.dir_min =  -3
+fixed tol = 0.5
+fixed side_length =  46
+self.dir_max_flow =  46.5
+self.dir_min_flow =  -0.5
+self.dir_max =  46.5
+self.dir_min =  -0.5
 Mesh imported
 Mesh refined
 Starting (P) simulation
 began sim_p
 Instancing boundaries
-gamma_in.dir_min =  -3
-gamma_in.dir_max =  43
-gamma_out.dir_min =  -3
-gamma_out.dir_max =  43
-gamma_air.dir_min =  -3
-gamma_air.dir_max =  43
+gamma_in.dir_min =  -0.5
+gamma_in.dir_max =  46.5
+gamma_out.dir_min =  -0.5
+gamma_out.dir_max =  46.5
+gamma_air.dir_min =  -0.5
+gamma_air.dir_max =  46.5
 boundaries instanced
 P problem solved
 u problem solved
@@ -535,23 +535,23 @@ Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
 Starting...
 Model initialised
 Mesh imported
-fixed tol = 3
-fixed side_length =  40
-self.dir_max_flow =  43
-self.dir_min_flow =  -3
-self.dir_max =  43
-self.dir_min =  -3
+fixed tol = 0.5
+fixed side_length =  46
+self.dir_max_flow =  46.5
+self.dir_min_flow =  -0.5
+self.dir_max =  46.5
+self.dir_min =  -0.5
 Mesh imported
 Mesh refined
 Starting (P) simulation
 began sim_p
 Instancing boundaries
-gamma_in.dir_min =  -3
-gamma_in.dir_max =  43
-gamma_out.dir_min =  -3
-gamma_out.dir_max =  43
-gamma_air.dir_min =  -3
-gamma_air.dir_max =  43
+gamma_in.dir_min =  -0.5
+gamma_in.dir_max =  46.5
+gamma_out.dir_min =  -0.5
+gamma_out.dir_max =  46.5
+gamma_air.dir_min =  -0.5
+gamma_air.dir_max =  46.5
 boundaries instanced
 P problem solved
 u problem solved
