@@ -24,7 +24,7 @@ path = os.path.join("../../raw-and-results-data", folder)
 model = PerfusionGasExchangeModel(folder_path=path, params=params)
 print("Model initialised")
 model.import_mesh(
-    os.path.join("../../raw-and-results-data/tiny", "fine.xdmf"), type="xdmf", 
+    os.path.join("../../raw-and-results-data/tiny", "46_flat_fixed.xdmf"), type="xdmf", 
     periodic=False, tol=tol, side_length=side_length
 )
 print("Mesh imported")
