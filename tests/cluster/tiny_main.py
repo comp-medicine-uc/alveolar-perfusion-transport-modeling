@@ -15,8 +15,8 @@ import dolfin
 from src.model import PerfusionGasExchangeModel
 from src.params import params
 
-tol = 3
-side_length = 40
+tol = 0.5
+side_length = 46
 
 print("Starting...")
 folder = "tiny"
