@@ -1,8 +1,8 @@
-# Repository template for scientific research projects (replace with paper/project title)
+# Computational simulations of an alveolar perfusion and gas transport mathematical model
 
-_[@comp-medicine-uc](https://github.com/comp-medicine-uc)_
+[Bastián Herrera](https://github.com/bnherrerac), _[@comp-medicine-uc](https://github.com/comp-medicine-uc)_
 
-(Add a description of your repo here)
+FEniCS-based computational simulation of alveolar perfusion and gas transport on 3D alveolar meshes.
 
 ## Abstract
 
@@ -12,14 +12,15 @@ _[@comp-medicine-uc](https://github.com/comp-medicine-uc)_
 
 - `manuscript`: Files pertaining to the article related to this project.
 - `presentations`: Files pertaining to presentations of this project.
-- `raw-data`: Input data needed for simulations + Output raw data.
-- `results-data`: Data processed from `raw-data`.
+- `raw-and-results-data`: Folders pertaining to each different tests, which contain raw images + outputs.
 - `src`: Source files.
 - `tests`: Main files that implement examples and tests.
 
 ## Dependencies
 
-(Modify accordingly, include versions for each library) Coded in Python 3.8.2 64-bit. 
+Project tested in MATLAB R2021a Update 6, Python 3.
+
+- [`iso2mesh`](http://iso2mesh.sourceforge.net/cgi-bin/index.cgi?Home) 2018.1.9.6 Lion's Head
 
 Used libraries:
 
