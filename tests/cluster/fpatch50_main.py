@@ -15,8 +15,8 @@ import dolfin
 from src.model import PerfusionGasExchangeModel
 from src.params import params
 
-tol = 1
-side_length = 92
+tol = 2
+side_length = 50
 
 print("Starting...")
 folder = "fpatch_50"
