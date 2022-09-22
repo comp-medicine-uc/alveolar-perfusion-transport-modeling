@@ -19,12 +19,12 @@ tol = 1
 side_length = 92
 
 print("Starting...")
-folder = "flat_patch"
+folder = "flat_patch_1"
 path = os.path.join("../../raw-and-results-data", folder)
 model = PerfusionGasExchangeModel(folder_path=path, params=params)
 print("Model initialised")
 model.import_mesh(
-    os.path.join("../../raw-and-results-data/flat_patch", "flat_patch.xdmf"), type="xdmf", 
+    os.path.join("../../raw-and-results-data/flat_patch_1", "flat_patch.xdmf"), type="xdmf", 
     periodic=False, tol=tol, side_length=side_length
 )
 print("Mesh imported")
