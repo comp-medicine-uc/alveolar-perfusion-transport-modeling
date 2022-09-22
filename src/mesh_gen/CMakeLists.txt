@@ -1,10 +1,10 @@
 # Created by the script cgal_create_CMakeLists
 # This is the CMake script for compiling a set of CGAL applications.
 
+cmake_minimum_required(VERSION 3.1...3.23)
+
 project( mesh_gen )
 
-
-cmake_minimum_required(VERSION 2.8.11)
 
 # CGAL and its components
 find_package( CGAL QUIET COMPONENTS  )
@@ -15,9 +15,6 @@ if ( NOT CGAL_FOUND )
   return()  
 
 endif()
-
-# include helper file
-include( ${CGAL_USE_FILE} )
 
 
 # Boost and its components
@@ -39,9 +36,7 @@ endif()
 # Creating entries for all C++ files with "main" routine
 # ##########################################################
 
-include( CGAL_CreateSingleSourceCGALProgram )
-
-create_single_source_cgal_program( "mesh_gen_441.cpp" )
 
 create_single_source_cgal_program( "mesh_gen_442.cpp" )
+
 
