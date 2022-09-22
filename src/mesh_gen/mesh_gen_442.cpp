@@ -22,7 +22,7 @@ typedef CGAL::Mesh_criteria_3<Tr> Mesh_criteria;
 using namespace CGAL::parameters;
 int main(int argc, char* argv[])
 {
-    const std::string fname = (argc > 1) ? argv[1] : CGAL::data_file_path("images/liver.inr.gz");
+    const std::string fname = (argc > 1) ? argv[1] : CGAL::data_file_path("rve.inr");
     CGAL::Image_3 image;
     if (!image.read(fname)) {
         std::cerr << "Error: Cannot read file " << fname << std::endl;
