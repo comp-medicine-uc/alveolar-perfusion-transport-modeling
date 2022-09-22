@@ -1,10 +1,10 @@
-#include "../../../cgal/CGAL/Kernel_23/include/Exact_predicates_inexact_constructions_kernel.h"
-#include "../../../cgal/CGAL/Kernel_23/include/CGAL/Mesh_triangulation_3.h"
-#include "../../../cgal/CGAL/Kernel_23/include/CGAL/Mesh_complex_3_in_triangulation_3.h"
-#include "../../../cgal/CGAL/Kernel_23/include/CGAL/Mesh_criteria_3.h"
-#include "../../../cgal/CGAL/Kernel_23/include/CGAL/Labeled_mesh_domain_3.h"
-#include "../../../cgal/CGAL/Kernel_23/include/CGAL/make_mesh_3.h"
-#include "../../../cgal/CGAL/Kernel_23/include/CGAL/Image_3.h"
+#include "../../../cgal/Kernel_23/include/Exact_predicates_inexact_constructions_kernel.h"
+#include "../../../cgal/Kernel_23/include/CGAL/Mesh_triangulation_3.h"
+#include "../../../cgal/Kernel_23/include/CGAL/Mesh_complex_3_in_triangulation_3.h"
+#include "../../../cgal/Kernel_23/include/CGAL/Mesh_criteria_3.h"
+#include "../../../cgal/Kernel_23/include/CGAL/Labeled_mesh_domain_3.h"
+#include "../../../cgal/Kernel_23/include/CGAL/make_mesh_3.h"
+#include "../../../cgal/Kernel_23/include/CGAL/Image_3.h"
 // Domain
 typedef CGAL::Exact_predicates_inexact_constructions_kernel K;
 typedef CGAL::Labeled_mesh_domain_3<K> Mesh_domain;
