@@ -7,7 +7,7 @@ project( mesh_gen )
 
 
 # CGAL and its components
-find_package( CGAL QUIET COMPONENTS  )
+find_package( CGAL QUIET COMPONENTS ImageIO )
 
 if ( NOT CGAL_FOUND )
 
@@ -36,7 +36,12 @@ endif()
 # Creating entries for all C++ files with "main" routine
 # ##########################################################
 
+<<<<<<< Updated upstream
+=======
+include( CGAL_CreateSingleSourceCGALProgram )
 
-create_single_source_cgal_program( "mesh_gen_442.cpp" )
+create_single_source_cgal_program( "mesh_3D_image.cpp" )
+>>>>>>> Stashed changes
+
 
 

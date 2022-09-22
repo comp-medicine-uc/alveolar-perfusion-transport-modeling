@@ -79,7 +79,7 @@ print(" Transforming .nii.gz or .nii to an .inr file")
 folder = sys.argv[1]
 print("Target folder: %s"%folder)
 
-segmentation_image = "rve.nii.gz"
+segmentation_image = "all_img.nii.gz"
 inr_name = "rve.inr"
 
 if not os.path.isfile(os.path.join(folder,segmentation_image)):

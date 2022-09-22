@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 # Install script for directory: /home/biherrera/alveolar-perfusion-transport-modeling/src/mesh_gen
+=======
+# Install script for directory: /home/bnherrerac/alveolar-perfusion-transport-modeling/src/mesh_gen
+>>>>>>> Stashed changes
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -29,7 +33,11 @@ endif()
 
 # Install shared libraries without execute permission?
 if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
+<<<<<<< Updated upstream
   set(CMAKE_INSTALL_SO_NO_EXE "0")
+=======
+  set(CMAKE_INSTALL_SO_NO_EXE "1")
+>>>>>>> Stashed changes
 endif()
 
 # Is this installation the result of a crosscompile?
@@ -45,5 +53,9 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
+<<<<<<< Updated upstream
 file(WRITE "/home/biherrera/alveolar-perfusion-transport-modeling/src/mesh_gen/${CMAKE_INSTALL_MANIFEST}"
+=======
+file(WRITE "/home/bnherrerac/alveolar-perfusion-transport-modeling/src/mesh_gen/${CMAKE_INSTALL_MANIFEST}"
+>>>>>>> Stashed changes
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

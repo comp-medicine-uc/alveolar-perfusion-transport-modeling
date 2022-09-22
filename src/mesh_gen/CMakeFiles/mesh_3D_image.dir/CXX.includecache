@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/bnherrerac/alveolar-perfusion-transport-modeling/src/mesh_gen/mesh_3D_image.cpp
+CGAL/Exact_predicates_inexact_constructions_kernel.h
+-
+CGAL/Mesh_triangulation_3.h
+-
+CGAL/Mesh_complex_3_in_triangulation_3.h
+-
+CGAL/Mesh_criteria_3.h
+-
+CGAL/Labeled_image_mesh_domain_3.h
+-
+CGAL/make_mesh_3.h
+-
+CGAL/Image_3.h
+-
+

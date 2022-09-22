@@ -1,5 +1,11 @@
+<<<<<<< Updated upstream
 /home/biherrera/alveolar-perfusion-transport-modeling/src/mesh_gen/CMakeFiles/rebuild_cache.dir
 /home/biherrera/alveolar-perfusion-transport-modeling/src/mesh_gen/CMakeFiles/edit_cache.dir
 /home/biherrera/alveolar-perfusion-transport-modeling/src/mesh_gen/CMakeFiles/cgal_check_build_system.dir
 /home/biherrera/alveolar-perfusion-transport-modeling/src/mesh_gen/CMakeFiles/ALL_CGAL_TARGETS.dir
 /home/biherrera/alveolar-perfusion-transport-modeling/src/mesh_gen/CMakeFiles/mesh_gen_442.dir
+=======
+/home/bnherrerac/alveolar-perfusion-transport-modeling/src/mesh_gen/CMakeFiles/rebuild_cache.dir
+/home/bnherrerac/alveolar-perfusion-transport-modeling/src/mesh_gen/CMakeFiles/mesh_3D_image.dir
+/home/bnherrerac/alveolar-perfusion-transport-modeling/src/mesh_gen/CMakeFiles/edit_cache.dir
+>>>>>>> Stashed changes
