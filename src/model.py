@@ -35,7 +35,7 @@ class PerfusionGasExchangeModel():
             for param in self.params:
                 file.write(f'Parameter {param}: {self.params[param]}\n')
 
-    def import_mesh(self, mesh_path, meshtype=None, type="h5", periodic=False, tol=1, side_length=40):
+    def import_mesh(self, mesh_path, meshtype=None, type="h5", periodic=False):
         '''Imports mesh from .h5 file for use in simulations.
 
         mesh_path: path to file. (string)
@@ -57,36 +57,39 @@ class PerfusionGasExchangeModel():
             raise ValueError("type of mesh should be h5 or xml")
         
         print("Mesh imported")
+        print("Coordinates have shape ", np.shape(self.mesh.coordinates()))
         dir_arr_flow = np.array(
                 [coords[0] for coords in self.mesh.coordinates()]
         )
-        dir_arr_rest = np.array(
+        dir_arr_1 = np.array(
                 [coords[1] for coords in self.mesh.coordinates()]
         )
+        dir_arr_2 = np.array(
+                [coords[2] for coords in self.mesh.coordinates()]
+        )
         # Node coordinates for principal (x) direction
-#         self.dir_max_flow = np.max(dir_arr_flow)  # Maximum principal direction coordinate
-#         self.dir_min_flow = np.min(dir_arr_flow)  # Minimum principal direction coordinate
-#         self.dir_max = np.max(dir_arr_rest)
-#         self.dir_min = np.min(dir_arr_rest)
-        self.tol = tol
-        self.side_length = side_length
-        print("fixed tol =", self.tol)
-        print("fixed side_length = ", self.side_length)
-        self.dir_max_flow = self.side_length + self.tol
-        self.dir_min_flow = - self.tol
-        self.dir_max = self.side_length + self.tol
-        self.dir_min = - self.tol
+        self.dir_max_flow = np.max(dir_arr_flow)  # Maximum principal direction coordinate
+        self.dir_min_flow = np.min(dir_arr_flow)  # Minimum principal direction coordinate
+        self.dir_max_1 = np.max(dir_arr_1)
+        self.dir_min_1 = np.min(dir_arr_1)
+        self.dir_max_2 = np.max(dir_arr_2)
+        self.dir_min_2 = np.min(dir_arr_2)
+        self.dir_max_air = max(self.dir_max_1, self.dir_max_2)
+        self.dir_min_air = min(self.dir_min_1, self.dir_min_2)
+
         print("self.dir_max_flow = ", self.dir_max_flow)
         print("self.dir_min_flow = ", self.dir_min_flow)
-        print("self.dir_max = ", self.dir_max)
-        print("self.dir_min = ", self.dir_min)
+        print("self.dir_max_1 = ", self.dir_max_1)
+        print("self.dir_min_1 = ", self.dir_min_1)
+        print("self.dir_max_2 = ", self.dir_max_2)
+        print("self.dir_min_2 = ", self.dir_min_2)
         len_flow = self.dir_max_flow - self.dir_min_flow
-        len_air = self.dir_max - self.dir_min
-        delta = (len_flow - len_air)/2
+        len_1 = self.dir_max_1 - self.dir_min_1
+        len_2 = self.dir_max_2 - self.dir_min_2
 
         # Save mesh dims for other uses
 
-        self.dims = (len_flow, self.dir_max, self.dir_max)
+        self.dims = (len_flow, len_1, len_2)
 
         # Flag for periodicity
 
@@ -103,7 +106,7 @@ class PerfusionGasExchangeModel():
         # Instance the relevant boundaries
         print("Instancing boundaries")
         
-        tol = 0.5
+        tol = 0.2
 
         if not self.periodic:
             self.gamma_in = GammaIn(
@@ -113,14 +116,13 @@ class PerfusionGasExchangeModel():
                 self.dir_min_flow, self.dir_max_flow, tol
             )
             self.gamma_air = GammaAir(
-                self.dir_min, self.dir_max, tol
+                self.dir_min_air, self.dir_max_air, tol
             )
 
             print("gamma_in.dir_min = ", self.gamma_in.dir_min)
             print("gamma_in.dir_max = ", self.gamma_in.dir_max)
             print("gamma_out.dir_min = ", self.gamma_out.dir_min)
             print("gamma_out.dir_max = ", self.gamma_out.dir_max)
-
             print("gamma_air.dir_min = ", self.gamma_air.dir_min)
             print("gamma_air.dir_max = ", self.gamma_air.dir_max)
 
@@ -167,6 +169,7 @@ class PerfusionGasExchangeModel():
         self.p_dbc = [
             DirichletBC(self.W_h, self.params['p_min'], self.gamma_out)
         ]
+        
         # Assemble problem
 
         ds = Measure('ds', domain=self.mesh, subdomain_data=self.boundaries)
@@ -181,24 +184,23 @@ class PerfusionGasExchangeModel():
 
         self.p = Function(self.W_h)
         solve(
-            a == F, self.p, self.p_dbc, solver_parameters={'linear_solver':'mumps'}
-            #solver_parameters={'linear_solver': 'gmres', 'preconditioner': 'ilu'}
+            a == F, self.p, self.p_dbc, solver_parameters={'linear_solver' : 'superlu'}
         )
         print("P problem solved")
-        self.u = project(
-            -1/self.params['mu']*self.params['kappa']*grad(self.p),
-            self.V_h
-        )
-        print("u problem solved")
-        self.u.rename("u", "blood velocity [um/s]")
+#         self.u = project(
+#             -1/self.params['mu']*self.params['kappa']*grad(self.p),
+#             self.V_h
+#         )
+#         print("u problem solved")
+#         self.u.rename("u", "blood velocity [um/s]")
         self.p.rename("p", "blood pressure [mmHg]")
 
         if save:
 
             # Save solutions
             print("Saving solutions")
-            u_file = File(self.folder_path+'/p/u.pvd')
-            u_file << self.u
+#             u_file = File(self.folder_path+'/p/u.pvd')
+#             u_file << self.u
             p_file = File(self.folder_path+'/p/p.pvd')
             p_file << self.p
             print("saved")
