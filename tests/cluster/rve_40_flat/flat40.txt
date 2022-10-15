@@ -1,0 +1,620 @@
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+../../../raw-and-results-data/rve_40_vol
+Model initialised
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/rve_40_flat/40_flat_main.py", line 26, in <module>
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+../../../raw-and-results-data/rve_40_vol
+Model initialised
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/rve_40_flat/40_flat_main.py", line 26, in <module>
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+../../../raw-and-results-data/rve_40_vol
+Model initialised
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+../../../raw-and-results-data/rve_40_vol
+Model initialised
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+../../../raw-and-results-data/rve_40_vol
+Model initialised
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+../../../raw-and-results-data/rve_40_vol
+Model initialised
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+../../../raw-and-results-data/rve_40_vol
+Model initialised
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/rve_40_flat/40_flat_main.py", line 26, in <module>
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/rve_40_flat/40_flat_main.py", line 26, in <module>
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/rve_40_flat/40_flat_main.py", line 26, in <module>
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/rve_40_flat/40_flat_main.py", line 26, in <module>
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/rve_40_flat/40_flat_main.py", line 26, in <module>
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+../../../raw-and-results-data/rve_40_vol
+Model initialised
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/rve_40_flat/40_flat_main.py", line 26, in <module>
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+../../../raw-and-results-data/rve_40_vol
+Model initialised
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/rve_40_flat/40_flat_main.py", line 26, in <module>
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+../../../raw-and-results-data/rve_40_vol
+Model initialised
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/rve_40_flat/40_flat_main.py", line 26, in <module>
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+../../../raw-and-results-data/rve_40_vol
+Model initialised
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/rve_40_flat/40_flat_main.py", line 26, in <module>
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+../../../raw-and-results-data/rve_40_vol
+Model initialised
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/rve_40_flat/40_flat_main.py", line 26, in <module>
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+../../../raw-and-results-data/rve_40_vol
+Model initialised
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/rve_40_flat/40_flat_main.py", line 26, in <module>
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+../../../raw-and-results-data/rve_40_vol
+Model initialised
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/rve_40_flat/40_flat_main.py", line 26, in <module>
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+../../../raw-and-results-data/rve_40_vol
+Model initialised
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/rve_40_flat/40_flat_main.py", line 26, in <module>
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+../../../raw-and-results-data/rve_40_vol
+Model initialised
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/rve_40_flat/40_flat_main.py", line 26, in <module>
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+../../../raw-and-results-data/rve_40_vol
+Model initialised
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/rve_40_flat/40_flat_main.py", line 26, in <module>
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+../../../raw-and-results-data/rve_40_vol
+Model initialised
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/rve_40_flat/40_flat_main.py", line 26, in <module>
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+../../../raw-and-results-data/rve_40_vol
+Model initialised
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/rve_40_flat/40_flat_main.py", line 26, in <module>
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+../../../raw-and-results-data/rve_40_vol
+Model initialised
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/rve_40_flat/40_flat_main.py", line 26, in <module>
+    model.import_mesh(
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 55, in import_mesh
+    model.import_mesh(
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 55, in import_mesh
+    model.import_mesh(
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 55, in import_mesh
+    model.import_mesh(
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 55, in import_mesh
+    model.import_mesh(
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 55, in import_mesh
+    model.import_mesh(
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 55, in import_mesh
+    model.import_mesh(
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 55, in import_mesh
+    model.import_mesh(
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 55, in import_mesh
+    model.import_mesh(
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 55, in import_mesh
+    model.import_mesh(
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 55, in import_mesh
+    model.import_mesh(
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 55, in import_mesh
+    model.import_mesh(
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 55, in import_mesh
+    model.import_mesh(
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 55, in import_mesh
+    model.import_mesh(
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 55, in import_mesh
+    model.import_mesh(
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 55, in import_mesh
+    model.import_mesh(
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 55, in import_mesh
+    model.import_mesh(
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 55, in import_mesh
+    model.import_mesh(
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 55, in import_mesh
+    model.import_mesh(
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 55, in import_mesh
+    infile.read(self.mesh)
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to open XDMF file.
+*** Reason:  XDMF file "../../raw-and-results-data/rve_40_vol/rve_40_vol.xdmf" does not exist.
+*** Where:   This error was encountered inside XDMFFile.cpp.
+*** Process: 1
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+    infile.read(self.mesh)
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to open XDMF file.
+*** Reason:  XDMF file "../../raw-and-results-data/rve_40_vol/rve_40_vol.xdmf" does not exist.
+*** Where:   This error was encountered inside XDMFFile.cpp.
+*** Process: 12
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+    infile.read(self.mesh)
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to open XDMF file.
+*** Reason:  XDMF file "../../raw-and-results-data/rve_40_vol/rve_40_vol.xdmf" does not exist.
+*** Where:   This error was encountered inside XDMFFile.cpp.
+*** Process: 15
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+    infile.read(self.mesh)
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to open XDMF file.
+*** Reason:  XDMF file "../../raw-and-results-data/rve_40_vol/rve_40_vol.xdmf" does not exist.
+*** Where:   This error was encountered inside XDMFFile.cpp.
+*** Process: 2
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+    model.import_mesh(
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 55, in import_mesh
+    infile.read(self.mesh)
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to open XDMF file.
+*** Reason:  XDMF file "../../raw-and-results-data/rve_40_vol/rve_40_vol.xdmf" does not exist.
+*** Where:   This error was encountered inside XDMFFile.cpp.
+*** Process: 8
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+    infile.read(self.mesh)
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to open XDMF file.
+*** Reason:  XDMF file "../../raw-and-results-data/rve_40_vol/rve_40_vol.xdmf" does not exist.
+*** Where:   This error was encountered inside XDMFFile.cpp.
+*** Process: 9
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+    infile.read(self.mesh)
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to open XDMF file.
+*** Reason:  XDMF file "../../raw-and-results-data/rve_40_vol/rve_40_vol.xdmf" does not exist.
+*** Where:   This error was encountered inside XDMFFile.cpp.
+*** Process: 0
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+    infile.read(self.mesh)
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to open XDMF file.
+*** Reason:  XDMF file "../../raw-and-results-data/rve_40_vol/rve_40_vol.xdmf" does not exist.
+*** Where:   This error was encountered inside XDMFFile.cpp.
+*** Process: 4
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+    infile.read(self.mesh)
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to open XDMF file.
+*** Reason:  XDMF file "../../raw-and-results-data/rve_40_vol/rve_40_vol.xdmf" does not exist.
+*** Where:   This error was encountered inside XDMFFile.cpp.
+*** Process: 18
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+    infile.read(self.mesh)
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to open XDMF file.
+*** Reason:  XDMF file "../../raw-and-results-data/rve_40_vol/rve_40_vol.xdmf" does not exist.
+*** Where:   This error was encountered inside XDMFFile.cpp.
+*** Process: 19
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+    infile.read(self.mesh)
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to open XDMF file.
+*** Reason:  XDMF file "../../raw-and-results-data/rve_40_vol/rve_40_vol.xdmf" does not exist.
+*** Where:   This error was encountered inside XDMFFile.cpp.
+*** Process: 17
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+    infile.read(self.mesh)
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to open XDMF file.
+*** Reason:  XDMF file "../../raw-and-results-data/rve_40_vol/rve_40_vol.xdmf" does not exist.
+*** Where:   This error was encountered inside XDMFFile.cpp.
+*** Process: 11
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+    infile.read(self.mesh)
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to open XDMF file.
+*** Reason:  XDMF file "../../raw-and-results-data/rve_40_vol/rve_40_vol.xdmf" does not exist.
+*** Where:   This error was encountered inside XDMFFile.cpp.
+*** Process: 6
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+    infile.read(self.mesh)
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to open XDMF file.
+*** Reason:  XDMF file "../../raw-and-results-data/rve_40_vol/rve_40_vol.xdmf" does not exist.
+*** Where:   This error was encountered inside XDMFFile.cpp.
+*** Process: 14
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+    infile.read(self.mesh)
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to open XDMF file.
+*** Reason:  XDMF file "../../raw-and-results-data/rve_40_vol/rve_40_vol.xdmf" does not exist.
+*** Where:   This error was encountered inside XDMFFile.cpp.
+*** Process: 16
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+    infile.read(self.mesh)
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to open XDMF file.
+*** Reason:  XDMF file "../../raw-and-results-data/rve_40_vol/rve_40_vol.xdmf" does not exist.
+*** Where:   This error was encountered inside XDMFFile.cpp.
+*** Process: 3
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+    infile.read(self.mesh)
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to open XDMF file.
+*** Reason:  XDMF file "../../raw-and-results-data/rve_40_vol/rve_40_vol.xdmf" does not exist.
+*** Where:   This error was encountered inside XDMFFile.cpp.
+*** Process: 5
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+    infile.read(self.mesh)
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to open XDMF file.
+*** Reason:  XDMF file "../../raw-and-results-data/rve_40_vol/rve_40_vol.xdmf" does not exist.
+*** Where:   This error was encountered inside XDMFFile.cpp.
+*** Process: 10
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+    infile.read(self.mesh)
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to open XDMF file.
+*** Reason:  XDMF file "../../raw-and-results-data/rve_40_vol/rve_40_vol.xdmf" does not exist.
+*** Where:   This error was encountered inside XDMFFile.cpp.
+*** Process: 13
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+    infile.read(self.mesh)
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to open XDMF file.
+*** Reason:  XDMF file "../../raw-and-results-data/rve_40_vol/rve_40_vol.xdmf" does not exist.
+*** Where:   This error was encountered inside XDMFFile.cpp.
+*** Process: 7
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
