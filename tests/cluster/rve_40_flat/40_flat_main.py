@@ -15,8 +15,7 @@ import dolfin
 from src.model import PerfusionGasExchangeModel
 from src.params import params
 
-tol = 1
-side_length = 39.346
+print("Imported src files")
 
 print("Starting...")
 folder = "rve_40_vol"
@@ -26,14 +25,14 @@ model = PerfusionGasExchangeModel(folder_path=path, params=params)
 print("Model initialised")
 model.import_mesh(
     os.path.join("../../raw-and-results-data/rve_40_vol", "rve_40_vol.xdmf"), type="xdmf", 
-    periodic=False, tol=tol, side_length=side_length
+    periodic=False
 )
 print("Mesh imported")
 model.mesh = dolfin.refine(model.mesh)
 print("Mesh refined")
-# print("Starting (P) simulation")
-# model.sim_p(save=True, meshtype="tkd")
-# print("(P) simulation done")
+print("Starting (P) simulation")
+model.sim_p(save=True, meshtype="tkd")
+print("(P) simulation done")
 # print("Starting (T) simulation")
 # x = model.sim_t(hb=False, save=False)
 # solution = model.sim_t(hb=True, save=True, guess=x)

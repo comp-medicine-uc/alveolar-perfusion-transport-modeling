@@ -184,23 +184,24 @@ class PerfusionGasExchangeModel():
 
         self.p = Function(self.W_h)
         solve(
-            a == F, self.p, self.p_dbc, solver_parameters={'linear_solver' : 'superlu'}
+            a == F, self.p, self.p_dbc
         )
+        #, solver_parameters={'linear_solver' : 'superlu'}
         print("P problem solved")
-#         self.u = project(
-#             -1/self.params['mu']*self.params['kappa']*grad(self.p),
-#             self.V_h
-#         )
-#         print("u problem solved")
-#         self.u.rename("u", "blood velocity [um/s]")
+        self.u = project(
+            -1/self.params['mu']*self.params['kappa']*grad(self.p),
+            self.V_h
+        )
+        print("u problem solved")
+        self.u.rename("u", "blood velocity [um/s]")
         self.p.rename("p", "blood pressure [mmHg]")
 
         if save:
 
             # Save solutions
             print("Saving solutions")
-#             u_file = File(self.folder_path+'/p/u.pvd')
-#             u_file << self.u
+            u_file = File(self.folder_path+'/p/u.pvd')
+            u_file << self.u
             p_file = File(self.folder_path+'/p/p.pvd')
             p_file << self.p
             print("saved")
