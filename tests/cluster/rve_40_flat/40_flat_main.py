@@ -9,8 +9,8 @@ import sys
 import os
 # The following line adds the directory to the path in order to cross-reference
 # files in the repo
-sys.path.append(os.getcwd()[:-14])
-print("Relative path: ", os.getcwd()[:-14])
+sys.path.append(os.getcwd()[:-26])
+print("Relative path: ", os.getcwd()[:-26])
 import dolfin
 from src.model import PerfusionGasExchangeModel
 from src.params import params

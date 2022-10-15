@@ -103,6 +103,7 @@ class PerfusionGasExchangeModel():
         '''
         
         self.meshtype = mesh
+        
         # Instance the relevant boundaries
         print("Instancing boundaries")
         
