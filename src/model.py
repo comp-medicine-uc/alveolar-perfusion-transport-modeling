@@ -91,6 +91,8 @@ class PerfusionGasExchangeModel():
         self.dir_min_1 =  -0.6702492376
         self.dir_max_2 =  40.6433994556
         self.dir_min_2 =  -0.6591004764
+        self.dir_max_air = max(self.dir_max_1, self.dir_max_2)
+        self.dir_min_air = min(self.dir_min_1, self.dir_min_2)
 
         len_flow = self.dir_max_flow - self.dir_min_flow
         len_1 = self.dir_max_1 - self.dir_min_1
