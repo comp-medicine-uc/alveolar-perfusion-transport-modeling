@@ -1,479 +1,23 @@
 Process 0: Solving linear variational problem.
-Process 3: Solving linear variational problem.
-Process 16: Solving linear variational problem.
-Process 19: Solving linear variational problem.
-Process 6: Solving linear variational problem.
-Process 4: Solving linear variational problem.
-Process 7: Solving linear variational problem.
-Process 5: Solving linear variational problem.
 Process 13: Solving linear variational problem.
-Process 18: Solving linear variational problem.
 Process 1: Solving linear variational problem.
-Process 14: Solving linear variational problem.
-Process 9: Solving linear variational problem.
 Process 10: Solving linear variational problem.
-Process 2: Solving linear variational problem.
-Process 8: Solving linear variational problem.
-Process 15: Solving linear variational problem.
+Process 7: Solving linear variational problem.
+Process 18: Solving linear variational problem.
+Process 4: Solving linear variational problem.
 Process 12: Solving linear variational problem.
+Process 16: Solving linear variational problem.
+Process 9: Solving linear variational problem.
+Process 5: Solving linear variational problem.
+Process 8: Solving linear variational problem.
+Process 2: Solving linear variational problem.
 Process 11: Solving linear variational problem.
 Process 17: Solving linear variational problem.
-Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
-Imported src files
-Starting...
-../../../raw-and-results-data/rve_40_vol
-Model initialised
-Mesh imported
-Coordinates have shape  (908, 3)
-Mesh imported
-Mesh refined
-Starting (P) simulation
-began sim_p
-Instancing boundaries
-gamma_in.dir_min =  -0.6561989643999999
-gamma_in.dir_max =  40.6758673128
-gamma_out.dir_min =  -0.6561989643999999
-gamma_out.dir_max =  40.6758673128
-gamma_air.dir_min =  -0.6702492376
-gamma_air.dir_max =  40.6559837499
-boundaries instanced
-P problem solved
-u problem solved
-Saving solutions
-saved
-(P) simulation done
-Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
-Imported src files
-Starting...
-../../../raw-and-results-data/rve_40_vol
-Model initialised
-Mesh imported
-Coordinates have shape  (812, 3)
-Mesh imported
-Mesh refined
-Starting (P) simulation
-began sim_p
-Instancing boundaries
-gamma_in.dir_min =  -0.6561989643999999
-gamma_in.dir_max =  40.6758673128
-gamma_out.dir_min =  -0.6561989643999999
-gamma_out.dir_max =  40.6758673128
-gamma_air.dir_min =  -0.6702492376
-gamma_air.dir_max =  40.6559837499
-boundaries instanced
-P problem solved
-u problem solved
-Saving solutions
-saved
-(P) simulation done
-Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
-Imported src files
-Starting...
-../../../raw-and-results-data/rve_40_vol
-Model initialised
-Mesh imported
-Coordinates have shape  (889, 3)
-Mesh imported
-Mesh refined
-Starting (P) simulation
-began sim_p
-Instancing boundaries
-gamma_in.dir_min =  -0.6561989643999999
-gamma_in.dir_max =  40.6758673128
-gamma_out.dir_min =  -0.6561989643999999
-gamma_out.dir_max =  40.6758673128
-gamma_air.dir_min =  -0.6702492376
-gamma_air.dir_max =  40.6559837499
-boundaries instanced
-P problem solved
-u problem solved
-Saving solutions
-saved
-(P) simulation done
-Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
-Imported src files
-Starting...
-../../../raw-and-results-data/rve_40_vol
-Model initialised
-Mesh imported
-Coordinates have shape  (897, 3)
-Mesh imported
-Mesh refined
-Starting (P) simulation
-began sim_p
-Instancing boundaries
-gamma_in.dir_min =  -0.6561989643999999
-gamma_in.dir_max =  40.6758673128
-gamma_out.dir_min =  -0.6561989643999999
-gamma_out.dir_max =  40.6758673128
-gamma_air.dir_min =  -0.6702492376
-gamma_air.dir_max =  40.6559837499
-boundaries instanced
-P problem solved
-u problem solved
-Saving solutions
-saved
-(P) simulation done
-Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
-Imported src files
-Starting...
-../../../raw-and-results-data/rve_40_vol
-Model initialised
-Mesh imported
-Coordinates have shape  (898, 3)
-Mesh imported
-Mesh refined
-Starting (P) simulation
-began sim_p
-Instancing boundaries
-gamma_in.dir_min =  -0.6561989643999999
-gamma_in.dir_max =  40.6758673128
-gamma_out.dir_min =  -0.6561989643999999
-gamma_out.dir_max =  40.6758673128
-gamma_air.dir_min =  -0.6702492376
-gamma_air.dir_max =  40.6559837499
-boundaries instanced
-P problem solved
-u problem solved
-Saving solutions
-saved
-(P) simulation done
-Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
-Imported src files
-Starting...
-../../../raw-and-results-data/rve_40_vol
-Model initialised
-Mesh imported
-Coordinates have shape  (875, 3)
-Mesh imported
-Mesh refined
-Starting (P) simulation
-began sim_p
-Instancing boundaries
-gamma_in.dir_min =  -0.6561989643999999
-gamma_in.dir_max =  40.6758673128
-gamma_out.dir_min =  -0.6561989643999999
-gamma_out.dir_max =  40.6758673128
-gamma_air.dir_min =  -0.6702492376
-gamma_air.dir_max =  40.6559837499
-boundaries instanced
-P problem solved
-u problem solved
-Saving solutions
-saved
-(P) simulation done
-Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
-Imported src files
-Starting...
-../../../raw-and-results-data/rve_40_vol
-Model initialised
-Mesh imported
-Coordinates have shape  (828, 3)
-Mesh imported
-Mesh refined
-Starting (P) simulation
-began sim_p
-Instancing boundaries
-gamma_in.dir_min =  -0.6561989643999999
-gamma_in.dir_max =  40.6758673128
-gamma_out.dir_min =  -0.6561989643999999
-gamma_out.dir_max =  40.6758673128
-gamma_air.dir_min =  -0.6702492376
-gamma_air.dir_max =  40.6559837499
-boundaries instanced
-P problem solved
-u problem solved
-Saving solutions
-saved
-(P) simulation done
-Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
-Imported src files
-Starting...
-../../../raw-and-results-data/rve_40_vol
-Model initialised
-Mesh imported
-Coordinates have shape  (892, 3)
-Mesh imported
-Mesh refined
-Starting (P) simulation
-began sim_p
-Instancing boundaries
-gamma_in.dir_min =  -0.6561989643999999
-gamma_in.dir_max =  40.6758673128
-gamma_out.dir_min =  -0.6561989643999999
-gamma_out.dir_max =  40.6758673128
-gamma_air.dir_min =  -0.6702492376
-gamma_air.dir_max =  40.6559837499
-boundaries instanced
-P problem solved
-u problem solved
-Saving solutions
-saved
-(P) simulation done
-Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
-Imported src files
-Starting...
-../../../raw-and-results-data/rve_40_vol
-Model initialised
-Mesh imported
-Coordinates have shape  (840, 3)
-Mesh imported
-Mesh refined
-Starting (P) simulation
-began sim_p
-Instancing boundaries
-gamma_in.dir_min =  -0.6561989643999999
-gamma_in.dir_max =  40.6758673128
-gamma_out.dir_min =  -0.6561989643999999
-gamma_out.dir_max =  40.6758673128
-gamma_air.dir_min =  -0.6702492376
-gamma_air.dir_max =  40.6559837499
-boundaries instanced
-P problem solved
-u problem solved
-Saving solutions
-saved
-(P) simulation done
-Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
-Imported src files
-Starting...
-../../../raw-and-results-data/rve_40_vol
-Model initialised
-Mesh imported
-Coordinates have shape  (872, 3)
-Mesh imported
-Mesh refined
-Starting (P) simulation
-began sim_p
-Instancing boundaries
-gamma_in.dir_min =  -0.6561989643999999
-gamma_in.dir_max =  40.6758673128
-gamma_out.dir_min =  -0.6561989643999999
-gamma_out.dir_max =  40.6758673128
-gamma_air.dir_min =  -0.6702492376
-gamma_air.dir_max =  40.6559837499
-boundaries instanced
-P problem solved
-u problem solved
-Saving solutions
-saved
-(P) simulation done
-Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
-Imported src files
-Starting...
-../../../raw-and-results-data/rve_40_vol
-Model initialised
-Mesh imported
-Coordinates have shape  (948, 3)
-Mesh imported
-Mesh refined
-Starting (P) simulation
-began sim_p
-Instancing boundaries
-gamma_in.dir_min =  -0.6561989643999999
-gamma_in.dir_max =  40.6758673128
-gamma_out.dir_min =  -0.6561989643999999
-gamma_out.dir_max =  40.6758673128
-gamma_air.dir_min =  -0.6702492376
-gamma_air.dir_max =  40.6559837499
-boundaries instanced
-P problem solved
-u problem solved
-Saving solutions
-saved
-(P) simulation done
-Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
-Imported src files
-Starting...
-../../../raw-and-results-data/rve_40_vol
-Model initialised
-Mesh imported
-Coordinates have shape  (892, 3)
-Mesh imported
-Mesh refined
-Starting (P) simulation
-began sim_p
-Instancing boundaries
-gamma_in.dir_min =  -0.6561989643999999
-gamma_in.dir_max =  40.6758673128
-gamma_out.dir_min =  -0.6561989643999999
-gamma_out.dir_max =  40.6758673128
-gamma_air.dir_min =  -0.6702492376
-gamma_air.dir_max =  40.6559837499
-boundaries instanced
-P problem solved
-u problem solved
-Saving solutions
-saved
-(P) simulation done
-Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
-Imported src files
-Starting...
-../../../raw-and-results-data/rve_40_vol
-Model initialised
-Mesh imported
-Coordinates have shape  (863, 3)
-Mesh imported
-Mesh refined
-Starting (P) simulation
-began sim_p
-Instancing boundaries
-gamma_in.dir_min =  -0.6561989643999999
-gamma_in.dir_max =  40.6758673128
-gamma_out.dir_min =  -0.6561989643999999
-gamma_out.dir_max =  40.6758673128
-gamma_air.dir_min =  -0.6702492376
-gamma_air.dir_max =  40.6559837499
-boundaries instanced
-P problem solved
-u problem solved
-Saving solutions
-saved
-(P) simulation done
-Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
-Imported src files
-Starting...
-../../../raw-and-results-data/rve_40_vol
-Model initialised
-Mesh imported
-Coordinates have shape  (924, 3)
-Mesh imported
-Mesh refined
-Starting (P) simulation
-began sim_p
-Instancing boundaries
-gamma_in.dir_min =  -0.6561989643999999
-gamma_in.dir_max =  40.6758673128
-gamma_out.dir_min =  -0.6561989643999999
-gamma_out.dir_max =  40.6758673128
-gamma_air.dir_min =  -0.6702492376
-gamma_air.dir_max =  40.6559837499
-boundaries instanced
-P problem solved
-u problem solved
-Saving solutions
-saved
-(P) simulation done
-Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
-Imported src files
-Starting...
-../../../raw-and-results-data/rve_40_vol
-Model initialised
-Mesh imported
-Coordinates have shape  (866, 3)
-Mesh imported
-Mesh refined
-Starting (P) simulation
-began sim_p
-Instancing boundaries
-gamma_in.dir_min =  -0.6561989643999999
-gamma_in.dir_max =  40.6758673128
-gamma_out.dir_min =  -0.6561989643999999
-gamma_out.dir_max =  40.6758673128
-gamma_air.dir_min =  -0.6702492376
-gamma_air.dir_max =  40.6559837499
-boundaries instanced
-P problem solved
-u problem solved
-Saving solutions
-saved
-(P) simulation done
-Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
-Imported src files
-Starting...
-../../../raw-and-results-data/rve_40_vol
-Model initialised
-Mesh imported
-Coordinates have shape  (867, 3)
-Mesh imported
-Mesh refined
-Starting (P) simulation
-began sim_p
-Instancing boundaries
-gamma_in.dir_min =  -0.6561989643999999
-gamma_in.dir_max =  40.6758673128
-gamma_out.dir_min =  -0.6561989643999999
-gamma_out.dir_max =  40.6758673128
-gamma_air.dir_min =  -0.6702492376
-gamma_air.dir_max =  40.6559837499
-boundaries instanced
-P problem solved
-u problem solved
-Saving solutions
-saved
-(P) simulation done
-Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
-Imported src files
-Starting...
-../../../raw-and-results-data/rve_40_vol
-Model initialised
-Mesh imported
-Coordinates have shape  (968, 3)
-Mesh imported
-Mesh refined
-Starting (P) simulation
-began sim_p
-Instancing boundaries
-gamma_in.dir_min =  -0.6561989643999999
-gamma_in.dir_max =  40.6758673128
-gamma_out.dir_min =  -0.6561989643999999
-gamma_out.dir_max =  40.6758673128
-gamma_air.dir_min =  -0.6702492376
-gamma_air.dir_max =  40.6559837499
-boundaries instanced
-P problem solved
-u problem solved
-Saving solutions
-saved
-(P) simulation done
-Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
-Imported src files
-Starting...
-../../../raw-and-results-data/rve_40_vol
-Model initialised
-Mesh imported
-Coordinates have shape  (873, 3)
-Mesh imported
-Mesh refined
-Starting (P) simulation
-began sim_p
-Instancing boundaries
-gamma_in.dir_min =  -0.6561989643999999
-gamma_in.dir_max =  40.6758673128
-gamma_out.dir_min =  -0.6561989643999999
-gamma_out.dir_max =  40.6758673128
-gamma_air.dir_min =  -0.6702492376
-gamma_air.dir_max =  40.6559837499
-boundaries instanced
-P problem solved
-u problem solved
-Saving solutions
-saved
-(P) simulation done
-Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
-Imported src files
-Starting...
-../../../raw-and-results-data/rve_40_vol
-Model initialised
-Mesh imported
-Coordinates have shape  (914, 3)
-Mesh imported
-Mesh refined
-Starting (P) simulation
-began sim_p
-Instancing boundaries
-gamma_in.dir_min =  -0.6561989643999999
-gamma_in.dir_max =  40.6758673128
-gamma_out.dir_min =  -0.6561989643999999
-gamma_out.dir_max =  40.6758673128
-gamma_air.dir_min =  -0.6702492376
-gamma_air.dir_max =  40.6559837499
-boundaries instanced
-P problem solved
-u problem solved
-Saving solutions
-saved
-(P) simulation done
+Process 19: Solving linear variational problem.
+Process 14: Solving linear variational problem.
+Process 6: Solving linear variational problem.
+Process 15: Solving linear variational problem.
+Process 3: Solving linear variational problem.
 Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
 Imported src files
 Starting...
@@ -498,3 +42,1281 @@ u problem solved
 Saving solutions
 saved
 (P) simulation done
+Starting (T) simulation
+Calling FFC just-in-time (JIT) compiler, this may take some time.
+Process 0: No Jacobian form specified for nonlinear variational problem.
+Process 0: Differentiating residual form F to obtain Jacobian J = F'.
+Process 5: No Jacobian form specified for nonlinear variational problem.
+Process 5: Differentiating residual form F to obtain Jacobian J = F'.
+Process 12: No Jacobian form specified for nonlinear variational problem.
+Process 12: Differentiating residual form F to obtain Jacobian J = F'.
+Process 8: No Jacobian form specified for nonlinear variational problem.
+Process 8: Differentiating residual form F to obtain Jacobian J = F'.
+Process 3: No Jacobian form specified for nonlinear variational problem.
+Process 3: Differentiating residual form F to obtain Jacobian J = F'.
+Process 10: No Jacobian form specified for nonlinear variational problem.
+Process 10: Differentiating residual form F to obtain Jacobian J = F'.
+Process 7: No Jacobian form specified for nonlinear variational problem.
+Process 7: Differentiating residual form F to obtain Jacobian J = F'.
+Process 15: No Jacobian form specified for nonlinear variational problem.
+Process 15: Differentiating residual form F to obtain Jacobian J = F'.
+Process 13: No Jacobian form specified for nonlinear variational problem.
+Process 2: No Jacobian form specified for nonlinear variational problem.
+Process 2: Differentiating residual form F to obtain Jacobian J = F'.
+Process 13: Differentiating residual form F to obtain Jacobian J = F'.
+Process 18: No Jacobian form specified for nonlinear variational problem.
+Process 18: Differentiating residual form F to obtain Jacobian J = F'.
+Process 14: No Jacobian form specified for nonlinear variational problem.
+Process 14: Differentiating residual form F to obtain Jacobian J = F'.
+Process 4: No Jacobian form specified for nonlinear variational problem.
+Process 1: No Jacobian form specified for nonlinear variational problem.
+Process 1: Differentiating residual form F to obtain Jacobian J = F'.
+Process 4: Differentiating residual form F to obtain Jacobian J = F'.
+Process 9: No Jacobian form specified for nonlinear variational problem.Process 6: No Jacobian form specified for nonlinear variational problem.
+Process 6: Differentiating residual form F to obtain Jacobian J = F'.
+
+Process 9: Differentiating residual form F to obtain Jacobian J = F'.
+Process 11: No Jacobian form specified for nonlinear variational problem.
+Process 11: Differentiating residual form F to obtain Jacobian J = F'.
+Process 17: No Jacobian form specified for nonlinear variational problem.Process 19: No Jacobian form specified for nonlinear variational problem.
+Process 19: Differentiating residual form F to obtain Jacobian J = F'.
+
+Process 17: Differentiating residual form F to obtain Jacobian J = F'.
+Process 16: No Jacobian form specified for nonlinear variational problem.
+Process 16: Differentiating residual form F to obtain Jacobian J = F'.
+Calling FFC just-in-time (JIT) compiler, this may take some time.
+Calling FFC just-in-time (JIT) compiler, this may take some time.
+Process 0: Solving nonlinear variational problem.
+Process 16: Solving nonlinear variational problem.
+Process 14: Solving nonlinear variational problem.
+Process 2: Solving nonlinear variational problem.
+Process 4: Solving nonlinear variational problem.
+Process 5: Solving nonlinear variational problem.
+Process 7: Solving nonlinear variational problem.
+Process 10: Solving nonlinear variational problem.
+Process 11: Solving nonlinear variational problem.
+Process 17: Solving nonlinear variational problem.
+Process 1: Solving nonlinear variational problem.
+Process 9: Solving nonlinear variational problem.
+Process 12: Solving nonlinear variational problem.
+Process 19: Solving nonlinear variational problem.
+Process 3: Solving nonlinear variational problem.
+Process 8: Solving nonlinear variational problem.Process 13: Solving nonlinear variational problem.
+Process 15: Solving nonlinear variational problem.
+Process 18: Solving nonlinear variational problem.
+
+Process 6: Solving nonlinear variational problem.
+  Process 0: Newton iteration 0: r (abs) = 3.281e+07 (tol = 1.000e-08) r (rel) = 1.000e+00 (tol = 1.000e-08)
+  Process 0: Newton iteration 1: r (abs) = 1.066e-07 (tol = 1.000e-08) r (rel) = 3.249e-15 (tol = 1.000e-08)
+  Process 0: Newton solver finished in 1 iterations and 1 linear solver iterations.
+Finished (linear) guess generation
+Calling FFC just-in-time (JIT) compiler, this may take some time.
+Calling FFC just-in-time (JIT) compiler, this may take some time.
+Calling FFC just-in-time (JIT) compiler, this may take some time.
+Process 8: No Jacobian form specified for nonlinear variational problem.
+Process 8: Differentiating residual form F to obtain Jacobian J = F'.
+Process 5: No Jacobian form specified for nonlinear variational problem.
+Process 5: Differentiating residual form F to obtain Jacobian J = F'.
+Process 12: No Jacobian form specified for nonlinear variational problem.
+Process 12: Differentiating residual form F to obtain Jacobian J = F'.
+Process 15: No Jacobian form specified for nonlinear variational problem.
+Process 15: Differentiating residual form F to obtain Jacobian J = F'.
+Process 18: No Jacobian form specified for nonlinear variational problem.
+Process 18: Differentiating residual form F to obtain Jacobian J = F'.
+Process 10: No Jacobian form specified for nonlinear variational problem.
+Process 10: Differentiating residual form F to obtain Jacobian J = F'.
+Process 9: No Jacobian form specified for nonlinear variational problem.
+Process 9: Differentiating residual form F to obtain Jacobian J = F'.
+Process 19: No Jacobian form specified for nonlinear variational problem.
+Process 19: Differentiating residual form F to obtain Jacobian J = F'.
+Process 7: No Jacobian form specified for nonlinear variational problem.
+Process 7: Differentiating residual form F to obtain Jacobian J = F'.
+Process 0: No Jacobian form specified for nonlinear variational problem.
+Process 0: Differentiating residual form F to obtain Jacobian J = F'.
+Process 17: No Jacobian form specified for nonlinear variational problem.
+Process 17: Differentiating residual form F to obtain Jacobian J = F'.
+Process 1: No Jacobian form specified for nonlinear variational problem.
+Process 13: No Jacobian form specified for nonlinear variational problem.
+Process 13: Differentiating residual form F to obtain Jacobian J = F'.Process 16: No Jacobian form specified for nonlinear variational problem.
+Process 16: Differentiating residual form F to obtain Jacobian J = F'.
+Process 1: Differentiating residual form F to obtain Jacobian J = F'.
+
+Process 6: No Jacobian form specified for nonlinear variational problem.
+Process 6: Differentiating residual form F to obtain Jacobian J = F'.
+Calling FFC just-in-time (JIT) compiler, this may take some time.
+Process 3: No Jacobian form specified for nonlinear variational problem.
+Process 3: Differentiating residual form F to obtain Jacobian J = F'.
+Process 4: No Jacobian form specified for nonlinear variational problem.
+Process 4: Differentiating residual form F to obtain Jacobian J = F'.
+Process 11: No Jacobian form specified for nonlinear variational problem.
+Process 11: Differentiating residual form F to obtain Jacobian J = F'.
+Process 2: No Jacobian form specified for nonlinear variational problem.
+Process 2: Differentiating residual form F to obtain Jacobian J = F'.
+Process 14: No Jacobian form specified for nonlinear variational problem.
+Process 14: Differentiating residual form F to obtain Jacobian J = F'.
+Calling FFC just-in-time (JIT) compiler, this may take some time.
+Process 0: Solving nonlinear variational problem.
+Process 2: Solving nonlinear variational problem.
+Process 5: Solving nonlinear variational problem.
+Process 13: Solving nonlinear variational problem.
+Process 4: Solving nonlinear variational problem.
+Process 14: Solving nonlinear variational problem.Process 10: Solving nonlinear variational problem.
+Process 17: Solving nonlinear variational problem.
+Process 12: Solving nonlinear variational problem.
+
+Process 16: Solving nonlinear variational problem.
+Process 18: Solving nonlinear variational problem.
+Process 1: Solving nonlinear variational problem.Process 9: Solving nonlinear variational problem.
+Process 3: Solving nonlinear variational problem.
+
+Process 8: Solving nonlinear variational problem.
+Process 15: Solving nonlinear variational problem.
+Process 11: Solving nonlinear variational problem.
+Process 6: Solving nonlinear variational problem.Process 7: Solving nonlinear variational problem.
+
+Process 19: Solving nonlinear variational problem.
+  Process 0: Newton iteration 0: r (abs) = 7.769e+08 (tol = 1.000e-08) r (rel) = 1.000e+00 (tol = 1.000e-08)
+  Process 0: Newton iteration 1: r (abs) = 1.375e+08 (tol = 1.000e-08) r (rel) = 1.770e-01 (tol = 1.000e-08)
+  Process 0: Newton iteration 2: r (abs) = 3.477e+10 (tol = 1.000e-08) r (rel) = 4.475e+01 (tol = 1.000e-08)
+  Process 0: Newton iteration 3: r (abs) = 8.727e+09 (tol = 1.000e-08) r (rel) = 1.123e+01 (tol = 1.000e-08)
+  Process 0: Newton iteration 4: r (abs) = 4.327e+09 (tol = 1.000e-08) r (rel) = 5.570e+00 (tol = 1.000e-08)
+  Process 0: Newton iteration 5: r (abs) = 2.270e+11 (tol = 1.000e-08) r (rel) = 2.922e+02 (tol = 1.000e-08)
+  Process 0: Newton iteration 6: r (abs) = 1.013e+12 (tol = 1.000e-08) r (rel) = 1.304e+03 (tol = 1.000e-08)
+  Process 0: Newton iteration 7: r (abs) = 6.018e+12 (tol = 1.000e-08) r (rel) = 7.746e+03 (tol = 1.000e-08)
+  Process 0: Newton iteration 8: r (abs) = 1.929e+12 (tol = 1.000e-08) r (rel) = 2.482e+03 (tol = 1.000e-08)
+  Process 0: Newton iteration 9: r (abs) = 1.764e+14 (tol = 1.000e-08) r (rel) = 2.271e+05 (tol = 1.000e-08)
+  Process 0: Newton iteration 10: r (abs) = 4.664e+13 (tol = 1.000e-08) r (rel) = 6.004e+04 (tol = 1.000e-08)
+  Process 0: Newton iteration 11: r (abs) = 2.069e+13 (tol = 1.000e-08) r (rel) = 2.663e+04 (tol = 1.000e-08)
+  Process 0: Newton iteration 12: r (abs) = 1.621e+14 (tol = 1.000e-08) r (rel) = 2.087e+05 (tol = 1.000e-08)
+  Process 0: Newton iteration 13: r (abs) = 1.894e+16 (tol = 1.000e-08) r (rel) = 2.438e+07 (tol = 1.000e-08)
+  Process 0: Newton iteration 14: r (abs) = 4.788e+15 (tol = 1.000e-08) r (rel) = 6.163e+06 (tol = 1.000e-08)
+  Process 0: Newton iteration 15: r (abs) = 1.206e+15 (tol = 1.000e-08) r (rel) = 1.552e+06 (tol = 1.000e-08)
+  Process 0: Newton iteration 16: r (abs) = 8.556e+14 (tol = 1.000e-08) r (rel) = 1.101e+06 (tol = 1.000e-08)
+  Process 0: Newton iteration 17: r (abs) = 7.997e+14 (tol = 1.000e-08) r (rel) = 1.029e+06 (tol = 1.000e-08)
+  Process 0: Newton iteration 18: r (abs) = 1.183e+15 (tol = 1.000e-08) r (rel) = 1.523e+06 (tol = 1.000e-08)
+  Process 0: Newton iteration 19: r (abs) = 4.508e+14 (tol = 1.000e-08) r (rel) = 5.802e+05 (tol = 1.000e-08)
+  Process 0: Newton iteration 20: r (abs) = 4.959e+15 (tol = 1.000e-08) r (rel) = 6.383e+06 (tol = 1.000e-08)
+  Process 0: Newton iteration 21: r (abs) = 1.239e+15 (tol = 1.000e-08) r (rel) = 1.595e+06 (tol = 1.000e-08)
+  Process 0: Newton iteration 22: r (abs) = 3.382e+14 (tol = 1.000e-08) r (rel) = 4.353e+05 (tol = 1.000e-08)
+  Process 0: Newton iteration 23: r (abs) = 1.273e+14 (tol = 1.000e-08) r (rel) = 1.638e+05 (tol = 1.000e-08)
+  Process 0: Newton iteration 24: r (abs) = 4.185e+13 (tol = 1.000e-08) r (rel) = 5.386e+04 (tol = 1.000e-08)
+  Process 0: Newton iteration 25: r (abs) = 6.023e+13 (tol = 1.000e-08) r (rel) = 7.753e+04 (tol = 1.000e-08)
+  Process 0: Newton iteration 26: r (abs) = 2.625e+13 (tol = 1.000e-08) r (rel) = 3.378e+04 (tol = 1.000e-08)
+  Process 0: Newton iteration 27: r (abs) = 2.016e+13 (tol = 1.000e-08) r (rel) = 2.594e+04 (tol = 1.000e-08)
+  Process 0: Newton iteration 28: r (abs) = 9.350e+13 (tol = 1.000e-08) r (rel) = 1.204e+05 (tol = 1.000e-08)
+  Process 0: Newton iteration 29: r (abs) = 6.978e+14 (tol = 1.000e-08) r (rel) = 8.982e+05 (tol = 1.000e-08)
+  Process 0: Newton iteration 30: r (abs) = 3.066e+14 (tol = 1.000e-08) r (rel) = 3.947e+05 (tol = 1.000e-08)
+  Process 0: Newton iteration 31: r (abs) = 6.879e+14 (tol = 1.000e-08) r (rel) = 8.855e+05 (tol = 1.000e-08)
+  Process 0: Newton iteration 32: r (abs) = 1.710e+14 (tol = 1.000e-08) r (rel) = 2.202e+05 (tol = 1.000e-08)
+  Process 0: Newton iteration 33: r (abs) = 4.528e+13 (tol = 1.000e-08) r (rel) = 5.829e+04 (tol = 1.000e-08)
+  Process 0: Newton iteration 34: r (abs) = 3.743e+13 (tol = 1.000e-08) r (rel) = 4.817e+04 (tol = 1.000e-08)
+  Process 0: Newton iteration 35: r (abs) = 9.972e+13 (tol = 1.000e-08) r (rel) = 1.284e+05 (tol = 1.000e-08)
+  Process 0: Newton iteration 36: r (abs) = 5.848e+13 (tol = 1.000e-08) r (rel) = 7.528e+04 (tol = 1.000e-08)
+  Process 0: Newton iteration 37: r (abs) = 2.074e+13 (tol = 1.000e-08) r (rel) = 2.669e+04 (tol = 1.000e-08)
+  Process 0: Newton iteration 38: r (abs) = 6.350e+12 (tol = 1.000e-08) r (rel) = 8.173e+03 (tol = 1.000e-08)
+  Process 0: Newton iteration 39: r (abs) = 7.628e+13 (tol = 1.000e-08) r (rel) = 9.819e+04 (tol = 1.000e-08)
+  Process 0: Newton iteration 40: r (abs) = 1.934e+13 (tol = 1.000e-08) r (rel) = 2.489e+04 (tol = 1.000e-08)
+  Process 0: Newton iteration 41: r (abs) = 5.210e+13 (tol = 1.000e-08) r (rel) = 6.707e+04 (tol = 1.000e-08)
+  Process 0: Newton iteration 42: r (abs) = 1.149e+14 (tol = 1.000e-08) r (rel) = 1.479e+05 (tol = 1.000e-08)
+  Process 0: Newton iteration 43: r (abs) = 1.339e+14 (tol = 1.000e-08) r (rel) = 1.724e+05 (tol = 1.000e-08)
+  Process 0: Newton iteration 44: r (abs) = 9.297e+13 (tol = 1.000e-08) r (rel) = 1.197e+05 (tol = 1.000e-08)
+  Process 0: Newton iteration 45: r (abs) = 9.066e+14 (tol = 1.000e-08) r (rel) = 1.167e+06 (tol = 1.000e-08)
+  Process 0: Newton iteration 46: r (abs) = 2.583e+14 (tol = 1.000e-08) r (rel) = 3.324e+05 (tol = 1.000e-08)
+  Process 0: Newton iteration 47: r (abs) = 9.720e+13 (tol = 1.000e-08) r (rel) = 1.251e+05 (tol = 1.000e-08)
+  Process 0: Newton iteration 48: r (abs) = 7.640e+13 (tol = 1.000e-08) r (rel) = 9.834e+04 (tol = 1.000e-08)
+  Process 0: Newton iteration 49: r (abs) = 2.038e+13 (tol = 1.000e-08) r (rel) = 2.624e+04 (tol = 1.000e-08)
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+../../../raw-and-results-data/rve_40_vol
+Model initialised
+Mesh imported
+Coordinates have shape  (948, 3)
+Mesh imported
+Mesh refined
+Starting (P) simulation
+began sim_p
+Instancing boundaries
+gamma_in.dir_min =  -0.6561989643999999
+gamma_in.dir_max =  40.6758673128
+gamma_out.dir_min =  -0.6561989643999999
+gamma_out.dir_max =  40.6758673128
+gamma_air.dir_min =  -0.6702492376
+gamma_air.dir_max =  40.6559837499
+boundaries instanced
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting (T) simulation
+Finished (linear) guess generation
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+../../../raw-and-results-data/rve_40_vol
+Model initialised
+Mesh imported
+Coordinates have shape  (924, 3)
+Mesh imported
+Mesh refined
+Starting (P) simulation
+began sim_p
+Instancing boundaries
+gamma_in.dir_min =  -0.6561989643999999
+gamma_in.dir_max =  40.6758673128
+gamma_out.dir_min =  -0.6561989643999999
+gamma_out.dir_max =  40.6758673128
+gamma_air.dir_min =  -0.6702492376
+gamma_air.dir_max =  40.6559837499
+boundaries instanced
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting (T) simulation
+Finished (linear) guess generation
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/rve_40_flat/40_flat_main.py", line 39, in <module>
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/rve_40_flat/40_flat_main.py", line 39, in <module>
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+../../../raw-and-results-data/rve_40_vol
+Model initialised
+Mesh imported
+Coordinates have shape  (875, 3)
+Mesh imported
+Mesh refined
+Starting (P) simulation
+began sim_p
+Instancing boundaries
+gamma_in.dir_min =  -0.6561989643999999
+gamma_in.dir_max =  40.6758673128
+gamma_out.dir_min =  -0.6561989643999999
+gamma_out.dir_max =  40.6758673128
+gamma_air.dir_min =  -0.6702492376
+gamma_air.dir_max =  40.6559837499
+boundaries instanced
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting (T) simulation
+Finished (linear) guess generation
+    solution = model.sim_t(hb=True, save=True, guess=x)
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 481, in sim_t
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/rve_40_flat/40_flat_main.py", line 39, in <module>
+    solution = model.sim_t(hb=True, save=True, guess=x)
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 481, in sim_t
+    solve(
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 220, in solve
+    solution = model.sim_t(hb=True, save=True, guess=x)
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 481, in sim_t
+    solve(
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 220, in solve
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+../../../raw-and-results-data/rve_40_vol
+Model initialised
+Mesh imported
+Coordinates have shape  (873, 3)
+Mesh imported
+Mesh refined
+Starting (P) simulation
+began sim_p
+Instancing boundaries
+gamma_in.dir_min =  -0.6561989643999999
+gamma_in.dir_max =  40.6758673128
+gamma_out.dir_min =  -0.6561989643999999
+gamma_out.dir_max =  40.6758673128
+gamma_air.dir_min =  -0.6702492376
+gamma_air.dir_max =  40.6559837499
+boundaries instanced
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting (T) simulation
+Finished (linear) guess generation
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/rve_40_flat/40_flat_main.py", line 39, in <module>
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+../../../raw-and-results-data/rve_40_vol
+Model initialised
+Mesh imported
+Coordinates have shape  (840, 3)
+Mesh imported
+Mesh refined
+Starting (P) simulation
+began sim_p
+Instancing boundaries
+gamma_in.dir_min =  -0.6561989643999999
+gamma_in.dir_max =  40.6758673128
+gamma_out.dir_min =  -0.6561989643999999
+gamma_out.dir_max =  40.6758673128
+gamma_air.dir_min =  -0.6702492376
+gamma_air.dir_max =  40.6559837499
+boundaries instanced
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting (T) simulation
+Finished (linear) guess generation
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/rve_40_flat/40_flat_main.py", line 39, in <module>
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+../../../raw-and-results-data/rve_40_vol
+Model initialised
+Mesh imported
+Coordinates have shape  (892, 3)
+Mesh imported
+Mesh refined
+Starting (P) simulation
+began sim_p
+Instancing boundaries
+gamma_in.dir_min =  -0.6561989643999999
+gamma_in.dir_max =  40.6758673128
+gamma_out.dir_min =  -0.6561989643999999
+gamma_out.dir_max =  40.6758673128
+gamma_air.dir_min =  -0.6702492376
+gamma_air.dir_max =  40.6559837499
+boundaries instanced
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting (T) simulation
+Finished (linear) guess generation
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/rve_40_flat/40_flat_main.py", line 39, in <module>
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+../../../raw-and-results-data/rve_40_vol
+Model initialised
+Mesh imported
+Coordinates have shape  (863, 3)
+Mesh imported
+Mesh refined
+Starting (P) simulation
+began sim_p
+Instancing boundaries
+gamma_in.dir_min =  -0.6561989643999999
+gamma_in.dir_max =  40.6758673128
+gamma_out.dir_min =  -0.6561989643999999
+gamma_out.dir_max =  40.6758673128
+gamma_air.dir_min =  -0.6702492376
+gamma_air.dir_max =  40.6559837499
+boundaries instanced
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting (T) simulation
+Finished (linear) guess generation
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/rve_40_flat/40_flat_main.py", line 39, in <module>
+    solve(
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 220, in solve
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+../../../raw-and-results-data/rve_40_vol
+Model initialised
+Mesh imported
+Coordinates have shape  (898, 3)
+Mesh imported
+Mesh refined
+Starting (P) simulation
+began sim_p
+Instancing boundaries
+gamma_in.dir_min =  -0.6561989643999999
+gamma_in.dir_max =  40.6758673128
+gamma_out.dir_min =  -0.6561989643999999
+gamma_out.dir_max =  40.6758673128
+gamma_air.dir_min =  -0.6702492376
+gamma_air.dir_max =  40.6559837499
+boundaries instanced
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting (T) simulation
+Finished (linear) guess generation
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+../../../raw-and-results-data/rve_40_vol
+Model initialised
+Mesh imported
+Coordinates have shape  (968, 3)
+Mesh imported
+Mesh refined
+Starting (P) simulation
+began sim_p
+Instancing boundaries
+gamma_in.dir_min =  -0.6561989643999999
+gamma_in.dir_max =  40.6758673128
+gamma_out.dir_min =  -0.6561989643999999
+gamma_out.dir_max =  40.6758673128
+gamma_air.dir_min =  -0.6702492376
+gamma_air.dir_max =  40.6559837499
+boundaries instanced
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting (T) simulation
+Finished (linear) guess generation
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/rve_40_flat/40_flat_main.py", line 39, in <module>
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/rve_40_flat/40_flat_main.py", line 39, in <module>
+    solution = model.sim_t(hb=True, save=True, guess=x)
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 481, in sim_t
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+../../../raw-and-results-data/rve_40_vol
+Model initialised
+Mesh imported
+Coordinates have shape  (908, 3)
+Mesh imported
+Mesh refined
+Starting (P) simulation
+began sim_p
+Instancing boundaries
+gamma_in.dir_min =  -0.6561989643999999
+gamma_in.dir_max =  40.6758673128
+gamma_out.dir_min =  -0.6561989643999999
+gamma_out.dir_max =  40.6758673128
+gamma_air.dir_min =  -0.6702492376
+gamma_air.dir_max =  40.6559837499
+boundaries instanced
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting (T) simulation
+Finished (linear) guess generation
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/rve_40_flat/40_flat_main.py", line 39, in <module>
+    solution = model.sim_t(hb=True, save=True, guess=x)
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 481, in sim_t
+    solution = model.sim_t(hb=True, save=True, guess=x)
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 481, in sim_t
+    solution = model.sim_t(hb=True, save=True, guess=x)
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 481, in sim_t
+    solve(
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 220, in solve
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+../../../raw-and-results-data/rve_40_vol
+Model initialised
+Mesh imported
+Coordinates have shape  (867, 3)
+Mesh imported
+Mesh refined
+Starting (P) simulation
+began sim_p
+Instancing boundaries
+gamma_in.dir_min =  -0.6561989643999999
+gamma_in.dir_max =  40.6758673128
+gamma_out.dir_min =  -0.6561989643999999
+gamma_out.dir_max =  40.6758673128
+gamma_air.dir_min =  -0.6702492376
+gamma_air.dir_max =  40.6559837499
+boundaries instanced
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting (T) simulation
+Finished (linear) guess generation
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+../../../raw-and-results-data/rve_40_vol
+Model initialised
+Mesh imported
+Coordinates have shape  (892, 3)
+Mesh imported
+Mesh refined
+Starting (P) simulation
+began sim_p
+Instancing boundaries
+gamma_in.dir_min =  -0.6561989643999999
+gamma_in.dir_max =  40.6758673128
+gamma_out.dir_min =  -0.6561989643999999
+gamma_out.dir_max =  40.6758673128
+gamma_air.dir_min =  -0.6702492376
+gamma_air.dir_max =  40.6559837499
+boundaries instanced
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting (T) simulation
+Finished (linear) guess generation
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+../../../raw-and-results-data/rve_40_vol
+Model initialised
+Mesh imported
+Coordinates have shape  (872, 3)
+Mesh imported
+Mesh refined
+Starting (P) simulation
+began sim_p
+Instancing boundaries
+gamma_in.dir_min =  -0.6561989643999999
+gamma_in.dir_max =  40.6758673128
+gamma_out.dir_min =  -0.6561989643999999
+gamma_out.dir_max =  40.6758673128
+gamma_air.dir_min =  -0.6702492376
+gamma_air.dir_max =  40.6559837499
+boundaries instanced
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting (T) simulation
+Finished (linear) guess generation
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/rve_40_flat/40_flat_main.py", line 39, in <module>
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/rve_40_flat/40_flat_main.py", line 39, in <module>
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/rve_40_flat/40_flat_main.py", line 39, in <module>
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+../../../raw-and-results-data/rve_40_vol
+Model initialised
+Mesh imported
+Coordinates have shape  (889, 3)
+Mesh imported
+Mesh refined
+Starting (P) simulation
+began sim_p
+Instancing boundaries
+gamma_in.dir_min =  -0.6561989643999999
+gamma_in.dir_max =  40.6758673128
+gamma_out.dir_min =  -0.6561989643999999
+gamma_out.dir_max =  40.6758673128
+gamma_air.dir_min =  -0.6702492376
+gamma_air.dir_max =  40.6559837499
+boundaries instanced
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting (T) simulation
+Finished (linear) guess generation
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+../../../raw-and-results-data/rve_40_vol
+Model initialised
+Mesh imported
+Coordinates have shape  (812, 3)
+Mesh imported
+Mesh refined
+Starting (P) simulation
+began sim_p
+Instancing boundaries
+gamma_in.dir_min =  -0.6561989643999999
+gamma_in.dir_max =  40.6758673128
+gamma_out.dir_min =  -0.6561989643999999
+gamma_out.dir_max =  40.6758673128
+gamma_air.dir_min =  -0.6702492376
+gamma_air.dir_max =  40.6559837499
+boundaries instanced
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting (T) simulation
+Finished (linear) guess generation
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/rve_40_flat/40_flat_main.py", line 39, in <module>
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/rve_40_flat/40_flat_main.py", line 39, in <module>
+  Process 0: Newton iteration 50: r (abs) = 1.358e+13 (tol = 1.000e-08) r (rel) = 1.748e+04 (tol = 1.000e-08)
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/rve_40_flat/40_flat_main.py", line 39, in <module>
+    solution = model.sim_t(hb=True, save=True, guess=x)
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 481, in sim_t
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+../../../raw-and-results-data/rve_40_vol
+Model initialised
+Mesh imported
+Coordinates have shape  (914, 3)
+Mesh imported
+Mesh refined
+Starting (P) simulation
+began sim_p
+Instancing boundaries
+gamma_in.dir_min =  -0.6561989643999999
+gamma_in.dir_max =  40.6758673128
+gamma_out.dir_min =  -0.6561989643999999
+gamma_out.dir_max =  40.6758673128
+gamma_air.dir_min =  -0.6702492376
+gamma_air.dir_max =  40.6559837499
+boundaries instanced
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting (T) simulation
+Finished (linear) guess generation
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/rve_40_flat/40_flat_main.py", line 39, in <module>
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+../../../raw-and-results-data/rve_40_vol
+Model initialised
+Mesh imported
+Coordinates have shape  (866, 3)
+Mesh imported
+Mesh refined
+Starting (P) simulation
+began sim_p
+Instancing boundaries
+gamma_in.dir_min =  -0.6561989643999999
+gamma_in.dir_max =  40.6758673128
+gamma_out.dir_min =  -0.6561989643999999
+gamma_out.dir_max =  40.6758673128
+gamma_air.dir_min =  -0.6702492376
+gamma_air.dir_max =  40.6559837499
+boundaries instanced
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting (T) simulation
+Finished (linear) guess generation
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/rve_40_flat/40_flat_main.py", line 39, in <module>
+    _solve_varproblem(*args, **kwargs)
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 266, in _solve_varproblem
+    _solve_varproblem(*args, **kwargs)
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 266, in _solve_varproblem
+    solution = model.sim_t(hb=True, save=True, guess=x)
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 481, in sim_t
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+../../../raw-and-results-data/rve_40_vol
+Model initialised
+Mesh imported
+Coordinates have shape  (897, 3)
+Mesh imported
+Mesh refined
+Starting (P) simulation
+began sim_p
+Instancing boundaries
+gamma_in.dir_min =  -0.6561989643999999
+gamma_in.dir_max =  40.6758673128
+gamma_out.dir_min =  -0.6561989643999999
+gamma_out.dir_max =  40.6758673128
+gamma_air.dir_min =  -0.6702492376
+gamma_air.dir_max =  40.6559837499
+boundaries instanced
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting (T) simulation
+Finished (linear) guess generation
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/rve_40_flat/40_flat_main.py", line 39, in <module>
+    solve(
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 220, in solve
+    _solve_varproblem(*args, **kwargs)
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 266, in _solve_varproblem
+    solve(
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 220, in solve
+    solution = model.sim_t(hb=True, save=True, guess=x)
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 481, in sim_t
+    solve(
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 220, in solve
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+../../../raw-and-results-data/rve_40_vol
+Model initialised
+Mesh imported
+Coordinates have shape  (828, 3)
+Mesh imported
+Mesh refined
+Starting (P) simulation
+began sim_p
+Instancing boundaries
+gamma_in.dir_min =  -0.6561989643999999
+gamma_in.dir_max =  40.6758673128
+gamma_out.dir_min =  -0.6561989643999999
+gamma_out.dir_max =  40.6758673128
+gamma_air.dir_min =  -0.6702492376
+gamma_air.dir_max =  40.6559837499
+boundaries instanced
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting (T) simulation
+Finished (linear) guess generation
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/rve_40_flat/40_flat_main.py", line 39, in <module>
+    solve(
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 220, in solve
+    solve(
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 220, in solve
+    solution = model.sim_t(hb=True, save=True, guess=x)
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 481, in sim_t
+    solve(
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 220, in solve
+    solution = model.sim_t(hb=True, save=True, guess=x)
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 481, in sim_t
+    solution = model.sim_t(hb=True, save=True, guess=x)
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 481, in sim_t
+    solution = model.sim_t(hb=True, save=True, guess=x)
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 481, in sim_t
+    solution = model.sim_t(hb=True, save=True, guess=x)
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 481, in sim_t
+    solution = model.sim_t(hb=True, save=True, guess=x)
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 481, in sim_t
+    solution = model.sim_t(hb=True, save=True, guess=x)
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 481, in sim_t
+    solution = model.sim_t(hb=True, save=True, guess=x)
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 481, in sim_t
+    solution = model.sim_t(hb=True, save=True, guess=x)
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 481, in sim_t
+    _solve_varproblem(*args, **kwargs)
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 266, in _solve_varproblem
+    solution = model.sim_t(hb=True, save=True, guess=x)
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 481, in sim_t
+    solve(
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 220, in solve
+    solve(
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 220, in solve
+    solve(
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 220, in solve
+    solve(
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 220, in solve
+    solve(
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 220, in solve
+    solver.solve()
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to solve nonlinear system with NewtonSolver.
+*** Reason:  Newton solver did not converge because maximum number of iterations reached.
+*** Where:   This error was encountered inside NewtonSolver.cpp.
+*** Process: 2
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+    solver.solve()
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to solve nonlinear system with NewtonSolver.
+*** Reason:  Newton solver did not converge because maximum number of iterations reached.
+*** Where:   This error was encountered inside NewtonSolver.cpp.
+*** Process: 9
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+    solver.solve()
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to solve nonlinear system with NewtonSolver.
+*** Reason:  Newton solver did not converge because maximum number of iterations reached.
+*** Where:   This error was encountered inside NewtonSolver.cpp.
+*** Process: 13
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+    _solve_varproblem(*args, **kwargs)
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 266, in _solve_varproblem
+    _solve_varproblem(*args, **kwargs)
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 266, in _solve_varproblem
+    solve(
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 220, in solve
+    _solve_varproblem(*args, **kwargs)
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 266, in _solve_varproblem
+    solve(
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 220, in solve
+    solve(
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 220, in solve
+    solve(
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 220, in solve
+    solve(
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 220, in solve
+    _solve_varproblem(*args, **kwargs)
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 266, in _solve_varproblem
+    _solve_varproblem(*args, **kwargs)
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 266, in _solve_varproblem
+    _solve_varproblem(*args, **kwargs)
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 266, in _solve_varproblem
+    solver.solve()
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to solve nonlinear system with NewtonSolver.
+*** Reason:  Newton solver did not converge because maximum number of iterations reached.
+*** Where:   This error was encountered inside NewtonSolver.cpp.
+*** Process: 6
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+    _solve_varproblem(*args, **kwargs)
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 266, in _solve_varproblem
+    _solve_varproblem(*args, **kwargs)
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 266, in _solve_varproblem
+    _solve_varproblem(*args, **kwargs)
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 266, in _solve_varproblem
+    _solve_varproblem(*args, **kwargs)
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 266, in _solve_varproblem
+    _solve_varproblem(*args, **kwargs)
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 266, in _solve_varproblem
+    solver.solve()
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to solve nonlinear system with NewtonSolver.
+*** Reason:  Newton solver did not converge because maximum number of iterations reached.
+*** Where:   This error was encountered inside NewtonSolver.cpp.
+*** Process: 17
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+    solver.solve()
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to solve nonlinear system with NewtonSolver.
+*** Reason:  Newton solver did not converge because maximum number of iterations reached.
+*** Where:   This error was encountered inside NewtonSolver.cpp.
+*** Process: 7
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+    solver.solve()
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to solve nonlinear system with NewtonSolver.
+*** Reason:  Newton solver did not converge because maximum number of iterations reached.
+*** Where:   This error was encountered inside NewtonSolver.cpp.
+*** Process: 3
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+    _solve_varproblem(*args, **kwargs)
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 266, in _solve_varproblem
+    _solve_varproblem(*args, **kwargs)
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 266, in _solve_varproblem
+    _solve_varproblem(*args, **kwargs)
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 266, in _solve_varproblem
+    _solve_varproblem(*args, **kwargs)
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 266, in _solve_varproblem
+    _solve_varproblem(*args, **kwargs)
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 266, in _solve_varproblem
+    solver.solve()
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to solve nonlinear system with NewtonSolver.
+*** Reason:  Newton solver did not converge because maximum number of iterations reached.
+*** Where:   This error was encountered inside NewtonSolver.cpp.
+*** Process: 19
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+    solver.solve()
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to solve nonlinear system with NewtonSolver.
+*** Reason:  Newton solver did not converge because maximum number of iterations reached.
+*** Where:   This error was encountered inside NewtonSolver.cpp.
+*** Process: 11
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+    solver.solve()
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to solve nonlinear system with NewtonSolver.
+*** Reason:  Newton solver did not converge because maximum number of iterations reached.
+*** Where:   This error was encountered inside NewtonSolver.cpp.
+*** Process: 15
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+    solver.solve()
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to solve nonlinear system with NewtonSolver.
+*** Reason:  Newton solver did not converge because maximum number of iterations reached.
+*** Where:   This error was encountered inside NewtonSolver.cpp.
+*** Process: 5
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+    solver.solve()
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to solve nonlinear system with NewtonSolver.
+*** Reason:  Newton solver did not converge because maximum number of iterations reached.
+*** Where:   This error was encountered inside NewtonSolver.cpp.
+*** Process: 8
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+    solver.solve()
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to solve nonlinear system with NewtonSolver.
+*** Reason:  Newton solver did not converge because maximum number of iterations reached.
+*** Where:   This error was encountered inside NewtonSolver.cpp.
+*** Process: 1
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+    solver.solve()
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to solve nonlinear system with NewtonSolver.
+*** Reason:  Newton solver did not converge because maximum number of iterations reached.
+*** Where:   This error was encountered inside NewtonSolver.cpp.
+*** Process: 4
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+    solver.solve()
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to solve nonlinear system with NewtonSolver.
+*** Reason:  Newton solver did not converge because maximum number of iterations reached.
+*** Where:   This error was encountered inside NewtonSolver.cpp.
+*** Process: 18
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+    solver.solve()
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to solve nonlinear system with NewtonSolver.
+*** Reason:  Newton solver did not converge because maximum number of iterations reached.
+*** Where:   This error was encountered inside NewtonSolver.cpp.
+*** Process: 12
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+    solver.solve()
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to solve nonlinear system with NewtonSolver.
+*** Reason:  Newton solver did not converge because maximum number of iterations reached.
+*** Where:   This error was encountered inside NewtonSolver.cpp.
+*** Process: 0
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+    solver.solve()
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to solve nonlinear system with NewtonSolver.
+*** Reason:  Newton solver did not converge because maximum number of iterations reached.
+*** Where:   This error was encountered inside NewtonSolver.cpp.
+*** Process: 14
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+    solver.solve()
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to solve nonlinear system with NewtonSolver.
+*** Reason:  Newton solver did not converge because maximum number of iterations reached.
+*** Where:   This error was encountered inside NewtonSolver.cpp.
+*** Process: 10
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+    solver.solve()
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to solve nonlinear system with NewtonSolver.
+*** Reason:  Newton solver did not converge because maximum number of iterations reached.
+*** Where:   This error was encountered inside NewtonSolver.cpp.
+*** Process: 16
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
