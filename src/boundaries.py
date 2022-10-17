@@ -30,8 +30,8 @@ class GammaIn(SubDomain):
         x: position.
         on_boundary: True if on element boundary. (bool)
         '''
-#         return on_boundary and near(x[0], self.dir_min, self.tol)
         return on_boundary and near(x[0], self.dir_min, self.tol)
+        
 
 
 class GammaOut(SubDomain):
