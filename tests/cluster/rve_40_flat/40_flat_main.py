@@ -19,7 +19,7 @@ from src.params import params
     
 print("Imported src files")
 print("Starting...")
-folder = "meshio"
+folder = "meshio_p"
 path = os.path.join("../../../results-data", folder)
 model = PerfusionGasExchangeModel(folder_path=path, params=params)
 print("Model initialised")
