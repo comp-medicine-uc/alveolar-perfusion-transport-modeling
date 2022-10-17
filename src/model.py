@@ -36,7 +36,7 @@ class PerfusionGasExchangeModel():
             for param in self.params:
                 file.write(f'Parameter {param}: {self.params[param]}\n')
 
-    def import_mesh(self, mesh_path, meshtype=None, type="h5", periodic=False):
+    def import_mesh(self, mesh_path, meshtype=None, type="h5", periodic=False, max_dims = [41.2, 40.7, 40.7], min_dims = [-1.2, -0.7, -0.7]):
         '''Imports mesh from .h5 file for use in simulations.
 
         mesh_path: path to file. (string)
@@ -70,12 +70,12 @@ class PerfusionGasExchangeModel():
         )
         
         # #Node coordinates for principal (x) direction
-        self.dir_max_flow = np.max(dir_arr_flow)  # Maximum principal direction coordinate
-        self.dir_min_flow = np.min(dir_arr_flow)  # Minimum principal direction coordinate
-        self.dir_max_y = np.max(dir_arr_y)
-        self.dir_min_y = np.min(dir_arr_y)
-        self.dir_max_z = np.max(dir_arr_z)
-        self.dir_min_z = np.min(dir_arr_z)
+        # self.dir_max_flow = np.max(dir_arr_flow)  # Maximum principal direction coordinate
+        # self.dir_min_flow = np.min(dir_arr_flow)  # Minimum principal direction coordinate
+        # self.dir_max_y = np.max(dir_arr_y)
+        # self.dir_min_y = np.min(dir_arr_y)
+        # self.dir_max_z = np.max(dir_arr_z)
+        # self.dir_min_z = np.min(dir_arr_z)
 
         # print("self.dir_max_flow = ", self.dir_max_flow)
         # print("self.dir_min_flow = ", self.dir_min_flow)
@@ -92,6 +92,13 @@ class PerfusionGasExchangeModel():
         # self.dir_min_y =  -0.6702492376
         # self.dir_max_z =  40.6433994556
         # self.dir_min_z =  -0.6591004764
+
+        self.dir_max_flow =  max_dims[0]
+        self.dir_min_flow =  min_dims[0]
+        self.dir_max_y =  max_dims[1]
+        self.dir_min_y =  min_dims[1]
+        self.dir_max_z =  max_dims[2]
+        self.dir_min_z =  min_dims[2]
 
         len_flow = self.dir_max_flow - self.dir_min_flow
         len_y = self.dir_max_y - self.dir_min_y

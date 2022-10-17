@@ -22,10 +22,14 @@ print("Starting...")
 folder = "meshio_p"
 path = os.path.join("../../../results-data", folder)
 model = PerfusionGasExchangeModel(folder_path=path, params=params)
+
+max_dims = [40.6758673128,40.6559837499,40.6433994556]
+min_dims = [-0.6561989643999999, -0.6702492376, -0.6591004764]
+
 print("Model initialised")
 model.import_mesh(
     os.path.join("../../../raw-data/rve_40_flat/meshio", "rve_40_flat.xdmf"), type="xdmf", 
-    periodic=False
+    periodic=False, max_dims=max_dims, min_dims=min_dims
 )
 print("Mesh imported")
 model.mesh = dolfin.refine(model.mesh)

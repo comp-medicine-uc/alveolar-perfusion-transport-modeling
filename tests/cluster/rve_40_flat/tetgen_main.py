@@ -22,10 +22,14 @@ print("Starting...")
 folder = "tetgen"
 path = os.path.join("../../../results-data", folder)
 model = PerfusionGasExchangeModel(folder_path=path, params=params)
+
+max_dims = [41.2, 40.7, 40.7]
+min_dims = [-1.2, -0.7, -0.7]
+
 print("Model initialised")
 model.import_mesh(
     os.path.join("../../../raw-data/rve_40_flat/tetgen", "tetra_mesh.xdmf"), type="xdmf", 
-    periodic=False
+    periodic=False, max_dims=max_dims, min_dims=min_dims
 )
 print("Mesh imported")
 model.mesh = dolfin.refine(model.mesh)
