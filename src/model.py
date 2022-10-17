@@ -61,46 +61,43 @@ class PerfusionGasExchangeModel():
         dir_arr_flow = np.array(
                 [coords[0] for coords in self.mesh.coordinates()]
         )
-        dir_arr_1 = np.array(
+        dir_arr_y = np.array(
                 [coords[1] for coords in self.mesh.coordinates()]
         )
-        dir_arr_2 = np.array(
+        dir_arr_z = np.array(
                 [coords[2] for coords in self.mesh.coordinates()]
         )
-        # Node coordinates for principal (x) direction
-        # self.dir_max_flow = np.max(dir_arr_flow)  # Maximum principal direction coordinate
-        # self.dir_min_flow = np.min(dir_arr_flow)  # Minimum principal direction coordinate
-        # self.dir_max_1 = np.max(dir_arr_1)
-        # self.dir_min_1 = np.min(dir_arr_1)
-        # self.dir_max_2 = np.max(dir_arr_2)
-        # self.dir_min_2 = np.min(dir_arr_2)
-        # self.dir_max_air = max(self.dir_max_1, self.dir_max_2)
-        # self.dir_min_air = min(self.dir_min_1, self.dir_min_2)
+        #Node coordinates for principal (x) direction
+        self.dir_max_flow = np.max(dir_arr_flow)  # Maximum principal direction coordinate
+        self.dir_min_flow = np.min(dir_arr_flow)  # Minimum principal direction coordinate
+        self.dir_max_y = np.max(dir_arr_y)
+        self.dir_min_y = np.min(dir_arr_y)
+        self.dir_max_z = np.max(dir_arr_z)
+        self.dir_min_z = np.min(dir_arr_z)
 
-        # print("self.dir_max_flow = ", self.dir_max_flow)
-        # print("self.dir_min_flow = ", self.dir_min_flow)
-        # print("self.dir_max_1 = ", self.dir_max_1)
-        # print("self.dir_min_1 = ", self.dir_min_1)
-        # print("self.dir_max_2 = ", self.dir_max_2)
-        # print("self.dir_min_2 = ", self.dir_min_2)
+        print("self.dir_max_flow = ", self.dir_max_flow)
+        print("self.dir_min_flow = ", self.dir_min_flow)
+        print("self.dir_max_y = ", self.dir_max_y)
+        print("self.dir_min_y = ", self.dir_min_y)
+        print("self.dir_max_z = ", self.dir_max_z)
+        print("self.dir_min_z = ", self.dir_min_z)
 
-        # Manually input values for this mesh
-        self.dir_max_flow =  40.6758673128
-        self.dir_min_flow =  -0.6561989643999999
-        self.dir_max_1 =  40.6559837499
-        self.dir_min_1 =  -0.6702492376
-        self.dir_max_2 =  40.6433994556
-        self.dir_min_2 =  -0.6591004764
-        self.dir_max_air = max(self.dir_max_1, self.dir_max_2)
-        self.dir_min_air = min(self.dir_min_1, self.dir_min_2)
+        # Manually input values for this mesh, otherwise parallel computation takes into account 
+        # different values for each of them, and inlet/outlet are not recognised
+#         self.dir_max_flow =  40.6758673128
+#         self.dir_min_flow =  -0.6561989643999999
+#         self.dir_max_y =  40.6559837499
+#         self.dir_min_y =  -0.6702492376
+#         self.dir_max_z =  40.6433994556
+#         self.dir_min_z =  -0.6591004764
 
         len_flow = self.dir_max_flow - self.dir_min_flow
-        len_1 = self.dir_max_1 - self.dir_min_1
-        len_2 = self.dir_max_2 - self.dir_min_2
+        len_y = self.dir_max_y - self.dir_min_y
+        len_z = self.dir_max_z - self.dir_min_z
 
         # Save mesh dims for other uses
 
-        self.dims = (len_flow, len_1, len_2)
+        self.dims = (len_flow, len_y, len_z)
 
         # Flag for periodicity
 
@@ -128,15 +125,17 @@ class PerfusionGasExchangeModel():
                 self.dir_min_flow, self.dir_max_flow, tol
             )
             self.gamma_air = GammaAir(
-                self.dir_min_air, self.dir_max_air, tol
+                self.dir_min_y, self.dir_max_y, self.dir_min_z, self.dir_max_z, tol
             )
 
             print("gamma_in.dir_min = ", self.gamma_in.dir_min)
             print("gamma_in.dir_max = ", self.gamma_in.dir_max)
             print("gamma_out.dir_min = ", self.gamma_out.dir_min)
             print("gamma_out.dir_max = ", self.gamma_out.dir_max)
-            print("gamma_air.dir_min = ", self.gamma_air.dir_min)
-            print("gamma_air.dir_max = ", self.gamma_air.dir_max)
+            print("gamma_air.dir_min_y = ", self.gamma_air.dir_min_y)
+            print("gamma_air.dir_max_y = ", self.gamma_air.dir_max_y)
+            print("gamma_air.dir_min_z = ", self.gamma_air.dir_min_z)
+            print("gamma_air.dir_max_z = ", self.gamma_air.dir_max_z)
 
             # Declare the boundaries in the mesh and tag them
 
@@ -177,7 +176,6 @@ class PerfusionGasExchangeModel():
         self.instance_function_spaces()
 
         # Declare Dirichlet boundary conditions for (P)
-
         self.p_dbc = [
             DirichletBC(self.W_h, self.params['p_min'], self.gamma_out)
         ]
@@ -448,13 +446,17 @@ class PerfusionGasExchangeModel():
         G = G_p_O2 + G_p_CO2 + G_c_O2 + G_c_CO2
      
         if save:
-        
+            if guess is None:
             # Create files for output
-
-            p_O2_file = File(self.folder_path+'/t/pO2.pvd')
-            p_CO2_file = File(self.folder_path+'/t/pCO2.pvd')
-            c_HbO2_file = File(self.folder_path+'/t/cHbO2.pvd')
-            c_HbCO2_file = File(self.folder_path+'/t/cHbCO2.pvd')
+                p_O2_file = File(self.folder_path+'/t/pO2_linear.pvd')
+                p_CO2_file = File(self.folder_path+'/t/pCO2_linear.pvd')
+                c_HbO2_file = File(self.folder_path+'/t/cHbO2_linear.pvd')
+                c_HbCO2_file = File(self.folder_path+'/t/cHbCO2_linear.pvd')
+            else:
+                p_O2_file = File(self.folder_path+'/t/pO2.pvd')
+                p_CO2_file = File(self.folder_path+'/t/pCO2.pvd')
+                c_HbO2_file = File(self.folder_path+'/t/cHbO2.pvd')
+                c_HbCO2_file = File(self.folder_path+'/t/cHbCO2.pvd')
 
         # Declare Dirichlet boundary conditions for (T)
 
