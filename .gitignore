@@ -129,3 +129,4 @@ dmypy.json
 .pyre/
 raw-and-results-data/octupled/octupled_working_fixed.h5
 raw-and-results-data/octupled/octupled_working_fixed.xdmf
+local-results-data/

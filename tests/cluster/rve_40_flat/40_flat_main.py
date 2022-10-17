@@ -21,7 +21,6 @@ print("Imported src files")
 print("Starting...")
 folder = "rve_40_vol"
 path = os.path.join("../../../results-data", folder)
-print(path)
 model = PerfusionGasExchangeModel(folder_path=path, params=params)
 print("Model initialised")
 model.import_mesh(
