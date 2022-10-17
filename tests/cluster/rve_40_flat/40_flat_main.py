@@ -19,12 +19,12 @@ from src.params import params
     
 print("Imported src files")
 print("Starting...")
-folder = "rve_40_vol"
+folder = "meshio"
 path = os.path.join("../../../results-data", folder)
 model = PerfusionGasExchangeModel(folder_path=path, params=params)
 print("Model initialised")
 model.import_mesh(
-    os.path.join("../../../raw-data/rve_40_vol", "rve_40_flat.xdmf"), type="xdmf", 
+    os.path.join("../../../raw-data/rve_40_flat/meshio", "rve_40_flat.xdmf"), type="xdmf", 
     periodic=False
 )
 print("Mesh imported")
