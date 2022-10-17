@@ -28,7 +28,8 @@ class PerfusionGasExchangeModel():
 
         # Save details
         if not os.path.exists(self.folder_path):
-            os.mkdir(self.folder_path)
+#             os.mkdir(self.folder_path)
+            os.makedirs(self.folder_path, exist_ok=True)
         with open(self.folder_path+'/info.txt', 'w') as file:
             file.write(f'Simulation done on {date.today()}\n\n')
             file.write(f'Parameters used:\n\n')
