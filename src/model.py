@@ -67,6 +67,7 @@ class PerfusionGasExchangeModel():
         dir_arr_z = np.array(
                 [coords[2] for coords in self.mesh.coordinates()]
         )
+        
         #Node coordinates for principal (x) direction
         self.dir_max_flow = np.max(dir_arr_flow)  # Maximum principal direction coordinate
         self.dir_min_flow = np.min(dir_arr_flow)  # Minimum principal direction coordinate
@@ -107,7 +108,7 @@ class PerfusionGasExchangeModel():
     def instance_boundaries(self, mesh=None):
         '''Instances the relevant boundaries for boundary conditions.
         
-        mesh: type of mesh created. None, "slab" or "tkd". (None or str)
+            mesh: type of mesh created. None, "slab" or "tkd". (None or str)
         '''
         
         self.meshtype = mesh

@@ -1,5 +1,5 @@
-'''Main file for alveolar perfusion and gas exchange simulations in TKD
-mesh.
+'''Main file for alveolar perfusion and gas exchange simulation in 
+a flattened rat lung RVE mesh.
 '''
 
 __author__ = 'biherrera'
@@ -7,24 +7,25 @@ __email__ = 'biherrera@uc.cl'
 
 import sys
 import os
+
 # The following line adds the directory to the path in order to cross-reference
 # files in the repo
 sys.path.append(os.getcwd()[:-26])
 print("Relative path: ", os.getcwd()[:-26])
+
 import dolfin
 from src.model import PerfusionGasExchangeModel
 from src.params import params
 
 print("Imported src files")
-
 print("Starting...")
 folder = "rve_40_vol"
-path = os.path.join("../../../raw-and-results-data", folder)
+path = os.path.join("../../../results-data", folder)
 print(path)
 model = PerfusionGasExchangeModel(folder_path=path, params=params)
 print("Model initialised")
 model.import_mesh(
-    os.path.join("../../../raw-and-results-data/rve_40_vol", "rve_40_flat.xdmf"), type="xdmf", 
+    os.path.join("../../../raw-data/rve_40_vol", "rve_40_flat.xdmf"), type="xdmf", 
     periodic=False
 )
 print("Mesh imported")
