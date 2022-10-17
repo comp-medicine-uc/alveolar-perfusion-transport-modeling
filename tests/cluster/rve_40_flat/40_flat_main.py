@@ -16,7 +16,7 @@ print("Relative path: ", os.getcwd()[:-26])
 import dolfin
 from src.model import PerfusionGasExchangeModel
 from src.params import params
-
+    
 print("Imported src files")
 print("Starting...")
 folder = "rve_40_vol"

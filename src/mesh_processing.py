@@ -4,11 +4,17 @@ import numpy as np
 import sys
 # import pyvista
 
-path = '//wsl.localhost/Ubuntu-18.04/home/bnherrerac/alveolar-perfusion-transport-modeling/raw-and-results-data/rve_40_vol/'
-src = 'rve_40_f.msh'
+path = '//wsl.localhost/Ubuntu-18.04/home/bnherrerac/alveolar-perfusion-transport-modeling/raw-data/rve_40_flat/matlab/'
+# path = 'C:/Users/bherr/Desktop/tests/'
+src = 'rve_40_flat_saveall.msh'
 
-# For msh to xdmf conversion
+# # For msh to xdmf conversion
 # dest = src[:-4] + '.xdmf'
+# mesh = meshio.read(path+src)
+# mesh.write(path+dest)
+
+# # For msh to stl conversion
+# dest = src[:-4] + '.stl'
 # mesh = meshio.read(path+src)
 # mesh.write(path+dest)
 
@@ -20,10 +26,10 @@ mesh = meshio.read(path+src)
 #Get point data and modify it
 points = mesh.points
 # cells = mesh.cells
-size = np.shape(points)
-print(size)
-print(points)
-# # np.set_printoptions(threshold=sys.maxsize)
+# size = np.shape(points)
+# print(size)
+# print(points)
+# # # np.set_printoptions(threshold=sys.maxsize)
 # print(cells)
 
 
@@ -84,31 +90,31 @@ print("nmin values =", [nmin_x, nmin_y, nmin_z])
 # Updating mesh points
 mesh.points = new_points
 
-# # Exporting the mesh
+# # # Exporting the mesh
 
-vtu_name = 'rve_40_flat.xdmf'
-mesh.write(path + vtu_name)
+# vtu_name = 'rve_40_flat.xdmf'
+# mesh.write(path + vtu_name)
 
-# # msh_name = 'rve_40_flat.msh'
-# # mesh.write(path + msh_name)
+# # # msh_name = 'rve_40_flat.msh'
+# # # mesh.write(path + msh_name)
 
-# xdmf_name = 'rve_40_flat.xdmf'
-# mesh.write(path + xdmf_name)
+# # xdmf_name = 'rve_40_flat.xdmf'
+# # mesh.write(path + xdmf_name)
 
-vtu_mesh = meshio.read(path + vtu_name)
+# vtu_mesh = meshio.read(path + vtu_name)
 
-off_name = 'rve_40_flat.off'
-vtu_mesh.write(path + off_name)
+# off_name = 'rve_40_flat.off'
+# vtu_mesh.write(path + off_name)
 
-ply_name = 'rve_40_flat.ply'
-vtu_mesh.write(path + ply_name)
+# ply_name = 'rve_40_flat.ply'
+# vtu_mesh.write(path + ply_name)
 
-stl_name = 'rve_40_flat.stl'
-vtu_mesh.write(path + stl_name)
+# stl_name = 'rve_40_flat.stl'
+# vtu_mesh.write(path + stl_name)
 
-# obj_name = 'rve_40_flat.obj'
-# vtu_mesh.write(path + obj_name)
+# # obj_name = 'rve_40_flat.obj'
+# # vtu_mesh.write(path + obj_name)
 
-off_name = 'rve_40_flat.off'
-vtu_mesh.write(path + off_name)
+# off_name = 'rve_40_flat.off'
+# vtu_mesh.write(path + off_name)
 

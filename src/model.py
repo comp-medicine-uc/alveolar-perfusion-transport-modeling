@@ -70,12 +70,12 @@ class PerfusionGasExchangeModel():
         )
         
         # #Node coordinates for principal (x) direction
-        # self.dir_max_flow = np.max(dir_arr_flow)  # Maximum principal direction coordinate
-        # self.dir_min_flow = np.min(dir_arr_flow)  # Minimum principal direction coordinate
-        # self.dir_max_y = np.max(dir_arr_y)
-        # self.dir_min_y = np.min(dir_arr_y)
-        # self.dir_max_z = np.max(dir_arr_z)
-        # self.dir_min_z = np.min(dir_arr_z)
+        self.dir_max_flow = np.max(dir_arr_flow)  # Maximum principal direction coordinate
+        self.dir_min_flow = np.min(dir_arr_flow)  # Minimum principal direction coordinate
+        self.dir_max_y = np.max(dir_arr_y)
+        self.dir_min_y = np.min(dir_arr_y)
+        self.dir_max_z = np.max(dir_arr_z)
+        self.dir_min_z = np.min(dir_arr_z)
 
         # print("self.dir_max_flow = ", self.dir_max_flow)
         # print("self.dir_min_flow = ", self.dir_min_flow)
@@ -86,12 +86,12 @@ class PerfusionGasExchangeModel():
 
         # Manually input values for this mesh, otherwise parallel computation takes into account 
         # different values for each of them, and inlet/outlet are not recognised
-        self.dir_max_flow =  40.6758673128
-        self.dir_min_flow =  -0.6561989643999999
-        self.dir_max_y =  40.6559837499
-        self.dir_min_y =  -0.6702492376
-        self.dir_max_z =  40.6433994556
-        self.dir_min_z =  -0.6591004764
+        # self.dir_max_flow =  40.6758673128
+        # self.dir_min_flow =  -0.6561989643999999
+        # self.dir_max_y =  40.6559837499
+        # self.dir_min_y =  -0.6702492376
+        # self.dir_max_z =  40.6433994556
+        # self.dir_min_z =  -0.6591004764
 
         len_flow = self.dir_max_flow - self.dir_min_flow
         len_y = self.dir_max_y - self.dir_min_y
