@@ -36,7 +36,7 @@ class PerfusionGasExchangeModel():
             for param in self.params:
                 file.write(f'Parameter {param}: {self.params[param]}\n')
 
-    def import_mesh(self, mesh_path, meshtype=None, type="h5", periodic=False, max_dims = [41.2, 40.7, 40.7], min_dims = [-1.2, -0.7, -0.7], tol=0.2):
+    def import_mesh(self, mesh_path, meshtype=None, type="h5", periodic=False, max_dims = [41.2, 40.7, 40.7], min_dims = [-1.2, -0.7, -0.7]):
         '''Imports mesh from .h5 file for use in simulations.
 
         mesh_path: path to file. (string)
@@ -103,10 +103,6 @@ class PerfusionGasExchangeModel():
         len_flow = self.dir_max_flow - self.dir_min_flow
         len_y = self.dir_max_y - self.dir_min_y
         len_z = self.dir_max_z - self.dir_min_z
-        
-        # Tolerance for boundary instancing
-        
-        self.tol = tol
 
         # Save mesh dims for other uses
 
@@ -127,16 +123,18 @@ class PerfusionGasExchangeModel():
         
         # Instance the relevant boundaries
         print("Instancing boundaries")
+        
+        tol = 0.2
 
         if not self.periodic:
             self.gamma_in = GammaIn(
-                self.dir_min_flow, self.dir_max_flow, self.tol
+                self.dir_min_flow, self.dir_max_flow, tol
             )
             self.gamma_out = GammaOut(
-                self.dir_min_flow, self.dir_max_flow, self.tol
+                self.dir_min_flow, self.dir_max_flow, tol
             )
             self.gamma_air = GammaAir(
-                self.dir_min_y, self.dir_max_y, self.dir_min_z, self.dir_max_z, self.tol
+                self.dir_min_y, self.dir_max_y, self.dir_min_z, self.dir_max_z, tol
             )
 
             print("gamma_in.dir_min = ", self.gamma_in.dir_min)
@@ -163,8 +161,8 @@ class PerfusionGasExchangeModel():
         '''Instances the relevant function spaces.'''
 
         if not self.periodic:
-            self.W_h = FunctionSpace(self.mesh, 'Lagrange', 2)
-            self.V_h = VectorFunctionSpace(self.mesh, 'Lagrange', 1)
+            self.W_h = FunctionSpace(self.mesh, 'Lagrange', 2) # degree n+1
+            self.V_h = VectorFunctionSpace(self.mesh, 'Lagrange', 1) # degree n
         else:
             self.W_h = FunctionSpace(
                 self.mesh, 'Lagrange', 2,
@@ -179,7 +177,7 @@ class PerfusionGasExchangeModel():
         '''Solves the perfusion (P) problem of the model.
         
         save: saves to vtk. (bool)
-        meshtype: type of mesh. None, "sheet" or "tkd". (None or str)
+        meshtype: type of mesh. None, "slab" or "tkd". (None or str)
         '''
         print("began sim_p")
         self.instance_boundaries(mesh=meshtype)
@@ -187,11 +185,10 @@ class PerfusionGasExchangeModel():
         self.instance_function_spaces()
 
         # Declare Dirichlet boundary conditions for (P)
-
         self.p_dbc = [
             DirichletBC(self.W_h, self.params['p_min'], self.gamma_out)
         ]
-
+        
         # Assemble problem
 
         ds = Measure('ds', domain=self.mesh, subdomain_data=self.boundaries)
@@ -206,20 +203,15 @@ class PerfusionGasExchangeModel():
 
         self.p = Function(self.W_h)
         solve(
-            a == F, self.p, self.p_dbc#,
-            #solver_parameters={
-            #    'linear_solver': 'gmres',
-            #    'preconditioner': 'ilu'
-            #}
+            a == F, self.p, self.p_dbc
         )
+        #, solver_parameters={'linear_solver' : 'superlu'}
         print("P problem solved")
-
         self.u = project(
             -1/self.params['mu']*self.params['kappa']*grad(self.p),
             self.V_h
         )
         print("u problem solved")
-
         self.u.rename("u", "blood velocity [um/s]")
         self.p.rename("p", "blood pressure [mmHg]")
 
@@ -233,8 +225,9 @@ class PerfusionGasExchangeModel():
             p_file << self.p
             print("saved")
 
-    def set_u(self, value=(0, 0, 0), meshtype='sheet', save=True):
+    def set_u(self, value=(0, 0, 0), meshtype='slab', save=True):
         '''Prescribes a velocity field u to the mesh instead of solving (P).
+
         value: uniform velocity field. (tuple)
         meshtype: specific case of mesh. (string or None)
         save: saves to vtk. (bool)
@@ -297,7 +290,7 @@ class PerfusionGasExchangeModel():
         else:
             raise ValueError('Gas species in f must be O2 or CO2.')
 
-    def sim_t(self, hb=True, save=True, guess=None):
+    def sim_t(self, hb=True, save=True, guess=None, stabilizer=None):
         '''Solves the steady state blood-side transport (T) problem of the
         model.
         
@@ -368,16 +361,106 @@ class PerfusionGasExchangeModel():
         else:
             G_c_O2 = self.c_HbO2*eta*dx
             G_c_CO2 = self.c_HbCO2*xi*dx
+        
+        # if guess:
+        #     if stabilizer == 'SUPG':
+               
+        #         # Norm of velocity field and element size
+        #         norm_u = norm(self.u)
+        #         h = self.mesh.hmax()
+                
+        #         # Stabilizing parameters (tau), with approximation
+                
+        #         # p_O2 stabilizing parameter
+        #         k = d_pla_O2
+        #         Pe = (norm_u*h)/(2*k) # value =~ 24
+        #         if Pe >= 1:
+        #             tau_p_O2 = h/(2*norm_u)
+        #         else: 
+        #             tau_p_O2 = (h**2)/(12*k)
+                
+        #         # p_CO2 stabilizing parameter
+        #         k = d_pla_CO2
+        #         Pe = (norm_u*h)/(2*k)
+        #         if Pe >= 1:
+        #             tau_p_CO2 = h/(2*norm_u)
+        #         else: 
+        #             tau_p_CO2 = (h**2)/(12*k)
+                    
+        #         # Temporary c_HbO2 and c_HbCO2 stabilizing parameters 
+        #         tau_c_HbO2 = tau_p_O2*1e-16
+        #         tau_c_HbCO2 = tau_p_CO2*1e-16
+
+        #         # Advection terms 
+        #         L_adv_p_O2 =    inner(self.u,grad(v))
+        #         L_adv_p_CO2 =   inner(self.u, grad(w))
+        #         L_adv_c_HbO2 =  -inner(self.u, grad(eta))
+        #         L_adv_c_HbCO2 = -inner(self.u, grad(xi))
+                
+        #         # LHS of (47a) and (47b) equations
+        #         L_p_O2 =        -d_pla_O2*div(grad(self.p_O2))      + inner(self.u,grad(self.p_O2))     + self.f('O2', self.p_O2, self.c_HbO2, self.c_HbCO2) #
+        #         L_p_CO2 =       -d_pla_CO2*div(grad(self.p_CO2))    + inner(self.u,grad(self.p_CO2))    + self.f('CO2', self.p_CO2, self.c_HbO2, self.c_HbCO2) #
+        #         L_c_HbO2 =      self.g('O2', self.p_O2, self.c_HbO2, self.c_HbCO2)   - inner(self.u,grad(self.c_HbO2)) 
+        #         L_c_HbCO2 =     self.g('CO2', self.p_CO2, self.c_HbO2, self.c_HbCO2) - inner(self.u,grad(self.c_HbCO2)) 
+
+        #         G_p_O2  += tau_p_O2*L_p_O2*L_adv_p_O2*dx
+        #         G_p_CO2 += tau_p_CO2*L_p_CO2*L_adv_p_CO2*dx
+        #         G_c_O2  += tau_c_HbO2*L_adv_c_HbO2*L_c_HbO2*dx
+        #         G_c_CO2 += tau_c_HbCO2*L_adv_c_HbCO2*L_c_HbCO2*dx
+        #         print("Added all SUPG stabilizing terms.")
+
+        #     elif stabilizer == 'GLS':
+        #         tau_k = 1
+        #         # Norm of velocity field and element size
+        #         norm_u = norm(self.u)
+        #         h = self.mesh.hmax()
+                
+        #         # Stabilizing parameters (tau), with approximation
+                
+        #         # p_O2 stabilizing parameter
+        #         k = d_pla_O2
+                
+        #         L_v =           -d_pla_O2*div(grad(v)) + inner(self.u,grad(v)) + self.f('O2',  v, self.c_HbO2, self.c_HbCO2)
+        #         L_w =           -d_pla_CO2*div(grad(w))+ inner(self.u,grad(w)) - self.f('CO2', w, self.c_HbO2, self.c_HbCO2)
+        #         L_eta =         self.g('O2', eta, self.c_HbO2, self.c_HbCO2) - inner(self.u,grad(eta))
+        #         L_xi =          self.g('CO2', xi, self.c_HbO2, self.c_HbCO2) - inner(self.u,grad(xi))
+
+        #         L_p_O2 =        -d_pla_O2*div(grad(self.p_O2))  + inner(self.u,grad(self.p_O2))  + self.f('O2', self.p_O2, self.c_HbO2, self.c_HbCO2)
+        #         L_p_CO2 =       -d_pla_CO2*div(grad(self.p_CO2))+ inner(self.u,grad(self.p_CO2)) - self.f('CO2', self.p_CO2, self.c_HbO2, self.c_HbCO2)
+        #         L_c_HbO2 =      self.g('O2', self.p_O2, self.c_HbO2, self.c_HbCO2)   - inner(self.u,grad(self.c_HbO2))
+        #         L_c_HbCO2 =     self.g('CO2', self.p_CO2, self.c_HbO2, self.c_HbCO2) - inner(self.u,grad(self.c_HbCO2)) 
+
+        #         G_p_O2 += tau_k*inner(L_v,L_p_O2)*dx
+        #         G_p_CO2 += tau_k*inner(L_w,L_p_CO2)*dx
+        #         G_c_O2 += tau_k*inner(L_eta,L_c_HbO2)*dx
+        #         G_c_CO2 += tau_k*inner(L_xi,L_c_HbCO2)*dx
+
+        #     elif stabilizer == 'SGS':
+        #         tau_k = 1
+        #         L_v_star =      -d_pla_O2*div(grad(v)) + dot(self.u,grad(v)) - self.f('O2',  v, self.c_HbO2, self.c_HbCO2)
+        #         L_w_star =      -d_pla_CO2*div(grad(w))+ dot(self.u,grad(w)) - self.f('CO2', w, self.c_HbO2, self.c_HbCO2)
+        #         L_eta_star =    - self.g('O2', eta, self.c_HbO2, self.c_HbCO2) - dot(self.u,grad(eta))
+        #         L_xi_star =     - self.g('CO2', xi, self.c_HbO2, self.c_HbCO2) - dot(self.u,grad(xi))
+
+        #         L_p_O2 =        -d_pla_O2*div(grad(self.p_O2))+ dot(self.u,grad(self.p_O2)) + self.f('O2', self.p_O2, self.c_HbO2, self.c_HbCO2)*v
+        #         L_p_CO2 =       -d_pla_CO2*div(grad(self.p_CO2))+ dot(self.u,grad(self.p_CO2)) - self.f('CO2', self.p_CO2, self.c_HbO2, self.c_HbCO2)*w
+        #         L_c_O2 =        self.g('O2', self.p_O2, self.c_HbO2, self.c_HbCO2)*eta - dot(self.u,grad(self.c_HbO2))
+        #         L_c_CO2 =       self.g('CO2', self.p_CO2, self.c_HbO2, self.c_HbCO2)*xi - dot(self.u,grad(self.c_HbCO2)) 
+
+        #         G_p_O2 += tau_k*inner(L_v_star,L_p_O2)*dx
+        #         G_p_CO2 += tau_k*inner(L_w_star,L_p_CO2)*dx
+        #         G_c_O2 += tau_k*inner(L_eta_star,L_c_HbO2)*dx
+        #         G_c_CO2 += tau_k*inner(L_xi_star,L_c_HbCO2)*dx
 
         G = G_p_O2 + G_p_CO2 + G_c_O2 + G_c_CO2
-
+     
         if save:
             if guess is None:
+            # Create files for output
                 p_O2_file = File(self.folder_path+'/t/pO2_linear.pvd')
                 p_CO2_file = File(self.folder_path+'/t/pCO2_linear.pvd')
                 c_HbO2_file = File(self.folder_path+'/t/cHbO2_linear.pvd')
                 c_HbCO2_file = File(self.folder_path+'/t/cHbCO2_linear.pvd')
-            # Create files for output
             else:
                 p_O2_file = File(self.folder_path+'/t/pO2.pvd')
                 p_CO2_file = File(self.folder_path+'/t/pCO2.pvd')
