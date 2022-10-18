@@ -25,8 +25,11 @@ Project tested in MATLAB R2021a Update 6, Python 3.
 Used libraries:
 
 - [`FEniCS`](https://fenicsproject.org/) 2019.1.0
-- `numpy`
-- `scipy`
-- `matplotlib`
-- `os`
-- `sys`
+- [`TetGen bindigs for Python`](https://tetgen.pyvista.org) 0.6.1
+- [`Trimesh`](https://trimsh.org/trimesh.html) 3.15.1
+- [`PyVista`](https://docs.pyvista.org) 0.34.0
+- [`PyMeshFix`](https://pymeshfix.pyvista.org) 0.16.1, a Python/Cython wrapper for [`MeshFix`](https://github.com/MarcoAttene/MeshFix-V2.1).
+- [`numpy`](https://numpy.org) 1.23.4
+- [`scipy`](https://scipy.org) 1.9.2
+- [`matplotlib`](https://matplotlib.org) 3.6.1
+- `os`, `sys`
