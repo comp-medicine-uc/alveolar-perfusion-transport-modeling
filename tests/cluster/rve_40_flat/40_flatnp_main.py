@@ -21,7 +21,7 @@ print("Imported src files")
 print("Starting...")
 folder = "meshio_np"
 path = os.path.join("../../../results-data", folder)
-model = PerfusionGasExchangeModel(folder_path=path, params=params)
+model = PerfusionGasExchangeModel(folder_path=path, params=params, solver='gmres')
 print("Model initialised")
 model.import_mesh(
     os.path.join("../../../raw-data/rve_40_flat/meshio", "rve_40_flat.xdmf"), type="xdmf", 

@@ -17,7 +17,7 @@ class PerfusionGasExchangeModel():
     '''FEniCS simulater class for microscale alveolar perfusion and gas exchange
     model.
     '''
-    def __init__(self, folder_path, params):
+    def __init__(self, folder_path, params, solver=''):
         '''Instance the model.
 
         folder_path: path to folder for storing solution files. (string)
@@ -25,6 +25,7 @@ class PerfusionGasExchangeModel():
         '''
         self.folder_path = folder_path
         self.params = params
+        self.solver = solver
 
         # Save details
         if not os.path.exists(self.folder_path):
@@ -205,13 +206,18 @@ class PerfusionGasExchangeModel():
         # Solve problem
 
         self.p = Function(self.W_h)
-        solve(
-            a == F, self.p, self.p_dbc#,
-            #solver_parameters={
-            #    'linear_solver': 'gmres',
-            #    'preconditioner': 'ilu'
-            #}
-        )
+        if solver == 'gmres':    
+            solve(
+                a == F, self.p, self.p_dbc,
+                solver_parameters={
+                    'linear_solver': 'gmres',
+                    'preconditioner': 'ilu'
+                }
+            )
+        else:
+            solve(
+                a == F, self.p, self.p_dbc
+            )
         print("P problem solved")
 
         self.u = project(

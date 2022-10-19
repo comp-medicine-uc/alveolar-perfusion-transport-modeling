@@ -12,5 +12,5 @@
 #SBATCH --mail-user=biherrera@uc.cl
 #SBATCH --mail-type=ALL
 
-python3 40_flat_main.py
+python3 40_flatnp_main.py
 
