@@ -206,7 +206,7 @@ class PerfusionGasExchangeModel():
         # Solve problem
 
         self.p = Function(self.W_h)
-        if solver == 'gmres':    
+        if self.solver == 'gmres':    
             solve(
                 a == F, self.p, self.p_dbc,
                 solver_parameters={
