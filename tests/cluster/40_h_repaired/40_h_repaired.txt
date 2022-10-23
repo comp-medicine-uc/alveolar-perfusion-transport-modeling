@@ -1,0 +1,520 @@
+Process 18: Solving linear variational problem.
+Process 0: Solving linear variational problem.
+Process 10: Solving linear variational problem.
+Process 8: Solving linear variational problem.
+Process 14: Solving linear variational problem.
+Process 1: Solving linear variational problem.
+Process 5: Solving linear variational problem.
+Process 9: Solving linear variational problem.
+Process 11: Solving linear variational problem.
+Process 12: Solving linear variational problem.
+Process 13: Solving linear variational problem.
+Process 16: Solving linear variational problem.
+Process 6: Solving linear variational problem.
+Process 2: Solving linear variational problem.
+Process 4: Solving linear variational problem.
+Process 7: Solving linear variational problem.
+Process 17: Solving linear variational problem.
+Process 15: Solving linear variational problem.
+Process 19: Solving linear variational problem.
+Process 3: Solving linear variational problem.
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+Model initialised
+Mesh imported
+Coordinates have shape  (2028, 3)
+Mesh imported
+Mesh refined
+Starting (P) simulation
+began sim_p
+Instancing boundaries
+gamma_in.dir_min =  0.09939099848270416
+gamma_in.dir_max =  39.894161224365234
+gamma_out.dir_min =  0.09939099848270416
+gamma_out.dir_max =  39.894161224365234
+gamma_air.dir_min_y =  0.09558500349521637
+gamma_air.dir_max_y =  39.895729064941406
+gamma_air.dir_min_z =  0.1048400029540062
+gamma_air.dir_max_z =  39.89208984375
+boundaries instanced
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+Model initialised
+Mesh imported
+Coordinates have shape  (2177, 3)
+Mesh imported
+Mesh refined
+Starting (P) simulation
+began sim_p
+Instancing boundaries
+gamma_in.dir_min =  0.09939099848270416
+gamma_in.dir_max =  39.894161224365234
+gamma_out.dir_min =  0.09939099848270416
+gamma_out.dir_max =  39.894161224365234
+gamma_air.dir_min_y =  0.09558500349521637
+gamma_air.dir_max_y =  39.895729064941406
+gamma_air.dir_min_z =  0.1048400029540062
+gamma_air.dir_max_z =  39.89208984375
+boundaries instanced
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+Model initialised
+Mesh imported
+Coordinates have shape  (2114, 3)
+Mesh imported
+Mesh refined
+Starting (P) simulation
+began sim_p
+Instancing boundaries
+gamma_in.dir_min =  0.09939099848270416
+gamma_in.dir_max =  39.894161224365234
+gamma_out.dir_min =  0.09939099848270416
+gamma_out.dir_max =  39.894161224365234
+gamma_air.dir_min_y =  0.09558500349521637
+gamma_air.dir_max_y =  39.895729064941406
+gamma_air.dir_min_z =  0.1048400029540062
+gamma_air.dir_max_z =  39.89208984375
+boundaries instanced
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+Model initialised
+Mesh imported
+Coordinates have shape  (1906, 3)
+Mesh imported
+Mesh refined
+Starting (P) simulation
+began sim_p
+Instancing boundaries
+gamma_in.dir_min =  0.09939099848270416
+gamma_in.dir_max =  39.894161224365234
+gamma_out.dir_min =  0.09939099848270416
+gamma_out.dir_max =  39.894161224365234
+gamma_air.dir_min_y =  0.09558500349521637
+gamma_air.dir_max_y =  39.895729064941406
+gamma_air.dir_min_z =  0.1048400029540062
+gamma_air.dir_max_z =  39.89208984375
+boundaries instanced
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+Model initialised
+Mesh imported
+Coordinates have shape  (2107, 3)
+Mesh imported
+Mesh refined
+Starting (P) simulation
+began sim_p
+Instancing boundaries
+gamma_in.dir_min =  0.09939099848270416
+gamma_in.dir_max =  39.894161224365234
+gamma_out.dir_min =  0.09939099848270416
+gamma_out.dir_max =  39.894161224365234
+gamma_air.dir_min_y =  0.09558500349521637
+gamma_air.dir_max_y =  39.895729064941406
+gamma_air.dir_min_z =  0.1048400029540062
+gamma_air.dir_max_z =  39.89208984375
+boundaries instanced
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+Model initialised
+Mesh imported
+Coordinates have shape  (2109, 3)
+Mesh imported
+Mesh refined
+Starting (P) simulation
+began sim_p
+Instancing boundaries
+gamma_in.dir_min =  0.09939099848270416
+gamma_in.dir_max =  39.894161224365234
+gamma_out.dir_min =  0.09939099848270416
+gamma_out.dir_max =  39.894161224365234
+gamma_air.dir_min_y =  0.09558500349521637
+gamma_air.dir_max_y =  39.895729064941406
+gamma_air.dir_min_z =  0.1048400029540062
+gamma_air.dir_max_z =  39.89208984375
+boundaries instanced
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+Model initialised
+Mesh imported
+Coordinates have shape  (2104, 3)
+Mesh imported
+Mesh refined
+Starting (P) simulation
+began sim_p
+Instancing boundaries
+gamma_in.dir_min =  0.09939099848270416
+gamma_in.dir_max =  39.894161224365234
+gamma_out.dir_min =  0.09939099848270416
+gamma_out.dir_max =  39.894161224365234
+gamma_air.dir_min_y =  0.09558500349521637
+gamma_air.dir_max_y =  39.895729064941406
+gamma_air.dir_min_z =  0.1048400029540062
+gamma_air.dir_max_z =  39.89208984375
+boundaries instanced
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+Model initialised
+Mesh imported
+Coordinates have shape  (2120, 3)
+Mesh imported
+Mesh refined
+Starting (P) simulation
+began sim_p
+Instancing boundaries
+gamma_in.dir_min =  0.09939099848270416
+gamma_in.dir_max =  39.894161224365234
+gamma_out.dir_min =  0.09939099848270416
+gamma_out.dir_max =  39.894161224365234
+gamma_air.dir_min_y =  0.09558500349521637
+gamma_air.dir_max_y =  39.895729064941406
+gamma_air.dir_min_z =  0.1048400029540062
+gamma_air.dir_max_z =  39.89208984375
+boundaries instanced
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+Model initialised
+Mesh imported
+Coordinates have shape  (2131, 3)
+Mesh imported
+Mesh refined
+Starting (P) simulation
+began sim_p
+Instancing boundaries
+gamma_in.dir_min =  0.09939099848270416
+gamma_in.dir_max =  39.894161224365234
+gamma_out.dir_min =  0.09939099848270416
+gamma_out.dir_max =  39.894161224365234
+gamma_air.dir_min_y =  0.09558500349521637
+gamma_air.dir_max_y =  39.895729064941406
+gamma_air.dir_min_z =  0.1048400029540062
+gamma_air.dir_max_z =  39.89208984375
+boundaries instanced
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+Model initialised
+Mesh imported
+Coordinates have shape  (2043, 3)
+Mesh imported
+Mesh refined
+Starting (P) simulation
+began sim_p
+Instancing boundaries
+gamma_in.dir_min =  0.09939099848270416
+gamma_in.dir_max =  39.894161224365234
+gamma_out.dir_min =  0.09939099848270416
+gamma_out.dir_max =  39.894161224365234
+gamma_air.dir_min_y =  0.09558500349521637
+gamma_air.dir_max_y =  39.895729064941406
+gamma_air.dir_min_z =  0.1048400029540062
+gamma_air.dir_max_z =  39.89208984375
+boundaries instanced
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+Model initialised
+Mesh imported
+Coordinates have shape  (2108, 3)
+Mesh imported
+Mesh refined
+Starting (P) simulation
+began sim_p
+Instancing boundaries
+gamma_in.dir_min =  0.09939099848270416
+gamma_in.dir_max =  39.894161224365234
+gamma_out.dir_min =  0.09939099848270416
+gamma_out.dir_max =  39.894161224365234
+gamma_air.dir_min_y =  0.09558500349521637
+gamma_air.dir_max_y =  39.895729064941406
+gamma_air.dir_min_z =  0.1048400029540062
+gamma_air.dir_max_z =  39.89208984375
+boundaries instanced
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+Model initialised
+Mesh imported
+Coordinates have shape  (2066, 3)
+Mesh imported
+Mesh refined
+Starting (P) simulation
+began sim_p
+Instancing boundaries
+gamma_in.dir_min =  0.09939099848270416
+gamma_in.dir_max =  39.894161224365234
+gamma_out.dir_min =  0.09939099848270416
+gamma_out.dir_max =  39.894161224365234
+gamma_air.dir_min_y =  0.09558500349521637
+gamma_air.dir_max_y =  39.895729064941406
+gamma_air.dir_min_z =  0.1048400029540062
+gamma_air.dir_max_z =  39.89208984375
+boundaries instanced
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+Model initialised
+Mesh imported
+Coordinates have shape  (2060, 3)
+Mesh imported
+Mesh refined
+Starting (P) simulation
+began sim_p
+Instancing boundaries
+gamma_in.dir_min =  0.09939099848270416
+gamma_in.dir_max =  39.894161224365234
+gamma_out.dir_min =  0.09939099848270416
+gamma_out.dir_max =  39.894161224365234
+gamma_air.dir_min_y =  0.09558500349521637
+gamma_air.dir_max_y =  39.895729064941406
+gamma_air.dir_min_z =  0.1048400029540062
+gamma_air.dir_max_z =  39.89208984375
+boundaries instanced
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+Model initialised
+Mesh imported
+Coordinates have shape  (2132, 3)
+Mesh imported
+Mesh refined
+Starting (P) simulation
+began sim_p
+Instancing boundaries
+gamma_in.dir_min =  0.09939099848270416
+gamma_in.dir_max =  39.894161224365234
+gamma_out.dir_min =  0.09939099848270416
+gamma_out.dir_max =  39.894161224365234
+gamma_air.dir_min_y =  0.09558500349521637
+gamma_air.dir_max_y =  39.895729064941406
+gamma_air.dir_min_z =  0.1048400029540062
+gamma_air.dir_max_z =  39.89208984375
+boundaries instanced
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+Model initialised
+Mesh imported
+Coordinates have shape  (2104, 3)
+Mesh imported
+Mesh refined
+Starting (P) simulation
+began sim_p
+Instancing boundaries
+gamma_in.dir_min =  0.09939099848270416
+gamma_in.dir_max =  39.894161224365234
+gamma_out.dir_min =  0.09939099848270416
+gamma_out.dir_max =  39.894161224365234
+gamma_air.dir_min_y =  0.09558500349521637
+gamma_air.dir_max_y =  39.895729064941406
+gamma_air.dir_min_z =  0.1048400029540062
+gamma_air.dir_max_z =  39.89208984375
+boundaries instanced
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+Model initialised
+Mesh imported
+Coordinates have shape  (2059, 3)
+Mesh imported
+Mesh refined
+Starting (P) simulation
+began sim_p
+Instancing boundaries
+gamma_in.dir_min =  0.09939099848270416
+gamma_in.dir_max =  39.894161224365234
+gamma_out.dir_min =  0.09939099848270416
+gamma_out.dir_max =  39.894161224365234
+gamma_air.dir_min_y =  0.09558500349521637
+gamma_air.dir_max_y =  39.895729064941406
+gamma_air.dir_min_z =  0.1048400029540062
+gamma_air.dir_max_z =  39.89208984375
+boundaries instanced
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+Model initialised
+Mesh imported
+Coordinates have shape  (2005, 3)
+Mesh imported
+Mesh refined
+Starting (P) simulation
+began sim_p
+Instancing boundaries
+gamma_in.dir_min =  0.09939099848270416
+gamma_in.dir_max =  39.894161224365234
+gamma_out.dir_min =  0.09939099848270416
+gamma_out.dir_max =  39.894161224365234
+gamma_air.dir_min_y =  0.09558500349521637
+gamma_air.dir_max_y =  39.895729064941406
+gamma_air.dir_min_z =  0.1048400029540062
+gamma_air.dir_max_z =  39.89208984375
+boundaries instanced
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+Model initialised
+Mesh imported
+Coordinates have shape  (2142, 3)
+Mesh imported
+Mesh refined
+Starting (P) simulation
+began sim_p
+Instancing boundaries
+gamma_in.dir_min =  0.09939099848270416
+gamma_in.dir_max =  39.894161224365234
+gamma_out.dir_min =  0.09939099848270416
+gamma_out.dir_max =  39.894161224365234
+gamma_air.dir_min_y =  0.09558500349521637
+gamma_air.dir_max_y =  39.895729064941406
+gamma_air.dir_min_z =  0.1048400029540062
+gamma_air.dir_max_z =  39.89208984375
+boundaries instanced
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+Model initialised
+Mesh imported
+Coordinates have shape  (2102, 3)
+Mesh imported
+Mesh refined
+Starting (P) simulation
+began sim_p
+Instancing boundaries
+gamma_in.dir_min =  0.09939099848270416
+gamma_in.dir_max =  39.894161224365234
+gamma_out.dir_min =  0.09939099848270416
+gamma_out.dir_max =  39.894161224365234
+gamma_air.dir_min_y =  0.09558500349521637
+gamma_air.dir_max_y =  39.895729064941406
+gamma_air.dir_min_z =  0.1048400029540062
+gamma_air.dir_max_z =  39.89208984375
+boundaries instanced
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+Model initialised
+Mesh imported
+Coordinates have shape  (2151, 3)
+Mesh imported
+Mesh refined
+Starting (P) simulation
+began sim_p
+Instancing boundaries
+gamma_in.dir_min =  0.09939099848270416
+gamma_in.dir_max =  39.894161224365234
+gamma_out.dir_min =  0.09939099848270416
+gamma_out.dir_max =  39.894161224365234
+gamma_air.dir_min_y =  0.09558500349521637
+gamma_air.dir_max_y =  39.895729064941406
+gamma_air.dir_min_z =  0.1048400029540062
+gamma_air.dir_max_z =  39.89208984375
+boundaries instanced
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
