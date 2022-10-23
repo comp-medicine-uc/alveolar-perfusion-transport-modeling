@@ -12,5 +12,5 @@
 #SBATCH --mail-user=biherrera@uc.cl
 #SBATCH --mail-type=ALL
 
-mpirun -n 20 python3 40_h_repaired.py
+mpirun -n 20 python3 40_h_repaired_main.py
 
