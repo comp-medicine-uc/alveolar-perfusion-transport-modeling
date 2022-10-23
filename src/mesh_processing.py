@@ -26,7 +26,7 @@ mesh = meshio.read(path+src)
 #Get point data and modify it
 points = mesh.points
 # cells = mesh.cells
-# size = np.shape(points)
+size = np.shape(points)
 # print(size)
 # print(points)
 # # # np.set_printoptions(threshold=sys.maxsize)
