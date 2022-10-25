@@ -6,7 +6,8 @@ __email__ = 'pzurita@uc.cl'
 
 
 mu = 3.5*0.00750062E-3  # mmHg*s
-kappa = mu*5000 #mu*30000  # um^2s
+# kappa = mu*5000 #mu*30000  # um^2s
+kappa = mu*5 # modified, 1000 times 
 p_max = 12  # mmHg
 p_min = 8  # mmHg
 u_in = 200  # um/s
