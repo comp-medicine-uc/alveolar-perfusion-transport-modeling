@@ -19,7 +19,7 @@ from src.params import params
     
 print("Imported src files")
 print("Starting...")
-folder = "40_h_repaired"
+folder = "ilu_40_h_repaired"
 path = os.path.join("../../../results-data", folder)
 model = PerfusionGasExchangeModel(folder_path=path, params=params)
 
