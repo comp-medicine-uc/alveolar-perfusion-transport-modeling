@@ -1,8 +1,8 @@
-Simulation done on 2022-10-22
+Simulation done on 2022-10-24
 
 Parameters used:
 
-Parameter kappa: 0.13126085
+Parameter kappa: 0.00013126085
 Parameter mu: 2.625217e-05
 Parameter p_max: 12
 Parameter p_min: 8
