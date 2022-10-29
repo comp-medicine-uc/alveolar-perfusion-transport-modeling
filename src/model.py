@@ -443,7 +443,7 @@ class PerfusionGasExchangeModel():
                     "relative_tolerance": 1E-8,
                     "absolute_tolerance": 1E-8,
                     "linear_solver": "gmres",
-                    "preconditioner": "sor"
+                    "preconditioner": "icc"
                 }}
         elif preconditioner == 'petsc_amg':
                 solver_parameters={"newton_solver": {
@@ -463,8 +463,8 @@ class PerfusionGasExchangeModel():
                 solver_parameters={"newton_solver": {
                     "relative_tolerance": 1E-8,
                     "absolute_tolerance": 1E-8,
-                    "linear_solver": "petsc",
-                    "preconditioner": "petsc_amg"
+                    "linear_solver": "richardson",
+                    "preconditioner": "sor"
                 }}
                             
         if save:
