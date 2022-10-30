@@ -1,153 +1,288 @@
 Process 0: Solving linear variational problem.
-Process 8: Solving linear variational problem.
-Process 15: Solving linear variational problem.
-Process 7: Solving linear variational problem.
-Process 6: Solving linear variational problem.
-Process 3: Solving linear variational problem.
-Process 18: Solving linear variational problem.
-Process 1: Solving linear variational problem.
-Process 5: Solving linear variational problem.
-Process 12: Solving linear variational problem.
-Process 16: Solving linear variational problem.
-Process 17: Solving linear variational problem.
 Process 11: Solving linear variational problem.
-Process 13: Solving linear variational problem.
-Process 9: Solving linear variational problem.
-Process 10: Solving linear variational problem.
-Process 2: Solving linear variational problem.
-Process 14: Solving linear variational problem.
+Process 17: Solving linear variational problem.
 Process 19: Solving linear variational problem.
+Process 15: Solving linear variational problem.
+Process 2: Solving linear variational problem.
+Process 3: Solving linear variational problem.
+Process 5: Solving linear variational problem.
+Process 1: Solving linear variational problem.
+Process 16: Solving linear variational problem.
 Process 4: Solving linear variational problem.
-Process 5: No Jacobian form specified for nonlinear variational problem.
-Process 5: Differentiating residual form F to obtain Jacobian J = F'.
-Process 0: No Jacobian form specified for nonlinear variational problem.
-Process 0: Differentiating residual form F to obtain Jacobian J = F'.
-Process 13: No Jacobian form specified for nonlinear variational problem.
-Process 13: Differentiating residual form F to obtain Jacobian J = F'.
-Process 15: No Jacobian form specified for nonlinear variational problem.
-Process 15: Differentiating residual form F to obtain Jacobian J = F'.
-Process 16: No Jacobian form specified for nonlinear variational problem.
-Process 16: Differentiating residual form F to obtain Jacobian J = F'.
-Process 17: No Jacobian form specified for nonlinear variational problem.
-Process 17: Differentiating residual form F to obtain Jacobian J = F'.
-Process 2: No Jacobian form specified for nonlinear variational problem.
-Process 2: Differentiating residual form F to obtain Jacobian J = F'.
-Process 12: No Jacobian form specified for nonlinear variational problem.
-Process 12: Differentiating residual form F to obtain Jacobian J = F'.
-Process 4: No Jacobian form specified for nonlinear variational problem.
-Process 4: Differentiating residual form F to obtain Jacobian J = F'.
-Process 9: No Jacobian form specified for nonlinear variational problem.
-Process 9: Differentiating residual form F to obtain Jacobian J = F'.
-Process 8: No Jacobian form specified for nonlinear variational problem.
-Process 19: No Jacobian form specified for nonlinear variational problem.
-Process 19: Differentiating residual form F to obtain Jacobian J = F'.
-Process 8: Differentiating residual form F to obtain Jacobian J = F'.
-Process 7: No Jacobian form specified for nonlinear variational problem.
-Process 7: Differentiating residual form F to obtain Jacobian J = F'.
-Process 3: No Jacobian form specified for nonlinear variational problem.
-Process 3: Differentiating residual form F to obtain Jacobian J = F'.
-Process 11: No Jacobian form specified for nonlinear variational problem.
-Process 11: Differentiating residual form F to obtain Jacobian J = F'.
-Process 6: No Jacobian form specified for nonlinear variational problem.
-Process 6: Differentiating residual form F to obtain Jacobian J = F'.
+Process 6: Solving linear variational problem.
+Process 7: Solving linear variational problem.
+Process 9: Solving linear variational problem.
+Process 12: Solving linear variational problem.
+Process 14: Solving linear variational problem.
+Process 8: Solving linear variational problem.Process 13: Solving linear variational problem.
+
+Process 10: Solving linear variational problem.
+Process 18: Solving linear variational problem.
 Process 10: No Jacobian form specified for nonlinear variational problem.
 Process 10: Differentiating residual form F to obtain Jacobian J = F'.
 Process 18: No Jacobian form specified for nonlinear variational problem.
 Process 18: Differentiating residual form F to obtain Jacobian J = F'.
+Process 16: No Jacobian form specified for nonlinear variational problem.
+Process 16: Differentiating residual form F to obtain Jacobian J = F'.
+Process 6: No Jacobian form specified for nonlinear variational problem.
+Process 6: Differentiating residual form F to obtain Jacobian J = F'.
 Process 14: No Jacobian form specified for nonlinear variational problem.
 Process 14: Differentiating residual form F to obtain Jacobian J = F'.
+Process 0: No Jacobian form specified for nonlinear variational problem.
+Process 0: Differentiating residual form F to obtain Jacobian J = F'.
+Process 7: No Jacobian form specified for nonlinear variational problem.
+Process 7: Differentiating residual form F to obtain Jacobian J = F'.
+Process 9: No Jacobian form specified for nonlinear variational problem.
+Process 9: Differentiating residual form F to obtain Jacobian J = F'.
+Process 15: No Jacobian form specified for nonlinear variational problem.
+Process 15: Differentiating residual form F to obtain Jacobian J = F'.
 Process 1: No Jacobian form specified for nonlinear variational problem.
 Process 1: Differentiating residual form F to obtain Jacobian J = F'.
+Process 5: No Jacobian form specified for nonlinear variational problem.
+Process 11: No Jacobian form specified for nonlinear variational problem.
+Process 11: Differentiating residual form F to obtain Jacobian J = F'.
+Process 5: Differentiating residual form F to obtain Jacobian J = F'.
+Process 8: No Jacobian form specified for nonlinear variational problem.
+Process 8: Differentiating residual form F to obtain Jacobian J = F'.
+Process 17: No Jacobian form specified for nonlinear variational problem.
+Process 17: Differentiating residual form F to obtain Jacobian J = F'.
+Process 12: No Jacobian form specified for nonlinear variational problem.
+Process 12: Differentiating residual form F to obtain Jacobian J = F'.
+Process 4: No Jacobian form specified for nonlinear variational problem.
+Process 4: Differentiating residual form F to obtain Jacobian J = F'.
+Process 13: No Jacobian form specified for nonlinear variational problem.
+Process 13: Differentiating residual form F to obtain Jacobian J = F'.
+Process 19: No Jacobian form specified for nonlinear variational problem.
+Process 19: Differentiating residual form F to obtain Jacobian J = F'.
+Process 2: No Jacobian form specified for nonlinear variational problem.
+Process 2: Differentiating residual form F to obtain Jacobian J = F'.
+Process 3: No Jacobian form specified for nonlinear variational problem.
+Process 3: Differentiating residual form F to obtain Jacobian J = F'.
 Process 0: Solving nonlinear variational problem.
-Process 5: Solving nonlinear variational problem.
-Process 13: Solving nonlinear variational problem.
-Process 11: Solving nonlinear variational problem.
-Process 10: Solving nonlinear variational problem.
-Process 17: Solving nonlinear variational problem.
-Process 4: Solving nonlinear variational problem.
-Process 15: Solving nonlinear variational problem.
 Process 18: Solving nonlinear variational problem.
-Process 3: Solving nonlinear variational problem.
-Process 8: Solving nonlinear variational problem.
-Process 14: Solving nonlinear variational problem.
 Process 16: Solving nonlinear variational problem.
+Process 3: Solving nonlinear variational problem.
+Process 10: Solving nonlinear variational problem.
+Process 11: Solving nonlinear variational problem.
 Process 1: Solving nonlinear variational problem.
-Process 9: Solving nonlinear variational problem.
-Process 6: Solving nonlinear variational problem.
+Process 15: Solving nonlinear variational problem.
 Process 19: Solving nonlinear variational problem.
 Process 12: Solving nonlinear variational problem.
-Process 2: Solving nonlinear variational problem.
+Process 8: Solving nonlinear variational problem.
 Process 7: Solving nonlinear variational problem.
+Process 2: Solving nonlinear variational problem.
+Process 5: Solving nonlinear variational problem.
+Process 14: Solving nonlinear variational problem.
+Process 4: Solving nonlinear variational problem.Process 6: Solving nonlinear variational problem.
+
+Process 13: Solving nonlinear variational problem.
+Process 9: Solving nonlinear variational problem.
+Process 17: Solving nonlinear variational problem.
   Process 0: Newton iteration 0: r (abs) = 2.054e+07 (tol = 1.000e-08) r (rel) = 1.000e+00 (tol = 1.000e-08)
-  Process 0: Newton iteration 1: r (abs) = 5.976e-08 (tol = 1.000e-08) r (rel) = 2.909e-15 (tol = 1.000e-08)
+  Process 0: Newton iteration 1: r (abs) = 5.988e-08 (tol = 1.000e-08) r (rel) = 2.915e-15 (tol = 1.000e-08)
   Process 0: Newton solver finished in 1 iterations and 1 linear solver iterations.
-Process 0: No Jacobian form specified for nonlinear variational problem.
-Process 0: Differentiating residual form F to obtain Jacobian J = F'.
+Process 7: No Jacobian form specified for nonlinear variational problem.
+Process 7: Differentiating residual form F to obtain Jacobian J = F'.
 Process 8: No Jacobian form specified for nonlinear variational problem.
 Process 8: Differentiating residual form F to obtain Jacobian J = F'.
 Process 1: No Jacobian form specified for nonlinear variational problem.
 Process 1: Differentiating residual form F to obtain Jacobian J = F'.
-Process 14: No Jacobian form specified for nonlinear variational problem.
-Process 14: Differentiating residual form F to obtain Jacobian J = F'.
-Process 16: No Jacobian form specified for nonlinear variational problem.
-Process 16: Differentiating residual form F to obtain Jacobian J = F'.
-Process 11: No Jacobian form specified for nonlinear variational problem.
-Process 11: Differentiating residual form F to obtain Jacobian J = F'.
 Process 6: No Jacobian form specified for nonlinear variational problem.
-Process 12: No Jacobian form specified for nonlinear variational problem.
-Process 12: Differentiating residual form F to obtain Jacobian J = F'.
 Process 6: Differentiating residual form F to obtain Jacobian J = F'.
 Process 2: No Jacobian form specified for nonlinear variational problem.
 Process 2: Differentiating residual form F to obtain Jacobian J = F'.
-Process 9: No Jacobian form specified for nonlinear variational problem.
-Process 9: Differentiating residual form F to obtain Jacobian J = F'.
-Process 18: No Jacobian form specified for nonlinear variational problem.
-Process 18: Differentiating residual form F to obtain Jacobian J = F'.
-Process 10: No Jacobian form specified for nonlinear variational problem.
-Process 10: Differentiating residual form F to obtain Jacobian J = F'.
-Process 19: No Jacobian form specified for nonlinear variational problem.
-Process 19: Differentiating residual form F to obtain Jacobian J = F'.
+Process 0: No Jacobian form specified for nonlinear variational problem.
+Process 0: Differentiating residual form F to obtain Jacobian J = F'.
 Process 3: No Jacobian form specified for nonlinear variational problem.
 Process 3: Differentiating residual form F to obtain Jacobian J = F'.
+Process 11: No Jacobian form specified for nonlinear variational problem.
+Process 11: Differentiating residual form F to obtain Jacobian J = F'.
+Process 14: No Jacobian form specified for nonlinear variational problem.
+Process 14: Differentiating residual form F to obtain Jacobian J = F'.
+Process 18: No Jacobian form specified for nonlinear variational problem.
+Process 18: Differentiating residual form F to obtain Jacobian J = F'.
+Process 16: No Jacobian form specified for nonlinear variational problem.
+Process 16: Differentiating residual form F to obtain Jacobian J = F'.
 Process 15: No Jacobian form specified for nonlinear variational problem.
 Process 15: Differentiating residual form F to obtain Jacobian J = F'.
-Process 13: No Jacobian form specified for nonlinear variational problem.
-Process 13: Differentiating residual form F to obtain Jacobian J = F'.
-Process 4: No Jacobian form specified for nonlinear variational problem.
-Process 4: Differentiating residual form F to obtain Jacobian J = F'.
-Process 7: No Jacobian form specified for nonlinear variational problem.
-Process 7: Differentiating residual form F to obtain Jacobian J = F'.
+Process 19: No Jacobian form specified for nonlinear variational problem.
+Process 19: Differentiating residual form F to obtain Jacobian J = F'.
 Process 17: No Jacobian form specified for nonlinear variational problem.
 Process 17: Differentiating residual form F to obtain Jacobian J = F'.
+Process 10: No Jacobian form specified for nonlinear variational problem.
+Process 10: Differentiating residual form F to obtain Jacobian J = F'.
+Process 12: No Jacobian form specified for nonlinear variational problem.
+Process 12: Differentiating residual form F to obtain Jacobian J = F'.
+Process 4: No Jacobian form specified for nonlinear variational problem.
+Process 4: Differentiating residual form F to obtain Jacobian J = F'.
 Process 5: No Jacobian form specified for nonlinear variational problem.
 Process 5: Differentiating residual form F to obtain Jacobian J = F'.
+Process 13: No Jacobian form specified for nonlinear variational problem.
+Process 13: Differentiating residual form F to obtain Jacobian J = F'.
+Process 9: No Jacobian form specified for nonlinear variational problem.
+Process 9: Differentiating residual form F to obtain Jacobian J = F'.
 Process 0: Solving nonlinear variational problem.
-Process 4: Solving nonlinear variational problem.
-Process 18: Solving nonlinear variational problem.
-Process 5: Solving nonlinear variational problem.
-Process 6: Solving nonlinear variational problem.
-Process 8: Solving nonlinear variational problem.
-Process 10: Solving nonlinear variational problem.
-Process 1: Solving nonlinear variational problem.
-Process 13: Solving nonlinear variational problem.
-Process 12: Solving nonlinear variational problem.
-Process 16: Solving nonlinear variational problem.
 Process 11: Solving nonlinear variational problem.
+Process 4: Solving nonlinear variational problem.
+Process 8: Solving nonlinear variational problem.
+Process 9: Solving nonlinear variational problem.
 Process 14: Solving nonlinear variational problem.
 Process 3: Solving nonlinear variational problem.
+Process 6: Solving nonlinear variational problem.
+Process 13: Solving nonlinear variational problem.
+Process 15: Solving nonlinear variational problem.Process 5: Solving nonlinear variational problem.
+Process 10: Solving nonlinear variational problem.
 Process 19: Solving nonlinear variational problem.
-Process 17: Solving nonlinear variational problem.
-Process 7: Solving nonlinear variational problem.
-Process 9: Solving nonlinear variational problem.
+Process 16: Solving nonlinear variational problem.
+
+Process 17: Solving nonlinear variational problem.Process 18: Solving nonlinear variational problem.
 Process 2: Solving nonlinear variational problem.
-Process 15: Solving nonlinear variational problem.
+
+Process 12: Solving nonlinear variational problem.
+Process 1: Solving nonlinear variational problem.
+Process 7: Solving nonlinear variational problem.
   Process 0: Newton iteration 0: r (abs) = 5.175e+08 (tol = 1.000e-08) r (rel) = 1.000e+00 (tol = 1.000e-08)
 Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
 Imported src files
 Starting...
 Model initialised
 Mesh imported
-Coordinates have shape  (2142, 3)
+Coordinates have shape  (2028, 3)
+Mesh imported
+Mesh refined
+Starting (P) simulation
+began sim_p
+Instancing boundaries
+gamma_in.dir_min =  0.09939099848270416
+gamma_in.dir_max =  39.894161224365234
+gamma_out.dir_min =  0.09939099848270416
+gamma_out.dir_max =  39.894161224365234
+gamma_air.dir_min_y =  0.09558500349521637
+gamma_air.dir_max_y =  39.895729064941406
+gamma_air.dir_min_z =  0.1048400029540062
+gamma_air.dir_max_z =  39.89208984375
+boundaries instanced
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting (T) simulation
+Finished (linear) guess generation
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+Model initialised
+Mesh imported
+Coordinates have shape  (2108, 3)
+Mesh imported
+Mesh refined
+Starting (P) simulation
+began sim_p
+Instancing boundaries
+gamma_in.dir_min =  0.09939099848270416
+gamma_in.dir_max =  39.894161224365234
+gamma_out.dir_min =  0.09939099848270416
+gamma_out.dir_max =  39.894161224365234
+gamma_air.dir_min_y =  0.09558500349521637
+gamma_air.dir_max_y =  39.895729064941406
+gamma_air.dir_min_z =  0.1048400029540062
+gamma_air.dir_max_z =  39.89208984375
+boundaries instanced
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting (T) simulation
+Finished (linear) guess generation
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+Model initialised
+Mesh imported
+Coordinates have shape  (2114, 3)
+Mesh imported
+Mesh refined
+Starting (P) simulation
+began sim_p
+Instancing boundaries
+gamma_in.dir_min =  0.09939099848270416
+gamma_in.dir_max =  39.894161224365234
+gamma_out.dir_min =  0.09939099848270416
+gamma_out.dir_max =  39.894161224365234
+gamma_air.dir_min_y =  0.09558500349521637
+gamma_air.dir_max_y =  39.895729064941406
+gamma_air.dir_min_z =  0.1048400029540062
+gamma_air.dir_max_z =  39.89208984375
+boundaries instanced
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting (T) simulation
+Finished (linear) guess generation
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+Model initialised
+Mesh imported
+Coordinates have shape  (2104, 3)
+Mesh imported
+Mesh refined
+Starting (P) simulation
+began sim_p
+Instancing boundaries
+gamma_in.dir_min =  0.09939099848270416
+gamma_in.dir_max =  39.894161224365234
+gamma_out.dir_min =  0.09939099848270416
+gamma_out.dir_max =  39.894161224365234
+gamma_air.dir_min_y =  0.09558500349521637
+gamma_air.dir_max_y =  39.895729064941406
+gamma_air.dir_min_z =  0.1048400029540062
+gamma_air.dir_max_z =  39.89208984375
+boundaries instanced
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting (T) simulation
+Finished (linear) guess generation
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+Model initialised
+Mesh imported
+Coordinates have shape  (2102, 3)
+Mesh imported
+Mesh refined
+Starting (P) simulation
+began sim_p
+Instancing boundaries
+gamma_in.dir_min =  0.09939099848270416
+gamma_in.dir_max =  39.894161224365234
+gamma_out.dir_min =  0.09939099848270416
+gamma_out.dir_max =  39.894161224365234
+gamma_air.dir_min_y =  0.09558500349521637
+gamma_air.dir_max_y =  39.895729064941406
+gamma_air.dir_min_z =  0.1048400029540062
+gamma_air.dir_max_z =  39.89208984375
+boundaries instanced
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting (T) simulation
+Finished (linear) guess generation
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+Model initialised
+Mesh imported
+Coordinates have shape  (2059, 3)
 Mesh imported
 Mesh refined
 Starting (P) simulation
@@ -228,61 +363,34 @@ Imported src files
 Starting...
 Model initialised
 Mesh imported
-Coordinates have shape  (2109, 3)
-Mesh imported
-Mesh refined
-Starting (P) simulation
-began sim_p
-Instancing boundaries
-gamma_in.dir_min =  0.09939099848270416
-gamma_in.dir_max =  39.894161224365234
-gamma_out.dir_min =  0.09939099848270416
-gamma_out.dir_max =  39.894161224365234
-gamma_air.dir_min_y =  0.09558500349521637
-gamma_air.dir_max_y =  39.895729064941406
-gamma_air.dir_min_z =  0.1048400029540062
-gamma_air.dir_max_z =  39.89208984375
-boundaries instanced
-P problem solved
-u problem solved
-Saving solutions
-saved
-(P) simulation done
-Starting (T) simulation
-Finished (linear) guess generation
-Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
-Imported src files
-Starting...
-Model initialised
-Mesh imported
-Coordinates have shape  (2005, 3)
-Mesh imported
-Mesh refined
-Starting (P) simulation
-began sim_p
-Instancing boundaries
-gamma_in.dir_min =  0.09939099848270416
-gamma_in.dir_max =  39.894161224365234
-gamma_out.dir_min =  0.09939099848270416
-gamma_out.dir_max =  39.894161224365234
-gamma_air.dir_min_y =  0.09558500349521637
-gamma_air.dir_max_y =  39.895729064941406
-gamma_air.dir_min_z =  0.1048400029540062
-gamma_air.dir_max_z =  39.89208984375
-boundaries instanced
-P problem solved
-u problem solved
-Saving solutions
-saved
-(P) simulation done
-Starting (T) simulation
-Finished (linear) guess generation
-Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
-Imported src files
-Starting...
-Model initialised
-Mesh imported
 Coordinates have shape  (2104, 3)
+Mesh imported
+Mesh refined
+Starting (P) simulation
+began sim_p
+Instancing boundaries
+gamma_in.dir_min =  0.09939099848270416
+gamma_in.dir_max =  39.894161224365234
+gamma_out.dir_min =  0.09939099848270416
+gamma_out.dir_max =  39.894161224365234
+gamma_air.dir_min_y =  0.09558500349521637
+gamma_air.dir_max_y =  39.895729064941406
+gamma_air.dir_min_z =  0.1048400029540062
+gamma_air.dir_max_z =  39.89208984375
+boundaries instanced
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting (T) simulation
+Finished (linear) guess generation
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+Model initialised
+Mesh imported
+Coordinates have shape  (2142, 3)
 Mesh imported
 Mesh refined
 Starting (P) simulation
@@ -343,60 +451,14 @@ Traceback (most recent call last):
   File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/40_h_repaired_solvers/ilu_40_h_repaired_main.py", line 43, in <module>
 Traceback (most recent call last):
   File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/40_h_repaired_solvers/ilu_40_h_repaired_main.py", line 43, in <module>
-Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
-Imported src files
-Starting...
-Model initialised
-Mesh imported
-Coordinates have shape  (2104, 3)
-Mesh imported
-Mesh refined
-Starting (P) simulation
-began sim_p
-Instancing boundaries
-gamma_in.dir_min =  0.09939099848270416
-gamma_in.dir_max =  39.894161224365234
-gamma_out.dir_min =  0.09939099848270416
-gamma_out.dir_max =  39.894161224365234
-gamma_air.dir_min_y =  0.09558500349521637
-gamma_air.dir_max_y =  39.895729064941406
-gamma_air.dir_min_z =  0.1048400029540062
-gamma_air.dir_max_z =  39.89208984375
-boundaries instanced
-P problem solved
-u problem solved
-Saving solutions
-saved
-(P) simulation done
-Starting (T) simulation
-Finished (linear) guess generation
-Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
-Imported src files
-Starting...
-Model initialised
-Mesh imported
-Coordinates have shape  (2107, 3)
-Mesh imported
-Mesh refined
-Starting (P) simulation
-began sim_p
-Instancing boundaries
-gamma_in.dir_min =  0.09939099848270416
-gamma_in.dir_max =  39.894161224365234
-gamma_out.dir_min =  0.09939099848270416
-gamma_out.dir_max =  39.894161224365234
-gamma_air.dir_min_y =  0.09558500349521637
-gamma_air.dir_max_y =  39.895729064941406
-gamma_air.dir_min_z =  0.1048400029540062
-gamma_air.dir_max_z =  39.89208984375
-boundaries instanced
-P problem solved
-u problem solved
-Saving solutions
-saved
-(P) simulation done
-Starting (T) simulation
-Finished (linear) guess generation
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/40_h_repaired_solvers/ilu_40_h_repaired_main.py", line 43, in <module>
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/40_h_repaired_solvers/ilu_40_h_repaired_main.py", line 43, in <module>
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/40_h_repaired_solvers/ilu_40_h_repaired_main.py", line 43, in <module>
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/40_h_repaired_solvers/ilu_40_h_repaired_main.py", line 43, in <module>
 Traceback (most recent call last):
   File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/40_h_repaired_solvers/ilu_40_h_repaired_main.py", line 43, in <module>
 Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
@@ -404,35 +466,7 @@ Imported src files
 Starting...
 Model initialised
 Mesh imported
-Coordinates have shape  (2114, 3)
-Mesh imported
-Mesh refined
-Starting (P) simulation
-began sim_p
-Instancing boundaries
-gamma_in.dir_min =  0.09939099848270416
-gamma_in.dir_max =  39.894161224365234
-gamma_out.dir_min =  0.09939099848270416
-gamma_out.dir_max =  39.894161224365234
-gamma_air.dir_min_y =  0.09558500349521637
-gamma_air.dir_max_y =  39.895729064941406
-gamma_air.dir_min_z =  0.1048400029540062
-gamma_air.dir_max_z =  39.89208984375
-boundaries instanced
-P problem solved
-u problem solved
-Saving solutions
-saved
-(P) simulation done
-Starting (T) simulation
-Finished (linear) guess generation
-Traceback (most recent call last):
-Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
-Imported src files
-Starting...
-Model initialised
-Mesh imported
-Coordinates have shape  (2028, 3)
+Coordinates have shape  (2107, 3)
 Mesh imported
 Mesh refined
 Starting (P) simulation
@@ -481,12 +515,122 @@ saved
 (P) simulation done
 Starting (T) simulation
 Finished (linear) guess generation
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/40_h_repaired_solvers/ilu_40_h_repaired_main.py", line 43, in <module>
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+Model initialised
+Mesh imported
+Coordinates have shape  (2066, 3)
+Mesh imported
+Mesh refined
+Starting (P) simulation
+began sim_p
+Instancing boundaries
+gamma_in.dir_min =  0.09939099848270416
+gamma_in.dir_max =  39.894161224365234
+gamma_out.dir_min =  0.09939099848270416
+gamma_out.dir_max =  39.894161224365234
+gamma_air.dir_min_y =  0.09558500349521637
+gamma_air.dir_max_y =  39.895729064941406
+gamma_air.dir_min_z =  0.1048400029540062
+gamma_air.dir_max_z =  39.89208984375
+boundaries instanced
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting (T) simulation
+Finished (linear) guess generation
 Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
 Imported src files
 Starting...
 Model initialised
 Mesh imported
 Coordinates have shape  (2060, 3)
+Mesh imported
+Mesh refined
+Starting (P) simulation
+began sim_p
+Instancing boundaries
+gamma_in.dir_min =  0.09939099848270416
+gamma_in.dir_max =  39.894161224365234
+gamma_out.dir_min =  0.09939099848270416
+gamma_out.dir_max =  39.894161224365234
+gamma_air.dir_min_y =  0.09558500349521637
+gamma_air.dir_max_y =  39.895729064941406
+gamma_air.dir_min_z =  0.1048400029540062
+gamma_air.dir_max_z =  39.89208984375
+boundaries instanced
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting (T) simulation
+Finished (linear) guess generation
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+Model initialised
+Mesh imported
+Coordinates have shape  (2005, 3)
+Mesh imported
+Mesh refined
+Starting (P) simulation
+began sim_p
+Instancing boundaries
+gamma_in.dir_min =  0.09939099848270416
+gamma_in.dir_max =  39.894161224365234
+gamma_out.dir_min =  0.09939099848270416
+gamma_out.dir_max =  39.894161224365234
+gamma_air.dir_min_y =  0.09558500349521637
+gamma_air.dir_max_y =  39.895729064941406
+gamma_air.dir_min_z =  0.1048400029540062
+gamma_air.dir_max_z =  39.89208984375
+boundaries instanced
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting (T) simulation
+Finished (linear) guess generation
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+Model initialised
+Mesh imported
+Coordinates have shape  (2120, 3)
+Mesh imported
+Mesh refined
+Starting (P) simulation
+began sim_p
+Instancing boundaries
+gamma_in.dir_min =  0.09939099848270416
+gamma_in.dir_max =  39.894161224365234
+gamma_out.dir_min =  0.09939099848270416
+gamma_out.dir_max =  39.894161224365234
+gamma_air.dir_min_y =  0.09558500349521637
+gamma_air.dir_max_y =  39.895729064941406
+gamma_air.dir_min_z =  0.1048400029540062
+gamma_air.dir_max_z =  39.89208984375
+boundaries instanced
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting (T) simulation
+Finished (linear) guess generation
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+Model initialised
+Mesh imported
+Coordinates have shape  (2132, 3)
 Mesh imported
 Mesh refined
 Starting (P) simulation
@@ -543,39 +687,18 @@ Traceback (most recent call last):
   File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/40_h_repaired_solvers/ilu_40_h_repaired_main.py", line 43, in <module>
 Traceback (most recent call last):
   File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/40_h_repaired_solvers/ilu_40_h_repaired_main.py", line 43, in <module>
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/40_h_repaired_solvers/ilu_40_h_repaired_main.py", line 43, in <module>
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/40_h_repaired_solvers/ilu_40_h_repaired_main.py", line 43, in <module>
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/40_h_repaired_solvers/ilu_40_h_repaired_main.py", line 43, in <module>
 Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
 Imported src files
 Starting...
 Model initialised
 Mesh imported
-Coordinates have shape  (2066, 3)
-Mesh imported
-Mesh refined
-Starting (P) simulation
-began sim_p
-Instancing boundaries
-gamma_in.dir_min =  0.09939099848270416
-gamma_in.dir_max =  39.894161224365234
-gamma_out.dir_min =  0.09939099848270416
-gamma_out.dir_max =  39.894161224365234
-gamma_air.dir_min_y =  0.09558500349521637
-gamma_air.dir_max_y =  39.895729064941406
-gamma_air.dir_min_z =  0.1048400029540062
-gamma_air.dir_max_z =  39.89208984375
-boundaries instanced
-P problem solved
-u problem solved
-Saving solutions
-saved
-(P) simulation done
-Starting (T) simulation
-Finished (linear) guess generation
-Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
-Imported src files
-Starting...
-Model initialised
-Mesh imported
-Coordinates have shape  (2059, 3)
+Coordinates have shape  (2109, 3)
 Mesh imported
 Mesh refined
 Starting (P) simulation
@@ -599,132 +722,6 @@ Starting (T) simulation
 Finished (linear) guess generation
 Traceback (most recent call last):
   File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/40_h_repaired_solvers/ilu_40_h_repaired_main.py", line 43, in <module>
-Traceback (most recent call last):
-  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/40_h_repaired_solvers/ilu_40_h_repaired_main.py", line 43, in <module>
-Traceback (most recent call last):
-  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/40_h_repaired_solvers/ilu_40_h_repaired_main.py", line 43, in <module>
-Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
-Imported src files
-Starting...
-Model initialised
-Mesh imported
-Coordinates have shape  (2120, 3)
-Mesh imported
-Mesh refined
-Starting (P) simulation
-began sim_p
-Instancing boundaries
-gamma_in.dir_min =  0.09939099848270416
-gamma_in.dir_max =  39.894161224365234
-gamma_out.dir_min =  0.09939099848270416
-gamma_out.dir_max =  39.894161224365234
-gamma_air.dir_min_y =  0.09558500349521637
-gamma_air.dir_max_y =  39.895729064941406
-gamma_air.dir_min_z =  0.1048400029540062
-gamma_air.dir_max_z =  39.89208984375
-boundaries instanced
-P problem solved
-u problem solved
-Saving solutions
-saved
-(P) simulation done
-Starting (T) simulation
-Finished (linear) guess generation
-Traceback (most recent call last):
-  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/40_h_repaired_solvers/ilu_40_h_repaired_main.py", line 43, in <module>
-Traceback (most recent call last):
-  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/40_h_repaired_solvers/ilu_40_h_repaired_main.py", line 43, in <module>
-  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/40_h_repaired_solvers/ilu_40_h_repaired_main.py", line 43, in <module>
-Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
-Imported src files
-Starting...
-Model initialised
-Mesh imported
-Coordinates have shape  (2108, 3)
-Mesh imported
-Mesh refined
-Starting (P) simulation
-began sim_p
-Instancing boundaries
-gamma_in.dir_min =  0.09939099848270416
-gamma_in.dir_max =  39.894161224365234
-gamma_out.dir_min =  0.09939099848270416
-gamma_out.dir_max =  39.894161224365234
-gamma_air.dir_min_y =  0.09558500349521637
-gamma_air.dir_max_y =  39.895729064941406
-gamma_air.dir_min_z =  0.1048400029540062
-gamma_air.dir_max_z =  39.89208984375
-boundaries instanced
-P problem solved
-u problem solved
-Saving solutions
-saved
-(P) simulation done
-Starting (T) simulation
-Finished (linear) guess generation
-Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
-Imported src files
-Starting...
-Model initialised
-Mesh imported
-Coordinates have shape  (2102, 3)
-Mesh imported
-Mesh refined
-Starting (P) simulation
-began sim_p
-Instancing boundaries
-gamma_in.dir_min =  0.09939099848270416
-gamma_in.dir_max =  39.894161224365234
-gamma_out.dir_min =  0.09939099848270416
-gamma_out.dir_max =  39.894161224365234
-gamma_air.dir_min_y =  0.09558500349521637
-gamma_air.dir_max_y =  39.895729064941406
-gamma_air.dir_min_z =  0.1048400029540062
-gamma_air.dir_max_z =  39.89208984375
-boundaries instanced
-P problem solved
-u problem solved
-Saving solutions
-saved
-(P) simulation done
-Starting (T) simulation
-Finished (linear) guess generation
-Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
-Imported src files
-Starting...
-Model initialised
-Mesh imported
-Coordinates have shape  (2132, 3)
-Mesh imported
-Mesh refined
-Starting (P) simulation
-began sim_p
-Instancing boundaries
-gamma_in.dir_min =  0.09939099848270416
-gamma_in.dir_max =  39.894161224365234
-gamma_out.dir_min =  0.09939099848270416
-gamma_out.dir_max =  39.894161224365234
-gamma_air.dir_min_y =  0.09558500349521637
-gamma_air.dir_max_y =  39.895729064941406
-gamma_air.dir_min_z =  0.1048400029540062
-gamma_air.dir_max_z =  39.89208984375
-boundaries instanced
-P problem solved
-u problem solved
-Saving solutions
-saved
-(P) simulation done
-Starting (T) simulation
-Finished (linear) guess generation
-Traceback (most recent call last):
-  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/40_h_repaired_solvers/ilu_40_h_repaired_main.py", line 43, in <module>
-Traceback (most recent call last):
-  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/40_h_repaired_solvers/ilu_40_h_repaired_main.py", line 43, in <module>
-Traceback (most recent call last):
-  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/40_h_repaired_solvers/ilu_40_h_repaired_main.py", line 43, in <module>
-    solution = model.sim_t(hb=True, save=True, guess=x, preconditioner='ilu')
-  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 425, in sim_t
-    solution = model.sim_t(hb=True, save=True, guess=x, preconditioner='ilu')
     solution = model.sim_t(hb=True, save=True, guess=x, preconditioner='ilu')
   File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 425, in sim_t
     solution = model.sim_t(hb=True, save=True, guess=x, preconditioner='ilu')
@@ -755,6 +752,9 @@ Traceback (most recent call last):
   File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 425, in sim_t
     solution = model.sim_t(hb=True, save=True, guess=x, preconditioner='ilu')
   File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 425, in sim_t
+    solution = model.sim_t(hb=True, save=True, guess=x, preconditioner='ilu')
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 425, in sim_t
+    solution = model.sim_t(hb=True, save=True, guess=x, preconditioner='ilu')
   File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 425, in sim_t
     solution = model.sim_t(hb=True, save=True, guess=x, preconditioner='ilu')
   File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 425, in sim_t
@@ -823,7 +823,6 @@ Traceback (most recent call last):
     _solve_varproblem(*args, **kwargs)
   File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 266, in _solve_varproblem
     _solve_varproblem(*args, **kwargs)
-  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 266, in _solve_varproblem
     _solve_varproblem(*args, **kwargs)
   File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 266, in _solve_varproblem
     _solve_varproblem(*args, **kwargs)
@@ -839,6 +838,7 @@ Traceback (most recent call last):
     _solve_varproblem(*args, **kwargs)
   File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 266, in _solve_varproblem
     _solve_varproblem(*args, **kwargs)
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 266, in _solve_varproblem
   File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 266, in _solve_varproblem
     _solve_varproblem(*args, **kwargs)
   File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 266, in _solve_varproblem
@@ -858,249 +858,7 @@ RuntimeError:
 *** Error:   Unable to successfully call PETSc function 'KSPSolve'.
 *** Reason:  PETSc error code is: 92 (See https://petsc.org/release/overview/linear_solve_table/ for possible LU and Cholesky solvers).
 *** Where:   This error was encountered inside /home/conda/feedstock_root/build_artifacts/fenics-pkgs_1653063982664/work/dolfin/dolfin/la/PETScKrylovSolver.cpp.
-*** Process: 1
-*** 
-*** DOLFIN version: 2019.1.0
-*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
-*** -------------------------------------------------------------------------
-
-    solver.solve()
-RuntimeError: 
-
-*** -------------------------------------------------------------------------
-*** DOLFIN encountered an error. If you are not able to resolve this issue
-*** using the information listed below, you can ask for help at
-***
-***     fenics-support@googlegroups.com
-***
-*** Remember to include the error message listed below and, if possible,
-*** include a *minimal* running example to reproduce the error.
-***
-*** -------------------------------------------------------------------------
-*** Error:   Unable to successfully call PETSc function 'KSPSolve'.
-*** Reason:  PETSc error code is: 92 (See https://petsc.org/release/overview/linear_solve_table/ for possible LU and Cholesky solvers).
-*** Where:   This error was encountered inside /home/conda/feedstock_root/build_artifacts/fenics-pkgs_1653063982664/work/dolfin/dolfin/la/PETScKrylovSolver.cpp.
-*** Process: 12
-*** 
-*** DOLFIN version: 2019.1.0
-*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
-*** -------------------------------------------------------------------------
-
-    solver.solve()
-RuntimeError: 
-
-*** -------------------------------------------------------------------------
-*** DOLFIN encountered an error. If you are not able to resolve this issue
-*** using the information listed below, you can ask for help at
-***
-***     fenics-support@googlegroups.com
-***
-*** Remember to include the error message listed below and, if possible,
-*** include a *minimal* running example to reproduce the error.
-***
-*** -------------------------------------------------------------------------
-*** Error:   Unable to successfully call PETSc function 'KSPSolve'.
-*** Reason:  PETSc error code is: 92 (See https://petsc.org/release/overview/linear_solve_table/ for possible LU and Cholesky solvers).
-*** Where:   This error was encountered inside /home/conda/feedstock_root/build_artifacts/fenics-pkgs_1653063982664/work/dolfin/dolfin/la/PETScKrylovSolver.cpp.
-*** Process: 11
-*** 
-*** DOLFIN version: 2019.1.0
-*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
-*** -------------------------------------------------------------------------
-
-    solver.solve()
-    solver.solve()
-RuntimeError: 
-
-*** -------------------------------------------------------------------------
-*** DOLFIN encountered an error. If you are not able to resolve this issue
-*** using the information listed below, you can ask for help at
-***
-***     fenics-support@googlegroups.com
-***
-*** Remember to include the error message listed below and, if possible,
-*** include a *minimal* running example to reproduce the error.
-***
-*** -------------------------------------------------------------------------
-*** Error:   Unable to successfully call PETSc function 'KSPSolve'.
-*** Reason:  PETSc error code is: 92 (See https://petsc.org/release/overview/linear_solve_table/ for possible LU and Cholesky solvers).
-*** Where:   This error was encountered inside /home/conda/feedstock_root/build_artifacts/fenics-pkgs_1653063982664/work/dolfin/dolfin/la/PETScKrylovSolver.cpp.
-*** Process: 15
-*** 
-*** DOLFIN version: 2019.1.0
-*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
-*** -------------------------------------------------------------------------
-
-RuntimeError: 
-
-*** -------------------------------------------------------------------------
-*** DOLFIN encountered an error. If you are not able to resolve this issue
-*** using the information listed below, you can ask for help at
-***
-***     fenics-support@googlegroups.com
-***
-*** Remember to include the error message listed below and, if possible,
-*** include a *minimal* running example to reproduce the error.
-***
-*** -------------------------------------------------------------------------
-*** Error:   Unable to successfully call PETSc function 'KSPSolve'.
-*** Reason:  PETSc error code is: 92 (See https://petsc.org/release/overview/linear_solve_table/ for possible LU and Cholesky solvers).
-*** Where:   This error was encountered inside /home/conda/feedstock_root/build_artifacts/fenics-pkgs_1653063982664/work/dolfin/dolfin/la/PETScKrylovSolver.cpp.
-*** Process: 13
-*** 
-*** DOLFIN version: 2019.1.0
-*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
-*** -------------------------------------------------------------------------
-
-    solver.solve()
-RuntimeError: 
-
-*** -------------------------------------------------------------------------
-*** DOLFIN encountered an error. If you are not able to resolve this issue
-*** using the information listed below, you can ask for help at
-***
-***     fenics-support@googlegroups.com
-***
-*** Remember to include the error message listed below and, if possible,
-*** include a *minimal* running example to reproduce the error.
-***
-*** -------------------------------------------------------------------------
-*** Error:   Unable to successfully call PETSc function 'KSPSolve'.
-*** Reason:  PETSc error code is: 92 (See https://petsc.org/release/overview/linear_solve_table/ for possible LU and Cholesky solvers).
-*** Where:   This error was encountered inside /home/conda/feedstock_root/build_artifacts/fenics-pkgs_1653063982664/work/dolfin/dolfin/la/PETScKrylovSolver.cpp.
-*** Process: 7
-*** 
-*** DOLFIN version: 2019.1.0
-*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
-*** -------------------------------------------------------------------------
-
-    solver.solve()
-RuntimeError: 
-
-*** -------------------------------------------------------------------------
-*** DOLFIN encountered an error. If you are not able to resolve this issue
-*** using the information listed below, you can ask for help at
-***
-***     fenics-support@googlegroups.com
-***
-*** Remember to include the error message listed below and, if possible,
-*** include a *minimal* running example to reproduce the error.
-***
-*** -------------------------------------------------------------------------
-*** Error:   Unable to successfully call PETSc function 'KSPSolve'.
-*** Reason:  PETSc error code is: 92 (See https://petsc.org/release/overview/linear_solve_table/ for possible LU and Cholesky solvers).
-*** Where:   This error was encountered inside /home/conda/feedstock_root/build_artifacts/fenics-pkgs_1653063982664/work/dolfin/dolfin/la/PETScKrylovSolver.cpp.
-*** Process: 0
-*** 
-*** DOLFIN version: 2019.1.0
-*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
-*** -------------------------------------------------------------------------
-
-    solver.solve()
-RuntimeError: 
-
-*** -------------------------------------------------------------------------
-*** DOLFIN encountered an error. If you are not able to resolve this issue
-*** using the information listed below, you can ask for help at
-***
-***     fenics-support@googlegroups.com
-***
-*** Remember to include the error message listed below and, if possible,
-*** include a *minimal* running example to reproduce the error.
-***
-*** -------------------------------------------------------------------------
-*** Error:   Unable to successfully call PETSc function 'KSPSolve'.
-*** Reason:  PETSc error code is: 92 (See https://petsc.org/release/overview/linear_solve_table/ for possible LU and Cholesky solvers).
-*** Where:   This error was encountered inside /home/conda/feedstock_root/build_artifacts/fenics-pkgs_1653063982664/work/dolfin/dolfin/la/PETScKrylovSolver.cpp.
-*** Process: 8
-*** 
-*** DOLFIN version: 2019.1.0
-*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
-*** -------------------------------------------------------------------------
-
-    solver.solve()
-RuntimeError: 
-
-*** -------------------------------------------------------------------------
-*** DOLFIN encountered an error. If you are not able to resolve this issue
-*** using the information listed below, you can ask for help at
-***
-***     fenics-support@googlegroups.com
-***
-*** Remember to include the error message listed below and, if possible,
-*** include a *minimal* running example to reproduce the error.
-***
-*** -------------------------------------------------------------------------
-*** Error:   Unable to successfully call PETSc function 'KSPSolve'.
-*** Reason:  PETSc error code is: 92 (See https://petsc.org/release/overview/linear_solve_table/ for possible LU and Cholesky solvers).
-*** Where:   This error was encountered inside /home/conda/feedstock_root/build_artifacts/fenics-pkgs_1653063982664/work/dolfin/dolfin/la/PETScKrylovSolver.cpp.
-*** Process: 10
-*** 
-*** DOLFIN version: 2019.1.0
-*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
-*** -------------------------------------------------------------------------
-
-    solver.solve()
-RuntimeError: 
-
-*** -------------------------------------------------------------------------
-*** DOLFIN encountered an error. If you are not able to resolve this issue
-*** using the information listed below, you can ask for help at
-***
-***     fenics-support@googlegroups.com
-***
-*** Remember to include the error message listed below and, if possible,
-*** include a *minimal* running example to reproduce the error.
-***
-*** -------------------------------------------------------------------------
-*** Error:   Unable to successfully call PETSc function 'KSPSolve'.
-*** Reason:  PETSc error code is: 92 (See https://petsc.org/release/overview/linear_solve_table/ for possible LU and Cholesky solvers).
-*** Where:   This error was encountered inside /home/conda/feedstock_root/build_artifacts/fenics-pkgs_1653063982664/work/dolfin/dolfin/la/PETScKrylovSolver.cpp.
-*** Process: 19
-*** 
-*** DOLFIN version: 2019.1.0
-*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
-*** -------------------------------------------------------------------------
-
-    solver.solve()
-RuntimeError: 
-
-*** -------------------------------------------------------------------------
-*** DOLFIN encountered an error. If you are not able to resolve this issue
-*** using the information listed below, you can ask for help at
-***
-***     fenics-support@googlegroups.com
-***
-*** Remember to include the error message listed below and, if possible,
-*** include a *minimal* running example to reproduce the error.
-***
-*** -------------------------------------------------------------------------
-*** Error:   Unable to successfully call PETSc function 'KSPSolve'.
-*** Reason:  PETSc error code is: 92 (See https://petsc.org/release/overview/linear_solve_table/ for possible LU and Cholesky solvers).
-*** Where:   This error was encountered inside /home/conda/feedstock_root/build_artifacts/fenics-pkgs_1653063982664/work/dolfin/dolfin/la/PETScKrylovSolver.cpp.
-*** Process: 16
-*** 
-*** DOLFIN version: 2019.1.0
-*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
-*** -------------------------------------------------------------------------
-
-    solver.solve()
-RuntimeError: 
-
-*** -------------------------------------------------------------------------
-*** DOLFIN encountered an error. If you are not able to resolve this issue
-*** using the information listed below, you can ask for help at
-***
-***     fenics-support@googlegroups.com
-***
-*** Remember to include the error message listed below and, if possible,
-*** include a *minimal* running example to reproduce the error.
-***
-*** -------------------------------------------------------------------------
-*** Error:   Unable to successfully call PETSc function 'KSPSolve'.
-*** Reason:  PETSc error code is: 92 (See https://petsc.org/release/overview/linear_solve_table/ for possible LU and Cholesky solvers).
-*** Where:   This error was encountered inside /home/conda/feedstock_root/build_artifacts/fenics-pkgs_1653063982664/work/dolfin/dolfin/la/PETScKrylovSolver.cpp.
-*** Process: 17
+*** Process: 6
 *** 
 *** DOLFIN version: 2019.1.0
 *** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
@@ -1144,7 +902,271 @@ RuntimeError:
 *** Error:   Unable to successfully call PETSc function 'KSPSolve'.
 *** Reason:  PETSc error code is: 92 (See https://petsc.org/release/overview/linear_solve_table/ for possible LU and Cholesky solvers).
 *** Where:   This error was encountered inside /home/conda/feedstock_root/build_artifacts/fenics-pkgs_1653063982664/work/dolfin/dolfin/la/PETScKrylovSolver.cpp.
+*** Process: 13
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+    solver.solve()
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to successfully call PETSc function 'KSPSolve'.
+*** Reason:  PETSc error code is: 92 (See https://petsc.org/release/overview/linear_solve_table/ for possible LU and Cholesky solvers).
+*** Where:   This error was encountered inside /home/conda/feedstock_root/build_artifacts/fenics-pkgs_1653063982664/work/dolfin/dolfin/la/PETScKrylovSolver.cpp.
+*** Process: 10
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+    solver.solve()
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to successfully call PETSc function 'KSPSolve'.
+*** Reason:  PETSc error code is: 92 (See https://petsc.org/release/overview/linear_solve_table/ for possible LU and Cholesky solvers).
+*** Where:   This error was encountered inside /home/conda/feedstock_root/build_artifacts/fenics-pkgs_1653063982664/work/dolfin/dolfin/la/PETScKrylovSolver.cpp.
+*** Process: 8
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+    solver.solve()
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to successfully call PETSc function 'KSPSolve'.
+*** Reason:  PETSc error code is: 92 (See https://petsc.org/release/overview/linear_solve_table/ for possible LU and Cholesky solvers).
+*** Where:   This error was encountered inside /home/conda/feedstock_root/build_artifacts/fenics-pkgs_1653063982664/work/dolfin/dolfin/la/PETScKrylovSolver.cpp.
+*** Process: 19
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+    solver.solve()
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to successfully call PETSc function 'KSPSolve'.
+*** Reason:  PETSc error code is: 92 (See https://petsc.org/release/overview/linear_solve_table/ for possible LU and Cholesky solvers).
+*** Where:   This error was encountered inside /home/conda/feedstock_root/build_artifacts/fenics-pkgs_1653063982664/work/dolfin/dolfin/la/PETScKrylovSolver.cpp.
+*** Process: 15
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+    solver.solve()
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to successfully call PETSc function 'KSPSolve'.
+*** Reason:  PETSc error code is: 92 (See https://petsc.org/release/overview/linear_solve_table/ for possible LU and Cholesky solvers).
+*** Where:   This error was encountered inside /home/conda/feedstock_root/build_artifacts/fenics-pkgs_1653063982664/work/dolfin/dolfin/la/PETScKrylovSolver.cpp.
 *** Process: 4
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+    solver.solve()
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to successfully call PETSc function 'KSPSolve'.
+*** Reason:  PETSc error code is: 92 (See https://petsc.org/release/overview/linear_solve_table/ for possible LU and Cholesky solvers).
+*** Where:   This error was encountered inside /home/conda/feedstock_root/build_artifacts/fenics-pkgs_1653063982664/work/dolfin/dolfin/la/PETScKrylovSolver.cpp.
+*** Process: 9
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+    solver.solve()
+    solver.solve()
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to successfully call PETSc function 'KSPSolve'.
+*** Reason:  PETSc error code is: 92 (See https://petsc.org/release/overview/linear_solve_table/ for possible LU and Cholesky solvers).
+*** Where:   This error was encountered inside /home/conda/feedstock_root/build_artifacts/fenics-pkgs_1653063982664/work/dolfin/dolfin/la/PETScKrylovSolver.cpp.
+*** Process: 16
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+    solver.solve()
+    solver.solve()
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to successfully call PETSc function 'KSPSolve'.
+*** Reason:  PETSc error code is: 92 (See https://petsc.org/release/overview/linear_solve_table/ for possible LU and Cholesky solvers).
+*** Where:   This error was encountered inside /home/conda/feedstock_root/build_artifacts/fenics-pkgs_1653063982664/work/dolfin/dolfin/la/PETScKrylovSolver.cpp.
+*** Process: 12
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to successfully call PETSc function 'KSPSolve'.
+*** Reason:  PETSc error code is: 92 (See https://petsc.org/release/overview/linear_solve_table/ for possible LU and Cholesky solvers).
+*** Where:   This error was encountered inside /home/conda/feedstock_root/build_artifacts/fenics-pkgs_1653063982664/work/dolfin/dolfin/la/PETScKrylovSolver.cpp.
+*** Process: 14
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to successfully call PETSc function 'KSPSolve'.
+*** Reason:  PETSc error code is: 92 (See https://petsc.org/release/overview/linear_solve_table/ for possible LU and Cholesky solvers).
+*** Where:   This error was encountered inside /home/conda/feedstock_root/build_artifacts/fenics-pkgs_1653063982664/work/dolfin/dolfin/la/PETScKrylovSolver.cpp.
+*** Process: 18
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+    solver.solve()
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to successfully call PETSc function 'KSPSolve'.
+*** Reason:  PETSc error code is: 92 (See https://petsc.org/release/overview/linear_solve_table/ for possible LU and Cholesky solvers).
+*** Where:   This error was encountered inside /home/conda/feedstock_root/build_artifacts/fenics-pkgs_1653063982664/work/dolfin/dolfin/la/PETScKrylovSolver.cpp.
+*** Process: 0
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+    solver.solve()
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to successfully call PETSc function 'KSPSolve'.
+*** Reason:  PETSc error code is: 92 (See https://petsc.org/release/overview/linear_solve_table/ for possible LU and Cholesky solvers).
+*** Where:   This error was encountered inside /home/conda/feedstock_root/build_artifacts/fenics-pkgs_1653063982664/work/dolfin/dolfin/la/PETScKrylovSolver.cpp.
+*** Process: 7
 *** 
 *** DOLFIN version: 2019.1.0
 *** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
@@ -1210,7 +1232,7 @@ RuntimeError:
 *** Error:   Unable to successfully call PETSc function 'KSPSolve'.
 *** Reason:  PETSc error code is: 92 (See https://petsc.org/release/overview/linear_solve_table/ for possible LU and Cholesky solvers).
 *** Where:   This error was encountered inside /home/conda/feedstock_root/build_artifacts/fenics-pkgs_1653063982664/work/dolfin/dolfin/la/PETScKrylovSolver.cpp.
-*** Process: 6
+*** Process: 17
 *** 
 *** DOLFIN version: 2019.1.0
 *** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
@@ -1232,7 +1254,7 @@ RuntimeError:
 *** Error:   Unable to successfully call PETSc function 'KSPSolve'.
 *** Reason:  PETSc error code is: 92 (See https://petsc.org/release/overview/linear_solve_table/ for possible LU and Cholesky solvers).
 *** Where:   This error was encountered inside /home/conda/feedstock_root/build_artifacts/fenics-pkgs_1653063982664/work/dolfin/dolfin/la/PETScKrylovSolver.cpp.
-*** Process: 18
+*** Process: 11
 *** 
 *** DOLFIN version: 2019.1.0
 *** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
@@ -1254,29 +1276,7 @@ RuntimeError:
 *** Error:   Unable to successfully call PETSc function 'KSPSolve'.
 *** Reason:  PETSc error code is: 92 (See https://petsc.org/release/overview/linear_solve_table/ for possible LU and Cholesky solvers).
 *** Where:   This error was encountered inside /home/conda/feedstock_root/build_artifacts/fenics-pkgs_1653063982664/work/dolfin/dolfin/la/PETScKrylovSolver.cpp.
-*** Process: 9
-*** 
-*** DOLFIN version: 2019.1.0
-*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
-*** -------------------------------------------------------------------------
-
-    solver.solve()
-RuntimeError: 
-
-*** -------------------------------------------------------------------------
-*** DOLFIN encountered an error. If you are not able to resolve this issue
-*** using the information listed below, you can ask for help at
-***
-***     fenics-support@googlegroups.com
-***
-*** Remember to include the error message listed below and, if possible,
-*** include a *minimal* running example to reproduce the error.
-***
-*** -------------------------------------------------------------------------
-*** Error:   Unable to successfully call PETSc function 'KSPSolve'.
-*** Reason:  PETSc error code is: 92 (See https://petsc.org/release/overview/linear_solve_table/ for possible LU and Cholesky solvers).
-*** Where:   This error was encountered inside /home/conda/feedstock_root/build_artifacts/fenics-pkgs_1653063982664/work/dolfin/dolfin/la/PETScKrylovSolver.cpp.
-*** Process: 14
+*** Process: 1
 *** 
 *** DOLFIN version: 2019.1.0
 *** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
