@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Nombre del trabajo
-#SBATCH --job-name=ILU
+#SBATCH --job-name=SOR
 # Archivo de salida
-#SBATCH --output=ilu_40_h_repaired.txt
+#SBATCH --output=sor_40_h_repaired.txt
 # Partición (Cola de y trabajo)
 #SBATCH --partition=512x1024
 # Solicitud de cpus
@@ -12,5 +12,5 @@
 #SBATCH --mail-user=biherrera@uc.cl
 #SBATCH --mail-type=ALL
 
-mpirun -n 20 python3 ilu_40_h_repaired_main.py
+mpirun -n 20 python3 sor_fdim_2_vecf_3.py
 

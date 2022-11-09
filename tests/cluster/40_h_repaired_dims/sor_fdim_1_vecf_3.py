@@ -10,8 +10,8 @@ import os
 
 # The following line adds the directory to the path in order to cross-reference
 # files in the repo
-sys.path.append(os.getcwd()[:-36])
-print("Relative path: ", os.getcwd()[:-36])
+sys.path.append(os.getcwd()[:-33])
+print("Relative path: ", os.getcwd()[:-33])
 
 import dolfin
 from src.model import PerfusionGasExchangeModel
@@ -19,7 +19,7 @@ from src.params import params
     
 print("Imported src files")
 print("Starting...")
-folder = "ilu_40_h_repaired"
+folder = "sor_fdim1_vecfdim3"
 path = os.path.join("../../../results-data", folder)
 model = PerfusionGasExchangeModel(folder_path=path, params=params)
 
@@ -40,5 +40,5 @@ print("(P) simulation done")
 print("Starting (T) simulation")
 x = model.sim_t(hb=False, save=True)
 print("Finished (linear) guess generation")
-solution = model.sim_t(hb=True, save=True, guess=x, preconditioner='ilu')
+solution = model.sim_t(hb=True, save=True, guess=x, preconditioner='sor', f_dim=1,vecf_dim=3)
 print("Done")

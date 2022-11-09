@@ -17,7 +17,7 @@ class PerfusionGasExchangeModel():
     '''FEniCS simulater class for microscale alveolar perfusion and gas exchange
     model.
     '''
-    def __init__(self, folder_path, params, solver=''):
+    def __init__(self, folder_path, params, solver='', f_dim=1, vecf_dim=2):
         '''Instance the model.
 
         folder_path: path to folder for storing solution files. (string)
@@ -26,6 +26,8 @@ class PerfusionGasExchangeModel():
         self.folder_path = folder_path
         self.params = params
         self.solver = solver
+        self.f_dim = f_dim
+        self.vecf_dim = vecf_dim
 
         # Save details
         if not os.path.exists(self.folder_path):
@@ -164,8 +166,8 @@ class PerfusionGasExchangeModel():
         '''Instances the relevant function spaces.'''
 
         if not self.periodic:
-            self.W_h = FunctionSpace(self.mesh, 'Lagrange', 2)
-            self.V_h = VectorFunctionSpace(self.mesh, 'Lagrange', 1)
+            self.W_h = FunctionSpace(self.mesh, 'Lagrange', self.f_dim)
+            self.V_h = VectorFunctionSpace(self.mesh, 'Lagrange', self.vecf_dim)
         else:
             self.W_h = FunctionSpace(
                 self.mesh, 'Lagrange', 2,
