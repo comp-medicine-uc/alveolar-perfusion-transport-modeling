@@ -166,8 +166,8 @@ class PerfusionGasExchangeModel():
         '''Instances the relevant function spaces.'''
 
         if not self.periodic:
-            self.W_h = FunctionSpace(self.mesh, 'Lagrange', 2)
-            self.V_h = VectorFunctionSpace(self.mesh, 'Lagrange', 3)
+            self.W_h = FunctionSpace(self.mesh, 'Lagrange', 1)
+            self.V_h = VectorFunctionSpace(self.mesh, 'Lagrange', 2)
         else:
             self.W_h = FunctionSpace(
                 self.mesh, 'Lagrange', 2,
