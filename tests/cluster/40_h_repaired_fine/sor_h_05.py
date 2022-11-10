@@ -21,7 +21,7 @@ print("Imported src files")
 print("Starting...")
 folder = "sor_h_05"
 path = os.path.join("../../../results-data", folder)
-model = PerfusionGasExchangeModel(folder_path=path, params=params, f_dim=1,vecf_dim=2)
+model = PerfusionGasExchangeModel(folder_path=path, params=params)
 
 max_dims = [39.580788, 39.575413, 39.577065]
 min_dims = [0.435949, 0.425893, 0.435422]
