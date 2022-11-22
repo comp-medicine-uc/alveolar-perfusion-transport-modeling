@@ -411,64 +411,23 @@ class PerfusionGasExchangeModel():
                 self.gamma_in
             )
         ]
-
+        
         # Solve variational problem
-        if preconditioner is None:
-            solve(
-                G == 0, x, self.t_dbc,
-                solver_parameters={"newton_solver": {
-                    "relative_tolerance": 1E-8,
-                    "absolute_tolerance": 1E-8#,
-                    #"linear_solver": "gmres",
-                    #"preconditioner": "ilu"
-                }}
-            )
-        elif preconditioner == 'ilu':
-            solve(
-                G == 0, x, self.t_dbc,
-                solver_parameters={"newton_solver": {
-                    "relative_tolerance": 1E-8,
-                    "absolute_tolerance": 1E-8,
-                    "linear_solver": "gmres",
-                    "preconditioner": "ilu"
-                }}
-            )
-        elif preconditioner == 'sor':
-                solver_parameters={"newton_solver": {
-                    "relative_tolerance": 1E-8,
-                    "absolute_tolerance": 1E-8,
-                    "linear_solver": "gmres",
-                    "preconditioner": "sor"
-                }}
-        elif preconditioner == 'icc':
-                solver_parameters={"newton_solver": {
-                    "relative_tolerance": 1E-8,
-                    "absolute_tolerance": 1E-8,
-                    "linear_solver": "gmres",
-                    "preconditioner": "icc"
-                }}
-        elif preconditioner == 'petsc_amg':
-                solver_parameters={"newton_solver": {
-                    "relative_tolerance": 1E-8,
-                    "absolute_tolerance": 1E-8,
-                    "linear_solver": "gmres",
-                    "preconditioner": "petsc_amg"
-                }}
-        elif preconditioner == 'petsc':
-                solver_parameters={"newton_solver": {
-                    "relative_tolerance": 1E-8,
-                    "absolute_tolerance": 1E-8,
-                    "linear_solver": "petsc",
-                    "preconditioner": "petsc_amg"
-                }}
-        elif preconditioner == 'test':
-                solver_parameters={"newton_solver": {
-                    "relative_tolerance": 1E-8,
-                    "absolute_tolerance": 1E-8,
-                    "linear_solver": "richardson",
-                    "preconditioner": "sor"
-                }}
-                            
+        solve(
+            G == 0, x, self.t_dbc,
+            solver_parameters={"newton_solver": {
+                "relative_tolerance": 1E-8,
+                "absolute_tolerance": 1E-8,
+                "linear_solver": "gmres",
+                "preconditioner": "sor"
+            }}
+        )
+        # Unused options
+        # "linear_solver": "gmres", "preconditioner": "icc"
+        # "linear_solver": "gmres", "preconditioner": "petsc_amg"
+        # "linear_solver": "petsc", "preconditioner": "petsc_amg"
+        # "linear_solver": "richardson", "preconditioner": "sor"
+   
         if save:
 
             # Save solution to files
