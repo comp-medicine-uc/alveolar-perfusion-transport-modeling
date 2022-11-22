@@ -1,17 +1,17 @@
 Process 0: Solving linear variational problem.
-Process 9: Solving linear variational problem.
-Process 7: Solving linear variational problem.
-Process 3: Solving linear variational problem.
 Process 5: Solving linear variational problem.
+Process 3: Solving linear variational problem.
+Process 7: Solving linear variational problem.
 Process 2: Solving linear variational problem.
-Process 6: Solving linear variational problem.
-Process 4: Solving linear variational problem.
+Process 9: Solving linear variational problem.
 Process 8: Solving linear variational problem.
+Process 4: Solving linear variational problem.
+Process 6: Solving linear variational problem.
 Process 1: Solving linear variational problem.
 
 ===================================================================================
 =   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
-=   PID 33936 RUNNING AT n11
+=   PID 251199 RUNNING AT n1
 =   EXIT CODE: 9
 =   CLEANING UP REMAINING PROCESSES
 =   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES

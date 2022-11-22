@@ -1,4 +1,4 @@
-Simulation done on 2022-10-29
+Simulation done on 2022-11-21
 
 Parameters used:
 
@@ -18,7 +18,7 @@ Parameter k_CO2: 500000000.0
 Parameter k_prime_CO2: 1e+18
 Parameter h_ba: 0.3
 Parameter p_air_O2: 100
-Parameter p_air_CO2: 40
+Parameter p_air_CO2: 45
 Parameter p_O2_in: 40
 Parameter p_CO2_in: 45
 Parameter c_t: 2.4e-17
