@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Nombre del trabajo
-#SBATCH --job-name=SOR
+#SBATCH --job-name=nosolv
 # Archivo de salida
-#SBATCH --output=sor_fdim_2_vecf_3.txt
+#SBATCH --output=nosolv_40_h_repaired.txt
 # Partición (Cola de y trabajo)
 #SBATCH --partition=512x1024
 # Solicitud de cpus
@@ -12,5 +12,5 @@
 #SBATCH --mail-user=biherrera@uc.cl
 #SBATCH --mail-type=ALL
 
-mpirun -n 20 python3 sor_fdim_2_vecf_3.py
+mpirun -n 20 python3 nosolv_40_h_repaired_main.py
 

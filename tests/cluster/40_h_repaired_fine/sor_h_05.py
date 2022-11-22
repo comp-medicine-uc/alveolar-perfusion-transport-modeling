@@ -19,9 +19,9 @@ from src.params import params
     
 print("Imported src files")
 print("Starting...")
-folder = "sor_h_05"
+folder = "fine_mesh"
 path = os.path.join("../../../results-data", folder)
-model = PerfusionGasExchangeModel(folder_path=path, params=params)
+model = PerfusionGasExchangeModel(folder_path=path, params=params, solver='gmres', f_dim = 2, vecf_dim=1)
 
 max_dims = [39.580788, 39.575413, 39.577065]
 min_dims = [0.435949, 0.425893, 0.435422]
@@ -40,5 +40,7 @@ print("(P) simulation done")
 print("Starting (T) simulation")
 x = model.sim_t(hb=False, save=True)
 print("Finished (linear) guess generation")
-solution = model.sim_t(hb=True, save=True, guess=x, preconditioner='sor')
+solution = model.sim_t(hb=True, save=True, guess=x, solver=None, preconditioner=None)
 print("Done")
+
+

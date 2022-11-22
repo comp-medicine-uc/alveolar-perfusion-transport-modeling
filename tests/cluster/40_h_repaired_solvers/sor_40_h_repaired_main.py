@@ -16,12 +16,12 @@ print("Relative path: ", os.getcwd()[:-36])
 import dolfin
 from src.model import PerfusionGasExchangeModel
 from src.params import params
-    
+
 print("Imported src files")
 print("Starting...")
 folder = "sor_40_h_repaired"
 path = os.path.join("../../../results-data", folder)
-model = PerfusionGasExchangeModel(solver='gmres', folder_path=path, params=params)
+model = PerfusionGasExchangeModel(folder_path=path, params=params, solver='gmres', f_dim = 2, vecf_dim=1)
 
 max_dims = [39.894161224365234, 39.895729064941406, 39.89208984375]
 min_dims = [0.09939099848270416, 0.09558500349521637, 0.1048400029540062]
@@ -40,5 +40,5 @@ print("(P) simulation done")
 print("Starting (T) simulation")
 x = model.sim_t(hb=False, save=True)
 print("Finished (linear) guess generation")
-solution = model.sim_t(hb=True, save=True, guess=x, preconditioner='sor')
+solution = model.sim_t(hb=True, save=True, guess=x, solver=None, preconditioner=None)
 print("Done")
