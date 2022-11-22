@@ -3,7 +3,7 @@
 # Nombre del trabajo
 #SBATCH --job-name=CUBE
 # Archivo de salida
-#SBATCH --output=icc_40_h_repaired.txt
+#SBATCH --output=cube.txt
 # Partición (Cola de y trabajo)
 #SBATCH --partition=512x1024
 # Solicitud de cpus
