@@ -423,8 +423,19 @@ class PerfusionGasExchangeModel():
                     #"preconditioner": "ilu"
                 }}
             )
+        elif preconditioner == 'ilu':
+            solve(
+                G == 0, x, self.t_dbc,
+                solver_parameters={"newton_solver": {
+                    "relative_tolerance": 1E-8,
+                    "absolute_tolerance": 1E-8,
+                    "linear_solver": "gmres",
+                    "preconditioner": "ilu"
+                }}
+            )            
         elif preconditioner == 'sor':
             solve(
+                G == 0, x, self.t_dbc,
                 solver_parameters={"newton_solver": {
                     "relative_tolerance": 1E-8,
                     "absolute_tolerance": 1E-8,
@@ -434,6 +445,7 @@ class PerfusionGasExchangeModel():
             )
         elif preconditioner == 'icc':
             solve(
+                G == 0, x, self.t_dbc,
                 solver_parameters={"newton_solver": {
                     "relative_tolerance": 1E-8,
                     "absolute_tolerance": 1E-8,
@@ -443,6 +455,7 @@ class PerfusionGasExchangeModel():
             )
         elif preconditioner == 'petsc_amg':
             solve(
+                G == 0, x, self.t_dbc,
                 solver_parameters={"newton_solver": {
                     "relative_tolerance": 1E-8,
                     "absolute_tolerance": 1E-8,
@@ -452,6 +465,7 @@ class PerfusionGasExchangeModel():
             )
         elif preconditioner == 'petsc':
             solve(
+                G == 0, x, self.t_dbc,
                 solver_parameters={"newton_solver": {
                     "relative_tolerance": 1E-8,
                     "absolute_tolerance": 1E-8,
@@ -461,6 +475,7 @@ class PerfusionGasExchangeModel():
             )
         elif preconditioner == 'test':
             solve(
+                G == 0, x, self.t_dbc,
                 solver_parameters={"newton_solver": {
                     "relative_tolerance": 1E-8,
                     "absolute_tolerance": 1E-8,
