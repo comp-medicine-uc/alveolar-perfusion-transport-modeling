@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Nombre del trabajo
-#SBATCH --job-name=SOR
+#SBATCH --job-name=PARAMS
 # Archivo de salida
 #SBATCH --output=sor_params.txt
 # Partición (Cola de y trabajo)
