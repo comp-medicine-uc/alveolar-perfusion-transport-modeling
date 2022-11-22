@@ -15,13 +15,13 @@ print("Relative path: ", os.getcwd()[:-35])
 
 import dolfin
 from src.model import PerfusionGasExchangeModel
-from src.mod_params import mod_params
+from src.mod_params import params
     
 print("Imported src files")
 print("Starting...")
 folder = "sor_params"
 path = os.path.join("../../../results-data", folder)
-model = PerfusionGasExchangeModel(folder_path=path, params=mod_params)
+model = PerfusionGasExchangeModel(folder_path=path, params=params)
 
 max_dims = [39.894161224365234, 39.895729064941406, 39.89208984375]
 min_dims = [0.09939099848270416, 0.09558500349521637, 0.1048400029540062]
