@@ -28,7 +28,7 @@ min_dims = [1.9771, 1.977327, 1.976733]
 
 print("Model initialised")
 model.import_mesh(
-    os.path.join("../../../raw-data/40_h_repaired", "40_h_repaired.xdmf"), type="xdmf", 
+    os.path.join("../../../raw-data/cube", "cube.xdmf"), type="xdmf", 
     periodic=False, max_dims=max_dims, min_dims=min_dims, tol=0.1
 )
 print("Mesh imported")
