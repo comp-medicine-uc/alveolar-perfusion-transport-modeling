@@ -7,7 +7,7 @@
 # Partición (Cola de y trabajo)
 #SBATCH --partition=512x1024
 # Solicitud de cpus
-#SBATCH --ntasks=20
+#SBATCH --ntasks=30
 #SBATCH --cpus-per-task=1
 #SBATCH --mail-user=biherrera@uc.cl
 #SBATCH --mail-type=ALL
