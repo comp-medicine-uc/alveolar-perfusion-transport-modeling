@@ -12,5 +12,5 @@
 #SBATCH --mail-user=biherrera@uc.cl
 #SBATCH --mail-type=ALL
 
-mpirun -n 20 python3 nosolv_40_h_repaired_main.py
+mpirun -n 30 python3 nosolv_40_h_repaired_main.py
 
