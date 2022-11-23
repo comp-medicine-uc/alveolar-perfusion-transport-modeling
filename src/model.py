@@ -342,7 +342,7 @@ class PerfusionGasExchangeModel():
 #         elem2 = VectorElement('P', tetrahedron, 2, dim=1)
 #         elem1 = VectorElement('P', tetrahedron, 1, dim=1)
 #         mixed = MixedElement([elem1, elem1, elem2, elem2])
-        self.M_h = FunctionSpace(self.mesh, mixed)
+        # self.M_h = FunctionSpace(self.mesh, mixed)
 
         ds = Measure('ds', domain=self.mesh, subdomain_data=self.boundaries)
 
