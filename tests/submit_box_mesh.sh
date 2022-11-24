@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Nombre del trabajo
-#SBATCH --job-name=flatp1
+#SBATCH --job-name=BoxMesh
 # Archivo de salida
-#SBATCH --output=flatp1.txt
+#SBATCH --output=box_mesh_test.txt
 # Partición (Cola de y trabajo)
 #SBATCH --partition=512x1024
 # Solicitud de cpus
@@ -12,5 +12,5 @@
 #SBATCH --mail-user=biherrera@uc.cl
 #SBATCH --mail-type=ALL
 
-mpirun -n 20 python3 flat_patch_main_1.py
+mpirun -n 20 python3 box_mesh_test.py
 
