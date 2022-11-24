@@ -16,7 +16,7 @@ print("Dolfin version: ", dolfin.__version__)
 from src.model import PerfusionGasExchangeModel
 from src.params import params
     
-box_mesh = BoxMesh(Point(0,0,0),Point(5,5,5),10,10,10)
+box_mesh = dolfin.BoxMesh(Point(0,0,0),Point(5,5,5),10,10,10)
 
 print("Imported src files")
 print("Starting...")
