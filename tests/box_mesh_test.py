@@ -9,9 +9,10 @@ import time
 # files in the repo
 sys.path.append(os.getcwd()[:-6])
 print("Relative path: ", os.getcwd()[:-6])
-print("Dolfin version: ", dolfin.__version__)
+
 import dolfin
-from fenics import *
+print("Dolfin version: ", dolfin.__version__)
+# from fenics import *
 from src.model import PerfusionGasExchangeModel
 from src.params import params
 
