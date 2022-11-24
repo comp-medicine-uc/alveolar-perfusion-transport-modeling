@@ -1,0 +1,56 @@
+Solving linear variational problem.
+
+UMFPACK V5.7.9 (Oct 20, 2019): ERROR: out of memory
+
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+Model initialised
+Mesh imported
+Coordinates have shape  (38586, 3)
+Mesh imported
+Mesh refined
+Starting (P) simulation
+began sim_p
+Instancing boundaries
+gamma_in.dir_min =  0.09939099848270416
+gamma_in.dir_max =  39.894161224365234
+gamma_out.dir_min =  0.09939099848270416
+gamma_out.dir_max =  39.894161224365234
+gamma_air.dir_min_y =  0.09558500349521637
+gamma_air.dir_max_y =  39.895729064941406
+gamma_air.dir_min_z =  0.1048400029540062
+gamma_air.dir_max_z =  39.89208984375
+boundaries instanced
+self.f_dim = 2
+self.vecf_dim = 1
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/40_h_repaired_solvers/mumps_default.py", line 38, in <module>
+    model.sim_p(save=True, meshtype="tkd")
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 214, in sim_p
+    solve(
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 220, in solve
+    _solve_varproblem(*args, **kwargs)
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 247, in _solve_varproblem
+    solver.solve()
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to successfully call PETSc function 'KSPSolve'.
+*** Reason:  PETSc error code is: 76 (Error in external library).
+*** Where:   This error was encountered inside /home/conda/feedstock_root/build_artifacts/fenics-pkgs_1653063982664/work/dolfin/dolfin/la/PETScKrylovSolver.cpp.
+*** Process: 0
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
