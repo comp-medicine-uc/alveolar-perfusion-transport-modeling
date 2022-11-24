@@ -472,7 +472,10 @@ class PerfusionGasExchangeModel():
                 
                 # solver=mumps, preconditioner=None: 172 seg, r(rel) = 5.741e-16
                 # solver=mumps, preconditioner=ilu: no funciona
-                # solver=mumps, preconditioner=amg: 
+                # solver=mumps, preconditioner=amg: no funciona
+                # solver=mumps, preconditioner=default: 175 seg, r(rel) = 5.741e-16
+                
+                
                 
                 
                 
