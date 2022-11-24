@@ -452,7 +452,6 @@ class PerfusionGasExchangeModel():
         else:
             if preconditioner is None:
                 print(f"Solving with solver = {solver} and without preconditioner.")
-
                 solve(
                     G == 0, x, self.t_dbc,
                     solver_parameters={"newton_solver": {
