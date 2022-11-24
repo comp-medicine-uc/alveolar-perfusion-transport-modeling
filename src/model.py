@@ -427,13 +427,29 @@ class PerfusionGasExchangeModel():
 
         # Solve variational problem
         if solver is None:
+#             test_solver = "bicgstab"
+#             print(f"Attempting to solve using solver {test_solver}")
             solve(
                 G == 0, x, self.t_dbc,
                 solver_parameters={"newton_solver": {
                     "relative_tolerance": 1E-8,
-                    "absolute_tolerance": 1E-8
+                    "absolute_tolerance": 1E-8#, 
+#                     "linear_solver": test_solver
                 }}
             )
+            # Pruebas para problema lineal
+            # gmres es muy rápido
+            # mumps es más lento que gmres, por ser método directo
+            # superlu es más lento aún que mumps, es directo pero es más exacto, 
+                # Métodos directos generan residuo relativo de 1e-14 o 1e-15 en vez de 1e-11 (gmres)
+            # bicgstab muy rápido, similar a gmres, residuo absoluto y relativo un poco menores que gmres
+            # cg peor que bicgstab, probablemente porque la matriz no es simétrica
+            # minres más iteraciones (111) que gmres (68)
+            # richardson muchas más iteraciones (600)
+            # tfqmr iteraciones (42), residuo un poco mejor que gmres
+            # petsc método directo, similar a superlu/mumps
+            # umfpack método directo, similar a superlu/mumps
+            
         else:
             if preconditioner is None:
                 print(f"Solving with solver = {solver} and without preconditioner.")
@@ -445,6 +461,23 @@ class PerfusionGasExchangeModel():
                         "linear_solver": solver
                     }}
                 )
+                # Pruebas para problema no lineal
+                # solver=None, preconditioner=None: 310 seg, r(rel) = 5.7e-16
+                # solver=gmres, preconditioner=ilu: no converge.
+                # solver=gmres, preconditioner=sor: no converge.
+                # solver=tfqmr, preconditioner=None: no converge.
+                # solver=tfqmr, preconditioner=default: no converge.
+                # solver=umfpack, preconditioner=default: 300 seg, r(rel) = 5.7e-16
+                # solver=umfpack, preconditioner=
+                
+                # solver=mumps, preconditioner=None: 172 seg, r(rel) = 5.741e-16
+                # solver=mumps, preconditioner=ilu: no funciona
+                # solver=mumps, preconditioner=amg: 
+                
+                
+                
+                # Mirar https://fenicsproject.org/qa/9563/mixed-navier-stokes-solver-preconditioner-configuration/
+                # Mirar documentación NonlinearVariationalSolver
             else:
                 print(f"Solving with solver = {solver} and preconditioner = {preconditioner}.")
                 solve(
