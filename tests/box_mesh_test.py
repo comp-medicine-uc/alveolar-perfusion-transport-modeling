@@ -15,24 +15,6 @@ print("Dolfin version: ", dolfin.__version__)
 # from fenics import *
 from src.model import PerfusionGasExchangeModel
 from src.params import params
-
-if not has_linear_algebra_backend("PETSc") and not has_linear_algebra_backend("Tpetra"):
-    info("DOLFIN has not been configured with Trilinos or PETSc. Exiting.")
-    exit()
-
-if not has_krylov_solver_preconditioner("amg"):
-    info("Sorry, this demo is only available when DOLFIN is compiled with AMG "
-         "preconditioner, Hypre or ML.")
-    exit()
-
-if has_krylov_solver_method("minres"):
-    krylov_method = "minres"
-elif has_krylov_solver_method("tfqmr"):
-    krylov_method = "tfqmr"
-else:
-    info("Default linear algebra backend was not compiled with MINRES or TFQMR "
-         "Krylov subspace method. Terminating.")
-    exit()
     
 box_mesh = BoxMesh(Point(0,0,0),Point(5,5,5),10,10,10)
 
