@@ -3,7 +3,7 @@
 # Nombre del trabajo
 #SBATCH --job-name=MUMPSdef
 # Archivo de salida
-#SBATCH --output=mumps_default_1.txt
+#SBATCH --output=mumps_default_5.txt
 # Partición (Cola de y trabajo)
 #SBATCH --partition=512x1024
 # Solicitud de cpus
