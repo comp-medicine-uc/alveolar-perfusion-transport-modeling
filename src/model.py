@@ -452,6 +452,7 @@ class PerfusionGasExchangeModel():
         else:
             if preconditioner is None:
                 print(f"Solving with solver = {solver} and without preconditioner.")
+
                 solve(
                     G == 0, x, self.t_dbc,
                     solver_parameters={"newton_solver": {
@@ -466,22 +467,20 @@ class PerfusionGasExchangeModel():
                 # solver=gmres, preconditioner=sor: no converge.
                 # solver=tfqmr, preconditioner=None: no converge.
                 # solver=tfqmr, preconditioner=default: no converge.
-                # solver=umfpack, preconditioner=default: 300 seg, r(rel) = 5.7e-16
+                # solver=umfpack, preconditioner=default: 300 seg, r(rel) = 5.741e-16
                 # solver=umfpack, preconditioner=
                 
                 # solver=mumps, preconditioner=None: 172 seg, r(rel) = 5.741e-16
                 # solver=mumps, preconditioner=ilu: no funciona
                 # solver=mumps, preconditioner=amg: no funciona
-                # solver=mumps, preconditioner=default: 175 seg, r(rel) = 5.741e-16
-                
+                # solver=mumps, preconditioner=default: 175 seg, r(rel) = 5.741e-16      
                 
                 # solver iterativo
                 # solver=bicgstab, preconditioner="default": no converge
                 
                     # Solution failed to converge in 10000 iterations (PETSc reason          
                     # DIVERGED_ITS, residual norm ||r|| = 6.392203e+00).
-                
-                
+
                 # Otra alternativa: buscar cómo hacer más iteraciones
                 # Mirar https://fenicsproject.org/qa/9563/mixed-navier-stokes-solver-preconditioner-configuration/
                 # Mirar documentación NonlinearVariationalSolver 
@@ -539,10 +538,10 @@ class PerfusionGasExchangeModel():
                 
                 solver.solve(x.vector(), bb)
             
-            
-            
             else:
                 print(f"Solving with solver = {solver} and preconditioner = {preconditioner}.")
+
+                
                 solve(
                     G == 0, x, self.t_dbc,
                     solver_parameters={"newton_solver": {
@@ -552,57 +551,7 @@ class PerfusionGasExchangeModel():
                         "preconditioner": preconditioner
                     }}
                 )      
-#         elif preconditioner == 'sor':
-#             solve(
-#                 G == 0, x, self.t_dbc,
-#                 solver_parameters={"newton_solver": {
-#                     "relative_tolerance": 1E-8,
-#                     "absolute_tolerance": 1E-8,
-#                     "linear_solver": "gmres",
-#                     "preconditioner": "sor"
-#                 }}
-#             )
-#         elif preconditioner == 'icc':
-#             solve(
-#                 G == 0, x, self.t_dbc,
-#                 solver_parameters={"newton_solver": {
-#                     "relative_tolerance": 1E-8,
-#                     "absolute_tolerance": 1E-8,
-#                     "linear_solver": "gmres",
-#                     "preconditioner": "icc"
-#                 }}
-#             )
-#         elif preconditioner == 'petsc_amg':
-#             solve(
-#                 G == 0, x, self.t_dbc,
-#                 solver_parameters={"newton_solver": {
-#                     "relative_tolerance": 10,
-#                     "absolute_tolerance": 10,
-#                     "linear_solver": "gmres",
-#                     "preconditioner": "petsc_amg"
-#                 }}
-#             )
-#         elif preconditioner == 'petsc':
-#             solve(
-#                 G == 0, x, self.t_dbc,
-#                 solver_parameters={"newton_solver": {
-#                     "relative_tolerance": 1E-8,
-#                     "absolute_tolerance": 1E-8,
-#                     "linear_solver": "petsc",
-#                     "preconditioner": "petsc_amg"
-#                 }}
-#             )
-#         elif preconditioner == 'test':
-#             solve(
-#                 G == 0, x, self.t_dbc,
-#                 solver_parameters={"newton_solver": {
-#                     "relative_tolerance": 1E-8,
-#                     "absolute_tolerance": 1E-8,
-#                     "linear_solver": "richardson",
-#                     "preconditioner": "sor"
-#                 }}
-#             )
-                            
+                
         if save:
 
             # Save solution to files
@@ -618,7 +567,19 @@ class PerfusionGasExchangeModel():
             p_CO2_file << _p_CO2
             c_HbO2_file << _c_HbO2
             c_HbCO2_file << _c_HbCO2
-
+        
+        
+#         print("Matrix for G")  
+#         A = assemble(G)
+#         A_mat =  A.mat()
+#         print(type(A_mat))
+#         A_mat_bin = A_mat != 0
+        
+#         R = assemble(G, tensor = PETScMatrix())
+#         RT = PETScMatrix(R.mat().transpose(R.mat().duplicate()))
+#         R2 = PETScMatrix(R.mat().matMult(R.mat()))
+#         A_mat = as_backend_type(R).mat()
+#         print(type(A_mat))
         return x
 
     def compute_airflow(self):

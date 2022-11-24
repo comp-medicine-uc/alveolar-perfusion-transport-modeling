@@ -4,7 +4,6 @@ __email__ = 'biherrera@uc.cl'
 import sys
 import os
 import time
-
 # The following line adds the directory to the path in order to cross-reference
 # files in the repo
 sys.path.append(os.getcwd()[:-6])
@@ -49,7 +48,6 @@ t1 = time.time()
 x = model.sim_t(hb=False, save=True, solver="bicgstab")
 print(f"Time elapsed: {time.time()-t1}")
 print("Finished (linear) guess generation")
-
 
 t1 = time.time()
 solution = model.sim_t(
