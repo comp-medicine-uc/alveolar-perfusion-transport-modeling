@@ -334,14 +334,13 @@ class PerfusionGasExchangeModel():
         h_ba = self.params['h_ba']
 
         # Instance function space for the multi-field problem
-
         element = VectorElement('P', tetrahedron, 2, dim=4)
         self.M_h = FunctionSpace(self.mesh, element)       
         
-# Revisar esto
-#         elem2 = VectorElement('P', tetrahedron, 2, dim=1)
-#         elem1 = VectorElement('P', tetrahedron, 1, dim=1)
-#         mixed = MixedElement([elem1, elem1, elem2, elem2])
+        # Revisar esto
+        # elem2 = VectorElement('P', tetrahedron, 2, dim=1)
+        # elem1 = VectorElement('P', tetrahedron, 1, dim=1)
+        # mixed = MixedElement([elem1, elem1, elem2, elem2])
         # self.M_h = FunctionSpace(self.mesh, mixed)
 
         ds = Measure('ds', domain=self.mesh, subdomain_data=self.boundaries)
@@ -476,11 +475,72 @@ class PerfusionGasExchangeModel():
                 # solver=mumps, preconditioner=default: 175 seg, r(rel) = 5.741e-16
                 
                 
+                # solver iterativo
+                # solver=bicgstab, preconditioner="default": no converge
+                
+                    # Solution failed to converge in 10000 iterations (PETSc reason          
+                    # DIVERGED_ITS, residual norm ||r|| = 6.392203e+00).
                 
                 
-                
+                # Otra alternativa: buscar cómo hacer más iteraciones
                 # Mirar https://fenicsproject.org/qa/9563/mixed-navier-stokes-solver-preconditioner-configuration/
-                # Mirar documentación NonlinearVariationalSolver
+                # Mirar documentación NonlinearVariationalSolver 
+                
+            elif preconditioner == "K":
+                print("Starting Krylov solver formulation")
+                # P2 = VectorElement("Lagrange", mesh.ufl_cell(), 2)
+                # P1 = FiniteElement("Lagrange", mesh.ufl_cell(), 1)
+                # TH = P2 * P1
+                # W = FunctionSpace(mesh, TH)
+                # (u, p) = TrialFunctions(W)
+                # (v, q) = TestFunctions(W)
+                # preconditioner form b
+                # b = inner(grad(u), grad(v))*dx + p*q*dx
+                # Assemble system
+                # A, bb = assemble_system(a, L, bcs)
+                # Assemble preconditioner system
+                # P, btmp = assemble_system(b, L, bcs)
+                # Create Krylov solver and AMG preconditioner
+                # solver = KrylovSolver(krylov_method, "amg")
+                # Associate operator (A) and preconditioner matrix (P)
+                # solver.set_operators(A, P)
+                # U = Function(W)
+                # solver.solve(U.vector(), bb)
+                
+                # En este caso
+                # v, w, eta, xi = TestFunctions(self.M_h)
+                # element = VectorElement('P', tetrahedron, 2, dim=4)
+                # self.M_h = FunctionSpace(self.mesh, element)     
+                # x = project(guess, self.M_h)
+                # self.p_O2, self.p_CO2, self.c_HbO2, self.c_HbCO2 = split(x) # trial functions
+                # v, w, eta, xi = TestFunctions(self.M_h)
+    
+                #   Krylov method  |  Description
+                # --------------------------------------------------------------
+                # bicgstab       |  Biconjugate gradient stabilized method
+                # cg             |  Conjugate gradient method
+                # default        |  default Krylov method
+                # gmres          |  Generalized minimal residual method
+                # minres         |  Minimal residual method
+                # richardson     |  Richardson method
+                # tfqmr          |  Transpose-free quasi-minimal residual method
+                # primero trial, después test
+            
+                #
+                F = Constant(0)*v*dx
+                b =  inner(grad(self.p_O2),grad(v))     + inner(grad(self.p_CO2),grad(w))
+                b += inner(grad(self.c_HbO2),grad(eta)) + inner(grad(self.c_HbCO2),grad(xi))
+                
+                # Esto no funciona porque G no es bilineal, ver alternativas
+                A, bb = assemble_system(G, F, self.t_dbc)
+                P, btmp = assemble_system(b, F, self.t_dbc)
+                solver = KrylovSolver(krylov_method, "amg")
+                solver.set_operators(A,P)
+                
+                solver.solve(x.vector(), bb)
+            
+            
+            
             else:
                 print(f"Solving with solver = {solver} and preconditioner = {preconditioner}.")
                 solve(
