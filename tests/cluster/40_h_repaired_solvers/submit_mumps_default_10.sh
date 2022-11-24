@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Nombre del trabajo
-#SBATCH --job-name=MUMPSd5
+#SBATCH --job-name=MUMPSdef
 # Archivo de salida
 #SBATCH --output=mumps_default_5.txt
 # Partición (Cola de y trabajo)
@@ -12,5 +12,5 @@
 #SBATCH --mail-user=biherrera@uc.cl
 #SBATCH --mail-type=ALL
 
-mpirun -n 5 python3 mumps_default_5.py
+mpirun -n 5 python3 mumps_default.py
 
