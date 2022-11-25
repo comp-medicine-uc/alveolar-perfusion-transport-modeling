@@ -19,7 +19,7 @@ from src.params import params
 
 print("Imported src files")
 print("Starting...")
-folder = "mumps_none"
+folder = "mumps_15"
 path = os.path.join("../../../results-data", folder)
 model = PerfusionGasExchangeModel(folder_path=path, params=params, solver='gmres', f_dim = 2, vecf_dim=1)
 
