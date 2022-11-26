@@ -1,0 +1,51 @@
+Process 0: Solving linear variational problem.
+Process 1: Solving linear variational problem.
+Process 0: No Jacobian form specified for nonlinear variational problem.
+Process 0: Differentiating residual form F to obtain Jacobian J = F'.
+Process 1: No Jacobian form specified for nonlinear variational problem.
+Process 1: Differentiating residual form F to obtain Jacobian J = F'.
+Process 0: Solving nonlinear variational problem.
+Process 1: Solving nonlinear variational problem.
+  Process 0: Newton iteration 0: r (abs) = 1.192e+07 (tol = 1.000e-08) r (rel) = 1.000e+00 (tol = 1.000e-08)
+  Process 0: Newton iteration 1: r (abs) = 1.569e+02 (tol = 1.000e-08) r (rel) = 1.316e-05 (tol = 1.000e-08)
+  Process 0: Newton iteration 2: r (abs) = 1.698e-03 (tol = 1.000e-08) r (rel) = 1.424e-10 (tol = 1.000e-08)
+  Process 0: Newton solver finished in 2 iterations and 135 linear solver iterations.
+Process 0: No Jacobian form specified for nonlinear variational problem.
+Process 0: Differentiating residual form F to obtain Jacobian J = F'.
+Process 1: No Jacobian form specified for nonlinear variational problem.
+Process 1: Differentiating residual form F to obtain Jacobian J = F'.
+Process 0: Solving nonlinear variational problem.
+Process 1: Solving nonlinear variational problem.
+  Process 0: Newton iteration 0: r (abs) = 2.461e+08 (tol = 1.000e-08) r (rel) = 1.000e+00 (tol = 1.000e-08)
+  Process 0: Newton iteration 1: r (abs) = 2.461e+08 (tol = 1.000e-08) r (rel) = 1.000e+00 (tol = 1.000e-08)
+  Process 0: Newton iteration 2: r (abs) = 2.461e+08 (tol = 1.000e-08) r (rel) = 1.000e+00 (tol = 1.000e-08)
+  Process 0: Newton iteration 3: r (abs) = 2.461e+08 (tol = 1.000e-08) r (rel) = 1.000e+00 (tol = 1.000e-08)
+  Process 0: Newton iteration 4: r (abs) = 2.461e+08 (tol = 1.000e-08) r (rel) = 1.000e+00 (tol = 1.000e-08)
+  Process 0: Newton iteration 5: r (abs) = 2.461e+08 (tol = 1.000e-08) r (rel) = 1.000e+00 (tol = 1.000e-08)
+  Process 0: Newton iteration 6: r (abs) = 2.461e+08 (tol = 1.000e-08) r (rel) = 1.000e+00 (tol = 1.000e-08)
+  Process 0: Newton iteration 7: r (abs) = 2.461e+08 (tol = 1.000e-08) r (rel) = 1.000e+00 (tol = 1.000e-08)
+  Process 0: Newton iteration 8: r (abs) = 2.461e+08 (tol = 1.000e-08) r (rel) = 1.000e+00 (tol = 1.000e-08)
+  Process 0: Newton iteration 9: r (abs) = 2.461e+08 (tol = 1.000e-08) r (rel) = 1.000e+00 (tol = 1.000e-08)
+  Process 0: Newton iteration 10: r (abs) = 2.475e+08 (tol = 1.000e-08) r (rel) = 1.006e+00 (tol = 1.000e-08)
+  Process 0: Newton iteration 11: r (abs) = 2.807e+08 (tol = 1.000e-08) r (rel) = 1.141e+00 (tol = 1.000e-08)
+  Process 0: Newton iteration 12: r (abs) = 3.589e+09 (tol = 1.000e-08) r (rel) = 1.458e+01 (tol = 1.000e-08)
+  Process 0: Newton iteration 13: r (abs) = 9.588e+09 (tol = 1.000e-08) r (rel) = 3.897e+01 (tol = 1.000e-08)
+  Process 0: Newton iteration 14: r (abs) = 2.599e+10 (tol = 1.000e-08) r (rel) = 1.056e+02 (tol = 1.000e-08)
+  Process 0: Newton iteration 15: r (abs) = 5.579e+11 (tol = 1.000e-08) r (rel) = 2.267e+03 (tol = 1.000e-08)
+  Process 0: Newton iteration 16: r (abs) = 5.482e+11 (tol = 1.000e-08) r (rel) = 2.228e+03 (tol = 1.000e-08)
+  Process 0: Newton iteration 17: r (abs) = 2.477e+12 (tol = 1.000e-08) r (rel) = 1.007e+04 (tol = 1.000e-08)
+  Process 0: Newton iteration 18: r (abs) = 2.463e+12 (tol = 1.000e-08) r (rel) = 1.001e+04 (tol = 1.000e-08)
+  Process 0: Newton iteration 19: r (abs) = 2.879e+13 (tol = 1.000e-08) r (rel) = 1.170e+05 (tol = 1.000e-08)
+  Process 0: Newton iteration 20: r (abs) = 2.071e+14 (tol = 1.000e-08) r (rel) = 8.415e+05 (tol = 1.000e-08)
+  Process 0: Newton iteration 21: r (abs) = 2.268e+14 (tol = 1.000e-08) r (rel) = 9.217e+05 (tol = 1.000e-08)
+  Process 0: Newton iteration 22: r (abs) = 2.336e+14 (tol = 1.000e-08) r (rel) = 9.492e+05 (tol = 1.000e-08)
+  Process 0: Newton iteration 23: r (abs) = 1.936e+15 (tol = 1.000e-08) r (rel) = 7.868e+06 (tol = 1.000e-08)
+  Process 0: Newton iteration 24: r (abs) = 7.359e+15 (tol = 1.000e-08) r (rel) = 2.991e+07 (tol = 1.000e-08)
+  Process 0: Newton iteration 25: r (abs) = 8.259e+16 (tol = 1.000e-08) r (rel) = 3.356e+08 (tol = 1.000e-08)
+  Process 0: Newton iteration 26: r (abs) = 8.306e+16 (tol = 1.000e-08) r (rel) = 3.376e+08 (tol = 1.000e-08)
+  Process 0: Newton iteration 27: r (abs) = 9.729e+17 (tol = 1.000e-08) r (rel) = 3.954e+09 (tol = 1.000e-08)
+  Process 0: Newton iteration 28: r (abs) = 9.396e+17 (tol = 1.000e-08) r (rel) = 3.819e+09 (tol = 1.000e-08)
+  Process 0: Newton iteration 29: r (abs) = 3.988e+18 (tol = 1.000e-08) r (rel) = 1.621e+10 (tol = 1.000e-08)
+  Process 0: Newton iteration 30: r (abs) = 9.869e+20 (tol = 1.000e-08) r (rel) = 4.011e+12 (tol = 1.000e-08)
+  Process 0: Newton iteration 31: r (abs) = 9.766e+20 (tol = 1.000e-08) r (rel) = 3.969e+12 (tol = 1.000e-08)
+  Process 0: Newton iteration 32: r (abs) = 2.330e+22 (tol = 1.000e-08) r (rel) = 9.468e+13 (tol = 1.000e-08)
