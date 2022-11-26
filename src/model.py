@@ -524,7 +524,6 @@ class PerfusionGasExchangeModel():
                 # tfqmr          |  Transpose-free quasi-minimal residual method
                 # primero trial, después test
             
-                #
                 F = Constant(0)*v*dx
                 b =  inner(grad(self.p_O2),grad(v))     + inner(grad(self.p_CO2),grad(w))
                 b += inner(grad(self.c_HbO2),grad(eta)) + inner(grad(self.c_HbCO2),grad(xi))
