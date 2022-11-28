@@ -334,7 +334,7 @@ class PerfusionGasExchangeModel():
         h_ba = self.params['h_ba']
 
         # Instance function space for the multi-field problem
-        element = VectorElement('P', tetrahedron, 2, dim=4)
+        element = VectorElement('P', tetrahedron, 3, dim=4)
         self.M_h = FunctionSpace(self.mesh, element)       
         
         # Revisar esto
