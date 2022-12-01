@@ -10,23 +10,23 @@ sys.path.append(os.getcwd()[:-6])
 print("Relative path: ", os.getcwd()[:-6])
 
 import dolfin
-# print("Dolfin version: ", dolfin.__version__)
+print("Dolfin version: ", dolfin.__version__)
 from fenics import *
 from src.model import PerfusionGasExchangeModel
 from src.params import params
     
-box_mesh = BoxMesh(Point(0,0,0),Point(50,50,50),100,100,100)
-
-# 33^3 ~ 36000 cells, which is approximately the same as 40_h_repaired data
+box_mesh = BoxMesh(Point(0,0,0),Point(5,5,5),50,50,50)
 
 print("Imported src files")
 print("Starting...")
-folder = "big_box_mesh"
+folder = "fine_5_box_mesh"
 path = os.path.join("../results-data", folder)
 print(path)
 model = PerfusionGasExchangeModel(folder_path=path, params=params, solver='mumps', f_dim = 2, vecf_dim=1)
 print("Model initialised")
-max_dimsh = [50,50,50]
+# max_dimsh = [12.005523, 12.005658, 12.005917]
+# min_dimsh = [1.994504, 1.993421, 1.994056]
+max_dimsh = [5,5,5]
 min_dimsh = [0,0,0]
 
 model.import_mesh(
