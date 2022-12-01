@@ -52,6 +52,6 @@ print("Finished (linear) guess generation")
 t1 = time.time()
 solution = model.sim_t(
     hb=True, save=True, guess=x, 
-    solver="mumps", preconditioner="default")
+    solver="bicgstab", preconditioner="default")
 print(f"Time elapsed: {time.time()-t1}")
 print("Done")
