@@ -308,7 +308,7 @@ class PerfusionGasExchangeModel():
         else:
             raise ValueError('Gas species in f must be O2 or CO2.')
 
-    def sim_t(self, hb=True, save=True, guess=None, solver=None, preconditioner=None):
+    def sim_t(self, hb=True, save=True, guess=None, solver=None, preconditioner=None, opt=None):
         '''Solves the steady state blood-side transport (T) problem of the
         model.
         
@@ -365,7 +365,8 @@ class PerfusionGasExchangeModel():
         G_p_O2 += inner(self.p_O2*self.u, n)*v*ds(2)
         G_p_O2 += -inner(self.p_O2*self.u, grad(v))*dx
         if hb:
-            G_p_O2 += self.f('O2', self.p_O2, self.c_HbO2, self.c_HbCO2)*v*dx
+            if opt is None or opt == 0:
+                G_p_O2 += self.f('O2', self.p_O2, self.c_HbO2, self.c_HbCO2)*v*dx # opt == 0
 
         G_p_CO2 = d_pla_CO2*inner(grad(self.p_CO2), grad(w))*dx
         G_p_CO2 += -d_ba_CO2/h_ba*Constant(p_air_CO2)*w*ds(3)
@@ -373,18 +374,29 @@ class PerfusionGasExchangeModel():
         G_p_CO2 += inner(self.p_CO2*self.u, n)*w*ds(2)
         G_p_CO2 += -inner(self.p_CO2*self.u, grad(w))*dx
         if hb:
-            G_p_CO2 += self.f('CO2', self.p_CO2, self.c_HbCO2, self.c_HbO2)*w*dx
+            if opt is None or opt == 0:
+                G_p_CO2 += self.f('CO2', self.p_CO2, self.c_HbCO2, self.c_HbO2)*w*dx # opt == 0
 
         if hb:
-            G_c_O2 = self.g('O2', self.p_O2, self.c_HbO2, self.c_HbCO2)*eta*dx
-            G_c_O2 += inner(self.c_HbO2*self.u, grad(eta))*dx
-            G_c_O2 += -inner(self.c_HbO2*self.u, n)*eta*ds(2)
-
-            G_c_CO2 = self.g(
-                'CO2', self.p_CO2, self.c_HbCO2, self.c_HbO2
-            )*xi*dx
-            G_c_CO2 += inner(self.c_HbCO2*self.u, grad(xi))*dx
-            G_c_CO2 += -inner(self.c_HbCO2*self.u, n)*xi*ds(2)
+            if opt is None:
+                G_c_O2 = self.g('O2', self.p_O2, self.c_HbO2, self.c_HbCO2)*eta*dx      # opt == 1
+                G_c_O2 += inner(self.c_HbO2*self.u, grad(eta))*dx                       # opt == 2
+                G_c_O2 += -inner(self.c_HbO2*self.u, n)*eta*ds(2)                       # opt == 3
+                G_c_CO2 = self.g('CO2', self.p_CO2, self.c_HbCO2, self.c_HbO2)*xi*dx    # opt == 1
+                G_c_CO2 += inner(self.c_HbCO2*self.u, grad(xi))*dx                      # opt == 2
+                G_c_CO2 += -inner(self.c_HbCO2*self.u, n)*xi*ds(2)                      # opt == 3
+            elif opt == 1:
+                G_c_O2 = self.g('O2', self.p_O2, self.c_HbO2, self.c_HbCO2)*eta*dx 
+                G_c_CO2 = self.g('CO2', self.p_CO2, self.c_HbCO2, self.c_HbO2)*xi*dx 
+            elif opt == 2:
+                G_c_O2 += inner(self.c_HbO2*self.u, grad(eta))*dx 
+                G_c_CO2 += inner(self.c_HbCO2*self.u, grad(xi))*dx         
+            elif opt == 3:
+                G_c_O2 += -inner(self.c_HbO2*self.u, n)*eta*ds(2)    
+                G_c_CO2 += -inner(self.c_HbCO2*self.u, n)*xi*ds(2)   
+            else:
+                raise ValueError("Option not valid for non-linear transport problem.")
+                
         else:
             G_c_O2 = self.c_HbO2*eta*dx
             G_c_CO2 = self.c_HbCO2*xi*dx
