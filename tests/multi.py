@@ -11,10 +11,7 @@ from fenics import *
 from src.model import PerfusionGasExchangeModel
 from src.params import params
 
-max_dims = [39.894161224365234, 39.895729064941406, 39.89208984375]
-min_dims = [0.09939099848270416, 0.09558500349521637, 0.1048400029540062]
-
-def run_model(name, fname, solver, preconditioner, boxmesh, n_jobs=15):
+def run_model(name, fname, solver, preconditioner, boxmesh, max_dims, min_dims, n_jobs=15):
     print(f"Running model on {n_jobs} jobs.")
     print("Imported src files")
     print("Starting...")
@@ -50,10 +47,17 @@ edges = [5,50]
 
 for side_length in edges:
     for amount in amounts:
-        box_mesh = BoxMesh(Point(0,0,0), Point(side_length,side_length,side_length), amount, amount, amount)
+        print(f"Comienza la iteración con amount = {str(amount)} y side_length = {str(side_length)}.")
+        
+        max_dims = [side_length,side_length,side_length]
+        min_dims = [0,0,0]
+        
+        boxmesh = BoxMesh(Point(0,0,0), Point(side_length,side_length,side_length), amount, amount, amount)
+        
         name = "amount_" + str(amount)
         fname = "edge_" + str(side_length)
-        run_model(name, fname, "bicgstab", "default", box_mesh)
+        
+        run_model(name, fname, "bicgstab", "default", boxmesh, max_dims, min_dims)
 #         try:
 #             run_model(name, fname, "bicgstab", "default", box_mesh)
 #         except RuntimeError:
