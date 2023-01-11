@@ -4,8 +4,6 @@ __email__ = 'biherrera@uc.cl'
 import sys
 import os
 import time
-import numpy as np
-import matplotlib.pyplot as plt
 sys.path.append(os.getcwd()[:-6])
 print("Relative path: ", os.getcwd()[:-6])
 import dolfin

@@ -13,4 +13,3 @@
 #SBATCH --mail-type=ALL
 
 mpirun -n 15 python3 multi.py
-
