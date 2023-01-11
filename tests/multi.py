@@ -19,7 +19,7 @@ def run_model(name, fname, solver, preconditioner, boxmesh, n_jobs=15):
     print("Imported src files")
     print("Starting...")
     folder = fname + "/" + name
-    path = os.path.join("../../../results-data/", folder)
+    path = os.path.join("../results-data", folder)
     model = PerfusionGasExchangeModel(folder_path=path, params=params, solver='gmres', f_dim = 2, vecf_dim=1)
     print("Model initialised")
     
