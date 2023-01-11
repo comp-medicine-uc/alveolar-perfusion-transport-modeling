@@ -51,12 +51,12 @@ edges = [5,50]
 for side_length in edges:
     for amount in amounts:
         box_mesh = BoxMesh(Point(0,0,0), Point(side_length,side_length,side_length), amount, amount, amount)
-        name = "amount_" + amount
-        fname = "edge_" + side_length
+        name = "amount_" + str(amount)
+        fname = "edge_" + str(side_length)
         try:
             run_model(name, fname, "bicgstab", "default", box_mesh)
         except RuntimeError:
-            print(f"La iteración con amount = {amount} y side_length = {side_length}")
+            print(f"La iteración con amount = {str(amount)} y side_length = {str(side_length)}")
             print("-----------------------------------------------------------------")
             
 print("Todas las iteraciones terminadas.")
