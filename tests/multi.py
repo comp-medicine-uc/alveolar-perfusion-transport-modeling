@@ -23,11 +23,11 @@ def run_model(name, fname, solver, preconditioner, boxmesh, n_jobs=15):
     model = PerfusionGasExchangeModel(folder_path=path, params=params, solver='gmres', f_dim = 2, vecf_dim=1)
     print("Model initialised")
     
-#     model.import_mesh(
-#         os.path.join("../../../raw-data/40_h_repaired", "40_h_repaired.xdmf"), type="xdmf", 
-#         periodic=False, max_dims=max_dims, min_dims=min_dims, tol=0.1
-#     )
-#     print("Mesh imported")
+    model.import_mesh(
+        os.path.join("../../../raw-data/40_h_repaired", "40_h_repaired.xdmf"), type="xdmf", 
+        periodic=False, max_dims=max_dims, min_dims=min_dims, tol=0.1
+    )
+    print("Mesh imported")
     
     model.mesh = boxmesh
     model.mesh = dolfin.refine(model.mesh)
