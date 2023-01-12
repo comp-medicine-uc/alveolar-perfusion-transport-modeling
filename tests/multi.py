@@ -41,9 +41,9 @@ def run_model(name, fname, solver, preconditioner, boxmesh, max_dims, min_dims, 
     print("Done")
     
 # amounts = [5,10,20,30,50,100]
-amounts = [5,10,50]
+amounts = [20]
 # edges = [5,25,50]
-edges = [5,50]
+edges = [5]
 
 for side_length in edges:
     for amount in amounts:
