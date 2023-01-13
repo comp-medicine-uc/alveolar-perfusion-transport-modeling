@@ -42,7 +42,7 @@ def run_model(name, fname, solver, preconditioner, boxmesh, max_dims, min_dims, 
 
 
 amount = 10
-side_length = 5
+side_length = 50
 
 print(f"Comienza la iteración con amount = {str(amount)} y side_length = {str(side_length)}.")
 
