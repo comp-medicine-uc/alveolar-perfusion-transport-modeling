@@ -322,7 +322,10 @@ class PerfusionGasExchangeModel():
         if solver is None:
             print("No solver selected.")
         else:
-            print("began sim_t, with solver = ", solver)
+            if preconditioner is None:
+                print("began sim_t, with solver = ", solver, " and WITHOUT preconditioner.")
+            else:
+                print("began sim_t, with solver = ", solver, " and preconditioner = ", preconditioner)
         p_air_O2 = self.params['p_air_O2']
         d_ba_O2 = self.params['d_ba_O2']
         d_pla_O2 = self.params['d_pla_O2']
@@ -438,8 +441,6 @@ class PerfusionGasExchangeModel():
 
         # Solve variational problem
         if solver is None:
-#             test_solver = "bicgstab"
-#             print(f"Attempting to solve using solver {test_solver}")
             solve(
                 G == 0, x, self.t_dbc,
                 solver_parameters={"newton_solver": {
@@ -549,9 +550,7 @@ class PerfusionGasExchangeModel():
                 solver.solve(x.vector(), bb)
             
             else:
-                print(f"Solving with solver = {solver} and preconditioner = {preconditioner}.")
-
-                
+                print(f"Solving with solver = {solver} and preconditioner = {preconditioner}.")                
                 solve(
                     G == 0, x, self.t_dbc,
                     solver_parameters={"newton_solver": {
@@ -577,19 +576,6 @@ class PerfusionGasExchangeModel():
             p_CO2_file << _p_CO2
             c_HbO2_file << _c_HbO2
             c_HbCO2_file << _c_HbCO2
-        
-        
-#         print("Matrix for G")  
-#         A = assemble(G)
-#         A_mat =  A.mat()
-#         print(type(A_mat))
-#         A_mat_bin = A_mat != 0
-        
-#         R = assemble(G, tensor = PETScMatrix())
-#         RT = PETScMatrix(R.mat().transpose(R.mat().duplicate()))
-#         R2 = PETScMatrix(R.mat().matMult(R.mat()))
-#         A_mat = as_backend_type(R).mat()
-#         print(type(A_mat))
         return x
 
     def compute_airflow(self):

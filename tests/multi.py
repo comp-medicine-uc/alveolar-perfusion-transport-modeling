@@ -55,4 +55,3 @@ name = "amount_" + str(amount)
 fname = "edge_" + str(side_length)
 
 run_model(name, fname, "bicgstab", "default", boxmesh, max_dims, min_dims)
-
