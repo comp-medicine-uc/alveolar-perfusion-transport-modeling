@@ -46,7 +46,7 @@ side_length = 50
 
 print(f"Comienza la iteración con amount = {str(amount)} y side_length = {str(side_length)}.")
 
-max_dims = [side_length,side_length,side_length]
+max_dims = [side_length, side_length, side_length]
 min_dims = [0,0,0]
 
 boxmesh = BoxMesh(Point(0,0,0), Point(side_length,side_length,side_length), amount, amount, amount)
