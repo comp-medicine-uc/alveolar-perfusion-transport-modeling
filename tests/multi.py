@@ -11,7 +11,7 @@ from fenics import *
 from src.model import PerfusionGasExchangeModel
 from src.params import params
 
-def run_model(name, fname, solver, preconditioner, boxmesh, max_dims, min_dims, n_jobs=15):
+def run_model(name, fname, solver, preconditioner, boxmesh, max_dims, min_dims, n_jobs=1):
     print(f"Running model on {n_jobs} jobs.")
     print("Imported src files")
     print("Starting...")
@@ -41,7 +41,7 @@ def run_model(name, fname, solver, preconditioner, boxmesh, max_dims, min_dims, 
     print("Done")
     
 # amounts = [5,10,20,30,50,100]
-amounts = [20]
+amounts = [5]
 # edges = [5,25,50]
 edges = [5]
 
