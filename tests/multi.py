@@ -39,30 +39,20 @@ def run_model(name, fname, solver, preconditioner, boxmesh, max_dims, min_dims, 
     print("Finished (linear) guess generation")
     solution = model.sim_t(hb=True, save=True, guess=x, solver=solver, preconditioner=preconditioner)
     print("Done")
-    
-# amounts = [5,10,20,30,50,100]
-amounts = [5]
-# edges = [5,25,50]
-edges = [5]
 
-for side_length in edges:
-    for amount in amounts:
-        print(f"Comienza la iteración con amount = {str(amount)} y side_length = {str(side_length)}.")
-        
-        max_dims = [side_length,side_length,side_length]
-        min_dims = [0,0,0]
-        
-        boxmesh = BoxMesh(Point(0,0,0), Point(side_length,side_length,side_length), amount, amount, amount)
-        
-        name = "amount_" + str(amount)
-        fname = "edge_" + str(side_length)
-        
-        run_model(name, fname, "bicgstab", "default", boxmesh, max_dims, min_dims)
-#         try:
-#             run_model(name, fname, "bicgstab", "default", box_mesh)
-#         except RuntimeError:
-#             print(f"La iteración con amount = {str(amount)} y side_length = {str(side_length)} falló por RuntimeError.")
-#             print("-----------------------------------------------------------------")
-            
-print("Todas las iteraciones terminadas.")
-            
+
+amount = 5
+side_length = 5
+
+print(f"Comienza la iteración con amount = {str(amount)} y side_length = {str(side_length)}.")
+
+max_dims = [side_length,side_length,side_length]
+min_dims = [0,0,0]
+
+boxmesh = BoxMesh(Point(0,0,0), Point(side_length,side_length,side_length), amount, amount, amount)
+
+name = "amount_" + str(amount)
+fname = "edge_" + str(side_length)
+
+run_model(name, fname, "bicgstab", "default", boxmesh, max_dims, min_dims)
+
