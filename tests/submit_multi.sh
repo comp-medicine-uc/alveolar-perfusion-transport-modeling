@@ -8,7 +8,7 @@
 #SBATCH --partition=512x1024
 # Solicitud de cpus
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=25
+#SBATCH --cpus-per-task=1
 #SBATCH --mail-user=biherrera@uc.cl
 #SBATCH --mail-type=ALL
 

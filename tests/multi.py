@@ -41,7 +41,7 @@ def run_model(name, fname, solver, preconditioner, max_dims, min_dims, side_leng
     
 ####################### VARIAR ESTOS DOS PARÁMETROS
 
-amount = 3
+amount = 5
 side_length = 5
 
 ####################### Ejecución
