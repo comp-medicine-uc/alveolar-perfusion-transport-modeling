@@ -70,6 +70,7 @@ class PerfusionGasExchangeModel():
                 print("Created b")
 
         print("Coordinates have shape ", np.shape(self.mesh.coordinates()))
+        
 #         dir_arr_flow = np.array(
 #                 [coords[0] for coords in self.mesh.coordinates()]
 #         )
@@ -162,7 +163,7 @@ class PerfusionGasExchangeModel():
         save: saves to vtk. (bool)
         meshtype: type of mesh. None, "sheet" or "tkd". (None or str)
         '''
-        print("began sim_p")
+        print("\n ############## (P) problem simulation ############")
         self.instance_boundaries(mesh=meshtype)
         print("boundaries instanced")
         self.instance_function_spaces()
@@ -293,6 +294,9 @@ class PerfusionGasExchangeModel():
         guess: starting point for Newton iterations. s^0_L in the paper.
         (FEniCS Function or None)
         '''
+        
+        print("\n ############## (LT) and (T) problem simulation ############")
+        
         # Instance parameters
         if solver is None:
             print("No solver selected.")

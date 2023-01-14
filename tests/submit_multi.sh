@@ -8,8 +8,8 @@
 #SBATCH --partition=512x1024
 # Solicitud de cpus
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=1
+#SBATCH --cpus-per-task=10
 #SBATCH --mail-user=biherrera@uc.cl
 #SBATCH --mail-type=ALL
 
-mpirun -n 1 python3 multi.py
+mpirun -n 10 python3 multi.py
