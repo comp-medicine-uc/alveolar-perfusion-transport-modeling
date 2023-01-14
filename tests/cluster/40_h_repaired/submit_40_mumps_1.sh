@@ -12,5 +12,5 @@
 #SBATCH --mail-user=biherrera@uc.cl
 #SBATCH --mail-type=ALL
 
-mpirun -n 1 python3 40_mumps_1.py
+mpirun -n 5 python3 40_mumps_1.py
 
