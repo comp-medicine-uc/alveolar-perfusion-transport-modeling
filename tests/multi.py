@@ -54,4 +54,4 @@ min_dims = [0,0,0]
 name = "amount_" + str(amount)
 fname = "edge_" + str(side_length)
 
-run_model(name, fname, "bicgstab", "default", max_dims, min_dims, side_length, amount)
+run_model(name, fname, "gmres", "default", max_dims, min_dims, side_length, amount)
