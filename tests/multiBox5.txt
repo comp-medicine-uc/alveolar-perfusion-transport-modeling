@@ -1,80 +1,56 @@
 Process 0: Solving linear variational problem.
 Process 2: Solving linear variational problem.
-Process 3: Solving linear variational problem.
 Process 1: Solving linear variational problem.
 Process 4: Solving linear variational problem.
-Process 1: No Jacobian form specified for nonlinear variational problem.
-Process 1: Differentiating residual form F to obtain Jacobian J = F'.
-Process 3: No Jacobian form specified for nonlinear variational problem.
-Process 3: Differentiating residual form F to obtain Jacobian J = F'.
-Process 2: No Jacobian form specified for nonlinear variational problem.Process 0: No Jacobian form specified for nonlinear variational problem.
-Process 0: Differentiating residual form F to obtain Jacobian J = F'.
-
-Process 4: No Jacobian form specified for nonlinear variational problem.
-Process 4: Differentiating residual form F to obtain Jacobian J = F'.
-Process 2: Differentiating residual form F to obtain Jacobian J = F'.
-Process 0: Solving nonlinear variational problem.
-Process 1: Solving nonlinear variational problem.
-Process 4: Solving nonlinear variational problem.
-Process 3: Solving nonlinear variational problem.
-Process 2: Solving nonlinear variational problem.
-  Process 0: Newton iteration 0: r (abs) = 6.892e+07 (tol = 1.000e-08) r (rel) = 1.000e+00 (tol = 1.000e-08)
-  Process 0: Newton iteration 1: r (abs) = 5.628e+02 (tol = 1.000e-08) r (rel) = 8.167e-06 (tol = 1.000e-08)
-  Process 0: Newton iteration 2: r (abs) = 1.657e-03 (tol = 1.000e-08) r (rel) = 2.405e-11 (tol = 1.000e-08)
-  Process 0: Newton solver finished in 2 iterations and 71 linear solver iterations.
+Process 3: Solving linear variational problem.
 Process 3: No Jacobian form specified for nonlinear variational problem.
 Process 3: Differentiating residual form F to obtain Jacobian J = F'.
 Process 0: No Jacobian form specified for nonlinear variational problem.
 Process 0: Differentiating residual form F to obtain Jacobian J = F'.
+Process 4: No Jacobian form specified for nonlinear variational problem.
+Process 4: Differentiating residual form F to obtain Jacobian J = F'.
+Process 2: No Jacobian form specified for nonlinear variational problem.
+Process 2: Differentiating residual form F to obtain Jacobian J = F'.
+Process 1: No Jacobian form specified for nonlinear variational problem.
+Process 1: Differentiating residual form F to obtain Jacobian J = F'.
+Process 0: Solving nonlinear variational problem.
+Process 4: Solving nonlinear variational problem.
+Process 3: Solving nonlinear variational problem.
+Process 1: Solving nonlinear variational problem.
+Process 2: Solving nonlinear variational problem.
+  Process 0: Newton iteration 0: r (abs) = 4.724e+07 (tol = 1.000e-08) r (rel) = 1.000e+00 (tol = 1.000e-08)
+  Process 0: Newton iteration 1: r (abs) = 4.191e+02 (tol = 1.000e-08) r (rel) = 8.873e-06 (tol = 1.000e-08)
+  Process 0: Newton iteration 2: r (abs) = 1.397e-03 (tol = 1.000e-08) r (rel) = 2.957e-11 (tol = 1.000e-08)
+  Process 0: Newton solver finished in 2 iterations and 68 linear solver iterations.
+Process 0: No Jacobian form specified for nonlinear variational problem.
+Process 0: Differentiating residual form F to obtain Jacobian J = F'.
+Process 1: No Jacobian form specified for nonlinear variational problem.
+Process 1: Differentiating residual form F to obtain Jacobian J = F'.
+Process 3: No Jacobian form specified for nonlinear variational problem.
+Process 3: Differentiating residual form F to obtain Jacobian J = F'.
 Process 2: No Jacobian form specified for nonlinear variational problem.
 Process 2: Differentiating residual form F to obtain Jacobian J = F'.
 Process 4: No Jacobian form specified for nonlinear variational problem.
-Process 1: No Jacobian form specified for nonlinear variational problem.
-Process 1: Differentiating residual form F to obtain Jacobian J = F'.Process 4: Differentiating residual form F to obtain Jacobian J = F'.
-
+Process 4: Differentiating residual form F to obtain Jacobian J = F'.
 Process 0: Solving nonlinear variational problem.
+Process 1: Solving nonlinear variational problem.
+Process 2: Solving nonlinear variational problem.
 Process 3: Solving nonlinear variational problem.
 Process 4: Solving nonlinear variational problem.
-Process 2: Solving nonlinear variational problem.
-Process 1: Solving nonlinear variational problem.
-  Process 0: Newton iteration 0: r (abs) = 6.244e+09 (tol = 1.000e-08) r (rel) = 1.000e+00 (tol = 1.000e-08)
-  Process 0: Newton iteration 1: r (abs) = 7.114e+10 (tol = 1.000e-08) r (rel) = 1.139e+01 (tol = 1.000e-08)
-  Process 0: Newton iteration 2: r (abs) = 7.121e+10 (tol = 1.000e-08) r (rel) = 1.140e+01 (tol = 1.000e-08)
-  Process 0: Newton iteration 3: r (abs) = 7.216e+10 (tol = 1.000e-08) r (rel) = 1.156e+01 (tol = 1.000e-08)
-  Process 0: Newton iteration 4: r (abs) = 7.217e+10 (tol = 1.000e-08) r (rel) = 1.156e+01 (tol = 1.000e-08)
-  Process 0: Newton iteration 5: r (abs) = 3.556e+11 (tol = 1.000e-08) r (rel) = 5.694e+01 (tol = 1.000e-08)
-  Process 0: Newton iteration 6: r (abs) = 4.579e+12 (tol = 1.000e-08) r (rel) = 7.333e+02 (tol = 1.000e-08)
-  Process 0: Newton iteration 7: r (abs) = 2.530e+14 (tol = 1.000e-08) r (rel) = 4.052e+04 (tol = 1.000e-08)
-  Process 0: Newton iteration 8: r (abs) = 8.983e+14 (tol = 1.000e-08) r (rel) = 1.439e+05 (tol = 1.000e-08)
-  Process 0: Newton iteration 9: r (abs) = 3.258e+17 (tol = 1.000e-08) r (rel) = 5.217e+07 (tol = 1.000e-08)
-  Process 0: Newton iteration 10: r (abs) = 3.259e+17 (tol = 1.000e-08) r (rel) = 5.219e+07 (tol = 1.000e-08)
-  Process 0: Newton iteration 11: r (abs) = 3.316e+17 (tol = 1.000e-08) r (rel) = 5.311e+07 (tol = 1.000e-08)
-  Process 0: Newton iteration 12: r (abs) = 1.615e+18 (tol = 1.000e-08) r (rel) = 2.587e+08 (tol = 1.000e-08)
-  Process 0: Newton iteration 13: r (abs) = 1.673e+18 (tol = 1.000e-08) r (rel) = 2.679e+08 (tol = 1.000e-08)
-  Process 0: Newton iteration 14: r (abs) = 1.703e+18 (tol = 1.000e-08) r (rel) = 2.726e+08 (tol = 1.000e-08)
-  Process 0: Newton iteration 15: r (abs) = 3.437e+18 (tol = 1.000e-08) r (rel) = 5.503e+08 (tol = 1.000e-08)
-  Process 0: Newton iteration 16: r (abs) = 3.578e+18 (tol = 1.000e-08) r (rel) = 5.730e+08 (tol = 1.000e-08)
-  Process 0: Newton iteration 17: r (abs) = 3.414e+18 (tol = 1.000e-08) r (rel) = 5.466e+08 (tol = 1.000e-08)
-  Process 0: Newton iteration 18: r (abs) = 9.704e+19 (tol = 1.000e-08) r (rel) = 1.554e+10 (tol = 1.000e-08)
-  Process 0: Newton iteration 19: r (abs) = 8.573e+19 (tol = 1.000e-08) r (rel) = 1.373e+10 (tol = 1.000e-08)
-  Process 0: Newton iteration 20: r (abs) = 1.001e+20 (tol = 1.000e-08) r (rel) = 1.603e+10 (tol = 1.000e-08)
-  Process 0: Newton iteration 21: r (abs) = 1.179e+20 (tol = 1.000e-08) r (rel) = 1.889e+10 (tol = 1.000e-08)
-  Process 0: Newton iteration 22: r (abs) = 1.337e+20 (tol = 1.000e-08) r (rel) = 2.141e+10 (tol = 1.000e-08)
-  Process 0: Newton iteration 23: r (abs) = 1.324e+20 (tol = 1.000e-08) r (rel) = 2.121e+10 (tol = 1.000e-08)
-  Process 0: Newton iteration 24: r (abs) = 1.383e+20 (tol = 1.000e-08) r (rel) = 2.214e+10 (tol = 1.000e-08)
-  Process 0: Newton iteration 25: r (abs) = 1.392e+20 (tol = 1.000e-08) r (rel) = 2.229e+10 (tol = 1.000e-08)
-  Process 0: Newton iteration 26: r (abs) = 1.898e+20 (tol = 1.000e-08) r (rel) = 3.039e+10 (tol = 1.000e-08)
-  Process 0: Newton iteration 27: r (abs) = 1.791e+20 (tol = 1.000e-08) r (rel) = 2.869e+10 (tol = 1.000e-08)
-  Process 0: Newton iteration 28: r (abs) = 5.278e+20 (tol = 1.000e-08) r (rel) = 8.452e+10 (tol = 1.000e-08)
-  Process 0: Newton iteration 29: r (abs) = 2.141e+21 (tol = 1.000e-08) r (rel) = 3.429e+11 (tol = 1.000e-08)
-  Process 0: Newton iteration 30: r (abs) = 3.914e+22 (tol = 1.000e-08) r (rel) = 6.268e+12 (tol = 1.000e-08)
+  Process 0: Newton iteration 0: r (abs) = 3.185e+09 (tol = 1.000e-08) r (rel) = 1.000e+00 (tol = 1.000e-08)
+  Process 0: Newton iteration 1: r (abs) = 2.224e+08 (tol = 1.000e-08) r (rel) = 6.982e-02 (tol = 1.000e-08)
+  Process 0: Newton iteration 2: r (abs) = 1.482e+07 (tol = 1.000e-08) r (rel) = 4.653e-03 (tol = 1.000e-08)
+  Process 0: Newton iteration 3: r (abs) = 2.655e+05 (tol = 1.000e-08) r (rel) = 8.335e-05 (tol = 1.000e-08)
+  Process 0: Newton iteration 4: r (abs) = 1.231e+02 (tol = 1.000e-08) r (rel) = 3.864e-08 (tol = 1.000e-08)
+  Process 0: Newton iteration 5: r (abs) = 3.165e-05 (tol = 1.000e-08) r (rel) = 9.937e-15 (tol = 1.000e-08)
+  Process 0: Newton solver finished in 5 iterations and 5 linear solver iterations.
 Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
 Imported src files
-Comienza la iteración con amount = 5 y side_length = 50.
+Comienza la iteración con amount = 20 y side_length = 50.
 Starting...
 Model initialised
 Created b
-Coordinates have shape  (66, 3)
+Coordinates have shape  (2041, 3)
 Mesh initialized
 Mesh refined
 Starting (P) simulation
@@ -106,17 +82,17 @@ Finished (linear) guess generation
 Starting nonlinear (T) simulation
 
  ############## (LT) and (T) problem simulation ############
-began sim_t, with solver =  tfqmr  and preconditioner =  default
-Solving with solver = tfqmr and preconditioner = default.
-Traceback (most recent call last):
-  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/multi.py", line 57, in <module>
+began sim_t, with solver =  mumps  and WITHOUT preconditioner.
+Solving with solver = mumps and without preconditioner.
+Generated non-linear solution
+Done
 Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
 Imported src files
-Comienza la iteración con amount = 5 y side_length = 50.
+Comienza la iteración con amount = 20 y side_length = 50.
 Starting...
 Model initialised
 Created b
-Coordinates have shape  (61, 3)
+Coordinates have shape  (2044, 3)
 Mesh initialized
 Mesh refined
 Starting (P) simulation
@@ -148,17 +124,17 @@ Finished (linear) guess generation
 Starting nonlinear (T) simulation
 
  ############## (LT) and (T) problem simulation ############
-began sim_t, with solver =  tfqmr  and preconditioner =  default
-Solving with solver = tfqmr and preconditioner = default.
-Traceback (most recent call last):
-  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/multi.py", line 57, in <module>
+began sim_t, with solver =  mumps  and WITHOUT preconditioner.
+Solving with solver = mumps and without preconditioner.
+Generated non-linear solution
+Done
 Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
 Imported src files
-Comienza la iteración con amount = 5 y side_length = 50.
+Comienza la iteración con amount = 20 y side_length = 50.
 Starting...
 Model initialised
 Created b
-Coordinates have shape  (63, 3)
+Coordinates have shape  (2081, 3)
 Mesh initialized
 Mesh refined
 Starting (P) simulation
@@ -190,17 +166,17 @@ Finished (linear) guess generation
 Starting nonlinear (T) simulation
 
  ############## (LT) and (T) problem simulation ############
-began sim_t, with solver =  tfqmr  and preconditioner =  default
-Solving with solver = tfqmr and preconditioner = default.
-Traceback (most recent call last):
-  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/multi.py", line 57, in <module>
+began sim_t, with solver =  mumps  and WITHOUT preconditioner.
+Solving with solver = mumps and without preconditioner.
+Generated non-linear solution
+Done
 Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
 Imported src files
-Comienza la iteración con amount = 5 y side_length = 50.
+Comienza la iteración con amount = 20 y side_length = 50.
 Starting...
 Model initialised
 Created b
-Coordinates have shape  (60, 3)
+Coordinates have shape  (2122, 3)
 Mesh initialized
 Mesh refined
 Starting (P) simulation
@@ -232,17 +208,17 @@ Finished (linear) guess generation
 Starting nonlinear (T) simulation
 
  ############## (LT) and (T) problem simulation ############
-began sim_t, with solver =  tfqmr  and preconditioner =  default
-Solving with solver = tfqmr and preconditioner = default.
-Traceback (most recent call last):
-  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/multi.py", line 57, in <module>
+began sim_t, with solver =  mumps  and WITHOUT preconditioner.
+Solving with solver = mumps and without preconditioner.
+Generated non-linear solution
+Done
 Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
 Imported src files
-Comienza la iteración con amount = 5 y side_length = 50.
+Comienza la iteración con amount = 20 y side_length = 50.
 Starting...
 Model initialised
 Created b
-Coordinates have shape  (61, 3)
+Coordinates have shape  (2111, 3)
 Mesh initialized
 Mesh refined
 Starting (P) simulation
@@ -274,157 +250,7 @@ Finished (linear) guess generation
 Starting nonlinear (T) simulation
 
  ############## (LT) and (T) problem simulation ############
-began sim_t, with solver =  tfqmr  and preconditioner =  default
-Solving with solver = tfqmr and preconditioner = default.
-Traceback (most recent call last):
-  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/multi.py", line 57, in <module>
-    run_model(name, fname, "mumps", None, max_dims, min_dims, side_length, amount)
-  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/multi.py", line 37, in run_model
-    run_model(name, fname, "mumps", None, max_dims, min_dims, side_length, amount)
-  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/multi.py", line 37, in run_model
-    run_model(name, fname, "mumps", None, max_dims, min_dims, side_length, amount)
-  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/multi.py", line 37, in run_model
-    run_model(name, fname, "mumps", None, max_dims, min_dims, side_length, amount)
-  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/multi.py", line 37, in run_model
-    run_model(name, fname, "mumps", None, max_dims, min_dims, side_length, amount)
-  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/multi.py", line 37, in run_model
-    solution = model.sim_t(hb=True, save=True, guess=x, solver=solver, preconditioner=preconditioner)
-  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 532, in sim_t
-    solution = model.sim_t(hb=True, save=True, guess=x, solver=solver, preconditioner=preconditioner)
-  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 532, in sim_t
-    solution = model.sim_t(hb=True, save=True, guess=x, solver=solver, preconditioner=preconditioner)
-  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 532, in sim_t
-    solution = model.sim_t(hb=True, save=True, guess=x, solver=solver, preconditioner=preconditioner)
-  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 532, in sim_t
-    solution = model.sim_t(hb=True, save=True, guess=x, solver=solver, preconditioner=preconditioner)
-  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 532, in sim_t
-    solve(
-    solve(
-  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 220, in solve
-  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 220, in solve
-    solve(
-  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 220, in solve
-    solve(
-  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 220, in solve
-    solve(
-  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 220, in solve
-    _solve_varproblem(*args, **kwargs)
-  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 266, in _solve_varproblem
-    _solve_varproblem(*args, **kwargs)
-  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 266, in _solve_varproblem
-    _solve_varproblem(*args, **kwargs)
-  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 266, in _solve_varproblem
-    _solve_varproblem(*args, **kwargs)
-  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 266, in _solve_varproblem
-    _solve_varproblem(*args, **kwargs)
-  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 266, in _solve_varproblem
-    solver.solve()
-RuntimeError: 
-
-*** -------------------------------------------------------------------------
-*** DOLFIN encountered an error. If you are not able to resolve this issue
-*** using the information listed below, you can ask for help at
-***
-***     fenics-support@googlegroups.com
-***
-*** Remember to include the error message listed below and, if possible,
-*** include a *minimal* running example to reproduce the error.
-***
-*** -------------------------------------------------------------------------
-*** Error:   Unable to solve linear system using PETSc Krylov solver.
-*** Reason:  Solution failed to converge in 10000 iterations (PETSc reason DIVERGED_ITS, residual norm ||r|| = 1.849279e+58).
-*** Where:   This error was encountered inside PETScKrylovSolver.cpp.
-*** Process: 1
-*** 
-*** DOLFIN version: 2019.1.0
-*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
-*** -------------------------------------------------------------------------
-
-    solver.solve()
-RuntimeError: 
-
-*** -------------------------------------------------------------------------
-*** DOLFIN encountered an error. If you are not able to resolve this issue
-*** using the information listed below, you can ask for help at
-***
-***     fenics-support@googlegroups.com
-***
-*** Remember to include the error message listed below and, if possible,
-*** include a *minimal* running example to reproduce the error.
-***
-*** -------------------------------------------------------------------------
-*** Error:   Unable to solve linear system using PETSc Krylov solver.
-*** Reason:  Solution failed to converge in 10000 iterations (PETSc reason DIVERGED_ITS, residual norm ||r|| = 1.849279e+58).
-*** Where:   This error was encountered inside PETScKrylovSolver.cpp.
-*** Process: 0
-*** 
-*** DOLFIN version: 2019.1.0
-*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
-*** -------------------------------------------------------------------------
-
-    solver.solve()
-RuntimeError: 
-
-*** -------------------------------------------------------------------------
-*** DOLFIN encountered an error. If you are not able to resolve this issue
-*** using the information listed below, you can ask for help at
-***
-***     fenics-support@googlegroups.com
-***
-*** Remember to include the error message listed below and, if possible,
-*** include a *minimal* running example to reproduce the error.
-***
-*** -------------------------------------------------------------------------
-*** Error:   Unable to solve linear system using PETSc Krylov solver.
-*** Reason:  Solution failed to converge in 10000 iterations (PETSc reason DIVERGED_ITS, residual norm ||r|| = 1.849279e+58).
-*** Where:   This error was encountered inside PETScKrylovSolver.cpp.
-*** Process: 2
-*** 
-*** DOLFIN version: 2019.1.0
-*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
-*** -------------------------------------------------------------------------
-
-    solver.solve()
-RuntimeError: 
-
-*** -------------------------------------------------------------------------
-*** DOLFIN encountered an error. If you are not able to resolve this issue
-*** using the information listed below, you can ask for help at
-***
-***     fenics-support@googlegroups.com
-***
-*** Remember to include the error message listed below and, if possible,
-*** include a *minimal* running example to reproduce the error.
-***
-*** -------------------------------------------------------------------------
-*** Error:   Unable to solve linear system using PETSc Krylov solver.
-*** Reason:  Solution failed to converge in 10000 iterations (PETSc reason DIVERGED_ITS, residual norm ||r|| = 1.849279e+58).
-*** Where:   This error was encountered inside PETScKrylovSolver.cpp.
-*** Process: 4
-*** 
-*** DOLFIN version: 2019.1.0
-*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
-*** -------------------------------------------------------------------------
-
-    solver.solve()
-RuntimeError: 
-
-*** -------------------------------------------------------------------------
-*** DOLFIN encountered an error. If you are not able to resolve this issue
-*** using the information listed below, you can ask for help at
-***
-***     fenics-support@googlegroups.com
-***
-*** Remember to include the error message listed below and, if possible,
-*** include a *minimal* running example to reproduce the error.
-***
-*** -------------------------------------------------------------------------
-*** Error:   Unable to solve linear system using PETSc Krylov solver.
-*** Reason:  Solution failed to converge in 10000 iterations (PETSc reason DIVERGED_ITS, residual norm ||r|| = 1.849279e+58).
-*** Where:   This error was encountered inside PETScKrylovSolver.cpp.
-*** Process: 3
-*** 
-*** DOLFIN version: 2019.1.0
-*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
-*** -------------------------------------------------------------------------
-
+began sim_t, with solver =  mumps  and WITHOUT preconditioner.
+Solving with solver = mumps and without preconditioner.
+Generated non-linear solution
+Done

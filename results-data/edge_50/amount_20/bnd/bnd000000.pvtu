@@ -22,15 +22,5 @@
     <Piece Source="bnd_p7_000000.vtu" />
     <Piece Source="bnd_p8_000000.vtu" />
     <Piece Source="bnd_p9_000000.vtu" />
-    <Piece Source="bnd_p10_000000.vtu" />
-    <Piece Source="bnd_p11_000000.vtu" />
-    <Piece Source="bnd_p12_000000.vtu" />
-    <Piece Source="bnd_p13_000000.vtu" />
-    <Piece Source="bnd_p14_000000.vtu" />
-    <Piece Source="bnd_p15_000000.vtu" />
-    <Piece Source="bnd_p16_000000.vtu" />
-    <Piece Source="bnd_p17_000000.vtu" />
-    <Piece Source="bnd_p18_000000.vtu" />
-    <Piece Source="bnd_p19_000000.vtu" />
   </PUnstructuredGrid>
 </VTKFile>
