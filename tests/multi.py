@@ -12,17 +12,17 @@ from src.model import PerfusionGasExchangeModel
 from src.params import params
 print("Imported src files")
 
-def run_model(name, fname, solver, preconditioner, max_dims, min_dims):
+def run_model(name, fname, solver, preconditioner, max_dims, min_dims, side_length, amount):
     print("Starting...")
     folder = fname + "/" + name
     path = os.path.join("../results-data", folder)
     model = PerfusionGasExchangeModel(folder_path=path, params=params, solver='gmres', f_dim = 2, vecf_dim=1)
     print("Model initialised")
     
-    model.import_mesh(max_dims=max_dims, min_dims=min_dims, tol=0.1, box_side_length = 5, box_nodes = 3)
+    model.import_mesh(max_dims=max_dims, min_dims=min_dims, tol=0.1, box_side_length = side_length, box_nodes = amount)
     print("Mesh initialized")
     
-    model.mesh = dolfin.refine(model.mesh)
+    model.mesh = dolfin.refine(model.mesh) # Esto duplica la cantidad de nodos
     print("Mesh refined")
     
     print("Starting (P) simulation")
@@ -38,8 +38,13 @@ def run_model(name, fname, solver, preconditioner, max_dims, min_dims):
     print("Generated non-linear solution")
     print("Done")
 
-amount = 10
-side_length = 50
+    
+####################### VARIAR ESTOS DOS PARÁMETROS
+
+amount = 3
+side_length = 5
+
+####################### Ejecución
 
 print(f"Comienza la iteración con amount = {str(amount)} y side_length = {str(side_length)}.")
 
@@ -49,4 +54,4 @@ min_dims = [0,0,0]
 name = "amount_" + str(amount)
 fname = "edge_" + str(side_length)
 
-run_model(name, fname, "bicgstab", "default", max_dims, min_dims)
+run_model(name, fname, "bicgstab", "default", max_dims, min_dims, side_length, amount)
