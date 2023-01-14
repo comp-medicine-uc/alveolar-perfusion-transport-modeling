@@ -38,7 +38,7 @@ def run_model(name, fname, solver, preconditioner, max_dims, min_dims, side_leng
     print("Generated non-linear solution")
     print("Done")
 
-    
+
 ####################### VARIAR ESTOS DOS PARÁMETROS
 
 amount = 5
@@ -54,4 +54,4 @@ min_dims = [0,0,0]
 name = "amount_" + str(amount)
 fname = "edge_" + str(side_length)
 
-run_model(name, fname, "tfqmr", "default", max_dims, min_dims, side_length, amount)
+run_model(name, fname, "mumps", preconditioner=None, max_dims, min_dims, side_length, amount)
