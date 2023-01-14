@@ -22,8 +22,8 @@ def run_model(name, fname, solver, preconditioner, max_dims, min_dims, side_leng
     model.import_mesh(max_dims=max_dims, min_dims=min_dims, tol=0.1, box_side_length = side_length, box_nodes = amount)
     print("Mesh initialized")
     
-#     model.mesh = dolfin.refine(model.mesh) # Esto duplica la cantidad de nodos
-#     print("Mesh refined")
+    model.mesh = dolfin.refine(model.mesh) # Esto duplica la cantidad de nodos
+    print("Mesh refined")
     
     print("Starting (P) simulation")
     model.sim_p(save=True, meshtype="tkd")
@@ -42,7 +42,7 @@ def run_model(name, fname, solver, preconditioner, max_dims, min_dims, side_leng
 ####################### VARIAR ESTOS DOS PARÁMETROS
 
 amount = 50
-side_length = 50
+side_length = 25
 
 ####################### Ejecución
 
@@ -52,6 +52,6 @@ max_dims = [side_length, side_length, side_length]
 min_dims = [0,0,0]
 
 name = "amount_" + str(amount)
-fname = "box_mumps_1_edge_" + str(side_length)
+fname = "box_gmres_1_edge_" + str(side_length)
 
-run_model(name, fname, "mumps", "default", max_dims, min_dims, side_length, amount)
+run_model(name, fname, "gmres", "default", max_dims, min_dims, side_length, amount)
