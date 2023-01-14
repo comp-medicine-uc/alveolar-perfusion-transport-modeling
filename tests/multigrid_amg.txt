@@ -1,0 +1,1464 @@
+Process 0: Solving linear variational problem.
+Process 12: Solving linear variational problem.
+Process 18: Solving linear variational problem.
+Process 8: Solving linear variational problem.
+Process 13: Solving linear variational problem.
+Process 3: Solving linear variational problem.
+Process 7: Solving linear variational problem.
+Process 14: Solving linear variational problem.
+Process 10: Solving linear variational problem.
+Process 16: Solving linear variational problem.Process 17: Solving linear variational problem.
+Process 9: Solving linear variational problem.
+Process 6: Solving linear variational problem.
+Process 15: Solving linear variational problem.
+
+Process 19: Solving linear variational problem.
+Process 2: Solving linear variational problem.
+Process 1: Solving linear variational problem.
+Process 5: Solving linear variational problem.
+Process 11: Solving linear variational problem.
+Process 4: Solving linear variational problem.
+Process 19: No Jacobian form specified for nonlinear variational problem.
+Process 19: Differentiating residual form F to obtain Jacobian J = F'.
+Process 0: No Jacobian form specified for nonlinear variational problem.
+Process 0: Differentiating residual form F to obtain Jacobian J = F'.
+Process 1: No Jacobian form specified for nonlinear variational problem.
+Process 1: Differentiating residual form F to obtain Jacobian J = F'.
+Process 2: No Jacobian form specified for nonlinear variational problem.
+Process 2: Differentiating residual form F to obtain Jacobian J = F'.
+Process 3: No Jacobian form specified for nonlinear variational problem.
+Process 3: Differentiating residual form F to obtain Jacobian J = F'.
+Process 4: No Jacobian form specified for nonlinear variational problem.
+Process 4: Differentiating residual form F to obtain Jacobian J = F'.
+Process 8: No Jacobian form specified for nonlinear variational problem.
+Process 8: Differentiating residual form F to obtain Jacobian J = F'.
+Process 9: No Jacobian form specified for nonlinear variational problem.
+Process 9: Differentiating residual form F to obtain Jacobian J = F'.
+Process 10: No Jacobian form specified for nonlinear variational problem.
+Process 10: Differentiating residual form F to obtain Jacobian J = F'.
+Process 12: No Jacobian form specified for nonlinear variational problem.
+Process 12: Differentiating residual form F to obtain Jacobian J = F'.
+Process 13: No Jacobian form specified for nonlinear variational problem.
+Process 13: Differentiating residual form F to obtain Jacobian J = F'.
+Process 14: No Jacobian form specified for nonlinear variational problem.
+Process 14: Differentiating residual form F to obtain Jacobian J = F'.
+Process 15: No Jacobian form specified for nonlinear variational problem.
+Process 15: Differentiating residual form F to obtain Jacobian J = F'.
+Process 16: No Jacobian form specified for nonlinear variational problem.
+Process 16: Differentiating residual form F to obtain Jacobian J = F'.
+Process 18: No Jacobian form specified for nonlinear variational problem.
+Process 18: Differentiating residual form F to obtain Jacobian J = F'.
+Process 7: No Jacobian form specified for nonlinear variational problem.
+Process 7: Differentiating residual form F to obtain Jacobian J = F'.
+Process 11: No Jacobian form specified for nonlinear variational problem.
+Process 11: Differentiating residual form F to obtain Jacobian J = F'.
+Process 5: No Jacobian form specified for nonlinear variational problem.
+Process 5: Differentiating residual form F to obtain Jacobian J = F'.
+Process 6: No Jacobian form specified for nonlinear variational problem.
+Process 6: Differentiating residual form F to obtain Jacobian J = F'.
+Process 17: No Jacobian form specified for nonlinear variational problem.
+Process 17: Differentiating residual form F to obtain Jacobian J = F'.
+Process 0: Solving nonlinear variational problem.
+Process 9: Solving nonlinear variational problem.
+Process 8: Solving nonlinear variational problem.
+Process 17: Solving nonlinear variational problem.
+Process 3: Solving nonlinear variational problem.
+Process 2: Solving nonlinear variational problem.
+Process 6: Solving nonlinear variational problem.
+Process 1: Solving nonlinear variational problem.
+Process 12: Solving nonlinear variational problem.
+Process 4: Solving nonlinear variational problem.
+Process 7: Solving nonlinear variational problem.
+Process 13: Solving nonlinear variational problem.
+Process 10: Solving nonlinear variational problem.
+Process 5: Solving nonlinear variational problem.
+Process 11: Solving nonlinear variational problem.
+Process 14: Solving nonlinear variational problem.
+Process 19: Solving nonlinear variational problem.
+Process 15: Solving nonlinear variational problem.
+Process 16: Solving nonlinear variational problem.
+Process 18: Solving nonlinear variational problem.
+  Process 0: Newton iteration 0: r (abs) = 1.886e+07 (tol = 1.000e-08) r (rel) = 1.000e+00 (tol = 1.000e-08)
+  Process 0: Newton iteration 1: r (abs) = 2.297e+02 (tol = 1.000e-08) r (rel) = 1.218e-05 (tol = 1.000e-08)
+  Process 0: Newton iteration 2: r (abs) = 1.167e-03 (tol = 1.000e-08) r (rel) = 6.188e-11 (tol = 1.000e-08)
+  Process 0: Newton solver finished in 2 iterations and 266 linear solver iterations.
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Comienza la iteración con amount = 20 y side_length = 50.
+Starting...
+Model initialised
+Created b
+Coordinates have shape  (585, 3)
+Mesh initialized
+Mesh refined
+Starting (P) simulation
+
+ ############## (P) problem simulation ############
+Instancing boundaries
+gamma_in.dir_min =  0
+gamma_in.dir_max =  50
+gamma_out.dir_min =  0
+gamma_out.dir_max =  50
+gamma_air.dir_min_y =  0
+gamma_air.dir_max_y =  50
+gamma_air.dir_min_z =  0
+gamma_air.dir_max_z =  50
+boundaries instanced
+self.f_dim = 2
+self.vecf_dim = 1
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting linear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  bicgstab  and WITHOUT preconditioner.
+Solving with solver = bicgstab and without preconditioner.
+Finished (linear) guess generation
+Starting nonlinear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  tfqmr  and preconditioner =  amg
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Comienza la iteración con amount = 20 y side_length = 50.
+Starting...
+Model initialised
+Created b
+Coordinates have shape  (587, 3)
+Mesh initialized
+Mesh refined
+Starting (P) simulation
+
+ ############## (P) problem simulation ############
+Instancing boundaries
+gamma_in.dir_min =  0
+gamma_in.dir_max =  50
+gamma_out.dir_min =  0
+gamma_out.dir_max =  50
+gamma_air.dir_min_y =  0
+gamma_air.dir_max_y =  50
+gamma_air.dir_min_z =  0
+gamma_air.dir_max_z =  50
+boundaries instanced
+self.f_dim = 2
+self.vecf_dim = 1
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting linear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  bicgstab  and WITHOUT preconditioner.
+Solving with solver = bicgstab and without preconditioner.
+Finished (linear) guess generation
+Starting nonlinear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  tfqmr  and preconditioner =  amg
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Comienza la iteración con amount = 20 y side_length = 50.
+Starting...
+Model initialised
+Created b
+Coordinates have shape  (585, 3)
+Mesh initialized
+Mesh refined
+Starting (P) simulation
+
+ ############## (P) problem simulation ############
+Instancing boundaries
+gamma_in.dir_min =  0
+gamma_in.dir_max =  50
+gamma_out.dir_min =  0
+gamma_out.dir_max =  50
+gamma_air.dir_min_y =  0
+gamma_air.dir_max_y =  50
+gamma_air.dir_min_z =  0
+gamma_air.dir_max_z =  50
+boundaries instanced
+self.f_dim = 2
+self.vecf_dim = 1
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting linear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  bicgstab  and WITHOUT preconditioner.
+Solving with solver = bicgstab and without preconditioner.
+Finished (linear) guess generation
+Starting nonlinear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  tfqmr  and preconditioner =  amg
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/multigrid_amg.py", line 57, in <module>
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Comienza la iteración con amount = 20 y side_length = 50.
+Starting...
+Model initialised
+Created b
+Coordinates have shape  (571, 3)
+Mesh initialized
+Mesh refined
+Starting (P) simulation
+
+ ############## (P) problem simulation ############
+Instancing boundaries
+gamma_in.dir_min =  0
+gamma_in.dir_max =  50
+gamma_out.dir_min =  0
+gamma_out.dir_max =  50
+gamma_air.dir_min_y =  0
+gamma_air.dir_max_y =  50
+gamma_air.dir_min_z =  0
+gamma_air.dir_max_z =  50
+boundaries instanced
+self.f_dim = 2
+self.vecf_dim = 1
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting linear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  bicgstab  and WITHOUT preconditioner.
+Solving with solver = bicgstab and without preconditioner.
+Finished (linear) guess generation
+Starting nonlinear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  tfqmr  and preconditioner =  amg
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/multigrid_amg.py", line 57, in <module>
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/multigrid_amg.py", line 57, in <module>
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Comienza la iteración con amount = 20 y side_length = 50.
+Starting...
+Model initialised
+Created b
+Coordinates have shape  (603, 3)
+Mesh initialized
+Mesh refined
+Starting (P) simulation
+
+ ############## (P) problem simulation ############
+Instancing boundaries
+gamma_in.dir_min =  0
+gamma_in.dir_max =  50
+gamma_out.dir_min =  0
+gamma_out.dir_max =  50
+gamma_air.dir_min_y =  0
+gamma_air.dir_max_y =  50
+gamma_air.dir_min_z =  0
+gamma_air.dir_max_z =  50
+boundaries instanced
+self.f_dim = 2
+self.vecf_dim = 1
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting linear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  bicgstab  and WITHOUT preconditioner.
+Solving with solver = bicgstab and without preconditioner.
+Finished (linear) guess generation
+Starting nonlinear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  tfqmr  and preconditioner =  amg
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/multigrid_amg.py", line 57, in <module>
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/multigrid_amg.py", line 57, in <module>
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Comienza la iteración con amount = 20 y side_length = 50.
+Starting...
+Model initialised
+Created b
+Coordinates have shape  (626, 3)
+Mesh initialized
+Mesh refined
+Starting (P) simulation
+
+ ############## (P) problem simulation ############
+Instancing boundaries
+gamma_in.dir_min =  0
+gamma_in.dir_max =  50
+gamma_out.dir_min =  0
+gamma_out.dir_max =  50
+gamma_air.dir_min_y =  0
+gamma_air.dir_max_y =  50
+gamma_air.dir_min_z =  0
+gamma_air.dir_max_z =  50
+boundaries instanced
+self.f_dim = 2
+self.vecf_dim = 1
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting linear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  bicgstab  and WITHOUT preconditioner.
+Solving with solver = bicgstab and without preconditioner.
+Finished (linear) guess generation
+Starting nonlinear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  tfqmr  and preconditioner =  amg
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Comienza la iteración con amount = 20 y side_length = 50.
+Starting...
+Model initialised
+Created b
+Coordinates have shape  (589, 3)
+Mesh initialized
+Mesh refined
+Starting (P) simulation
+
+ ############## (P) problem simulation ############
+Instancing boundaries
+gamma_in.dir_min =  0
+gamma_in.dir_max =  50
+gamma_out.dir_min =  0
+gamma_out.dir_max =  50
+gamma_air.dir_min_y =  0
+gamma_air.dir_max_y =  50
+gamma_air.dir_min_z =  0
+gamma_air.dir_max_z =  50
+boundaries instanced
+self.f_dim = 2
+self.vecf_dim = 1
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting linear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  bicgstab  and WITHOUT preconditioner.
+Solving with solver = bicgstab and without preconditioner.
+Finished (linear) guess generation
+Starting nonlinear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  tfqmr  and preconditioner =  amg
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/multigrid_amg.py", line 57, in <module>
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Comienza la iteración con amount = 20 y side_length = 50.
+Starting...
+Model initialised
+Created b
+Coordinates have shape  (610, 3)
+Mesh initialized
+Mesh refined
+Starting (P) simulation
+
+ ############## (P) problem simulation ############
+Instancing boundaries
+gamma_in.dir_min =  0
+gamma_in.dir_max =  50
+gamma_out.dir_min =  0
+gamma_out.dir_max =  50
+gamma_air.dir_min_y =  0
+gamma_air.dir_max_y =  50
+gamma_air.dir_min_z =  0
+gamma_air.dir_max_z =  50
+boundaries instanced
+self.f_dim = 2
+self.vecf_dim = 1
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting linear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  bicgstab  and WITHOUT preconditioner.
+Solving with solver = bicgstab and without preconditioner.
+Finished (linear) guess generation
+Starting nonlinear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  tfqmr  and preconditioner =  amg
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Comienza la iteración con amount = 20 y side_length = 50.
+Starting...
+Model initialised
+Created b
+Coordinates have shape  (573, 3)
+Mesh initialized
+Mesh refined
+Starting (P) simulation
+
+ ############## (P) problem simulation ############
+Instancing boundaries
+gamma_in.dir_min =  0
+gamma_in.dir_max =  50
+gamma_out.dir_min =  0
+gamma_out.dir_max =  50
+gamma_air.dir_min_y =  0
+gamma_air.dir_max_y =  50
+gamma_air.dir_min_z =  0
+gamma_air.dir_max_z =  50
+boundaries instanced
+self.f_dim = 2
+self.vecf_dim = 1
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting linear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  bicgstab  and WITHOUT preconditioner.
+Solving with solver = bicgstab and without preconditioner.
+Finished (linear) guess generation
+Starting nonlinear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  tfqmr  and preconditioner =  amg
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/multigrid_amg.py", line 57, in <module>
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/multigrid_amg.py", line 57, in <module>
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Comienza la iteración con amount = 20 y side_length = 50.
+Starting...
+Model initialised
+Created b
+Coordinates have shape  (622, 3)
+Mesh initialized
+Mesh refined
+Starting (P) simulation
+
+ ############## (P) problem simulation ############
+Instancing boundaries
+gamma_in.dir_min =  0
+gamma_in.dir_max =  50
+gamma_out.dir_min =  0
+gamma_out.dir_max =  50
+gamma_air.dir_min_y =  0
+gamma_air.dir_max_y =  50
+gamma_air.dir_min_z =  0
+gamma_air.dir_max_z =  50
+boundaries instanced
+self.f_dim = 2
+self.vecf_dim = 1
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting linear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  bicgstab  and WITHOUT preconditioner.
+Solving with solver = bicgstab and without preconditioner.
+Finished (linear) guess generation
+Starting nonlinear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  tfqmr  and preconditioner =  amg
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Comienza la iteración con amount = 20 y side_length = 50.
+Starting...
+Model initialised
+Created b
+Coordinates have shape  (587, 3)
+Mesh initialized
+Mesh refined
+Starting (P) simulation
+
+ ############## (P) problem simulation ############
+Instancing boundaries
+gamma_in.dir_min =  0
+gamma_in.dir_max =  50
+gamma_out.dir_min =  0
+gamma_out.dir_max =  50
+gamma_air.dir_min_y =  0
+gamma_air.dir_max_y =  50
+gamma_air.dir_min_z =  0
+gamma_air.dir_max_z =  50
+boundaries instanced
+self.f_dim = 2
+self.vecf_dim = 1
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting linear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  bicgstab  and WITHOUT preconditioner.
+Solving with solver = bicgstab and without preconditioner.
+Finished (linear) guess generation
+Starting nonlinear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  tfqmr  and preconditioner =  amg
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/multigrid_amg.py", line 57, in <module>
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/multigrid_amg.py", line 57, in <module>
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/multigrid_amg.py", line 57, in <module>
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Comienza la iteración con amount = 20 y side_length = 50.
+Starting...
+Model initialised
+Created b
+Coordinates have shape  (599, 3)
+Mesh initialized
+Mesh refined
+Starting (P) simulation
+
+ ############## (P) problem simulation ############
+Instancing boundaries
+gamma_in.dir_min =  0
+gamma_in.dir_max =  50
+gamma_out.dir_min =  0
+gamma_out.dir_max =  50
+gamma_air.dir_min_y =  0
+gamma_air.dir_max_y =  50
+gamma_air.dir_min_z =  0
+gamma_air.dir_max_z =  50
+boundaries instanced
+self.f_dim = 2
+self.vecf_dim = 1
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting linear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  bicgstab  and WITHOUT preconditioner.
+Solving with solver = bicgstab and without preconditioner.
+Finished (linear) guess generation
+Starting nonlinear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  tfqmr  and preconditioner =  amg
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Comienza la iteración con amount = 20 y side_length = 50.
+Starting...
+Model initialised
+Created b
+Coordinates have shape  (579, 3)
+Mesh initialized
+Mesh refined
+Starting (P) simulation
+
+ ############## (P) problem simulation ############
+Instancing boundaries
+gamma_in.dir_min =  0
+gamma_in.dir_max =  50
+gamma_out.dir_min =  0
+gamma_out.dir_max =  50
+gamma_air.dir_min_y =  0
+gamma_air.dir_max_y =  50
+gamma_air.dir_min_z =  0
+gamma_air.dir_max_z =  50
+boundaries instanced
+self.f_dim = 2
+self.vecf_dim = 1
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting linear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  bicgstab  and WITHOUT preconditioner.
+Solving with solver = bicgstab and without preconditioner.
+Finished (linear) guess generation
+Starting nonlinear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  tfqmr  and preconditioner =  amg
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Comienza la iteración con amount = 20 y side_length = 50.
+Starting...
+Model initialised
+Created b
+Coordinates have shape  (575, 3)
+Mesh initialized
+Mesh refined
+Starting (P) simulation
+
+ ############## (P) problem simulation ############
+Instancing boundaries
+gamma_in.dir_min =  0
+gamma_in.dir_max =  50
+gamma_out.dir_min =  0
+gamma_out.dir_max =  50
+gamma_air.dir_min_y =  0
+gamma_air.dir_max_y =  50
+gamma_air.dir_min_z =  0
+gamma_air.dir_max_z =  50
+boundaries instanced
+self.f_dim = 2
+self.vecf_dim = 1
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting linear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  bicgstab  and WITHOUT preconditioner.
+Solving with solver = bicgstab and without preconditioner.
+Finished (linear) guess generation
+Starting nonlinear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  tfqmr  and preconditioner =  amg
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/multigrid_amg.py", line 57, in <module>
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/multigrid_amg.py", line 57, in <module>
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/multigrid_amg.py", line 57, in <module>
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Comienza la iteración con amount = 20 y side_length = 50.
+Starting...
+Model initialised
+Created b
+Coordinates have shape  (594, 3)
+Mesh initialized
+Mesh refined
+Starting (P) simulation
+
+ ############## (P) problem simulation ############
+Instancing boundaries
+gamma_in.dir_min =  0
+gamma_in.dir_max =  50
+gamma_out.dir_min =  0
+gamma_out.dir_max =  50
+gamma_air.dir_min_y =  0
+gamma_air.dir_max_y =  50
+gamma_air.dir_min_z =  0
+gamma_air.dir_max_z =  50
+boundaries instanced
+self.f_dim = 2
+self.vecf_dim = 1
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting linear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  bicgstab  and WITHOUT preconditioner.
+Solving with solver = bicgstab and without preconditioner.
+Finished (linear) guess generation
+Starting nonlinear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  tfqmr  and preconditioner =  amg
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Comienza la iteración con amount = 20 y side_length = 50.
+Starting...
+Model initialised
+Created b
+Coordinates have shape  (615, 3)
+Mesh initialized
+Mesh refined
+Starting (P) simulation
+
+ ############## (P) problem simulation ############
+Instancing boundaries
+gamma_in.dir_min =  0
+gamma_in.dir_max =  50
+gamma_out.dir_min =  0
+gamma_out.dir_max =  50
+gamma_air.dir_min_y =  0
+gamma_air.dir_max_y =  50
+gamma_air.dir_min_z =  0
+gamma_air.dir_max_z =  50
+boundaries instanced
+self.f_dim = 2
+self.vecf_dim = 1
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting linear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  bicgstab  and WITHOUT preconditioner.
+Solving with solver = bicgstab and without preconditioner.
+Finished (linear) guess generation
+Starting nonlinear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  tfqmr  and preconditioner =  amg
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Comienza la iteración con amount = 20 y side_length = 50.
+Starting...
+Model initialised
+Created b
+Coordinates have shape  (583, 3)
+Mesh initialized
+Mesh refined
+Starting (P) simulation
+
+ ############## (P) problem simulation ############
+Instancing boundaries
+gamma_in.dir_min =  0
+gamma_in.dir_max =  50
+gamma_out.dir_min =  0
+gamma_out.dir_max =  50
+gamma_air.dir_min_y =  0
+gamma_air.dir_max_y =  50
+gamma_air.dir_min_z =  0
+gamma_air.dir_max_z =  50
+boundaries instanced
+self.f_dim = 2
+self.vecf_dim = 1
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting linear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  bicgstab  and WITHOUT preconditioner.
+Solving with solver = bicgstab and without preconditioner.
+Finished (linear) guess generation
+Starting nonlinear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  tfqmr  and preconditioner =  amg
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/multigrid_amg.py", line 57, in <module>
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/multigrid_amg.py", line 57, in <module>
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/multigrid_amg.py", line 57, in <module>
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Comienza la iteración con amount = 20 y side_length = 50.
+Starting...
+Model initialised
+Created b
+Coordinates have shape  (629, 3)
+Mesh initialized
+Mesh refined
+Starting (P) simulation
+
+ ############## (P) problem simulation ############
+Instancing boundaries
+gamma_in.dir_min =  0
+gamma_in.dir_max =  50
+gamma_out.dir_min =  0
+gamma_out.dir_max =  50
+gamma_air.dir_min_y =  0
+gamma_air.dir_max_y =  50
+gamma_air.dir_min_z =  0
+gamma_air.dir_max_z =  50
+boundaries instanced
+self.f_dim = 2
+self.vecf_dim = 1
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting linear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  bicgstab  and WITHOUT preconditioner.
+Solving with solver = bicgstab and without preconditioner.
+Finished (linear) guess generation
+Starting nonlinear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  tfqmr  and preconditioner =  amg
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/multigrid_amg.py", line 57, in <module>
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Comienza la iteración con amount = 20 y side_length = 50.
+Starting...
+Model initialised
+Created b
+Coordinates have shape  (622, 3)
+Mesh initialized
+Mesh refined
+Starting (P) simulation
+
+ ############## (P) problem simulation ############
+Instancing boundaries
+gamma_in.dir_min =  0
+gamma_in.dir_max =  50
+gamma_out.dir_min =  0
+gamma_out.dir_max =  50
+gamma_air.dir_min_y =  0
+gamma_air.dir_max_y =  50
+gamma_air.dir_min_z =  0
+gamma_air.dir_max_z =  50
+boundaries instanced
+self.f_dim = 2
+self.vecf_dim = 1
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting linear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  bicgstab  and WITHOUT preconditioner.
+Solving with solver = bicgstab and without preconditioner.
+Finished (linear) guess generation
+Starting nonlinear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  tfqmr  and preconditioner =  amg
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/multigrid_amg.py", line 57, in <module>
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Comienza la iteración con amount = 20 y side_length = 50.
+Starting...
+Model initialised
+Created b
+Coordinates have shape  (638, 3)
+Mesh initialized
+Mesh refined
+Starting (P) simulation
+
+ ############## (P) problem simulation ############
+Instancing boundaries
+gamma_in.dir_min =  0
+gamma_in.dir_max =  50
+gamma_out.dir_min =  0
+gamma_out.dir_max =  50
+gamma_air.dir_min_y =  0
+gamma_air.dir_max_y =  50
+gamma_air.dir_min_z =  0
+gamma_air.dir_max_z =  50
+boundaries instanced
+self.f_dim = 2
+self.vecf_dim = 1
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting linear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  bicgstab  and WITHOUT preconditioner.
+Solving with solver = bicgstab and without preconditioner.
+Finished (linear) guess generation
+Starting nonlinear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  tfqmr  and preconditioner =  amg
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/multigrid_amg.py", line 57, in <module>
+    run_model(name, fname, "tfqmr", "amg", max_dims, min_dims, side_length, amount)
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/multigrid_amg.py", line 37, in run_model
+    run_model(name, fname, "tfqmr", "amg", max_dims, min_dims, side_length, amount)
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/multigrid_amg.py", line 37, in run_model
+    run_model(name, fname, "tfqmr", "amg", max_dims, min_dims, side_length, amount)
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/multigrid_amg.py", line 37, in run_model
+    run_model(name, fname, "tfqmr", "amg", max_dims, min_dims, side_length, amount)
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/multigrid_amg.py", line 37, in run_model
+    run_model(name, fname, "tfqmr", "amg", max_dims, min_dims, side_length, amount)
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/multigrid_amg.py", line 37, in run_model
+    run_model(name, fname, "tfqmr", "amg", max_dims, min_dims, side_length, amount)
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/multigrid_amg.py", line 37, in run_model
+    run_model(name, fname, "tfqmr", "amg", max_dims, min_dims, side_length, amount)
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/multigrid_amg.py", line 37, in run_model
+    run_model(name, fname, "tfqmr", "amg", max_dims, min_dims, side_length, amount)
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/multigrid_amg.py", line 37, in run_model
+    run_model(name, fname, "tfqmr", "amg", max_dims, min_dims, side_length, amount)
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/multigrid_amg.py", line 37, in run_model
+    run_model(name, fname, "tfqmr", "amg", max_dims, min_dims, side_length, amount)
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/multigrid_amg.py", line 37, in run_model
+    run_model(name, fname, "tfqmr", "amg", max_dims, min_dims, side_length, amount)
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/multigrid_amg.py", line 37, in run_model
+    run_model(name, fname, "tfqmr", "amg", max_dims, min_dims, side_length, amount)
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/multigrid_amg.py", line 37, in run_model
+    run_model(name, fname, "tfqmr", "amg", max_dims, min_dims, side_length, amount)
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/multigrid_amg.py", line 37, in run_model
+    run_model(name, fname, "tfqmr", "amg", max_dims, min_dims, side_length, amount)
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/multigrid_amg.py", line 37, in run_model
+    run_model(name, fname, "tfqmr", "amg", max_dims, min_dims, side_length, amount)
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/multigrid_amg.py", line 37, in run_model
+    solution = model.sim_t(hb=True, save=True, guess=x, solver=solver, preconditioner=preconditioner)
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 335, in sim_t
+    run_model(name, fname, "tfqmr", "amg", max_dims, min_dims, side_length, amount)
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/multigrid_amg.py", line 37, in run_model
+    solution = model.sim_t(hb=True, save=True, guess=x, solver=solver, preconditioner=preconditioner)
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 335, in sim_t
+    solution = model.sim_t(hb=True, save=True, guess=x, solver=solver, preconditioner=preconditioner)
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 335, in sim_t
+    run_model(name, fname, "tfqmr", "amg", max_dims, min_dims, side_length, amount)
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/multigrid_amg.py", line 37, in run_model
+    solution = model.sim_t(hb=True, save=True, guess=x, solver=solver, preconditioner=preconditioner)
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 335, in sim_t
+    run_model(name, fname, "tfqmr", "amg", max_dims, min_dims, side_length, amount)
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/multigrid_amg.py", line 37, in run_model
+    solution = model.sim_t(hb=True, save=True, guess=x, solver=solver, preconditioner=preconditioner)
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 335, in sim_t
+    solution = model.sim_t(hb=True, save=True, guess=x, solver=solver, preconditioner=preconditioner)
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 335, in sim_t
+    solution = model.sim_t(hb=True, save=True, guess=x, solver=solver, preconditioner=preconditioner)
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 335, in sim_t
+    run_model(name, fname, "tfqmr", "amg", max_dims, min_dims, side_length, amount)
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/multigrid_amg.py", line 37, in run_model
+    run_model(name, fname, "tfqmr", "amg", max_dims, min_dims, side_length, amount)
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/multigrid_amg.py", line 37, in run_model
+    solution = model.sim_t(hb=True, save=True, guess=x, solver=solver, preconditioner=preconditioner)
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 335, in sim_t
+    solution = model.sim_t(hb=True, save=True, guess=x, solver=solver, preconditioner=preconditioner)
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 335, in sim_t
+    solution = model.sim_t(hb=True, save=True, guess=x, solver=solver, preconditioner=preconditioner)
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 335, in sim_t
+    solution = model.sim_t(hb=True, save=True, guess=x, solver=solver, preconditioner=preconditioner)
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 335, in sim_t
+    solution = model.sim_t(hb=True, save=True, guess=x, solver=solver, preconditioner=preconditioner)
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 335, in sim_t
+    solution = model.sim_t(hb=True, save=True, guess=x, solver=solver, preconditioner=preconditioner)
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 335, in sim_t
+    solution = model.sim_t(hb=True, save=True, guess=x, solver=solver, preconditioner=preconditioner)
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 335, in sim_t
+    solution = model.sim_t(hb=True, save=True, guess=x, solver=solver, preconditioner=preconditioner)
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 335, in sim_t
+    solution = model.sim_t(hb=True, save=True, guess=x, solver=solver, preconditioner=preconditioner)
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 335, in sim_t
+    solution = model.sim_t(hb=True, save=True, guess=x, solver=solver, preconditioner=preconditioner)
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 335, in sim_t
+    solution = model.sim_t(hb=True, save=True, guess=x, solver=solver, preconditioner=preconditioner)
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 335, in sim_t
+    solution = model.sim_t(hb=True, save=True, guess=x, solver=solver, preconditioner=preconditioner)
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 335, in sim_t
+    x = project(guess, self.M_h)
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/projection.py", line 138, in project
+    x = project(guess, self.M_h)
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/projection.py", line 138, in project
+    x = project(guess, self.M_h)
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/projection.py", line 138, in project
+    x = project(guess, self.M_h)
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/projection.py", line 138, in project
+    x = project(guess, self.M_h)
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/projection.py", line 138, in project
+    solution = model.sim_t(hb=True, save=True, guess=x, solver=solver, preconditioner=preconditioner)
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 335, in sim_t
+    x = project(guess, self.M_h)
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/projection.py", line 138, in project
+    x = project(guess, self.M_h)
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/projection.py", line 138, in project
+    x = project(guess, self.M_h)
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/projection.py", line 138, in project
+    x = project(guess, self.M_h)
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/projection.py", line 138, in project
+    x = project(guess, self.M_h)
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/projection.py", line 138, in project
+    x = project(guess, self.M_h)
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/projection.py", line 138, in project
+    x = project(guess, self.M_h)
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/projection.py", line 138, in project
+    x = project(guess, self.M_h)
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/projection.py", line 138, in project
+    x = project(guess, self.M_h)
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/projection.py", line 138, in project
+    x = project(guess, self.M_h)
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/projection.py", line 138, in project
+    x = project(guess, self.M_h)
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/projection.py", line 138, in project
+    x = project(guess, self.M_h)
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/projection.py", line 138, in project
+    x = project(guess, self.M_h)
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/projection.py", line 138, in project
+    x = project(guess, self.M_h)
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/projection.py", line 138, in project
+    x = project(guess, self.M_h)
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/projection.py", line 138, in project
+    cpp.la.solve(A, function.vector(), b, solver_type, preconditioner_type)
+    cpp.la.solve(A, function.vector(), b, solver_type, preconditioner_type)
+    cpp.la.solve(A, function.vector(), b, solver_type, preconditioner_type)
+    cpp.la.solve(A, function.vector(), b, solver_type, preconditioner_type)
+    cpp.la.solve(A, function.vector(), b, solver_type, preconditioner_type)
+    cpp.la.solve(A, function.vector(), b, solver_type, preconditioner_type)
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to solve linear system using PETSc Krylov solver.
+*** Reason:  Solution failed to converge in 0 iterations (PETSc reason DIVERGED_PC_FAILED, residual norm ||r|| = 0.000000e+00).
+*** Where:   This error was encountered inside PETScKrylovSolver.cpp.
+*** Process: 0
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to solve linear system using PETSc Krylov solver.
+*** Reason:  Solution failed to converge in 0 iterations (PETSc reason DIVERGED_PC_FAILED, residual norm ||r|| = 0.000000e+00).
+*** Where:   This error was encountered inside PETScKrylovSolver.cpp.
+*** Process: 4
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to solve linear system using PETSc Krylov solver.
+*** Reason:  Solution failed to converge in 0 iterations (PETSc reason DIVERGED_PC_FAILED, residual norm ||r|| = 0.000000e+00).
+*** Where:   This error was encountered inside PETScKrylovSolver.cpp.
+*** Process: 8
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to solve linear system using PETSc Krylov solver.
+*** Reason:  Solution failed to converge in 0 iterations (PETSc reason DIVERGED_PC_FAILED, residual norm ||r|| = 0.000000e+00).
+*** Where:   This error was encountered inside PETScKrylovSolver.cpp.
+*** Process: 10
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to solve linear system using PETSc Krylov solver.
+*** Reason:  Solution failed to converge in 0 iterations (PETSc reason DIVERGED_PC_FAILED, residual norm ||r|| = 0.000000e+00).
+*** Where:   This error was encountered inside PETScKrylovSolver.cpp.
+*** Process: 11
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to solve linear system using PETSc Krylov solver.
+*** Reason:  Solution failed to converge in 0 iterations (PETSc reason DIVERGED_PC_FAILED, residual norm ||r|| = 0.000000e+00).
+*** Where:   This error was encountered inside PETScKrylovSolver.cpp.
+*** Process: 14
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+    cpp.la.solve(A, function.vector(), b, solver_type, preconditioner_type)
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to solve linear system using PETSc Krylov solver.
+*** Reason:  Solution failed to converge in 0 iterations (PETSc reason DIVERGED_PC_FAILED, residual norm ||r|| = 0.000000e+00).
+*** Where:   This error was encountered inside PETScKrylovSolver.cpp.
+*** Process: 13
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+    cpp.la.solve(A, function.vector(), b, solver_type, preconditioner_type)
+
+    cpp.la.solve(A, function.vector(), b, solver_type, preconditioner_type)
+    cpp.la.solve(A, function.vector(), b, solver_type, preconditioner_type)
+    cpp.la.solve(A, function.vector(), b, solver_type, preconditioner_type)
+    cpp.la.solve(A, function.vector(), b, solver_type, preconditioner_type)
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to solve linear system using PETSc Krylov solver.
+*** Reason:  Solution failed to converge in 0 iterations (PETSc reason DIVERGED_PC_FAILED, residual norm ||r|| = 0.000000e+00).
+*** Where:   This error was encountered inside PETScKrylovSolver.cpp.
+*** Process: 7
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+    cpp.la.solve(A, function.vector(), b, solver_type, preconditioner_type)
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to solve linear system using PETSc Krylov solver.
+*** Reason:  Solution failed to converge in 0 iterations (PETSc reason DIVERGED_PC_FAILED, residual norm ||r|| = 0.000000e+00).
+*** Where:   This error was encountered inside PETScKrylovSolver.cpp.
+*** Process: 3
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to solve linear system using PETSc Krylov solver.
+*** Reason:  Solution failed to converge in 0 iterations (PETSc reason DIVERGED_PC_FAILED, residual norm ||r|| = 0.000000e+00).
+*** Where:   This error was encountered inside PETScKrylovSolver.cpp.
+*** Process: 19
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to solve linear system using PETSc Krylov solver.
+*** Reason:  Solution failed to converge in 0 iterations (PETSc reason DIVERGED_PC_FAILED, residual norm ||r|| = 0.000000e+00).
+*** Where:   This error was encountered inside PETScKrylovSolver.cpp.
+*** Process: 18
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+    cpp.la.solve(A, function.vector(), b, solver_type, preconditioner_type)
+    cpp.la.solve(A, function.vector(), b, solver_type, preconditioner_type)
+    cpp.la.solve(A, function.vector(), b, solver_type, preconditioner_type)
+    cpp.la.solve(A, function.vector(), b, solver_type, preconditioner_type)
+    cpp.la.solve(A, function.vector(), b, solver_type, preconditioner_type)
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to solve linear system using PETSc Krylov solver.
+*** Reason:  Solution failed to converge in 0 iterations (PETSc reason DIVERGED_PC_FAILED, residual norm ||r|| = 0.000000e+00).
+*** Where:   This error was encountered inside PETScKrylovSolver.cpp.
+*** Process: 16
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to solve linear system using PETSc Krylov solver.
+*** Reason:  Solution failed to converge in 0 iterations (PETSc reason DIVERGED_PC_FAILED, residual norm ||r|| = 0.000000e+00).
+*** Where:   This error was encountered inside PETScKrylovSolver.cpp.
+*** Process: 9
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to solve linear system using PETSc Krylov solver.
+*** Reason:  Solution failed to converge in 0 iterations (PETSc reason DIVERGED_PC_FAILED, residual norm ||r|| = 0.000000e+00).
+*** Where:   This error was encountered inside PETScKrylovSolver.cpp.
+*** Process: 15
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to solve linear system using PETSc Krylov solver.
+*** Reason:  Solution failed to converge in 0 iterations (PETSc reason DIVERGED_PC_FAILED, residual norm ||r|| = 0.000000e+00).
+*** Where:   This error was encountered inside PETScKrylovSolver.cpp.
+*** Process: 2
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to solve linear system using PETSc Krylov solver.
+*** Reason:  Solution failed to converge in 0 iterations (PETSc reason DIVERGED_PC_FAILED, residual norm ||r|| = 0.000000e+00).
+*** Where:   This error was encountered inside PETScKrylovSolver.cpp.
+*** Process: 5
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+    cpp.la.solve(A, function.vector(), b, solver_type, preconditioner_type)
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to solve linear system using PETSc Krylov solver.
+*** Reason:  Solution failed to converge in 0 iterations (PETSc reason DIVERGED_PC_FAILED, residual norm ||r|| = 0.000000e+00).
+*** Where:   This error was encountered inside PETScKrylovSolver.cpp.
+*** Process: 12
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to solve linear system using PETSc Krylov solver.
+*** Reason:  Solution failed to converge in 0 iterations (PETSc reason DIVERGED_PC_FAILED, residual norm ||r|| = 0.000000e+00).
+*** Where:   This error was encountered inside PETScKrylovSolver.cpp.
+*** Process: 6
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+    cpp.la.solve(A, function.vector(), b, solver_type, preconditioner_type)
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to solve linear system using PETSc Krylov solver.
+*** Reason:  Solution failed to converge in 0 iterations (PETSc reason DIVERGED_PC_FAILED, residual norm ||r|| = 0.000000e+00).
+*** Where:   This error was encountered inside PETScKrylovSolver.cpp.
+*** Process: 17
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to solve linear system using PETSc Krylov solver.
+*** Reason:  Solution failed to converge in 0 iterations (PETSc reason DIVERGED_PC_FAILED, residual norm ||r|| = 0.000000e+00).
+*** Where:   This error was encountered inside PETScKrylovSolver.cpp.
+*** Process: 1
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+

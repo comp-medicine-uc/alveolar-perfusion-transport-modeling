@@ -1,54 +1,95 @@
-Solving linear variational problem.
-No Jacobian form specified for nonlinear variational problem.
-Differentiating residual form F to obtain Jacobian J = F'.
-Solving nonlinear variational problem.
-  Newton iteration 0: r (abs) = 1.373e+06 (tol = 1.000e-08) r (rel) = 1.000e+00 (tol = 1.000e-08)
-  Newton iteration 1: r (abs) = 4.516e+00 (tol = 1.000e-08) r (rel) = 3.288e-06 (tol = 1.000e-08)
-  Newton iteration 2: r (abs) = 3.841e-05 (tol = 1.000e-08) r (rel) = 2.797e-11 (tol = 1.000e-08)
-  Newton solver finished in 2 iterations and 36 linear solver iterations.
-No Jacobian form specified for nonlinear variational problem.
-Differentiating residual form F to obtain Jacobian J = F'.
-Solving nonlinear variational problem.
-  Newton iteration 0: r (abs) = 1.366e+07 (tol = 1.000e-08) r (rel) = 1.000e+00 (tol = 1.000e-08)
-  Newton iteration 1: r (abs) = 9.002e+05 (tol = 1.000e-08) r (rel) = 6.589e-02 (tol = 1.000e-08)
-  Newton iteration 2: r (abs) = 7.380e+04 (tol = 1.000e-08) r (rel) = 5.402e-03 (tol = 1.000e-08)
-  Newton iteration 3: r (abs) = 8.400e+02 (tol = 1.000e-08) r (rel) = 6.148e-05 (tol = 1.000e-08)
-  Newton iteration 4: r (abs) = 1.727e-01 (tol = 1.000e-08) r (rel) = 1.264e-08 (tol = 1.000e-08)
-  Newton iteration 5: r (abs) = 1.064e-06 (tol = 1.000e-08) r (rel) = 7.789e-14 (tol = 1.000e-08)
-  Newton solver finished in 5 iterations and 216 linear solver iterations.
-Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
-Comienza la iteración con amount = 3 y side_length = 5.
-Running model on 1 jobs.
-Imported src files
-Starting...
-Model initialised
-Mesh imported
-Coordinates have shape  (38586, 3)
-Mesh imported
-Mesh refined
-Starting (P) simulation
-began sim_p
-Instancing boundaries
-gamma_in.dir_min =  0
-gamma_in.dir_max =  5
-gamma_out.dir_min =  0
-gamma_out.dir_max =  5
-gamma_air.dir_min_y =  0
-gamma_air.dir_max_y =  5
-gamma_air.dir_min_z =  0
-gamma_air.dir_max_z =  5
-boundaries instanced
-self.f_dim = 2
-self.vecf_dim = 1
-P problem solved
-u problem solved
-Saving solutions
-saved
-(P) simulation done
-Starting (T) simulation
-began sim_t, with solver =  bicgstab  and WITHOUT preconditioner.
-Solving with solver = bicgstab and without preconditioner.
-Finished (linear) guess generation
-began sim_t, with solver =  bicgstab  and preconditioner =  default
-Solving with solver = bicgstab and preconditioner = default.
-Done
+Process 0: Solving linear variational problem.
+Process 19: Solving linear variational problem.
+Process 9: Solving linear variational problem.
+Process 7: Solving linear variational problem.
+Process 4: Solving linear variational problem.Process 14: Solving linear variational problem.
+
+Process 13: Solving linear variational problem.
+Process 5: Solving linear variational problem.
+Process 16: Solving linear variational problem.
+Process 18: Solving linear variational problem.
+Process 1: Solving linear variational problem.
+Process 6: Solving linear variational problem.
+Process 10: Solving linear variational problem.
+Process 2: Solving linear variational problem.
+Process 8: Solving linear variational problem.
+Process 11: Solving linear variational problem.
+Process 12: Solving linear variational problem.
+Process 17: Solving linear variational problem.Process 15: Solving linear variational problem.
+
+Process 3: Solving linear variational problem.
+Process 1: No Jacobian form specified for nonlinear variational problem.Process 2: No Jacobian form specified for nonlinear variational problem.
+Process 2: Differentiating residual form F to obtain Jacobian J = F'.
+
+Process 1: Differentiating residual form F to obtain Jacobian J = F'.
+Process 6: No Jacobian form specified for nonlinear variational problem.
+Process 6: Differentiating residual form F to obtain Jacobian J = F'.
+Process 7: No Jacobian form specified for nonlinear variational problem.
+Process 7: Differentiating residual form F to obtain Jacobian J = F'.
+Process 0: No Jacobian form specified for nonlinear variational problem.
+Process 0: Differentiating residual form F to obtain Jacobian J = F'.
+Process 16: No Jacobian form specified for nonlinear variational problem.
+Process 16: Differentiating residual form F to obtain Jacobian J = F'.
+Process 4: No Jacobian form specified for nonlinear variational problem.
+Process 4: Differentiating residual form F to obtain Jacobian J = F'.
+Process 19: No Jacobian form specified for nonlinear variational problem.
+Process 19: Differentiating residual form F to obtain Jacobian J = F'.
+Process 3: No Jacobian form specified for nonlinear variational problem.
+Process 3: Differentiating residual form F to obtain Jacobian J = F'.
+Process 12: No Jacobian form specified for nonlinear variational problem.
+Process 12: Differentiating residual form F to obtain Jacobian J = F'.
+Process 10: No Jacobian form specified for nonlinear variational problem.
+Process 10: Differentiating residual form F to obtain Jacobian J = F'.
+Process 14: No Jacobian form specified for nonlinear variational problem.
+Process 14: Differentiating residual form F to obtain Jacobian J = F'.
+Process 15: No Jacobian form specified for nonlinear variational problem.
+Process 15: Differentiating residual form F to obtain Jacobian J = F'.
+Process 9: No Jacobian form specified for nonlinear variational problem.
+Process 9: Differentiating residual form F to obtain Jacobian J = F'.
+Process 11: No Jacobian form specified for nonlinear variational problem.
+Process 11: Differentiating residual form F to obtain Jacobian J = F'.
+Process 13: No Jacobian form specified for nonlinear variational problem.
+Process 13: Differentiating residual form F to obtain Jacobian J = F'.
+Process 5: No Jacobian form specified for nonlinear variational problem.
+Process 5: Differentiating residual form F to obtain Jacobian J = F'.
+Process 8: No Jacobian form specified for nonlinear variational problem.
+Process 8: Differentiating residual form F to obtain Jacobian J = F'.
+Process 17: No Jacobian form specified for nonlinear variational problem.
+Process 17: Differentiating residual form F to obtain Jacobian J = F'.
+Process 18: No Jacobian form specified for nonlinear variational problem.
+Process 18: Differentiating residual form F to obtain Jacobian J = F'.
+Process 0: Solving nonlinear variational problem.
+Process 9: Solving nonlinear variational problem.
+Process 18: Solving nonlinear variational problem.
+Process 11: Solving nonlinear variational problem.
+Process 17: Solving nonlinear variational problem.
+Process 14: Solving nonlinear variational problem.
+Process 4: Solving nonlinear variational problem.
+Process 2: Solving nonlinear variational problem.
+Process 3: Solving nonlinear variational problem.
+Process 13: Solving nonlinear variational problem.Process 7: Solving nonlinear variational problem.
+
+Process 6: Solving nonlinear variational problem.
+Process 15: Solving nonlinear variational problem.
+Process 19: Solving nonlinear variational problem.
+Process 10: Solving nonlinear variational problem.
+Process 16: Solving nonlinear variational problem.
+Process 8: Solving nonlinear variational problem.
+Process 12: Solving nonlinear variational problem.
+Process 1: Solving nonlinear variational problem.
+Process 5: Solving nonlinear variational problem.
+  Process 0: Newton iteration 0: r (abs) = 1.886e+07 (tol = 1.000e-08) r (rel) = 1.000e+00 (tol = 1.000e-08)
+  Process 0: Newton iteration 1: r (abs) = 2.212e+02 (tol = 1.000e-08) r (rel) = 1.173e-05 (tol = 1.000e-08)
+  Process 0: Newton iteration 2: r (abs) = 2.087e-03 (tol = 1.000e-08) r (rel) = 1.106e-10 (tol = 1.000e-08)
+  Process 0: Newton solver finished in 2 iterations and 257 linear solver iterations.
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   PID 74750 RUNNING AT n11
+=   EXIT CODE: 9
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
+YOUR APPLICATION TERMINATED WITH THE EXIT STRING: Killed (signal 9)
+This typically refers to a problem with your application.
+Please see the FAQ page for debugging suggestions
