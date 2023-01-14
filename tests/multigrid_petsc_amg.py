@@ -52,13 +52,6 @@ max_dims = [side_length, side_length, side_length]
 min_dims = [0,0,0]
 
 name = "amount_" + str(amount)
-fname = "40_h_repaired_amg_edge_" + str(side_length)
+fname = "40_h_repaired_petsc_amg_edge_" + str(side_length)
 
-run_model(name, fname, "tfqmr", "amg", max_dims, min_dims, side_length, amount)
-
-# https://doi.org/10.1016/S0168-9274(01)00115-5
-# In AMG4PSBLAS we provide interfaces to some of the widely used parallel direct
-# solvers, such as SuperLU [32] and MUMPS [2]. However, using direct solvers at the
-# coarsest level of an AMG method on many thousands of parallel cores can be very
-# expensive, because the coarsest-level matrix tends to have a small size, therefore the
-# cost of data communication dominates the local arithmetic computations.
+run_model(name, fname, "tfqmr", "petsc_amg", max_dims, min_dims, side_length, amount)

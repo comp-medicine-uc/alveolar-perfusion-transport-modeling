@@ -1,15 +1,15 @@
 #!/bin/bash
 
 # Nombre del trabajo
-#SBATCH --job-name=multiBox
+#SBATCH --job-name=multiPetSCamg
 # Archivo de salida
-#SBATCH --output=multiBox.txt
+#SBATCH --output=multigrid_petsc_amg.txt
 # Partición (Cola de y trabajo)
 #SBATCH --partition=512x1024
 # Solicitud de cpus
-#SBATCH --ntasks=20
+#SBATCH --ntasks=1
 #SBATCH --cpus-per-task=1
 #SBATCH --mail-user=biherrera@uc.cl
 #SBATCH --mail-type=ALL
 
-mpirun -n 20 python3 multi.py
+mpirun -n 1 python3 multigrid_petsc_amg.py

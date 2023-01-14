@@ -41,8 +41,8 @@ def run_model(name, fname, solver, preconditioner, max_dims, min_dims, side_leng
     
 ####################### VARIAR ESTOS DOS PARÁMETROS
 
-amount = 5
-side_length = 5
+amount = 20
+side_length = 50
 
 ####################### Ejecución
 
@@ -52,6 +52,10 @@ max_dims = [side_length, side_length, side_length]
 min_dims = [0,0,0]
 
 name = "amount_" + str(amount)
-fname = "edge_" + str(side_length)
+fname = "40_h_repaired_hypre_amg_edge_" + str(side_length)
 
-run_model(name, fname, "bicgstab", "default", max_dims, min_dims, side_length, amount)
+run_model(name, fname, "gmres", "hypre_amg", max_dims, min_dims, side_length, amount)
+
+# https://doi.org/10.1016/S0168-9274(01)00115-5
+# BoomerAMG: A parallel algebraic multigrid solver and preconditioner
+# Combinación gmres - hypre_amg
