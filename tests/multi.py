@@ -41,7 +41,7 @@ def run_model(name, fname, solver, preconditioner, max_dims, min_dims, side_leng
     
 ####################### VARIAR ESTOS DOS PARÁMETROS
 
-amount = 3
+amount = 5
 side_length = 50
 
 ####################### Ejecución
@@ -54,4 +54,4 @@ min_dims = [0,0,0]
 name = "amount_" + str(amount)
 fname = "edge_" + str(side_length)
 
-run_model(name, fname, "cg", "default", max_dims, min_dims, side_length, amount)
+run_model(name, fname, "tfqmr", "default", max_dims, min_dims, side_length, amount)
