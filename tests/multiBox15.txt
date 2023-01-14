@@ -1,3 +1,5 @@
 srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
 slurmstepd: error: *** JOB 87583 ON n11 CANCELLED AT 2023-01-14T17:06:25 ***
   Process 0: Newton iteration 2: r (abs) = 1.482e+07 (tol = 1.000e-08) r (rel) = 4.653e-03 (tol = 1.000e-08)
+  Process 0: Newton iteration 3: r (abs) = 2.655e+05 (tol = 1.000e-08) r (rel) = 8.335e-05 (tol = 1.000e-08)
+  Process 0: Newton iteration 4: r (abs) = 1.231e+02 (tol = 1.000e-08) r (rel) = 3.864e-08 (tol = 1.000e-08)
