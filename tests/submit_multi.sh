@@ -12,4 +12,4 @@
 #SBATCH --mail-user=biherrera@uc.cl
 #SBATCH --mail-type=ALL
 
-mpirun -c 10 python3 multi.py
+mpirun -n 1 python3 multi.py
