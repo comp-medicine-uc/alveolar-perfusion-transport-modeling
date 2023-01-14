@@ -22,8 +22,8 @@ def run_model(name, fname, solver, preconditioner, max_dims, min_dims, side_leng
     model.import_mesh(max_dims=max_dims, min_dims=min_dims, tol=0.1, box_side_length = side_length, box_nodes = amount)
     print("Mesh initialized")
     
-    model.mesh = dolfin.refine(model.mesh) # Esto duplica la cantidad de nodos
-    print("Mesh refined")
+#     model.mesh = dolfin.refine(model.mesh) # Esto duplica la cantidad de nodos
+#     print("Mesh refined")
     
     print("Starting (P) simulation")
     model.sim_p(save=True, meshtype="tkd")
@@ -41,8 +41,8 @@ def run_model(name, fname, solver, preconditioner, max_dims, min_dims, side_leng
 
 ####################### VARIAR ESTOS DOS PARÁMETROS
 
-amount = 50
-side_length = 25
+amount = 30
+side_length = 50
 
 ####################### Ejecución
 
