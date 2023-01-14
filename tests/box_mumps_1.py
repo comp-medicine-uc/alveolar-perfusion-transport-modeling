@@ -54,4 +54,4 @@ min_dims = [0,0,0]
 name = "amount_" + str(amount)
 fname = "box_mumps_1_edge_" + str(side_length)
 
-run_model(name, fname, "mumps", None, max_dims, min_dims, side_length, amount)
+run_model(name, fname, "mumps", "default", max_dims, min_dims, side_length, amount)
