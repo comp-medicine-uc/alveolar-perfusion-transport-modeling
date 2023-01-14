@@ -29,10 +29,7 @@ class PerfusionGasExchangeModel():
         self.f_dim = f_dim
         self.vecf_dim = vecf_dim
 
-
-        # Save details
         if not os.path.exists(self.folder_path):
-#             os.mkdir(self.folder_path)
             os.makedirs(self.folder_path, exist_ok=True)
         with open(self.folder_path+'/info.txt', 'w') as file:
             file.write(f'Simulation done on {date.today()}\n\n')
@@ -40,62 +37,48 @@ class PerfusionGasExchangeModel():
             for param in self.params:
                 file.write(f'Parameter {param}: {self.params[param]}\n')
 
-    def import_mesh(self, mesh_path, meshtype=None, type="h5", periodic=False, max_dims = [41.2, 40.7, 40.7], min_dims = [-1.2, -0.7, -0.7], tol=0.2):
+    def import_mesh(self, mesh_path=os.path.join("../raw-data/40_h_repaired", "40_h_repaired.xdmf"), meshtype=None, type="h5", periodic=False, max_dims=[41.2, 40.7, 40.7], min_dims=[-1.2, -0.7, -0.7], tol=0.2, box_side_length=None, box_nodes=None):
         '''Imports mesh from .h5 file for use in simulations.
-
         mesh_path: path to file. (string)
         meshtype: specific case for refinement. (string)
         type: file format for mesh. (string)
         periodic: use periodic boundary conditions. (bool)
         '''
-        if type == "h5":
-            hdf5 = HDF5File(MPI.comm_world, mesh_path, 'r')
-            self.mesh = Mesh()
-            hdf5.read(self.mesh, 'mesh', False)
-        elif type == "xml":
-            self.mesh = Mesh(mesh_path)
-        elif type == "xdmf":
-            self.mesh = Mesh()
-            with XDMFFile(mesh_path) as infile:
-                infile.read(self.mesh)
+        
+        if box_side_length is None:
+            if type == "h5":
+                hdf5 = HDF5File(MPI.comm_world, mesh_path, 'r')
+                self.mesh = Mesh()
+                hdf5.read(self.mesh, 'mesh', False)
+            elif type == "xml":
+                self.mesh = Mesh(mesh_path)
+            elif type == "xdmf":
+                self.mesh = Mesh()
+                with XDMFFile(mesh_path) as infile:
+                    infile.read(self.mesh)
+            else:
+                raise ValueError("type of mesh should be h5 or xml")
+            print("Mesh imported")
+            
         else:
-            raise ValueError("type of mesh should be h5 or xml")
-        
-        print("Mesh imported")
+            if box_nodes is None:
+                raise ValueError("Parameter box_nodes_amount should be non-zero.")
+            else:
+                max_dims = [box_side_length, box_side_length, box_side_length]
+                min_dims = [0,0,0]
+                self.mesh = BoxMesh(Point(0,0,0), Point(box_side_length,box_side_length,box_side_length), box_nodes, box_nodes, box_nodes)
+                print("Created b")
+
         print("Coordinates have shape ", np.shape(self.mesh.coordinates()))
-        dir_arr_flow = np.array(
-                [coords[0] for coords in self.mesh.coordinates()]
-        )
-        dir_arr_y = np.array(
-                [coords[1] for coords in self.mesh.coordinates()]
-        )
-        dir_arr_z = np.array(
-                [coords[2] for coords in self.mesh.coordinates()]
-        )
-        
-        # #Node coordinates for principal (x) direction
-        # self.dir_max_flow = np.max(dir_arr_flow)  # Maximum principal direction coordinate
-        # self.dir_min_flow = np.min(dir_arr_flow)  # Minimum principal direction coordinate
-        # self.dir_max_y = np.max(dir_arr_y)
-        # self.dir_min_y = np.min(dir_arr_y)
-        # self.dir_max_z = np.max(dir_arr_z)
-        # self.dir_min_z = np.min(dir_arr_z)
-
-        # print("self.dir_max_flow = ", self.dir_max_flow)
-        # print("self.dir_min_flow = ", self.dir_min_flow)
-        # print("self.dir_max_y = ", self.dir_max_y)
-        # print("self.dir_min_y = ", self.dir_min_y)
-        # print("self.dir_max_z = ", self.dir_max_z)
-        # print("self.dir_min_z = ", self.dir_min_z)
-
-        # Manually input values for this mesh, otherwise parallel computation takes into account 
-        # different values for each of them, and inlet/outlet are not recognised
-        # self.dir_max_flow =  40.6758673128
-        # self.dir_min_flow =  -0.6561989643999999
-        # self.dir_max_y =  40.6559837499
-        # self.dir_min_y =  -0.6702492376
-        # self.dir_max_z =  40.6433994556
-        # self.dir_min_z =  -0.6591004764
+#         dir_arr_flow = np.array(
+#                 [coords[0] for coords in self.mesh.coordinates()]
+#         )
+#         dir_arr_y = np.array(
+#                 [coords[1] for coords in self.mesh.coordinates()]
+#         )
+#         dir_arr_z = np.array(
+#                 [coords[2] for coords in self.mesh.coordinates()]
+#         )
 
         self.dir_max_flow =  max_dims[0]
         self.dir_min_flow =  min_dims[0]
@@ -109,15 +92,12 @@ class PerfusionGasExchangeModel():
         len_z = self.dir_max_z - self.dir_min_z
         
         # Tolerance for boundary instancing
-        
         self.tol = tol
 
         # Save mesh dims for other uses
-
         self.dims = (len_flow, len_y, len_z)
 
         # Flag for periodicity
-
         self.periodic = periodic
 
 
@@ -128,7 +108,6 @@ class PerfusionGasExchangeModel():
         '''
         
         self.meshtype = mesh
-        
         # Instance the relevant boundaries
         print("Instancing boundaries")
 
@@ -153,7 +132,6 @@ class PerfusionGasExchangeModel():
             print("gamma_air.dir_max_z = ", self.gamma_air.dir_max_z)
 
             # Declare the boundaries in the mesh and tag them
-
             self.boundaries = MeshFunction('size_t', self.mesh, dim=2)
             self.boundaries.set_all(3)
             self.gamma_in.mark(self.boundaries, 1)
@@ -181,7 +159,6 @@ class PerfusionGasExchangeModel():
 
     def sim_p(self, save=True, meshtype=None):
         '''Solves the perfusion (P) problem of the model.
-        
         save: saves to vtk. (bool)
         meshtype: type of mesh. None, "sheet" or "tkd". (None or str)
         '''
@@ -191,14 +168,13 @@ class PerfusionGasExchangeModel():
         self.instance_function_spaces()
         print("self.f_dim =", self.f_dim)
         print("self.vecf_dim =", self.vecf_dim)
+        
         # Declare Dirichlet boundary conditions for (P)
-
         self.p_dbc = [
             DirichletBC(self.W_h, self.params['p_min'], self.gamma_out)
         ]
 
         # Assemble problem
-
         ds = Measure('ds', domain=self.mesh, subdomain_data=self.boundaries)
 
         p = TrialFunction(self.W_h)
@@ -223,6 +199,7 @@ class PerfusionGasExchangeModel():
             solve(
                 a == F, self.p, self.p_dbc
             )
+            
         print("P problem solved")
 
         self.u = project(
@@ -235,8 +212,6 @@ class PerfusionGasExchangeModel():
         self.p.rename("p", "blood pressure [mmHg]")
 
         if save:
-
-            # Save solutions
             print("Saving solutions")
             u_file = File(self.folder_path+'/p/u.pvd')
             u_file << self.u
@@ -412,7 +387,7 @@ class PerfusionGasExchangeModel():
                 p_CO2_file = File(self.folder_path+'/t/pCO2_linear.pvd')
                 c_HbO2_file = File(self.folder_path+'/t/cHbO2_linear.pvd')
                 c_HbCO2_file = File(self.folder_path+'/t/cHbCO2_linear.pvd')
-            # Create files for output
+                
             else:
                 p_O2_file = File(self.folder_path+'/t/pO2.pvd')
                 p_CO2_file = File(self.folder_path+'/t/pCO2.pvd')
@@ -420,7 +395,6 @@ class PerfusionGasExchangeModel():
                 c_HbCO2_file = File(self.folder_path+'/t/cHbCO2.pvd')
 
         # Declare Dirichlet boundary conditions for (T)
-
         self.t_dbc = [
             DirichletBC(
                 self.M_h.sub(0), Constant(self.params['p_O2_in']), self.gamma_in
@@ -564,7 +538,6 @@ class PerfusionGasExchangeModel():
         if save:
 
             # Save solution to files
-
             _p_O2, _p_CO2, _c_HbO2, _c_HbCO2 = x.split()
             _p_O2.rename("p_O2", "oxygen partial pressure [mmHg]")
             _p_CO2.rename("p_CO2", "carbon dioxide partial pressure [mmHg]")
