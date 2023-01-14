@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Nombre del trabajo
-#SBATCH --job-name=multiBox
+#SBATCH --job-name=boxm10
 # Archivo de salida
-#SBATCH --output=multiBox10.txt
+#SBATCH --output=box_mumps_10.txt
 # Partición (Cola de y trabajo)
 #SBATCH --partition=512x1024
 # Solicitud de cpus
@@ -12,4 +12,4 @@
 #SBATCH --mail-user=biherrera@uc.cl
 #SBATCH --mail-type=ALL
 
-mpirun -n 10 python3 multi.py
+mpirun -n 10 python3 box_mumps_10.py
