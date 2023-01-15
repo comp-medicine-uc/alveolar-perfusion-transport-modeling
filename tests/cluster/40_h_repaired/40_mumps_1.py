@@ -15,7 +15,7 @@ from src.params import params
     
 print("Imported src files")
 print("Starting...")
-folder = "40_bicgstabamg_1"
+folder = "40_bicgstabdef_1"
 path = os.path.join("../../../results-data", folder)
 model = PerfusionGasExchangeModel(folder_path=path, params=params, solver='gmres', f_dim = 2, vecf_dim=1)
 
@@ -36,5 +36,5 @@ print("(P) simulation done")
 print("Starting (T) simulation")
 x = model.sim_t(hb=False, save=True, solver="bicgstab")
 print("Finished (linear) guess generation")
-solution = model.sim_t(hb=True, save=True, guess=x, solver="bicgstab", preconditioner="amg")
+solution = model.sim_t(hb=True, save=True, guess=x, solver="bicgstab", preconditioner="default")
 print("Done")
