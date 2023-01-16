@@ -542,7 +542,8 @@ class PerfusionGasExchangeModel():
                         "relative_tolerance": 1E-8,
                         "absolute_tolerance": 1E-8,
                         "linear_solver": solver, 
-                        "preconditioner": preconditioner
+                        "preconditioner": preconditioner,
+                        "maximum_iterations": 100000
                     }}
                 )      
                 
