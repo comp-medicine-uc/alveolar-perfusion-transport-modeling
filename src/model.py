@@ -191,6 +191,11 @@ class PerfusionGasExchangeModel():
             solve(
                 a == F, self.p, self.p_dbc
             )
+        elif self.solver == "bicgstab":
+            solve(
+                a == F, self.p, self.p_dbc,
+                solver_parameters={'linear_solver': 'bicgstab'}
+            )      
         elif self.solver == 'mumps':
             solve(
                 a == F, self.p, self.p_dbc,
@@ -458,30 +463,7 @@ class PerfusionGasExchangeModel():
                         "linear_solver": solver
                     }}
                 )
-                # Pruebas para problema no lineal
-                # solver=None, preconditioner=None: 310 seg, r(rel) = 5.7e-16
-                # solver=gmres, preconditioner=ilu: no converge.
-                # solver=gmres, preconditioner=sor: no converge.
-                # solver=tfqmr, preconditioner=None: no converge.
-                # solver=tfqmr, preconditioner=default: no converge.
-                # solver=umfpack, preconditioner=default: 300 seg, r(rel) = 5.741e-16
-                # solver=umfpack, preconditioner=
-                
-                # solver=mumps, preconditioner=None: 172 seg, r(rel) = 5.741e-16
-                # solver=mumps, preconditioner=ilu: no funciona
-                # solver=mumps, preconditioner=amg: no funciona
-                # solver=mumps, preconditioner=default: 175 seg, r(rel) = 5.741e-16      
-                
-                # solver iterativo
-                # solver=bicgstab, preconditioner="default": no converge
-                
-                    # Solution failed to converge in 10000 iterations (PETSc reason          
-                    # DIVERGED_ITS, residual norm ||r|| = 6.392203e+00).
 
-                # Otra alternativa: buscar cómo hacer más iteraciones
-                # Mirar https://fenicsproject.org/qa/9563/mixed-navier-stokes-solver-preconditioner-configuration/
-                # Mirar documentación NonlinearVariationalSolver 
-                
             elif preconditioner == "K":
                 print("Starting Krylov solver formulation")
                 # P2 = VectorElement("Lagrange", mesh.ufl_cell(), 2)
