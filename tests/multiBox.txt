@@ -143,3 +143,849 @@ Process 2: Solving nonlinear variational problem.
 Process 11: Solving nonlinear variational problem.
 Process 8: Solving nonlinear variational problem.
   Process 0: Newton iteration 0: r (abs) = 3.185e+09 (tol = 1.000e-08) r (rel) = 1.000e+00 (tol = 1.000e-08)
+  Process 0: Newton iteration 1: r (abs) = 2.224e+08 (tol = 1.000e-08) r (rel) = 6.982e-02 (tol = 1.000e-08)
+  Process 0: Newton iteration 2: r (abs) = 1.482e+07 (tol = 1.000e-08) r (rel) = 4.653e-03 (tol = 1.000e-08)
+  Process 0: Newton iteration 3: r (abs) = 2.655e+05 (tol = 1.000e-08) r (rel) = 8.335e-05 (tol = 1.000e-08)
+  Process 0: Newton iteration 4: r (abs) = 1.231e+02 (tol = 1.000e-08) r (rel) = 3.864e-08 (tol = 1.000e-08)
+  Process 0: Newton iteration 5: r (abs) = 3.165e-05 (tol = 1.000e-08) r (rel) = 9.937e-15 (tol = 1.000e-08)
+  Process 0: Newton solver finished in 5 iterations and 5 linear solver iterations.
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Comienza la iteración con amount = 20 y side_length = 50.
+Starting...
+Model initialised
+Created b
+Coordinates have shape  (615, 3)
+Mesh initialized
+Mesh refined
+Starting (P) simulation
+
+ ############## (P) problem simulation ############
+Instancing boundaries
+gamma_in.dir_min =  0
+gamma_in.dir_max =  50
+gamma_out.dir_min =  0
+gamma_out.dir_max =  50
+gamma_air.dir_min_y =  0
+gamma_air.dir_max_y =  50
+gamma_air.dir_min_z =  0
+gamma_air.dir_max_z =  50
+boundaries instanced
+self.f_dim = 2
+self.vecf_dim = 1
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting linear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  bicgstab  and WITHOUT preconditioner.
+Solving with solver = bicgstab and without preconditioner.
+Finished (linear) guess generation
+Starting nonlinear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  mumps  and WITHOUT preconditioner.
+Solving with solver = mumps and without preconditioner.
+Generated non-linear solution
+Done
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Comienza la iteración con amount = 20 y side_length = 50.
+Starting...
+Model initialised
+Created b
+Coordinates have shape  (603, 3)
+Mesh initialized
+Mesh refined
+Starting (P) simulation
+
+ ############## (P) problem simulation ############
+Instancing boundaries
+gamma_in.dir_min =  0
+gamma_in.dir_max =  50
+gamma_out.dir_min =  0
+gamma_out.dir_max =  50
+gamma_air.dir_min_y =  0
+gamma_air.dir_max_y =  50
+gamma_air.dir_min_z =  0
+gamma_air.dir_max_z =  50
+boundaries instanced
+self.f_dim = 2
+self.vecf_dim = 1
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting linear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  bicgstab  and WITHOUT preconditioner.
+Solving with solver = bicgstab and without preconditioner.
+Finished (linear) guess generation
+Starting nonlinear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  mumps  and WITHOUT preconditioner.
+Solving with solver = mumps and without preconditioner.
+Generated non-linear solution
+Done
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Comienza la iteración con amount = 20 y side_length = 50.
+Starting...
+Model initialised
+Created b
+Coordinates have shape  (589, 3)
+Mesh initialized
+Mesh refined
+Starting (P) simulation
+
+ ############## (P) problem simulation ############
+Instancing boundaries
+gamma_in.dir_min =  0
+gamma_in.dir_max =  50
+gamma_out.dir_min =  0
+gamma_out.dir_max =  50
+gamma_air.dir_min_y =  0
+gamma_air.dir_max_y =  50
+gamma_air.dir_min_z =  0
+gamma_air.dir_max_z =  50
+boundaries instanced
+self.f_dim = 2
+self.vecf_dim = 1
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting linear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  bicgstab  and WITHOUT preconditioner.
+Solving with solver = bicgstab and without preconditioner.
+Finished (linear) guess generation
+Starting nonlinear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  mumps  and WITHOUT preconditioner.
+Solving with solver = mumps and without preconditioner.
+Generated non-linear solution
+Done
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Comienza la iteración con amount = 20 y side_length = 50.
+Starting...
+Model initialised
+Created b
+Coordinates have shape  (594, 3)
+Mesh initialized
+Mesh refined
+Starting (P) simulation
+
+ ############## (P) problem simulation ############
+Instancing boundaries
+gamma_in.dir_min =  0
+gamma_in.dir_max =  50
+gamma_out.dir_min =  0
+gamma_out.dir_max =  50
+gamma_air.dir_min_y =  0
+gamma_air.dir_max_y =  50
+gamma_air.dir_min_z =  0
+gamma_air.dir_max_z =  50
+boundaries instanced
+self.f_dim = 2
+self.vecf_dim = 1
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting linear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  bicgstab  and WITHOUT preconditioner.
+Solving with solver = bicgstab and without preconditioner.
+Finished (linear) guess generation
+Starting nonlinear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  mumps  and WITHOUT preconditioner.
+Solving with solver = mumps and without preconditioner.
+Generated non-linear solution
+Done
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Comienza la iteración con amount = 20 y side_length = 50.
+Starting...
+Model initialised
+Created b
+Coordinates have shape  (629, 3)
+Mesh initialized
+Mesh refined
+Starting (P) simulation
+
+ ############## (P) problem simulation ############
+Instancing boundaries
+gamma_in.dir_min =  0
+gamma_in.dir_max =  50
+gamma_out.dir_min =  0
+gamma_out.dir_max =  50
+gamma_air.dir_min_y =  0
+gamma_air.dir_max_y =  50
+gamma_air.dir_min_z =  0
+gamma_air.dir_max_z =  50
+boundaries instanced
+self.f_dim = 2
+self.vecf_dim = 1
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting linear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  bicgstab  and WITHOUT preconditioner.
+Solving with solver = bicgstab and without preconditioner.
+Finished (linear) guess generation
+Starting nonlinear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  mumps  and WITHOUT preconditioner.
+Solving with solver = mumps and without preconditioner.
+Generated non-linear solution
+Done
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Comienza la iteración con amount = 20 y side_length = 50.
+Starting...
+Model initialised
+Created b
+Coordinates have shape  (599, 3)
+Mesh initialized
+Mesh refined
+Starting (P) simulation
+
+ ############## (P) problem simulation ############
+Instancing boundaries
+gamma_in.dir_min =  0
+gamma_in.dir_max =  50
+gamma_out.dir_min =  0
+gamma_out.dir_max =  50
+gamma_air.dir_min_y =  0
+gamma_air.dir_max_y =  50
+gamma_air.dir_min_z =  0
+gamma_air.dir_max_z =  50
+boundaries instanced
+self.f_dim = 2
+self.vecf_dim = 1
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting linear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  bicgstab  and WITHOUT preconditioner.
+Solving with solver = bicgstab and without preconditioner.
+Finished (linear) guess generation
+Starting nonlinear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  mumps  and WITHOUT preconditioner.
+Solving with solver = mumps and without preconditioner.
+Generated non-linear solution
+Done
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Comienza la iteración con amount = 20 y side_length = 50.
+Starting...
+Model initialised
+Created b
+Coordinates have shape  (583, 3)
+Mesh initialized
+Mesh refined
+Starting (P) simulation
+
+ ############## (P) problem simulation ############
+Instancing boundaries
+gamma_in.dir_min =  0
+gamma_in.dir_max =  50
+gamma_out.dir_min =  0
+gamma_out.dir_max =  50
+gamma_air.dir_min_y =  0
+gamma_air.dir_max_y =  50
+gamma_air.dir_min_z =  0
+gamma_air.dir_max_z =  50
+boundaries instanced
+self.f_dim = 2
+self.vecf_dim = 1
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting linear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  bicgstab  and WITHOUT preconditioner.
+Solving with solver = bicgstab and without preconditioner.
+Finished (linear) guess generation
+Starting nonlinear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  mumps  and WITHOUT preconditioner.
+Solving with solver = mumps and without preconditioner.
+Generated non-linear solution
+Done
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Comienza la iteración con amount = 20 y side_length = 50.
+Starting...
+Model initialised
+Created b
+Coordinates have shape  (573, 3)
+Mesh initialized
+Mesh refined
+Starting (P) simulation
+
+ ############## (P) problem simulation ############
+Instancing boundaries
+gamma_in.dir_min =  0
+gamma_in.dir_max =  50
+gamma_out.dir_min =  0
+gamma_out.dir_max =  50
+gamma_air.dir_min_y =  0
+gamma_air.dir_max_y =  50
+gamma_air.dir_min_z =  0
+gamma_air.dir_max_z =  50
+boundaries instanced
+self.f_dim = 2
+self.vecf_dim = 1
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting linear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  bicgstab  and WITHOUT preconditioner.
+Solving with solver = bicgstab and without preconditioner.
+Finished (linear) guess generation
+Starting nonlinear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  mumps  and WITHOUT preconditioner.
+Solving with solver = mumps and without preconditioner.
+Generated non-linear solution
+Done
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Comienza la iteración con amount = 20 y side_length = 50.
+Starting...
+Model initialised
+Created b
+Coordinates have shape  (587, 3)
+Mesh initialized
+Mesh refined
+Starting (P) simulation
+
+ ############## (P) problem simulation ############
+Instancing boundaries
+gamma_in.dir_min =  0
+gamma_in.dir_max =  50
+gamma_out.dir_min =  0
+gamma_out.dir_max =  50
+gamma_air.dir_min_y =  0
+gamma_air.dir_max_y =  50
+gamma_air.dir_min_z =  0
+gamma_air.dir_max_z =  50
+boundaries instanced
+self.f_dim = 2
+self.vecf_dim = 1
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting linear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  bicgstab  and WITHOUT preconditioner.
+Solving with solver = bicgstab and without preconditioner.
+Finished (linear) guess generation
+Starting nonlinear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  mumps  and WITHOUT preconditioner.
+Solving with solver = mumps and without preconditioner.
+Generated non-linear solution
+Done
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Comienza la iteración con amount = 20 y side_length = 50.
+Starting...
+Model initialised
+Created b
+Coordinates have shape  (638, 3)
+Mesh initialized
+Mesh refined
+Starting (P) simulation
+
+ ############## (P) problem simulation ############
+Instancing boundaries
+gamma_in.dir_min =  0
+gamma_in.dir_max =  50
+gamma_out.dir_min =  0
+gamma_out.dir_max =  50
+gamma_air.dir_min_y =  0
+gamma_air.dir_max_y =  50
+gamma_air.dir_min_z =  0
+gamma_air.dir_max_z =  50
+boundaries instanced
+self.f_dim = 2
+self.vecf_dim = 1
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting linear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  bicgstab  and WITHOUT preconditioner.
+Solving with solver = bicgstab and without preconditioner.
+Finished (linear) guess generation
+Starting nonlinear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  mumps  and WITHOUT preconditioner.
+Solving with solver = mumps and without preconditioner.
+Generated non-linear solution
+Done
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Comienza la iteración con amount = 20 y side_length = 50.
+Starting...
+Model initialised
+Created b
+Coordinates have shape  (575, 3)
+Mesh initialized
+Mesh refined
+Starting (P) simulation
+
+ ############## (P) problem simulation ############
+Instancing boundaries
+gamma_in.dir_min =  0
+gamma_in.dir_max =  50
+gamma_out.dir_min =  0
+gamma_out.dir_max =  50
+gamma_air.dir_min_y =  0
+gamma_air.dir_max_y =  50
+gamma_air.dir_min_z =  0
+gamma_air.dir_max_z =  50
+boundaries instanced
+self.f_dim = 2
+self.vecf_dim = 1
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting linear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  bicgstab  and WITHOUT preconditioner.
+Solving with solver = bicgstab and without preconditioner.
+Finished (linear) guess generation
+Starting nonlinear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  mumps  and WITHOUT preconditioner.
+Solving with solver = mumps and without preconditioner.
+Generated non-linear solution
+Done
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Comienza la iteración con amount = 20 y side_length = 50.
+Starting...
+Model initialised
+Created b
+Coordinates have shape  (626, 3)
+Mesh initialized
+Mesh refined
+Starting (P) simulation
+
+ ############## (P) problem simulation ############
+Instancing boundaries
+gamma_in.dir_min =  0
+gamma_in.dir_max =  50
+gamma_out.dir_min =  0
+gamma_out.dir_max =  50
+gamma_air.dir_min_y =  0
+gamma_air.dir_max_y =  50
+gamma_air.dir_min_z =  0
+gamma_air.dir_max_z =  50
+boundaries instanced
+self.f_dim = 2
+self.vecf_dim = 1
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting linear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  bicgstab  and WITHOUT preconditioner.
+Solving with solver = bicgstab and without preconditioner.
+Finished (linear) guess generation
+Starting nonlinear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  mumps  and WITHOUT preconditioner.
+Solving with solver = mumps and without preconditioner.
+Generated non-linear solution
+Done
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Comienza la iteración con amount = 20 y side_length = 50.
+Starting...
+Model initialised
+Created b
+Coordinates have shape  (571, 3)
+Mesh initialized
+Mesh refined
+Starting (P) simulation
+
+ ############## (P) problem simulation ############
+Instancing boundaries
+gamma_in.dir_min =  0
+gamma_in.dir_max =  50
+gamma_out.dir_min =  0
+gamma_out.dir_max =  50
+gamma_air.dir_min_y =  0
+gamma_air.dir_max_y =  50
+gamma_air.dir_min_z =  0
+gamma_air.dir_max_z =  50
+boundaries instanced
+self.f_dim = 2
+self.vecf_dim = 1
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting linear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  bicgstab  and WITHOUT preconditioner.
+Solving with solver = bicgstab and without preconditioner.
+Finished (linear) guess generation
+Starting nonlinear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  mumps  and WITHOUT preconditioner.
+Solving with solver = mumps and without preconditioner.
+Generated non-linear solution
+Done
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Comienza la iteración con amount = 20 y side_length = 50.
+Starting...
+Model initialised
+Created b
+Coordinates have shape  (585, 3)
+Mesh initialized
+Mesh refined
+Starting (P) simulation
+
+ ############## (P) problem simulation ############
+Instancing boundaries
+gamma_in.dir_min =  0
+gamma_in.dir_max =  50
+gamma_out.dir_min =  0
+gamma_out.dir_max =  50
+gamma_air.dir_min_y =  0
+gamma_air.dir_max_y =  50
+gamma_air.dir_min_z =  0
+gamma_air.dir_max_z =  50
+boundaries instanced
+self.f_dim = 2
+self.vecf_dim = 1
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting linear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  bicgstab  and WITHOUT preconditioner.
+Solving with solver = bicgstab and without preconditioner.
+Finished (linear) guess generation
+Starting nonlinear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  mumps  and WITHOUT preconditioner.
+Solving with solver = mumps and without preconditioner.
+Generated non-linear solution
+Done
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Comienza la iteración con amount = 20 y side_length = 50.
+Starting...
+Model initialised
+Created b
+Coordinates have shape  (622, 3)
+Mesh initialized
+Mesh refined
+Starting (P) simulation
+
+ ############## (P) problem simulation ############
+Instancing boundaries
+gamma_in.dir_min =  0
+gamma_in.dir_max =  50
+gamma_out.dir_min =  0
+gamma_out.dir_max =  50
+gamma_air.dir_min_y =  0
+gamma_air.dir_max_y =  50
+gamma_air.dir_min_z =  0
+gamma_air.dir_max_z =  50
+boundaries instanced
+self.f_dim = 2
+self.vecf_dim = 1
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting linear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  bicgstab  and WITHOUT preconditioner.
+Solving with solver = bicgstab and without preconditioner.
+Finished (linear) guess generation
+Starting nonlinear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  mumps  and WITHOUT preconditioner.
+Solving with solver = mumps and without preconditioner.
+Generated non-linear solution
+Done
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Comienza la iteración con amount = 20 y side_length = 50.
+Starting...
+Model initialised
+Created b
+Coordinates have shape  (622, 3)
+Mesh initialized
+Mesh refined
+Starting (P) simulation
+
+ ############## (P) problem simulation ############
+Instancing boundaries
+gamma_in.dir_min =  0
+gamma_in.dir_max =  50
+gamma_out.dir_min =  0
+gamma_out.dir_max =  50
+gamma_air.dir_min_y =  0
+gamma_air.dir_max_y =  50
+gamma_air.dir_min_z =  0
+gamma_air.dir_max_z =  50
+boundaries instanced
+self.f_dim = 2
+self.vecf_dim = 1
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting linear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  bicgstab  and WITHOUT preconditioner.
+Solving with solver = bicgstab and without preconditioner.
+Finished (linear) guess generation
+Starting nonlinear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  mumps  and WITHOUT preconditioner.
+Solving with solver = mumps and without preconditioner.
+Generated non-linear solution
+Done
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Comienza la iteración con amount = 20 y side_length = 50.
+Starting...
+Model initialised
+Created b
+Coordinates have shape  (579, 3)
+Mesh initialized
+Mesh refined
+Starting (P) simulation
+
+ ############## (P) problem simulation ############
+Instancing boundaries
+gamma_in.dir_min =  0
+gamma_in.dir_max =  50
+gamma_out.dir_min =  0
+gamma_out.dir_max =  50
+gamma_air.dir_min_y =  0
+gamma_air.dir_max_y =  50
+gamma_air.dir_min_z =  0
+gamma_air.dir_max_z =  50
+boundaries instanced
+self.f_dim = 2
+self.vecf_dim = 1
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting linear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  bicgstab  and WITHOUT preconditioner.
+Solving with solver = bicgstab and without preconditioner.
+Finished (linear) guess generation
+Starting nonlinear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  mumps  and WITHOUT preconditioner.
+Solving with solver = mumps and without preconditioner.
+Generated non-linear solution
+Done
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Comienza la iteración con amount = 20 y side_length = 50.
+Starting...
+Model initialised
+Created b
+Coordinates have shape  (587, 3)
+Mesh initialized
+Mesh refined
+Starting (P) simulation
+
+ ############## (P) problem simulation ############
+Instancing boundaries
+gamma_in.dir_min =  0
+gamma_in.dir_max =  50
+gamma_out.dir_min =  0
+gamma_out.dir_max =  50
+gamma_air.dir_min_y =  0
+gamma_air.dir_max_y =  50
+gamma_air.dir_min_z =  0
+gamma_air.dir_max_z =  50
+boundaries instanced
+self.f_dim = 2
+self.vecf_dim = 1
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting linear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  bicgstab  and WITHOUT preconditioner.
+Solving with solver = bicgstab and without preconditioner.
+Finished (linear) guess generation
+Starting nonlinear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  mumps  and WITHOUT preconditioner.
+Solving with solver = mumps and without preconditioner.
+Generated non-linear solution
+Done
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Comienza la iteración con amount = 20 y side_length = 50.
+Starting...
+Model initialised
+Created b
+Coordinates have shape  (585, 3)
+Mesh initialized
+Mesh refined
+Starting (P) simulation
+
+ ############## (P) problem simulation ############
+Instancing boundaries
+gamma_in.dir_min =  0
+gamma_in.dir_max =  50
+gamma_out.dir_min =  0
+gamma_out.dir_max =  50
+gamma_air.dir_min_y =  0
+gamma_air.dir_max_y =  50
+gamma_air.dir_min_z =  0
+gamma_air.dir_max_z =  50
+boundaries instanced
+self.f_dim = 2
+self.vecf_dim = 1
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting linear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  bicgstab  and WITHOUT preconditioner.
+Solving with solver = bicgstab and without preconditioner.
+Finished (linear) guess generation
+Starting nonlinear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  mumps  and WITHOUT preconditioner.
+Solving with solver = mumps and without preconditioner.
+Generated non-linear solution
+Done
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Comienza la iteración con amount = 20 y side_length = 50.
+Starting...
+Model initialised
+Created b
+Coordinates have shape  (610, 3)
+Mesh initialized
+Mesh refined
+Starting (P) simulation
+
+ ############## (P) problem simulation ############
+Instancing boundaries
+gamma_in.dir_min =  0
+gamma_in.dir_max =  50
+gamma_out.dir_min =  0
+gamma_out.dir_max =  50
+gamma_air.dir_min_y =  0
+gamma_air.dir_max_y =  50
+gamma_air.dir_min_z =  0
+gamma_air.dir_max_z =  50
+boundaries instanced
+self.f_dim = 2
+self.vecf_dim = 1
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting linear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  bicgstab  and WITHOUT preconditioner.
+Solving with solver = bicgstab and without preconditioner.
+Finished (linear) guess generation
+Starting nonlinear (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  mumps  and WITHOUT preconditioner.
+Solving with solver = mumps and without preconditioner.
+Generated non-linear solution
+Done

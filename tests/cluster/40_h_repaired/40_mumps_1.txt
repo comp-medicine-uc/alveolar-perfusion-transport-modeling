@@ -1,0 +1,130 @@
+Solving linear variational problem.
+No Jacobian form specified for nonlinear variational problem.
+Differentiating residual form F to obtain Jacobian J = F'.
+Solving nonlinear variational problem.
+  Newton iteration 0: r (abs) = 3.989e+07 (tol = 1.000e-08) r (rel) = 1.000e+00 (tol = 1.000e-08)
+  Newton iteration 1: r (abs) = 2.205e+02 (tol = 1.000e-08) r (rel) = 5.529e-06 (tol = 1.000e-08)
+  Newton iteration 2: r (abs) = 6.180e-04 (tol = 1.000e-08) r (rel) = 1.549e-11 (tol = 1.000e-08)
+  Newton solver finished in 2 iterations and 12 linear solver iterations.
+No Jacobian form specified for nonlinear variational problem.
+Differentiating residual form F to obtain Jacobian J = F'.
+Solving nonlinear variational problem.
+  Newton iteration 0: r (abs) = 1.344e+09 (tol = 1.000e-08) r (rel) = 1.000e+00 (tol = 1.000e-08)
+  Newton iteration 1: r (abs) = 6.311e+07 (tol = 1.000e-08) r (rel) = 4.696e-02 (tol = 1.000e-08)
+  Newton iteration 2: r (abs) = 4.680e+08 (tol = 1.000e-08) r (rel) = 3.482e-01 (tol = 1.000e-08)
+  Newton iteration 3: r (abs) = 1.526e+08 (tol = 1.000e-08) r (rel) = 1.135e-01 (tol = 1.000e-08)
+  Newton iteration 4: r (abs) = 3.781e+08 (tol = 1.000e-08) r (rel) = 2.813e-01 (tol = 1.000e-08)
+  Newton iteration 5: r (abs) = 4.248e+09 (tol = 1.000e-08) r (rel) = 3.161e+00 (tol = 1.000e-08)
+  Newton iteration 6: r (abs) = 1.515e+10 (tol = 1.000e-08) r (rel) = 1.127e+01 (tol = 1.000e-08)
+  Newton iteration 7: r (abs) = 4.920e+11 (tol = 1.000e-08) r (rel) = 3.661e+02 (tol = 1.000e-08)
+  Newton iteration 8: r (abs) = 1.229e+11 (tol = 1.000e-08) r (rel) = 9.145e+01 (tol = 1.000e-08)
+  Newton iteration 9: r (abs) = 1.742e+11 (tol = 1.000e-08) r (rel) = 1.296e+02 (tol = 1.000e-08)
+  Newton iteration 10: r (abs) = 6.723e+10 (tol = 1.000e-08) r (rel) = 5.003e+01 (tol = 1.000e-08)
+  Newton iteration 11: r (abs) = 1.170e+12 (tol = 1.000e-08) r (rel) = 8.706e+02 (tol = 1.000e-08)
+  Newton iteration 12: r (abs) = 7.580e+11 (tol = 1.000e-08) r (rel) = 5.641e+02 (tol = 1.000e-08)
+  Newton iteration 13: r (abs) = 2.173e+12 (tol = 1.000e-08) r (rel) = 1.617e+03 (tol = 1.000e-08)
+  Newton iteration 14: r (abs) = 4.392e+13 (tol = 1.000e-08) r (rel) = 3.268e+04 (tol = 1.000e-08)
+  Newton iteration 15: r (abs) = 1.098e+13 (tol = 1.000e-08) r (rel) = 8.167e+03 (tol = 1.000e-08)
+  Newton iteration 16: r (abs) = 5.640e+12 (tol = 1.000e-08) r (rel) = 4.197e+03 (tol = 1.000e-08)
+  Newton iteration 17: r (abs) = 1.600e+13 (tol = 1.000e-08) r (rel) = 1.191e+04 (tol = 1.000e-08)
+  Newton iteration 18: r (abs) = 7.297e+14 (tol = 1.000e-08) r (rel) = 5.430e+05 (tol = 1.000e-08)
+  Newton iteration 19: r (abs) = 1.918e+14 (tol = 1.000e-08) r (rel) = 1.427e+05 (tol = 1.000e-08)
+  Newton iteration 20: r (abs) = 4.086e+15 (tol = 1.000e-08) r (rel) = 3.041e+06 (tol = 1.000e-08)
+  Newton iteration 21: r (abs) = 1.022e+15 (tol = 1.000e-08) r (rel) = 7.602e+05 (tol = 1.000e-08)
+  Newton iteration 22: r (abs) = 2.663e+14 (tol = 1.000e-08) r (rel) = 1.982e+05 (tol = 1.000e-08)
+  Newton iteration 23: r (abs) = 1.119e+15 (tol = 1.000e-08) r (rel) = 8.325e+05 (tol = 1.000e-08)
+  Newton iteration 24: r (abs) = 2.794e+14 (tol = 1.000e-08) r (rel) = 2.079e+05 (tol = 1.000e-08)
+  Newton iteration 25: r (abs) = 6.978e+13 (tol = 1.000e-08) r (rel) = 5.192e+04 (tol = 1.000e-08)
+  Newton iteration 26: r (abs) = 3.081e+13 (tol = 1.000e-08) r (rel) = 2.293e+04 (tol = 1.000e-08)
+  Newton iteration 27: r (abs) = 1.889e+13 (tol = 1.000e-08) r (rel) = 1.406e+04 (tol = 1.000e-08)
+  Newton iteration 28: r (abs) = 2.219e+13 (tol = 1.000e-08) r (rel) = 1.651e+04 (tol = 1.000e-08)
+  Newton iteration 29: r (abs) = 6.178e+12 (tol = 1.000e-08) r (rel) = 4.597e+03 (tol = 1.000e-08)
+  Newton iteration 30: r (abs) = 8.399e+12 (tol = 1.000e-08) r (rel) = 6.250e+03 (tol = 1.000e-08)
+  Newton iteration 31: r (abs) = 3.722e+14 (tol = 1.000e-08) r (rel) = 2.770e+05 (tol = 1.000e-08)
+  Newton iteration 32: r (abs) = 4.386e+14 (tol = 1.000e-08) r (rel) = 3.264e+05 (tol = 1.000e-08)
+  Newton iteration 33: r (abs) = 1.093e+14 (tol = 1.000e-08) r (rel) = 8.135e+04 (tol = 1.000e-08)
+  Newton iteration 34: r (abs) = 5.249e+13 (tol = 1.000e-08) r (rel) = 3.906e+04 (tol = 1.000e-08)
+  Newton iteration 35: r (abs) = 1.362e+13 (tol = 1.000e-08) r (rel) = 1.013e+04 (tol = 1.000e-08)
+  Newton iteration 36: r (abs) = 3.479e+13 (tol = 1.000e-08) r (rel) = 2.589e+04 (tol = 1.000e-08)
+  Newton iteration 37: r (abs) = 1.473e+13 (tol = 1.000e-08) r (rel) = 1.096e+04 (tol = 1.000e-08)
+  Newton iteration 38: r (abs) = 9.053e+12 (tol = 1.000e-08) r (rel) = 6.737e+03 (tol = 1.000e-08)
+  Newton iteration 39: r (abs) = 2.749e+13 (tol = 1.000e-08) r (rel) = 2.046e+04 (tol = 1.000e-08)
+  Newton iteration 40: r (abs) = 1.102e+13 (tol = 1.000e-08) r (rel) = 8.198e+03 (tol = 1.000e-08)
+  Newton iteration 41: r (abs) = 1.912e+13 (tol = 1.000e-08) r (rel) = 1.423e+04 (tol = 1.000e-08)
+  Newton iteration 42: r (abs) = 4.031e+13 (tol = 1.000e-08) r (rel) = 3.000e+04 (tol = 1.000e-08)
+  Newton iteration 43: r (abs) = 9.969e+12 (tol = 1.000e-08) r (rel) = 7.418e+03 (tol = 1.000e-08)
+  Newton iteration 44: r (abs) = 3.154e+12 (tol = 1.000e-08) r (rel) = 2.347e+03 (tol = 1.000e-08)
+  Newton iteration 45: r (abs) = 7.640e+12 (tol = 1.000e-08) r (rel) = 5.685e+03 (tol = 1.000e-08)
+  Newton iteration 46: r (abs) = 4.665e+12 (tol = 1.000e-08) r (rel) = 3.472e+03 (tol = 1.000e-08)
+  Newton iteration 47: r (abs) = 8.885e+13 (tol = 1.000e-08) r (rel) = 6.612e+04 (tol = 1.000e-08)
+  Newton iteration 48: r (abs) = 2.230e+13 (tol = 1.000e-08) r (rel) = 1.659e+04 (tol = 1.000e-08)
+  Newton iteration 49: r (abs) = 6.465e+12 (tol = 1.000e-08) r (rel) = 4.811e+03 (tol = 1.000e-08)
+  Newton iteration 50: r (abs) = 6.482e+13 (tol = 1.000e-08) r (rel) = 4.824e+04 (tol = 1.000e-08)
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+Model initialised
+Mesh imported
+Coordinates have shape  (38586, 3)
+Mesh imported
+Mesh HAS NOT BEEN refined
+Starting (P) simulation
+
+ ############## (P) problem simulation ############
+Instancing boundaries
+gamma_in.dir_min =  0.09939099848270416
+gamma_in.dir_max =  39.894161224365234
+gamma_out.dir_min =  0.09939099848270416
+gamma_out.dir_max =  39.894161224365234
+gamma_air.dir_min_y =  0.09558500349521637
+gamma_air.dir_max_y =  39.895729064941406
+gamma_air.dir_min_z =  0.1048400029540062
+gamma_air.dir_max_z =  39.89208984375
+boundaries instanced
+self.f_dim = 2
+self.vecf_dim = 1
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  bicgstab  and WITHOUT preconditioner.
+Solving with solver = bicgstab and without preconditioner.
+Finished (linear) guess generation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  mumps  and preconditioner =  default
+Solving with solver = mumps and preconditioner = default.
+Traceback (most recent call last):
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/tests/cluster/40_h_repaired/40_mumps_1.py", line 39, in <module>
+    solution = model.sim_t(hb=True, save=True, guess=x, solver="mumps", preconditioner="default")
+  File "/mnt/biherrera/alveolar-perfusion-transport-modeling/src/model.py", line 532, in sim_t
+    solve(
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 220, in solve
+    _solve_varproblem(*args, **kwargs)
+  File "/home/biherrera/miniconda3/lib/python3.9/site-packages/dolfin/fem/solving.py", line 266, in _solve_varproblem
+    solver.solve()
+RuntimeError: 
+
+*** -------------------------------------------------------------------------
+*** DOLFIN encountered an error. If you are not able to resolve this issue
+*** using the information listed below, you can ask for help at
+***
+***     fenics-support@googlegroups.com
+***
+*** Remember to include the error message listed below and, if possible,
+*** include a *minimal* running example to reproduce the error.
+***
+*** -------------------------------------------------------------------------
+*** Error:   Unable to solve nonlinear system with NewtonSolver.
+*** Reason:  Newton solver did not converge because maximum number of iterations reached.
+*** Where:   This error was encountered inside NewtonSolver.cpp.
+*** Process: 0
+*** 
+*** DOLFIN version: 2019.1.0
+*** Git changeset:  ba376b6aebd7a9bc089be46b50bdd9f5c548fb91
+*** -------------------------------------------------------------------------
+
