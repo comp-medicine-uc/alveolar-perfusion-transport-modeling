@@ -15,16 +15,16 @@ from src.params import params
     
 print("Imported src files")
 print("Starting...")
-folder = "40_bicgstab_def_1"
+folder = "40_tfqmr_amg_5"
 path = os.path.join("../../../results-data", folder)
 model = PerfusionGasExchangeModel(folder_path=path, params=params, solver='gmres', f_dim = 2, vecf_dim=1)
 
-max_dims = [39.894161224365234, 39.895729064941406, 39.89208984375]
-min_dims = [0.09939099848270416, 0.09558500349521637, 0.1048400029540062]
+max_dims = [39.894, 39.895, 39.892]
+min_dims = [0.099, 0.095, 0.104]
 
 print("Model initialised")
 model.import_mesh(
-    os.path.join("../../../raw-data/40_h_repaired", "40_h_repaired.xdmf"), type="xdmf", 
+    os.path.join("../../../raw-data/40_rve_12", "rve_40_12.xdmf"), type="xdmf", 
     periodic=False, max_dims=max_dims, min_dims=min_dims, tol=0.1
 )
 print("Mesh imported")
@@ -36,5 +36,5 @@ print("(P) simulation done")
 print("Starting (T) simulation")
 x = model.sim_t(hb=False, save=True, solver="bicgstab")
 print("Finished (linear) guess generation")
-solution = model.sim_t(hb=True, save=True, guess=x, solver="mumps", preconditioner="default")
+solution = model.sim_t(hb=True, save=True, guess=x, solver="tfqmr", preconditioner="amg")
 print("Done")

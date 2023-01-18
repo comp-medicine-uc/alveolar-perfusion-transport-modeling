@@ -10,7 +10,8 @@ kappa = mu*5000 #mu*30000  # um^2s
 # kappa = mu*5 # modified, 1000 times 
 p_max = 12  # mmHg
 p_min = 8  # mmHg
-u_in = 200  # um/s
+u_in = 200  # um/s ESTE ES EL VALOR BUENO
+# u_in = 2 
 
 d_pla_O2 = 1.62E-5*1E8  # um^2/s
 d_ba_O2 = 1E-5*1E8  # um^2/s
