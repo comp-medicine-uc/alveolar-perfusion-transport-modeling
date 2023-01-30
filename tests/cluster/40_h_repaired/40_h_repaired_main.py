@@ -40,33 +40,33 @@ slowmodel.sim_p(save=True, meshtype="tkd")
 print("(P) simulation done")
 
 print("Starting slow (T) simulation")
-print(f"Slow u_in value = {str(model.params['u_in'])}")
-slowx = model.sim_t(hb=False, save=True)
+print(f"Slow u_in value = {str(slowmodel.params['u_in'])}")
+slowx = slowmodel.sim_t(hb=False, save=True)
 print("Finished (linear) slow guess generation")
 print("Started nonlinear slow solution")
-slowsolution = model.sim_t(hb=True, save=True, guess=slowx, solver="bicgstab", preconditioner="default")
+slowsolution = slowmodel.sim_t(hb=True, save=True, guess=slowx, solver="bicgstab", preconditioner="default")
 print("Finished nonlinear slow solution")
 
  
 folder = "40_h_repaired"
 path = os.path.join("../../../results-data", folder)
-model = PerfusionGasExchangeModel(folder_path=path, params=params)
+fastmodel = PerfusionGasExchangeModel(folder_path=path, params=params)
 
 print("Fast model initialised")
-model.import_mesh(
+fastmodel.import_mesh(
     os.path.join("../../../raw-data/40_h_repaired", "40_h_repaired.xdmf"), type="xdmf", 
     periodic=False, max_dims=max_dims, min_dims=min_dims, tol=0.1
 )
       
 print("Fast - mesh imported")
-print(f"Fast u_in value = {str(model.params['u_in'])}")
+print(f"Fast u_in value = {str(fastmodel.params['u_in'])}")
 print("Starting fast (P) simulation")
-model.sim_p(save=True, meshtype="tkd")
+fastmodel.sim_p(save=True, meshtype="tkd")
 print("(P) simulation done")
 
 print("Starting fast (T) simulation without linear guess, with guess from slow solution.")
 # print(f"Old u_in value = {str(model.params['u_in'])}")
 # x = model.sim_t(hb=False, save=True)
 # print("Finished (linear) guess generation")
-solution = model.sim_t(hb=True, save=True, guess=slowsolution)
+solution = fastmodel.sim_t(hb=True, save=True, guess=slowsolution)
 print("Done")
