@@ -3,7 +3,7 @@
 # Nombre del trabajo
 #SBATCH --job-name=u002
 # Archivo de salida
-#SBATCH --output=u_002.txt
+#SBATCH --output=u_002wnl.txt
 # Partición (Cola de y trabajo)
 #SBATCH --partition=512x1024
 # Solicitud de cpus
