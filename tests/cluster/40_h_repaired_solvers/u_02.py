@@ -35,7 +35,7 @@ print("Mesh imported")
 # model.mesh = dolfin.refine(model.mesh)
 # print("Mesh refined")
 model.params["u_in"] = 0.2
-print(f"Changed inlet speed u_in to {str(model.params["u_in"])}")
+print(f"Changed inlet speed u_in to {str(model.params['u_in'])}")
 print("Starting (P) simulation")
 model.sim_p(save=True, meshtype="tkd")
 print("(P) simulation done")
