@@ -439,18 +439,7 @@ class PerfusionGasExchangeModel():
 #                     "linear_solver": test_solver
                 }}
             )
-            # Pruebas para problema lineal
-            # gmres es muy rápido
-            # mumps es más lento que gmres, por ser método directo
-            # superlu es más lento aún que mumps, es directo pero es más exacto, 
-                # Métodos directos generan residuo relativo de 1e-14 o 1e-15 en vez de 1e-11 (gmres)
-            # bicgstab muy rápido, similar a gmres, residuo absoluto y relativo un poco menores que gmres
-            # cg peor que bicgstab, probablemente porque la matriz no es simétrica
-            # minres más iteraciones (111) que gmres (68)
-            # richardson muchas más iteraciones (600)
-            # tfqmr iteraciones (42), residuo un poco mejor que gmres
-            # petsc método directo, similar a superlu/mumps
-            # umfpack método directo, similar a superlu/mumps
+
             
         else:
             if preconditioner is None:
