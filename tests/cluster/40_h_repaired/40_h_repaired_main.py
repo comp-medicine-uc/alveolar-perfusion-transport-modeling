@@ -15,30 +15,58 @@ print("Relative path: ", os.getcwd()[:-28])
 
 import dolfin
 from src.model import PerfusionGasExchangeModel
-from src.params import params
-    
+from src.params import params    
 print("Imported src files")
 print("Starting...")
+
+slowfolder = "40_h_repaired_slow"
+slowpath = os.path.join("../../../results-data", slowfolder)
+slowmodel = PerfusionGasExchangeModel(folder_path=slowpath, params=params)
+slowmodel.params['u_in'] = 0.2
+print(f"Slow model inlet velocity = {str(slowmodel.params['u_in'])}")
+
+max_dims = [39.894, 39.896, 39.892]
+min_dims = [0.099, 0.095, 0.105]
+
+print("Slow model initialised")
+slowmodel.import_mesh(
+    os.path.join("../../../raw-data/40_h_repaired", "40_h_repaired.xdmf"), type="xdmf", 
+    periodic=False, max_dims=max_dims, min_dims=min_dims, tol=0.1
+)
+print("Slow - mesh imported")
+
+print("Starting slow (P) simulation")
+slowmodel.sim_p(save=True, meshtype="tkd")
+print("(P) simulation done")
+
+print("Starting slow (T) simulation")
+print(f"Slow u_in value = {str(model.params['u_in'])}")
+slowx = model.sim_t(hb=False, save=True)
+print("Finished (linear) slow guess generation")
+print("Started nonlinear slow solution")
+slowsolution = model.sim_t(hb=True, save=True, guess=slowx, solver="bicgstab", preconditioner="default")
+print("Finished nonlinear slow solution")
+
+ 
 folder = "40_h_repaired"
 path = os.path.join("../../../results-data", folder)
 model = PerfusionGasExchangeModel(folder_path=path, params=params)
 
-max_dims = [39.894161224365234, 39.895729064941406, 39.89208984375]
-min_dims = [0.09939099848270416, 0.09558500349521637, 0.1048400029540062]
-
-print("Model initialised")
+print("Fast model initialised")
 model.import_mesh(
     os.path.join("../../../raw-data/40_h_repaired", "40_h_repaired.xdmf"), type="xdmf", 
     periodic=False, max_dims=max_dims, min_dims=min_dims, tol=0.1
 )
-print("Mesh imported")
-model.mesh = dolfin.refine(model.mesh)
-print("Mesh refined")
-print("Starting (P) simulation")
+      
+print("Fast - mesh imported")
+print(f"Fast u_in value = {str(model.params['u_in'])}")
+print("Starting fast (P) simulation")
 model.sim_p(save=True, meshtype="tkd")
 print("(P) simulation done")
-print("Starting (T) simulation")
-x = model.sim_t(hb=False, save=True)
-print("Finished (linear) guess generation")
-solution = model.sim_t(hb=True, save=True)
+
+print("Starting fast (T) simulation without linear guess, with guess from slow solution.")
+# print(f"Old u_in value = {str(model.params['u_in'])}")
+# x = model.sim_t(hb=False, save=True)
+# print("Finished (linear) guess generation")
+solution = model.sim_t(hb=True, save=True, guess=slowsolution)
 print("Done")
