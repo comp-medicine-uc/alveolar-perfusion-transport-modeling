@@ -13,4 +13,3 @@
 #SBATCH --mail-type=ALL
 
 mpirun -n 5 python3 40_h_repaired_main.py
-
