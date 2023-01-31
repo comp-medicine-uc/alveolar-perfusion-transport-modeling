@@ -16,7 +16,6 @@ print("Relative path: ", os.getcwd()[:-28])
 
 from dolfin import *
 from fenics import *
-print(dolfin.__version__)
 from src.model import PerfusionGasExchangeModel
 from src.params import params    
 from src.boundaries import Inlet
