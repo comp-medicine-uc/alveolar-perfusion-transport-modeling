@@ -16,11 +16,7 @@ print("Relative path: ", os.getcwd()[:-28])
 import dolfin
 from src.model import PerfusionGasExchangeModel
 from src.params import params    
-
-
-class Inlet(dolfin.SubDomain):
-    def inside(self, x, on_boundary):
-        return (x[0]<5-DOLFIN_EPS or x[0]>40-5+DOLFIN_EPS)
+from src.boundaries import Inlet
 
 print("Imported src files")
 print("Starting...")

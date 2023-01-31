@@ -15,12 +15,8 @@ print("Relative path: ", os.getcwd()[:-28])
 
 import dolfin
 from src.model import PerfusionGasExchangeModel
-from src.params import params    
-
-
-class Inlet(dolfin.SubDomain):
-    def inside(self, x, on_boundary):
-        return (x[0]<5-DOLFIN_EPS or x[0]>40-5+DOLFIN_EPS)
+from src.params import params   
+from src.boundaries import InletOutlet
 
 print("Imported src files")
 print("Starting...")
@@ -47,7 +43,7 @@ cell_markers.set_all(False)
 
 print("Defined cell markers")
 
-inlet = Inlet()
+inlet = InletOutlet()
 inlet.mark(cell_markers, True)
 
 # cell_marked = File(model.folder_path+'/bnd/cell_markers.pvd')
@@ -64,7 +60,7 @@ cell_markers_2.set_all(False)
 
 print("Defined fine cell markers")
 
-inlet2 = Inlet()
+inlet2 = InletOutlet()
 inlet2.mark(cell_markers_2, True)
 
 final_mesh = dolfin.refine(new_mesh, cell_markers_2)

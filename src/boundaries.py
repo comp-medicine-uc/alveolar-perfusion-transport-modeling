@@ -7,7 +7,6 @@ __email__ = 'pzurita@uc.cl'
 from dolfin import *
 import numpy as np
 
-
 class GammaIn(SubDomain):
     '''Subdomain class for boundary conditions on the inlet of a rectangular
     prism.
@@ -32,7 +31,6 @@ class GammaIn(SubDomain):
         '''
         
         return on_boundary and near(x[0], self.dir_min, self.tol)
-    
 
 class GammaOut(SubDomain):
     '''Subdomain class for boundary conditions on the outlet of a rectangular
@@ -84,3 +82,11 @@ class GammaAir(SubDomain):
         '''
 
         return on_boundary and (near(x[1], self.dir_min_y, self.tol) or near(x[1], self.dir_max_y, self.tol) or near(x[2], self.dir_min_z, self.tol) or near(x[2], self.dir_max_z, self.tol))
+    
+class InletOutlet(SubDomain):
+    def inside(self, x, on_boundary):
+        return (x[0]<5-DOLFIN_EPS or x[0]>40-5+DOLFIN_EPS)
+    
+class Inlet(SubDomain):
+    def inside(self, x, on_boundary):
+        return x[0]<5-DOLFIN_EPS
