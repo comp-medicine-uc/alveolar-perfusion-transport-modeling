@@ -1,146 +1,68 @@
 Process 0: Solving linear variational problem.
+Process 1: Solving linear variational problem.
 Process 2: Solving linear variational problem.
 Process 4: Solving linear variational problem.
-Process 1: Solving linear variational problem.
 Process 3: Solving linear variational problem.
 Process 1: No Jacobian form specified for nonlinear variational problem.
 Process 1: Differentiating residual form F to obtain Jacobian J = F'.
 Process 2: No Jacobian form specified for nonlinear variational problem.
 Process 2: Differentiating residual form F to obtain Jacobian J = F'.
-Process 4: No Jacobian form specified for nonlinear variational problem.
-Process 4: Differentiating residual form F to obtain Jacobian J = F'.
-Process 0: No Jacobian form specified for nonlinear variational problem.
-Process 0: Differentiating residual form F to obtain Jacobian J = F'.
 Process 3: No Jacobian form specified for nonlinear variational problem.
 Process 3: Differentiating residual form F to obtain Jacobian J = F'.
+Process 0: No Jacobian form specified for nonlinear variational problem.
+Process 0: Differentiating residual form F to obtain Jacobian J = F'.
+Process 4: No Jacobian form specified for nonlinear variational problem.
+Process 4: Differentiating residual form F to obtain Jacobian J = F'.
 Process 0: Solving nonlinear variational problem.
 Process 2: Solving nonlinear variational problem.
 Process 4: Solving nonlinear variational problem.
-Process 1: Solving nonlinear variational problem.
 Process 3: Solving nonlinear variational problem.
-  Process 0: Newton iteration 0: r (abs) = 3.733e+07 (tol = 1.000e-08) r (rel) = 1.000e+00 (tol = 1.000e-08)
-  Process 0: Newton iteration 1: r (abs) = 1.391e+02 (tol = 1.000e-08) r (rel) = 3.726e-06 (tol = 1.000e-08)
-  Process 0: Newton iteration 2: r (abs) = 6.066e-04 (tol = 1.000e-08) r (rel) = 1.625e-11 (tol = 1.000e-08)
-  Process 0: Newton solver finished in 2 iterations and 55 linear solver iterations.
+Process 1: Solving nonlinear variational problem.
+  Process 0: Newton iteration 0: r (abs) = 3.926e+07 (tol = 1.000e-08) r (rel) = 1.000e+00 (tol = 1.000e-08)
+  Process 0: Newton iteration 1: r (abs) = 8.244e+01 (tol = 1.000e-08) r (rel) = 2.100e-06 (tol = 1.000e-08)
+  Process 0: Newton iteration 2: r (abs) = 1.696e-03 (tol = 1.000e-08) r (rel) = 4.321e-11 (tol = 1.000e-08)
+  Process 0: Newton solver finished in 2 iterations and 51 linear solver iterations.
+Process 0: No Jacobian form specified for nonlinear variational problem.
+Process 0: Differentiating residual form F to obtain Jacobian J = F'.
 Process 2: No Jacobian form specified for nonlinear variational problem.
 Process 2: Differentiating residual form F to obtain Jacobian J = F'.
-Process 4: No Jacobian form specified for nonlinear variational problem.
-Process 4: Differentiating residual form F to obtain Jacobian J = F'.
-Process 0: No Jacobian form specified for nonlinear variational problem.
-Process 0: Differentiating residual form F to obtain Jacobian J = F'.
-Process 3: No Jacobian form specified for nonlinear variational problem.
-Process 3: Differentiating residual form F to obtain Jacobian J = F'.
 Process 1: No Jacobian form specified for nonlinear variational problem.
 Process 1: Differentiating residual form F to obtain Jacobian J = F'.
+Process 3: No Jacobian form specified for nonlinear variational problem.
+Process 3: Differentiating residual form F to obtain Jacobian J = F'.
+Process 4: No Jacobian form specified for nonlinear variational problem.
+Process 4: Differentiating residual form F to obtain Jacobian J = F'.
 Process 0: Solving nonlinear variational problem.
-Process 4: Solving nonlinear variational problem.
-Process 1: Solving nonlinear variational problem.
 Process 3: Solving nonlinear variational problem.
+Process 1: Solving nonlinear variational problem.
 Process 2: Solving nonlinear variational problem.
-  Process 0: Newton iteration 0: r (abs) = 1.266e+09 (tol = 1.000e-08) r (rel) = 1.000e+00 (tol = 1.000e-08)
-  Process 0: Newton iteration 1: r (abs) = 8.068e+06 (tol = 1.000e-08) r (rel) = 6.372e-03 (tol = 1.000e-08)
-  Process 0: Newton iteration 2: r (abs) = 7.300e+05 (tol = 1.000e-08) r (rel) = 5.765e-04 (tol = 1.000e-08)
-  Process 0: Newton iteration 3: r (abs) = 2.563e+04 (tol = 1.000e-08) r (rel) = 2.024e-05 (tol = 1.000e-08)
-  Process 0: Newton iteration 4: r (abs) = 3.758e+01 (tol = 1.000e-08) r (rel) = 2.968e-08 (tol = 1.000e-08)
-  Process 0: Newton iteration 5: r (abs) = 4.870e-05 (tol = 1.000e-08) r (rel) = 3.846e-14 (tol = 1.000e-08)
-  Process 0: Newton solver finished in 5 iterations and 168 linear solver iterations.
+Process 4: Solving nonlinear variational problem.
+  Process 0: Newton iteration 0: r (abs) = 1.319e+09 (tol = 1.000e-08) r (rel) = 1.000e+00 (tol = 1.000e-08)
+  Process 0: Newton iteration 1: r (abs) = 1.275e+07 (tol = 1.000e-08) r (rel) = 9.660e-03 (tol = 1.000e-08)
+  Process 0: Newton iteration 2: r (abs) = 8.413e+05 (tol = 1.000e-08) r (rel) = 6.376e-04 (tol = 1.000e-08)
+  Process 0: Newton iteration 3: r (abs) = 3.206e+04 (tol = 1.000e-08) r (rel) = 2.430e-05 (tol = 1.000e-08)
+  Process 0: Newton iteration 4: r (abs) = 5.399e+01 (tol = 1.000e-08) r (rel) = 4.092e-08 (tol = 1.000e-08)
+  Process 0: Newton iteration 5: r (abs) = 7.734e-05 (tol = 1.000e-08) r (rel) = 5.861e-14 (tol = 1.000e-08)
+  Process 0: Newton solver finished in 5 iterations and 573 linear solver iterations.
 Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
 Imported src files
 Starting...
 Model initialised
 Mesh imported
-Coordinates have shape  (7796, 3)
+Coordinates have shape  (8104, 3)
 Mesh imported
-Defined cell markers
-Finished partial mesh refination
-Defined fine cell markers
-Finished full mesh refination
-Mesh refined
-Starting (P) simulation
-
- ############## (P) problem simulation ############
-Instancing boundaries
-gamma_in.dir_min =  0.099
-gamma_in.dir_max =  39.894
-gamma_out.dir_min =  0.099
-gamma_out.dir_max =  39.894
-gamma_air.dir_min_y =  0.095
-gamma_air.dir_max_y =  39.896
-gamma_air.dir_min_z =  0.105
-gamma_air.dir_max_z =  39.892
-boundaries instanced
-self.f_dim = 2
-self.vecf_dim = 1
-P problem solved
-u problem solved
-Saving solutions
-saved
-(P) simulation done
-Starting (T) simulation
-
- ############## (LT) and (T) problem simulation ############
-began sim_t, with solver =  bicgstab  and WITHOUT preconditioner.
-Solving with solver = bicgstab and without preconditioner.
-Finished (linear) guess generation
-
- ############## (LT) and (T) problem simulation ############
-began sim_t, with solver =  bicgstab  and preconditioner =  default
-Solving with solver = bicgstab and preconditioner = default.
-Done
-Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
-Imported src files
-Starting...
-Model initialised
-Mesh imported
-Coordinates have shape  (8120, 3)
-Mesh imported
-Defined cell markers
-Finished partial mesh refination
-Defined fine cell markers
-Finished full mesh refination
-Mesh refined
-Starting (P) simulation
-
- ############## (P) problem simulation ############
-Instancing boundaries
-gamma_in.dir_min =  0.099
-gamma_in.dir_max =  39.894
-gamma_out.dir_min =  0.099
-gamma_out.dir_max =  39.894
-gamma_air.dir_min_y =  0.095
-gamma_air.dir_max_y =  39.896
-gamma_air.dir_min_z =  0.105
-gamma_air.dir_max_z =  39.892
-boundaries instanced
-self.f_dim = 2
-self.vecf_dim = 1
-P problem solved
-u problem solved
-Saving solutions
-saved
-(P) simulation done
-Starting (T) simulation
-
- ############## (LT) and (T) problem simulation ############
-began sim_t, with solver =  bicgstab  and WITHOUT preconditioner.
-Solving with solver = bicgstab and without preconditioner.
-Finished (linear) guess generation
-
- ############## (LT) and (T) problem simulation ############
-began sim_t, with solver =  bicgstab  and preconditioner =  default
-Solving with solver = bicgstab and preconditioner = default.
-Done
-Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
-Imported src files
-Starting...
-Model initialised
-Mesh imported
-Coordinates have shape  (7967, 3)
-Mesh imported
-Defined cell markers
-Finished partial mesh refination
-Defined fine cell markers
-Finished full mesh refination
+Starting iteration 0
+Defined object
+Marked cells
+Finished refining iteration 0
+Starting iteration 1
+Defined object
+Marked cells
+Finished refining iteration 1
+Starting iteration 2
+Defined object
+Marked cells
+Finished refining iteration 2
 Mesh refined
 Starting (P) simulation
 
@@ -180,10 +102,18 @@ Model initialised
 Mesh imported
 Coordinates have shape  (7977, 3)
 Mesh imported
-Defined cell markers
-Finished partial mesh refination
-Defined fine cell markers
-Finished full mesh refination
+Starting iteration 0
+Defined object
+Marked cells
+Finished refining iteration 0
+Starting iteration 1
+Defined object
+Marked cells
+Finished refining iteration 1
+Starting iteration 2
+Defined object
+Marked cells
+Finished refining iteration 2
 Mesh refined
 Starting (P) simulation
 
@@ -221,12 +151,122 @@ Imported src files
 Starting...
 Model initialised
 Mesh imported
-Coordinates have shape  (8104, 3)
+Coordinates have shape  (7796, 3)
 Mesh imported
-Defined cell markers
-Finished partial mesh refination
-Defined fine cell markers
-Finished full mesh refination
+Starting iteration 0
+Defined object
+Marked cells
+Finished refining iteration 0
+Starting iteration 1
+Defined object
+Marked cells
+Finished refining iteration 1
+Starting iteration 2
+Defined object
+Marked cells
+Finished refining iteration 2
+Mesh refined
+Starting (P) simulation
+
+ ############## (P) problem simulation ############
+Instancing boundaries
+gamma_in.dir_min =  0.099
+gamma_in.dir_max =  39.894
+gamma_out.dir_min =  0.099
+gamma_out.dir_max =  39.894
+gamma_air.dir_min_y =  0.095
+gamma_air.dir_max_y =  39.896
+gamma_air.dir_min_z =  0.105
+gamma_air.dir_max_z =  39.892
+boundaries instanced
+self.f_dim = 2
+self.vecf_dim = 1
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  bicgstab  and WITHOUT preconditioner.
+Solving with solver = bicgstab and without preconditioner.
+Finished (linear) guess generation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  bicgstab  and preconditioner =  default
+Solving with solver = bicgstab and preconditioner = default.
+Done
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+Model initialised
+Mesh imported
+Coordinates have shape  (7967, 3)
+Mesh imported
+Starting iteration 0
+Defined object
+Marked cells
+Finished refining iteration 0
+Starting iteration 1
+Defined object
+Marked cells
+Finished refining iteration 1
+Starting iteration 2
+Defined object
+Marked cells
+Finished refining iteration 2
+Mesh refined
+Starting (P) simulation
+
+ ############## (P) problem simulation ############
+Instancing boundaries
+gamma_in.dir_min =  0.099
+gamma_in.dir_max =  39.894
+gamma_out.dir_min =  0.099
+gamma_out.dir_max =  39.894
+gamma_air.dir_min_y =  0.095
+gamma_air.dir_max_y =  39.896
+gamma_air.dir_min_z =  0.105
+gamma_air.dir_max_z =  39.892
+boundaries instanced
+self.f_dim = 2
+self.vecf_dim = 1
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  bicgstab  and WITHOUT preconditioner.
+Solving with solver = bicgstab and without preconditioner.
+Finished (linear) guess generation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  bicgstab  and preconditioner =  default
+Solving with solver = bicgstab and preconditioner = default.
+Done
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+Model initialised
+Mesh imported
+Coordinates have shape  (8120, 3)
+Mesh imported
+Starting iteration 0
+Defined object
+Marked cells
+Finished refining iteration 0
+Starting iteration 1
+Defined object
+Marked cells
+Finished refining iteration 1
+Starting iteration 2
+Defined object
+Marked cells
+Finished refining iteration 2
 Mesh refined
 Starting (P) simulation
 
