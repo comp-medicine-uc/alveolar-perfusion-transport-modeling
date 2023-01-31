@@ -28,6 +28,12 @@ path = os.path.join("../../../results-data", folder)
 
 model = PerfusionGasExchangeModel(folder_path=path, params=params, solver='gmres', f_dim = 2, vecf_dim=1)
 
+################################################################### VELOCIDAD CAMBIADA
+
+model.params["u_in"] = 20
+
+###################################################################
+
 max_dims = [39.894, 39.896, 39.892]
 min_dims = [0.099, 0.095, 0.105]
 
