@@ -13,7 +13,9 @@ import os
 sys.path.append(os.getcwd()[:-28])
 print("Relative path: ", os.getcwd()[:-28])
 
+
 import dolfin
+print(dolfin.__version__)
 from src.model import PerfusionGasExchangeModel
 from src.params import params    
 from src.boundaries import Inlet
@@ -36,32 +38,32 @@ model.import_mesh(
     periodic=False, max_dims=max_dims, min_dims=min_dims, tol=0.1
 )
 
-print("Mesh imported")
+# print("Mesh imported")
 
-cell_markers = MeshFunction("bool", model.mesh, model.mesh.topology().dim())
-cell_markers.set_all(False)
+# cell_markers = MeshFunction("bool", model.mesh, model.mesh.topology().dim())
+# cell_markers.set_all(False)
 
-print("Defined cell markers")
+# print("Defined cell markers")
 
-inlet = Inlet()
-inlet.mark(cell_markers, True)
+# inlet = Inlet()
+# inlet.mark(cell_markers, True)
 
-# cell_marked = File(model.folder_path+'/bnd/cell_markers.pvd')
-# cell_marked << cell_markers
+# # cell_marked = File(model.folder_path+'/bnd/cell_markers.pvd')
+# # cell_marked << cell_markers
 
-new_mesh = dolfin.refine(model.mesh, cell_markers)
-new_mesh_file = File(model.folder_path+'/bnd/p_refined.pvd')
-new_mesh_file << new_mesh
+# new_mesh = dolfin.refine(model.mesh, cell_markers)
+# new_mesh_file = File(model.folder_path+'/bnd/p_refined.pvd')
+# new_mesh_file << new_mesh
 
-print("Finished partial mesh refination")
+# print("Finished partial mesh refination")
 
-model.mesh = new_mesh
-print("Mesh refined")
-print("Starting (P) simulation")
-model.sim_p(save=True, meshtype="tkd")
-print("(P) simulation done")
-print("Starting (T) simulation")
-x = model.sim_t(hb=False, save=True, solver="bicgstab")
-print("Finished (linear) guess generation")
-solution = model.sim_t(hb=True, save=True, guess=x, solver="bicgstab", preconditioner="default")
-print("Done")
+# model.mesh = new_mesh
+# print("Mesh refined")
+# print("Starting (P) simulation")
+# model.sim_p(save=True, meshtype="tkd")
+# print("(P) simulation done")
+# print("Starting (T) simulation")
+# x = model.sim_t(hb=False, save=True, solver="bicgstab")
+# print("Finished (linear) guess generation")
+# solution = model.sim_t(hb=True, save=True, guess=x, solver="bicgstab", preconditioner="default")
+# print("Done")
