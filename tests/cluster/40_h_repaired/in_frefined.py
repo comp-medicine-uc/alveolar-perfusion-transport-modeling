@@ -33,14 +33,14 @@ model.params["u_in"] = 20
 
 ###################################################################
 
-max_dims = [39.894, 39.896, 39.892]
-min_dims = [0.099, 0.095, 0.105]
+max_dims = [39.7948, 39.8001, 39.7872] # Correct coordinates
+min_dims = [0.0994, 0.0956, 0.1048]    # Correct coordinates
 
 print("Model initialised")
 
 model.import_mesh(
     os.path.join("../../../raw-data/40_h_repaired", "40_h_repaired.xdmf"), type="xdmf", 
-    periodic=False, max_dims=max_dims, min_dims=min_dims, tol=0.1
+    periodic=False, max_dims=max_dims, min_dims=min_dims, tol=0.01
 )
 
 print("Mesh imported")
