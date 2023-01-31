@@ -36,7 +36,10 @@ model.import_mesh(
     periodic=False, max_dims=max_dims, min_dims=min_dims, tol=0.1
 )
 print("Mesh imported")
-model.folder_path = os.path.join(path, "/slow")
+
+folder = "40_h_repaired_sf_slow"
+path = os.path.join("../../../results-data", folder)
+model.folder_path = path
       
 print(f"Starting slow (P) simulation with inlet velocity u_in {str(model.params['u_in'])}")
 model.sim_p(save=True, meshtype="tkd")
@@ -54,7 +57,9 @@ print("%%%%%%%%%%%%%%%%%%%%%%%%")
 print("Starting fast simulation")
 model.params['u_in'] = 200
 print(f"Current (fast) model inlet velocity u_in = {str(model.params['u_in'])}")
-model.folder_path = os.path.join(path, "/fast") 
+folder = "40_h_repaired_sf_fast"
+path = os.path.join("../../../results-data", folder)
+model.folder_path = path
       
 print("Starting fast (P) simulation")
 model.sim_p(save=True, meshtype="tkd")
