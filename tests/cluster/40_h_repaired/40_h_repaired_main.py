@@ -58,6 +58,7 @@ fastmodel.import_mesh(
     periodic=False, max_dims=max_dims, min_dims=min_dims, tol=0.1
 )
       
+fastmodel.params['u_in'] = 200
 print("Fast - mesh imported")
 print(f"Fast u_in value = {str(fastmodel.params['u_in'])}")
 print("Starting fast (P) simulation")
