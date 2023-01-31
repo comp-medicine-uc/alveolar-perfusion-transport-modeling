@@ -22,6 +22,7 @@ print("Starting...")
 slowfolder = "40_h_repaired_slow"
 slowpath = os.path.join("../../../results-data", slowfolder)
 slowmodel = PerfusionGasExchangeModel(folder_path=slowpath, params=params)
+
 slowmodel.params['u_in'] = 0.2
 print(f"Slow model inlet velocity = {str(slowmodel.params['u_in'])}")
 
