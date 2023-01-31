@@ -337,8 +337,7 @@ class PerfusionGasExchangeModel():
         if not guess:
             x = Function(self.M_h)
         else:
-            x = Function(self.M_h)
-            x.set_allow_extrapolation(True)
+            guess.set_allow_extrapolation(True)
             x = project(guess, self.M_h)
 
 
