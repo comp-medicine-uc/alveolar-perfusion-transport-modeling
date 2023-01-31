@@ -14,7 +14,8 @@ sys.path.append(os.getcwd()[:-28])
 print("Relative path: ", os.getcwd()[:-28])
 
 
-import dolfin
+from dolfin import *
+from fenics import *
 print(dolfin.__version__)
 from src.model import PerfusionGasExchangeModel
 from src.params import params    
@@ -39,7 +40,7 @@ model.import_mesh(
 )
 
 print("Mesh imported")
-cell_markers = CellFunction("bool", model.mesh)
+cell_markers = MeshFunction("bool", model.mesh)
 print("Created cell markers")
 # cell_markers = MeshFunction("bool", model.mesh, model.mesh.topology().dim())
 # cell_markers.set_all(False)
