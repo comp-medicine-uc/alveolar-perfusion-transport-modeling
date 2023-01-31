@@ -337,15 +337,11 @@ class PerfusionGasExchangeModel():
         if not guess:
             x = Function(self.M_h)
         else:
-            try:
-                x = project(guess, self.M_h)
-            except RuntimeError:
-                x = Function(self.M_h)
-                x.set_allow_extrapolation(True)
-                x = project(guess, self.M_h)
-            except Exception:
-                print("UNKNOWN ERROR.")
-                
+            x = Function(self.M_h)
+            x.set_allow_extrapolation(True)
+            x = project(guess, self.M_h)
+
+
         self.p_O2, self.p_CO2, self.c_HbO2, self.c_HbCO2 = split(x)
 
         v, w, eta, xi = TestFunctions(self.M_h)
