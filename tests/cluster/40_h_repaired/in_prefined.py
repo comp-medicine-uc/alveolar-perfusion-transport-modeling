@@ -18,7 +18,7 @@ from src.model import PerfusionGasExchangeModel
 from src.params import params    
 
 
-class Inlet(SubDomain):
+class Inlet(dolfin.SubDomain):
     def inside(self, x, on_boundary):
         return (x[0]<5-DOLFIN_EPS or x[0]>40-5+DOLFIN_EPS)
 
