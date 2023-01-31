@@ -13,7 +13,8 @@ import os
 sys.path.append(os.getcwd()[:-28])
 print("Relative path: ", os.getcwd()[:-28])
 
-import dolfin
+from dolfin import *
+from fenics import *
 from src.model import PerfusionGasExchangeModel
 from src.params import params    
 from src.boundaries import InletOutlet
