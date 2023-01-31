@@ -51,7 +51,7 @@ inlet.mark(cell_markers, True)
 # cell_marked = File(model.folder_path+'/bnd/cell_markers.pvd')
 # cell_marked << cell_markers
 
-new_mesh = dolfin.refine(model.mesh, cell_markers)
+new_mesh = refine(model.mesh, cell_markers)
 new_mesh_file = File(model.folder_path+'/bnd/p_refined.pvd')
 new_mesh_file << new_mesh
 

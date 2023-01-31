@@ -50,7 +50,7 @@ inlet.mark(cell_markers, True)
 # cell_marked = File(model.folder_path+'/bnd/cell_markers.pvd')
 # cell_marked << cell_markers
 
-new_mesh = dolfin.refine(model.mesh, cell_markers)
+new_mesh = refine(model.mesh, cell_markers)
 new_mesh_file = File(model.folder_path+'/bnd/p_refined.pvd')
 new_mesh_file << new_mesh
 
@@ -64,7 +64,7 @@ print("Defined fine cell markers")
 inlet2 = InletOutlet()
 inlet2.mark(cell_markers_2, True)
 
-final_mesh = dolfin.refine(new_mesh, cell_markers_2)
+final_mesh = refine(new_mesh, cell_markers_2)
 final_mesh_file = File(model.folder_path+'/bnd/f_refined.pvd')
 final_mesh_file << final_mesh
 
