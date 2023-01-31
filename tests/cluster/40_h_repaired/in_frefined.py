@@ -17,9 +17,7 @@ from dolfin import *
 from fenics import *
 from src.model import PerfusionGasExchangeModel
 from src.params import params
-from src.boundaries import Inlet
-
-
+from src.boundaries import IterativeRefine
 
 print("Imported src files")
 print("Starting...")
@@ -47,38 +45,41 @@ model.import_mesh(
 
 print("Mesh imported")
 
-cell_markers = MeshFunction("bool", model.mesh, model.mesh.topology().dim())
-cell_markers.set_all(False)
+# cell_markers = MeshFunction("bool", model.mesh, model.mesh.topology().dim())
+# cell_markers.set_all(False)
 
-print("Defined cell markers")
+# print("Defined cell markers")
 
-inlet = Inlet()
-inlet.mark(cell_markers, True)
+# inlet = Inlet()
+# inlet.mark(cell_markers, True)
 
-# cell_marked = File(model.folder_path+'/bnd/cell_markers.pvd')
-# cell_marked << cell_markers
+# # cell_marked = File(model.folder_path+'/bnd/cell_markers.pvd')
+# # cell_marked << cell_markers
 
-new_mesh = refine(model.mesh, cell_markers)
-new_mesh_file = File(model.folder_path+'/bnd/p_refined.pvd')
-new_mesh_file << new_mesh
+# new_mesh = refine(model.mesh, cell_markers)
+# new_mesh_file = File(model.folder_path+'/bnd/p_refined.pvd')
+# new_mesh_file << new_mesh
 
-print("Finished partial mesh refination")
+# print("Finished partial mesh refination")
 
-cell_markers_2 = MeshFunction("bool", new_mesh, new_mesh.topology().dim())
-cell_markers_2.set_all(False)
+# cell_markers_2 = MeshFunction("bool", new_mesh, new_mesh.topology().dim())
+# cell_markers_2.set_all(False)
 
-print("Defined fine cell markers")
+# print("Defined fine cell markers")
 
-inlet2 = Inlet()
-inlet2.mark(cell_markers_2, True)
+# inlet2 = Inlet()
+# inlet2.mark(cell_markers_2, True)
 
-final_mesh = refine(new_mesh, cell_markers_2)
-final_mesh_file = File(model.folder_path+'/bnd/f_refined.pvd')
-final_mesh_file << final_mesh
+# final_mesh = refine(new_mesh, cell_markers_2)
+# final_mesh_file = File(model.folder_path+'/bnd/f_refined.pvd')
+# final_mesh_file << final_mesh
 
-print("Finished full mesh refination")
+# print("Finished full mesh refination")
 
-model.mesh = final_mesh
+# model.mesh = final_mesh
+
+new_mesh = IterativeRefine(mesh, N=3, outlet=False)
+model.mesh = new_mesh
 
 print("Mesh refined")
 print("Starting (P) simulation")

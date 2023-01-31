@@ -84,9 +84,32 @@ class GammaAir(SubDomain):
         return on_boundary and (near(x[1], self.dir_min_y, self.tol) or near(x[1], self.dir_max_y, self.tol) or near(x[2], self.dir_min_z, self.tol) or near(x[2], self.dir_max_z, self.tol))
     
 class InletOutlet(SubDomain):
+
     def inside(self, x, on_boundary):
-        return (x[0]<5-DOLFIN_EPS or x[0]>40-5+DOLFIN_EPS)
+        return (x[0]<1-DOLFIN_EPS or x[0]>40-1+DOLFIN_EPS)
     
 class Inlet(SubDomain):
+    
     def inside(self, x, on_boundary):
-        return x[0]<5-DOLFIN_EPS
+        return x[0]<1-DOLFIN_EPS
+    
+def IterativeRefine(mesh, N=1, outlet=False):
+    
+    for n in range(N):
+        print(f"Starting iteration {str(n)}")
+        cell_markers = MeshFunction("bool", mesh, mesh.topology().dim())
+        cell_markers.set_all(False)
+        
+        if outlet:
+            obj = InletOutlet()
+            
+        else:
+            obj = Inlet()
+            
+        print("Defined object")
+        obj.mark(cell_markers, True)   
+        print("Marked cells")
+        mesh = refine(mesh, cell_markers)
+        print(f"Finished refining iteration {str(n)}")
+        
+    return mesh
