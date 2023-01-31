@@ -17,5 +17,10 @@
     <Piece Source="pCO2_p2_000000.vtu" />
     <Piece Source="pCO2_p3_000000.vtu" />
     <Piece Source="pCO2_p4_000000.vtu" />
+    <Piece Source="pCO2_p5_000000.vtu" />
+    <Piece Source="pCO2_p6_000000.vtu" />
+    <Piece Source="pCO2_p7_000000.vtu" />
+    <Piece Source="pCO2_p8_000000.vtu" />
+    <Piece Source="pCO2_p9_000000.vtu" />
   </PUnstructuredGrid>
 </VTKFile>

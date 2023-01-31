@@ -14,5 +14,10 @@
     <Piece Source="p_refined_p2_000000.vtu" />
     <Piece Source="p_refined_p3_000000.vtu" />
     <Piece Source="p_refined_p4_000000.vtu" />
+    <Piece Source="p_refined_p5_000000.vtu" />
+    <Piece Source="p_refined_p6_000000.vtu" />
+    <Piece Source="p_refined_p7_000000.vtu" />
+    <Piece Source="p_refined_p8_000000.vtu" />
+    <Piece Source="p_refined_p9_000000.vtu" />
   </PUnstructuredGrid>
 </VTKFile>
