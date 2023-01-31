@@ -38,8 +38,9 @@ model.import_mesh(
     periodic=False, max_dims=max_dims, min_dims=min_dims, tol=0.1
 )
 
-# print("Mesh imported")
-
+print("Mesh imported")
+cell_markers = CellFunction("bool", model.mesh)
+print("Created cell markers")
 # cell_markers = MeshFunction("bool", model.mesh, model.mesh.topology().dim())
 # cell_markers.set_all(False)
 
