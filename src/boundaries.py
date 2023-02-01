@@ -86,12 +86,12 @@ class GammaAir(SubDomain):
 class InletOutlet(SubDomain):
 
     def inside(self, x, on_boundary):
-        return (x[0]<1-DOLFIN_EPS or x[0]>40-1+DOLFIN_EPS)
+        return (x[0]<0.0994+0.3+DOLFIN_EPS or x[0]>39.8942-0.3-DOLFIN_EPS)
     
 class Inlet(SubDomain):
     
     def inside(self, x, on_boundary):
-        return x[0]<1-DOLFIN_EPS
+        return x[0]<0.0994+0.3+DOLFIN_EPS
     
 def IterativeRefine(mesh, N=1, outlet=False):
     

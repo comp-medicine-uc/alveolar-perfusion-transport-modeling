@@ -34,7 +34,7 @@ model.params["u_in"] = 20
 
 ###################################################################
 
-max_dims = [39.7948, 39.8001, 39.7872] # Correct coordinates
+max_dims = [39.8942, 39.8957, 39.8921] # Correct coordinates
 min_dims = [0.0994, 0.0956, 0.1048]    # Correct coordinates
 
 print("Model initialised")
