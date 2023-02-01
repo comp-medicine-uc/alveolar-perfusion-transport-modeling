@@ -1,289 +1,83 @@
 Process 0: Solving linear variational problem.
 Process 1: Solving linear variational problem.
-Process 9: Solving linear variational problem.
+Process 7: Solving linear variational problem.Process 9: Solving linear variational problem.
+
+Process 4: Solving linear variational problem.
+Process 2: Solving linear variational problem.
 Process 8: Solving linear variational problem.
 Process 5: Solving linear variational problem.
-Process 6: Solving linear variational problem.
-Process 2: Solving linear variational problem.
-Process 4: Solving linear variational problem.
-Process 7: Solving linear variational problem.
-Process 3: Solving linear variational problem.
+Process 3: Solving linear variational problem.Process 6: Solving linear variational problem.
+
 Process 4: No Jacobian form specified for nonlinear variational problem.
 Process 4: Differentiating residual form F to obtain Jacobian J = F'.
-Process 6: No Jacobian form specified for nonlinear variational problem.
-Process 6: Differentiating residual form F to obtain Jacobian J = F'.
-Process 0: No Jacobian form specified for nonlinear variational problem.
-Process 0: Differentiating residual form F to obtain Jacobian J = F'.
-Process 2: No Jacobian form specified for nonlinear variational problem.
-Process 2: Differentiating residual form F to obtain Jacobian J = F'.
-Process 3: No Jacobian form specified for nonlinear variational problem.
-Process 3: Differentiating residual form F to obtain Jacobian J = F'.
-Process 8: No Jacobian form specified for nonlinear variational problem.
-Process 8: Differentiating residual form F to obtain Jacobian J = F'.
-Process 5: No Jacobian form specified for nonlinear variational problem.
-Process 5: Differentiating residual form F to obtain Jacobian J = F'.
-Process 9: No Jacobian form specified for nonlinear variational problem.
-Process 9: Differentiating residual form F to obtain Jacobian J = F'.
+Process 1: No Jacobian form specified for nonlinear variational problem.
 Process 7: No Jacobian form specified for nonlinear variational problem.
 Process 7: Differentiating residual form F to obtain Jacobian J = F'.
-Process 1: No Jacobian form specified for nonlinear variational problem.
+Process 0: No Jacobian form specified for nonlinear variational problem.
+Process 0: Differentiating residual form F to obtain Jacobian J = F'.
 Process 1: Differentiating residual form F to obtain Jacobian J = F'.
-Process 0: Solving nonlinear variational problem.
-Process 5: Solving nonlinear variational problem.
-Process 8: Solving nonlinear variational problem.
-Process 9: Solving nonlinear variational problem.
-Process 4: Solving nonlinear variational problem.
-Process 6: Solving nonlinear variational problem.
-Process 1: Solving nonlinear variational problem.
-Process 7: Solving nonlinear variational problem.
-Process 3: Solving nonlinear variational problem.
-Process 2: Solving nonlinear variational problem.
-  Process 0: Newton iteration 0: r (abs) = 3.988e+07 (tol = 1.000e-08) r (rel) = 1.000e+00 (tol = 1.000e-08)
-  Process 0: Newton iteration 1: r (abs) = 3.362e+02 (tol = 1.000e-08) r (rel) = 8.430e-06 (tol = 1.000e-08)
-  Process 0: Newton iteration 2: r (abs) = 2.389e-03 (tol = 1.000e-08) r (rel) = 5.991e-11 (tol = 1.000e-08)
-  Process 0: Newton solver finished in 2 iterations and 20 linear solver iterations.
+Process 2: No Jacobian form specified for nonlinear variational problem.
+Process 2: Differentiating residual form F to obtain Jacobian J = F'.
+Process 5: No Jacobian form specified for nonlinear variational problem.
+Process 5: Differentiating residual form F to obtain Jacobian J = F'.
+Process 8: No Jacobian form specified for nonlinear variational problem.
+Process 8: Differentiating residual form F to obtain Jacobian J = F'.
 Process 9: No Jacobian form specified for nonlinear variational problem.
 Process 9: Differentiating residual form F to obtain Jacobian J = F'.
+Process 3: No Jacobian form specified for nonlinear variational problem.
+Process 3: Differentiating residual form F to obtain Jacobian J = F'.
+Process 6: No Jacobian form specified for nonlinear variational problem.
+Process 6: Differentiating residual form F to obtain Jacobian J = F'.
+Process 0: Solving nonlinear variational problem.
+Process 4: Solving nonlinear variational problem.Process 2: Solving nonlinear variational problem.
+Process 8: Solving nonlinear variational problem.
+Process 3: Solving nonlinear variational problem.
+Process 6: Solving nonlinear variational problem.
+Process 9: Solving nonlinear variational problem.
+Process 1: Solving nonlinear variational problem.
+
+Process 7: Solving nonlinear variational problem.Process 5: Solving nonlinear variational problem.
+
+  Process 0: Newton iteration 0: r (abs) = 3.947e+07 (tol = 1.000e-08) r (rel) = 1.000e+00 (tol = 1.000e-08)
+  Process 0: Newton iteration 1: r (abs) = 3.215e+02 (tol = 1.000e-08) r (rel) = 8.145e-06 (tol = 1.000e-08)
+  Process 0: Newton iteration 2: r (abs) = 7.730e-03 (tol = 1.000e-08) r (rel) = 1.958e-10 (tol = 1.000e-08)
+  Process 0: Newton solver finished in 2 iterations and 30 linear solver iterations.
+Process 2: No Jacobian form specified for nonlinear variational problem.
+Process 2: Differentiating residual form F to obtain Jacobian J = F'.
+Process 0: No Jacobian form specified for nonlinear variational problem.Process 3: No Jacobian form specified for nonlinear variational problem.
+Process 3: Differentiating residual form F to obtain Jacobian J = F'.
+Process 6: No Jacobian form specified for nonlinear variational problem.
+Process 6: Differentiating residual form F to obtain Jacobian J = F'.
+Process 7: No Jacobian form specified for nonlinear variational problem.
+Process 7: Differentiating residual form F to obtain Jacobian J = F'.
+Process 9: No Jacobian form specified for nonlinear variational problem.
+Process 9: Differentiating residual form F to obtain Jacobian J = F'.
+Process 8: No Jacobian form specified for nonlinear variational problem.
+Process 8: Differentiating residual form F to obtain Jacobian J = F'.
 Process 4: No Jacobian form specified for nonlinear variational problem.
 Process 4: Differentiating residual form F to obtain Jacobian J = F'.
-Process 7: No Jacobian form specified for nonlinear variational problem.
-Process 7: Differentiating residual form F to obtain Jacobian J = F'.
-Process 6: No Jacobian form specified for nonlinear variational problem.
-Process 6: Differentiating residual form F to obtain Jacobian J = F'.
-Process 2: No Jacobian form specified for nonlinear variational problem.
-Process 2: Differentiating residual form F to obtain Jacobian J = F'.
-Process 8: No Jacobian form specified for nonlinear variational problem.
-Process 8: Differentiating residual form F to obtain Jacobian J = F'.
+
+Process 0: Differentiating residual form F to obtain Jacobian J = F'.
 Process 1: No Jacobian form specified for nonlinear variational problem.
 Process 1: Differentiating residual form F to obtain Jacobian J = F'.
 Process 5: No Jacobian form specified for nonlinear variational problem.
 Process 5: Differentiating residual form F to obtain Jacobian J = F'.
-Process 3: No Jacobian form specified for nonlinear variational problem.
-Process 3: Differentiating residual form F to obtain Jacobian J = F'.
-Process 0: No Jacobian form specified for nonlinear variational problem.
-Process 0: Differentiating residual form F to obtain Jacobian J = F'.
 Process 0: Solving nonlinear variational problem.
-Process 3: Solving nonlinear variational problem.
-Process 8: Solving nonlinear variational problem.
-Process 1: Solving nonlinear variational problem.
 Process 6: Solving nonlinear variational problem.
-Process 2: Solving nonlinear variational problem.
-Process 4: Solving nonlinear variational problem.
 Process 9: Solving nonlinear variational problem.
+Process 1: Solving nonlinear variational problem.
+Process 4: Solving nonlinear variational problem.
 Process 5: Solving nonlinear variational problem.
+Process 2: Solving nonlinear variational problem.
+Process 3: Solving nonlinear variational problem.
 Process 7: Solving nonlinear variational problem.
-  Process 0: Newton iteration 0: r (abs) = 1.345e+09 (tol = 1.000e-08) r (rel) = 1.000e+00 (tol = 1.000e-08)
-  Process 0: Newton iteration 1: r (abs) = 1.534e+07 (tol = 1.000e-08) r (rel) = 1.141e-02 (tol = 1.000e-08)
-  Process 0: Newton iteration 2: r (abs) = 7.427e+05 (tol = 1.000e-08) r (rel) = 5.523e-04 (tol = 1.000e-08)
-  Process 0: Newton iteration 3: r (abs) = 2.452e+04 (tol = 1.000e-08) r (rel) = 1.824e-05 (tol = 1.000e-08)
-  Process 0: Newton iteration 4: r (abs) = 3.489e+01 (tol = 1.000e-08) r (rel) = 2.595e-08 (tol = 1.000e-08)
-  Process 0: Newton iteration 5: r (abs) = 5.531e-05 (tol = 1.000e-08) r (rel) = 4.113e-14 (tol = 1.000e-08)
-  Process 0: Newton solver finished in 5 iterations and 45 linear solver iterations.
-Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
-Imported src files
-Starting...
-Model initialised
-Mesh imported
-Coordinates have shape  (3886, 3)
-Mesh imported
-Defined cell markers
-Finished partial mesh refination
-Mesh refined
-Starting (P) simulation
-
- ############## (P) problem simulation ############
-Instancing boundaries
-gamma_in.dir_min =  0.0994
-gamma_in.dir_max =  39.8942
-gamma_out.dir_min =  0.0994
-gamma_out.dir_max =  39.8942
-gamma_air.dir_min_y =  0.0956
-gamma_air.dir_max_y =  39.8957
-gamma_air.dir_min_z =  0.1048
-gamma_air.dir_max_z =  39.8921
-boundaries instanced
-self.f_dim = 2
-self.vecf_dim = 1
-P problem solved
-u problem solved
-Saving solutions
-saved
-(P) simulation done
-Starting (T) simulation
-
- ############## (LT) and (T) problem simulation ############
-began sim_t, with solver =  bicgstab  and WITHOUT preconditioner.
-Solving with solver = bicgstab and without preconditioner.
-Finished (linear) guess generation
-
- ############## (LT) and (T) problem simulation ############
-began sim_t, with solver =  bicgstab  and preconditioner =  default
-Solving with solver = bicgstab and preconditioner = default.
-Done
-Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
-Imported src files
-Starting...
-Model initialised
-Mesh imported
-Coordinates have shape  (4113, 3)
-Mesh imported
-Defined cell markers
-Finished partial mesh refination
-Mesh refined
-Starting (P) simulation
-
- ############## (P) problem simulation ############
-Instancing boundaries
-gamma_in.dir_min =  0.0994
-gamma_in.dir_max =  39.8942
-gamma_out.dir_min =  0.0994
-gamma_out.dir_max =  39.8942
-gamma_air.dir_min_y =  0.0956
-gamma_air.dir_max_y =  39.8957
-gamma_air.dir_min_z =  0.1048
-gamma_air.dir_max_z =  39.8921
-boundaries instanced
-self.f_dim = 2
-self.vecf_dim = 1
-P problem solved
-u problem solved
-Saving solutions
-saved
-(P) simulation done
-Starting (T) simulation
-
- ############## (LT) and (T) problem simulation ############
-began sim_t, with solver =  bicgstab  and WITHOUT preconditioner.
-Solving with solver = bicgstab and without preconditioner.
-Finished (linear) guess generation
-
- ############## (LT) and (T) problem simulation ############
-began sim_t, with solver =  bicgstab  and preconditioner =  default
-Solving with solver = bicgstab and preconditioner = default.
-Done
-Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
-Imported src files
-Starting...
-Model initialised
-Mesh imported
-Coordinates have shape  (4036, 3)
-Mesh imported
-Defined cell markers
-Finished partial mesh refination
-Mesh refined
-Starting (P) simulation
-
- ############## (P) problem simulation ############
-Instancing boundaries
-gamma_in.dir_min =  0.0994
-gamma_in.dir_max =  39.8942
-gamma_out.dir_min =  0.0994
-gamma_out.dir_max =  39.8942
-gamma_air.dir_min_y =  0.0956
-gamma_air.dir_max_y =  39.8957
-gamma_air.dir_min_z =  0.1048
-gamma_air.dir_max_z =  39.8921
-boundaries instanced
-self.f_dim = 2
-self.vecf_dim = 1
-P problem solved
-u problem solved
-Saving solutions
-saved
-(P) simulation done
-Starting (T) simulation
-
- ############## (LT) and (T) problem simulation ############
-began sim_t, with solver =  bicgstab  and WITHOUT preconditioner.
-Solving with solver = bicgstab and without preconditioner.
-Finished (linear) guess generation
-
- ############## (LT) and (T) problem simulation ############
-began sim_t, with solver =  bicgstab  and preconditioner =  default
-Solving with solver = bicgstab and preconditioner = default.
-Done
-Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
-Imported src files
-Starting...
-Model initialised
-Mesh imported
-Coordinates have shape  (4213, 3)
-Mesh imported
-Defined cell markers
-Finished partial mesh refination
-Mesh refined
-Starting (P) simulation
-
- ############## (P) problem simulation ############
-Instancing boundaries
-gamma_in.dir_min =  0.0994
-gamma_in.dir_max =  39.8942
-gamma_out.dir_min =  0.0994
-gamma_out.dir_max =  39.8942
-gamma_air.dir_min_y =  0.0956
-gamma_air.dir_max_y =  39.8957
-gamma_air.dir_min_z =  0.1048
-gamma_air.dir_max_z =  39.8921
-boundaries instanced
-self.f_dim = 2
-self.vecf_dim = 1
-P problem solved
-u problem solved
-Saving solutions
-saved
-(P) simulation done
-Starting (T) simulation
-
- ############## (LT) and (T) problem simulation ############
-began sim_t, with solver =  bicgstab  and WITHOUT preconditioner.
-Solving with solver = bicgstab and without preconditioner.
-Finished (linear) guess generation
-
- ############## (LT) and (T) problem simulation ############
-began sim_t, with solver =  bicgstab  and preconditioner =  default
-Solving with solver = bicgstab and preconditioner = default.
-Done
-Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
-Imported src files
-Starting...
-Model initialised
-Mesh imported
-Coordinates have shape  (3964, 3)
-Mesh imported
-Defined cell markers
-Finished partial mesh refination
-Mesh refined
-Starting (P) simulation
-
- ############## (P) problem simulation ############
-Instancing boundaries
-gamma_in.dir_min =  0.0994
-gamma_in.dir_max =  39.8942
-gamma_out.dir_min =  0.0994
-gamma_out.dir_max =  39.8942
-gamma_air.dir_min_y =  0.0956
-gamma_air.dir_max_y =  39.8957
-gamma_air.dir_min_z =  0.1048
-gamma_air.dir_max_z =  39.8921
-boundaries instanced
-self.f_dim = 2
-self.vecf_dim = 1
-P problem solved
-u problem solved
-Saving solutions
-saved
-(P) simulation done
-Starting (T) simulation
-
- ############## (LT) and (T) problem simulation ############
-began sim_t, with solver =  bicgstab  and WITHOUT preconditioner.
-Solving with solver = bicgstab and without preconditioner.
-Finished (linear) guess generation
-
- ############## (LT) and (T) problem simulation ############
-began sim_t, with solver =  bicgstab  and preconditioner =  default
-Solving with solver = bicgstab and preconditioner = default.
-Done
+Process 8: Solving nonlinear variational problem.
+  Process 0: Newton iteration 0: r (abs) = 1.305e+09 (tol = 1.000e-08) r (rel) = 1.000e+00 (tol = 1.000e-08)
+  Process 0: Newton iteration 1: r (abs) = 1.334e+07 (tol = 1.000e-08) r (rel) = 1.022e-02 (tol = 1.000e-08)
+  Process 0: Newton iteration 2: r (abs) = 2.532e+05 (tol = 1.000e-08) r (rel) = 1.940e-04 (tol = 1.000e-08)
+  Process 0: Newton iteration 3: r (abs) = 1.364e+03 (tol = 1.000e-08) r (rel) = 1.045e-06 (tol = 1.000e-08)
+  Process 0: Newton iteration 4: r (abs) = 3.068e-01 (tol = 1.000e-08) r (rel) = 2.351e-10 (tol = 1.000e-08)
+  Process 0: Newton solver finished in 4 iterations and 70 linear solver iterations.
 Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
 Imported src files
 Starting...
@@ -330,7 +124,7 @@ Imported src files
 Starting...
 Model initialised
 Mesh imported
-Coordinates have shape  (4016, 3)
+Coordinates have shape  (4113, 3)
 Mesh imported
 Defined cell markers
 Finished partial mesh refination
@@ -413,6 +207,211 @@ Starting...
 Model initialised
 Mesh imported
 Coordinates have shape  (4097, 3)
+Mesh imported
+Defined cell markers
+Finished partial mesh refination
+Mesh refined
+Starting (P) simulation
+
+ ############## (P) problem simulation ############
+Instancing boundaries
+gamma_in.dir_min =  0.0994
+gamma_in.dir_max =  39.8942
+gamma_out.dir_min =  0.0994
+gamma_out.dir_max =  39.8942
+gamma_air.dir_min_y =  0.0956
+gamma_air.dir_max_y =  39.8957
+gamma_air.dir_min_z =  0.1048
+gamma_air.dir_max_z =  39.8921
+boundaries instanced
+self.f_dim = 2
+self.vecf_dim = 1
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  bicgstab  and WITHOUT preconditioner.
+Solving with solver = bicgstab and without preconditioner.
+Finished (linear) guess generation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  bicgstab  and preconditioner =  default
+Solving with solver = bicgstab and preconditioner = default.
+Done
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+Model initialised
+Mesh imported
+Coordinates have shape  (4213, 3)
+Mesh imported
+Defined cell markers
+Finished partial mesh refination
+Mesh refined
+Starting (P) simulation
+
+ ############## (P) problem simulation ############
+Instancing boundaries
+gamma_in.dir_min =  0.0994
+gamma_in.dir_max =  39.8942
+gamma_out.dir_min =  0.0994
+gamma_out.dir_max =  39.8942
+gamma_air.dir_min_y =  0.0956
+gamma_air.dir_max_y =  39.8957
+gamma_air.dir_min_z =  0.1048
+gamma_air.dir_max_z =  39.8921
+boundaries instanced
+self.f_dim = 2
+self.vecf_dim = 1
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  bicgstab  and WITHOUT preconditioner.
+Solving with solver = bicgstab and without preconditioner.
+Finished (linear) guess generation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  bicgstab  and preconditioner =  default
+Solving with solver = bicgstab and preconditioner = default.
+Done
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+Model initialised
+Mesh imported
+Coordinates have shape  (3886, 3)
+Mesh imported
+Defined cell markers
+Finished partial mesh refination
+Mesh refined
+Starting (P) simulation
+
+ ############## (P) problem simulation ############
+Instancing boundaries
+gamma_in.dir_min =  0.0994
+gamma_in.dir_max =  39.8942
+gamma_out.dir_min =  0.0994
+gamma_out.dir_max =  39.8942
+gamma_air.dir_min_y =  0.0956
+gamma_air.dir_max_y =  39.8957
+gamma_air.dir_min_z =  0.1048
+gamma_air.dir_max_z =  39.8921
+boundaries instanced
+self.f_dim = 2
+self.vecf_dim = 1
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  bicgstab  and WITHOUT preconditioner.
+Solving with solver = bicgstab and without preconditioner.
+Finished (linear) guess generation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  bicgstab  and preconditioner =  default
+Solving with solver = bicgstab and preconditioner = default.
+Done
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+Model initialised
+Mesh imported
+Coordinates have shape  (4016, 3)
+Mesh imported
+Defined cell markers
+Finished partial mesh refination
+Mesh refined
+Starting (P) simulation
+
+ ############## (P) problem simulation ############
+Instancing boundaries
+gamma_in.dir_min =  0.0994
+gamma_in.dir_max =  39.8942
+gamma_out.dir_min =  0.0994
+gamma_out.dir_max =  39.8942
+gamma_air.dir_min_y =  0.0956
+gamma_air.dir_max_y =  39.8957
+gamma_air.dir_min_z =  0.1048
+gamma_air.dir_max_z =  39.8921
+boundaries instanced
+self.f_dim = 2
+self.vecf_dim = 1
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  bicgstab  and WITHOUT preconditioner.
+Solving with solver = bicgstab and without preconditioner.
+Finished (linear) guess generation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  bicgstab  and preconditioner =  default
+Solving with solver = bicgstab and preconditioner = default.
+Done
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+Model initialised
+Mesh imported
+Coordinates have shape  (3964, 3)
+Mesh imported
+Defined cell markers
+Finished partial mesh refination
+Mesh refined
+Starting (P) simulation
+
+ ############## (P) problem simulation ############
+Instancing boundaries
+gamma_in.dir_min =  0.0994
+gamma_in.dir_max =  39.8942
+gamma_out.dir_min =  0.0994
+gamma_out.dir_max =  39.8942
+gamma_air.dir_min_y =  0.0956
+gamma_air.dir_max_y =  39.8957
+gamma_air.dir_min_z =  0.1048
+gamma_air.dir_max_z =  39.8921
+boundaries instanced
+self.f_dim = 2
+self.vecf_dim = 1
+P problem solved
+u problem solved
+Saving solutions
+saved
+(P) simulation done
+Starting (T) simulation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  bicgstab  and WITHOUT preconditioner.
+Solving with solver = bicgstab and without preconditioner.
+Finished (linear) guess generation
+
+ ############## (LT) and (T) problem simulation ############
+began sim_t, with solver =  bicgstab  and preconditioner =  default
+Solving with solver = bicgstab and preconditioner = default.
+Done
+Relative path:  /mnt/biherrera/alveolar-perfusion-transport-modeling
+Imported src files
+Starting...
+Model initialised
+Mesh imported
+Coordinates have shape  (4036, 3)
 Mesh imported
 Defined cell markers
 Finished partial mesh refination
