@@ -36,7 +36,7 @@ model.params["u_in"] = 20
 max_dims = [39.8942, 39.8957, 39.8921] # Correct coordinates
 min_dims = [0.0994, 0.0956, 0.1048]    # Correct coordinates
 
-print("Model initialised")
+print(f"Model initialised with u_in = {model.params['u_in']}")
 
 model.import_mesh(
     os.path.join("../../../raw-data/40_h_repaired", "40_h_repaired.xdmf"), type="xdmf", 
@@ -78,7 +78,7 @@ print("Mesh imported")
 
 # model.mesh = final_mesh
 
-new_mesh = IterativeRefine(model.mesh, N=2, outlet=False)
+new_mesh = IterativeRefine(model.mesh, N=4, outlet=False)
 model.mesh = new_mesh
 
 print("Mesh refined")

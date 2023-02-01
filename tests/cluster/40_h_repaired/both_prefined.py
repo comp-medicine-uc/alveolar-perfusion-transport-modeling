@@ -30,14 +30,14 @@ model = PerfusionGasExchangeModel(folder_path=path, params=params, solver='gmres
  
 ################################################################### VELOCIDAD CAMBIADA
 
-model.params["u_in"] = 20
+model.params["u_in"] = 200
 
 ###################################################################
 
 max_dims = [39.8942, 39.8957, 39.8921] # Correct coordinates
 min_dims = [0.0994, 0.0956, 0.1048]    # Correct coordinates
 
-print("Model initialised")
+print(f"Model initialised with u_in = {model.params['u_in']}")
 
 model.import_mesh(
     os.path.join("../../../raw-data/40_h_repaired", "40_h_repaired.xdmf"), type="xdmf", 
