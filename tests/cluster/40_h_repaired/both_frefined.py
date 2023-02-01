@@ -79,7 +79,7 @@ print("Mesh imported")
 
 # model.mesh = final_mesh
 
-new_mesh = IterativeRefine(model.mesh, N=3, outlet=True)
+new_mesh = IterativeRefine(model.mesh, N=2, outlet=True)
 model.mesh = new_mesh
 
 print("Mesh refined")
