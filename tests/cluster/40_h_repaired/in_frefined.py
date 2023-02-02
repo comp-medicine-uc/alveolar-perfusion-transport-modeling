@@ -15,7 +15,7 @@ print("Relative path: ", os.getcwd()[:-28])
 
 from dolfin import *
 from fenics import *
-from src.model import PerfusionGasExchangeModel
+from src.model_cdv import PerfusionGasExchangeModel
 from src.params import params
 from src.boundaries import IterativeRefine
 
