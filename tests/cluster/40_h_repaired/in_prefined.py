@@ -30,7 +30,8 @@ model = PerfusionGasExchangeModel(folder_path=path, params=params, solver='gmres
 
 ################################################################### VELOCIDAD CAMBIADA
 
-model.params["u_in"] = 100
+model.params["u_in"] = 200
+model.params["k_prime_CO2"] = 6E-6*1E15
 
 ###################################################################
 

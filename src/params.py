@@ -28,6 +28,7 @@ beta_CO2 = 0.9*28.2E-6/(1E15)  # mol/um^3/mmHg
 k_CO2 = 0.5E9 # 0.008  # 1/s
 k_prime_CO2 = 0.1E19  # 6E-6*1E15  # um^3/mol/s
 
+
 c_t = 2.4E-17  # mol/um^3
 h_ba = 0.3  # um
 
