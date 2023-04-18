@@ -289,7 +289,7 @@ class PerfusionGasExchangeModel():
         else:
             raise ValueError('Gas species in f must be O2 or CO2.')
 
-    def sim_t(self, hb=True, save=True, guess=None, solver=None, preconditioner=None, opt=None):
+    def sim_t(self, hb=True, save=True, guess=None, solver=None, preconditioner=None, opt=None, stab_param=None):
         '''Solves the steady state blood-side transport (T) problem of the
         model.
         
@@ -346,13 +346,26 @@ class PerfusionGasExchangeModel():
 
         n = FacetNormal(self.mesh)
         
-        # Define residuals
+        # Define residuals and stabilisation parameters
+        
+        b_1 = 1
+        b_2 = 1
+        d_1 = 1
+        d_2 = 1
+        h_p = h_c = 1
+        
+        if stab_param_p is not None:
+            b_1 = b_2 = stab_param_p
+            h_p = self.mesh.hmin()
+        if stab_param_c is not None:
+            d_1 = d_2 = stab_param_c
+            h_c = self.mesh.hmin()
 
         G_p_O2 = d_pla_O2*inner(grad(self.p_O2), grad(v))*dx
         G_p_O2 += -d_ba_O2/h_ba*Constant(p_air_O2)*v*ds(3)
         G_p_O2 += d_ba_O2/h_ba*self.p_O2*v*ds(3)
         G_p_O2 += inner(self.p_O2*self.u, n)*v*ds(2)
-        G_p_O2 += -inner(self.p_O2*self.u, grad(v))*dx
+        G_p_O2 += -b_1*h_p*inner(self.p_O2*self.u, grad(v))*dx # Término convectivo
         if hb:
             G_p_O2 += self.f('O2', self.p_O2, self.c_HbO2, self.c_HbCO2)*v*dx
 
@@ -360,19 +373,19 @@ class PerfusionGasExchangeModel():
         G_p_CO2 += -d_ba_CO2/h_ba*Constant(p_air_CO2)*w*ds(3)
         G_p_CO2 += d_ba_CO2/h_ba*self.p_CO2*w*ds(3)
         G_p_CO2 += inner(self.p_CO2*self.u, n)*w*ds(2)
-        G_p_CO2 += -inner(self.p_CO2*self.u, grad(w))*dx
+        G_p_CO2 += -b_2*h_p*inner(self.p_CO2*self.u, grad(w))*dx # Término convectivo
         if hb:
             G_p_CO2 += self.f('CO2', self.p_CO2, self.c_HbCO2, self.c_HbO2)*w*dx
 
         if hb:
             G_c_O2 = self.g('O2', self.p_O2, self.c_HbO2, self.c_HbCO2)*eta*dx
-            G_c_O2 += inner(self.c_HbO2*self.u, grad(eta))*dx
+            G_c_O2 += d_1*h_c*inner(self.c_HbO2*self.u, grad(eta))*dx # Término convectivo
             G_c_O2 += -inner(self.c_HbO2*self.u, n)*eta*ds(2)
 
             G_c_CO2 = self.g(
                 'CO2', self.p_CO2, self.c_HbCO2, self.c_HbO2
             )*xi*dx
-            G_c_CO2 += inner(self.c_HbCO2*self.u, grad(xi))*dx
+            G_c_CO2 += d_2*h_c*inner(self.c_HbCO2*self.u, grad(xi))*dx # Término convectivo
             G_c_CO2 += -inner(self.c_HbCO2*self.u, n)*xi*ds(2)
         else:
             G_c_O2 = self.c_HbO2*eta*dx
@@ -477,7 +490,6 @@ class PerfusionGasExchangeModel():
                 }}
             )
 
-            
         else:
             if preconditioner is None:
                 print(f"Solving with solver = {solver} and without preconditioner.")

@@ -13,7 +13,7 @@ from fenics import *
 from dolfin import *
 from src.boundaries import *
 
-class PerfusionGasExchangeModel():
+class NondimensionalPerfusionGasExchangeModel():
     '''FEniCS simulater class for microscale alveolar perfusion and gas exchange
     model.
     '''
@@ -36,6 +36,68 @@ class PerfusionGasExchangeModel():
             file.write(f'Parameters used:\n\n')
             for param in self.params:
                 file.write(f'Parameter {param}: {self.params[param]}\n')
+
+    def instance_nondimensional_params(self):
+        U = self.params['u_in']
+        L = 6
+        rho = 1E-3 # uPa s^2 um^-2
+        mu = 3499.7 # uPa s
+        
+        conv = 1E6*133.322 # uPa / mmHg
+        
+        self.U = U
+        self.L = L
+        self.rho = rho
+        self.mu = mu
+        self.conv = conv
+        
+        self.Re = (rho*U*L)/mu
+        self.Tau = mu*U/L
+        self.Pe_O2 = L*U/(self.params['d_pla_O2'])
+        self.Pe_CO2 = L*U/(self.params['d_pla_CO2'])
+        self.Dap_T_O2 = self.params['k_prime_O2']*self.params['c_t']*(L**2)/self.params['d_pla_O2']
+        self.Dap_T_CO2 = self.params['k_prime_CO2']*self.params['c_t']*(L**2)/self.params['d_pla_CO2']
+        self.Dap_O2 = self.params['k_prime_O2']*self.params['c_HbO2_in']*(L**2)/self.params['d_pla_O2']
+        self.Dap_CO2 = self.params['k_prime_CO2']*self.params['c_HbCO2_in']*(L**2)/self.params['d_pla_CO2']
+        self.Da_O2 = self.params['k_O2']*(L**2)/self.params['d_pla_O2']
+        self.Da_CO2 = self.params['k_CO2']*(L**2)/self.params['d_pla_CO2']        
+        self.H_O2  = conv*self.params['c_HbO2_in']/(rho*(U**2)*self.params['beta_O2'])
+        self.H_CO2 = conv*self.params['c_HbCO2_in']/(rho*(U**2)*self.params['beta_CO2'])
+
+        print(f"Re = {self.Re}")
+        print(f"Tau = {self.Tau}")
+        print(f"Pe_O2 = {self.Pe_O2}")
+        print(f"Pe_CO2 = {self.Pe_CO2}")
+        print(f"Da'_(T, O2) = {self.Dap_T_O2}")
+        print(f"Da'_(T, CO2) = {self.Dap_T_CO2}")
+        print(f"Da'_O2 = {self.Dap_O2}")
+        print(f"Da'_CO2 = {self.Dap_CO2}")
+        print(f"Da_O2 = {self.Da_O2}")
+        print(f"Da_CO2 = {self.Da_CO2}")
+        print(f"H_O2 = {self.H_O2}")
+        print(f"H_CO2 = {self.H_CO2}")
+
+        self.S_O2_T = (mu*self.params['beta_O2']*self.params['k_prime_O2'])*self.params['c_t']/(self.params['c_HbO2_in']) * (1/conv)
+        self.S_CO2_T = (mu*self.params['beta_CO2']*self.params['k_prime_CO2'])*self.params['c_t']/(self.params['c_HbCO2_in']) * (1/conv)
+        self.S_O2_O2 = mu*self.params['beta_O2']*self.params['k_prime_O2'] * (1/conv)
+        self.S_CO2_CO2 = mu*self.params['beta_CO2']*self.params['k_prime_CO2']* (1/conv)
+        self.S_O2_CO2 = (mu*self.params['beta_O2']*self.params['k_prime_O2']*self.params['c_HbCO2_in'])/self.params['c_HbO2_in']* (1/conv)
+        self.S_CO2_O2 = (mu*self.params['beta_CO2']*self.params['k_prime_CO2']*self.params['c_HbO2_in'])/self.params['c_HbCO2_in']* (1/conv)
+        self.W_O2 = L*self.params['k_O2']/U
+        self.W_CO2 = L*self.params['k_CO2']/U
+        self.R_O2 = (self.params['d_ba_O2']*L)/(self.params['d_pla_O2']*self.params['h_ba'])
+        self.R_CO2 = (self.params['d_ba_CO2']*L)/(self.params['d_pla_CO2']*self.params['h_ba'])
+
+        print(f"S_(O2, T) = {self.S_O2_T}")
+        print(f"S_(CO2, T) = {self.S_CO2_T}")
+        print(f"S_(O2, O2) = {self.S_O2_O2}")
+        print(f"S_(CO2, CO2) = {self.S_CO2_CO2}")
+        print(f"S_(O2, CO2) = {self.S_O2_CO2}")
+        print(f"S_(CO2, O2) = {self.S_CO2_O2}")
+        print(f"W_O2 = {self.W_O2}")
+        print(f"W_CO2 = {self.W_CO2}")
+        print(f"R_O2 = {self.R_O2}")
+        print(f"R_CO2 = {self.R_CO2}")
 
     def import_mesh(self, mesh_path=os.path.join("../raw-data/40_h_repaired", "40_h_repaired.xdmf"), meshtype=None, type="h5", periodic=False, max_dims=[41.2, 40.7, 40.7], min_dims=[-1.2, -0.7, -0.7], tol=0.2, box_side_length=None, box_nodes=None):
         '''Imports mesh from .h5 file for use in simulations.
@@ -70,16 +132,6 @@ class PerfusionGasExchangeModel():
                 print("Created b")
 
         print("Coordinates have shape ", np.shape(self.mesh.coordinates()))
-        
-#         dir_arr_flow = np.array(
-#                 [coords[0] for coords in self.mesh.coordinates()]
-#         )
-#         dir_arr_y = np.array(
-#                 [coords[1] for coords in self.mesh.coordinates()]
-#         )
-#         dir_arr_z = np.array(
-#                 [coords[2] for coords in self.mesh.coordinates()]
-#         )
 
         self.dir_max_flow =  max_dims[0]
         self.dir_min_flow =  min_dims[0]
@@ -172,7 +224,7 @@ class PerfusionGasExchangeModel():
         
         # Declare Dirichlet boundary conditions for (P)
         self.p_dbc = [
-            DirichletBC(self.W_h, self.params['p_min'], self.gamma_out)
+            DirichletBC(self.W_h, self.L*self.params['p_min']/(self.mu*self.U), self.gamma_out)
         ]
 
         # Assemble problem
@@ -182,7 +234,7 @@ class PerfusionGasExchangeModel():
         v = TestFunction(self.W_h)
         a = inner(grad(p), grad(v))*dx
         F = Constant(0)*v*dx
-        F += self.params["u_in"]*self.params["mu"]/self.params["kappa"]*v*ds(1)
+        F += (self.L**2)/self.params["kappa"]*v*ds(1)
 
         # Solve problem
 
@@ -209,7 +261,7 @@ class PerfusionGasExchangeModel():
         print("P problem solved")
 
         self.u = project(
-            -1/self.params['mu']*self.params['kappa']*grad(self.p),
+            -1/(self.L**2)*self.params['kappa']*grad(self.p),
             self.V_h
         )
         print("u problem solved")
@@ -252,35 +304,9 @@ class PerfusionGasExchangeModel():
         '''
         c_t = self.params['c_t']
         if X == 'O2':
-#             beta_O2 = self.params['beta_O2']
-#             k_O2 = self.params['k_O2']
-#             k_prime_O2 = self.params['k_prime_O2']
-#             first_term = k_prime_O2*(c_t - c_HbX - c_HbY)*p_X
-#             alpha = 1
-#             second_term = -k_O2/beta_O2*c_HbX
-#             beta = 1
-
-            c_1 = 2.85E43
-            c_2 = 2.285E44
-        
-            return c_1*(c_t-c_HbX-c_HbY)*p_X- c_2*c_HbX
-     
-            return first_term + second_term
+            return(self.Dap_T_O2 - self.Dap_O2*c_HbX - self.Dap_CO2*c_HbY)*p_X - self.Da_O2*self.H_O2/self.Re *c_HbX
         elif X == 'CO2':
-#             beta_CO2 = self.params['beta_CO2']
-#             k_CO2 = self.params['k_CO2']
-#             k_prime_CO2 = self.params['k_prime_CO2']
-#             first_term = k_prime_CO2*(c_t - c_HbX - c_HbY)*p_X
-#             alpha = 1
-#             second_term = -k_CO2/beta_CO2*c_HbX
-#             beta = 1
-#             return alpha*first_term + beta*second_term
-
-            c_1 = 1.0E40
-            c_2 = 1.970E50
-        
-            return c_1*(c_t-c_HbX-c_HbY)*p_X - c_2*c_HbX
-
+            return(self.Dap_T_CO2 - self.Dap_O2*c_HbX - self.Dap_CO2*c_HbY)*p_X - self.Da_CO2*self.H_CO2/self.Re *c_HbX
         else:
             raise ValueError('Gas species in f must be O2 or CO2.')
 
@@ -293,22 +319,13 @@ class PerfusionGasExchangeModel():
         c_HbY: concentration of Hb(Y). (FEniCS Function)
         '''
         if X == 'O2':
-            
-            c_1 = 3.6167E22
-            c_2 = 29E22
-        
-            return c_1*(c_t-c_HbX-c_HbY)*p_X - c_2*c_HbX
-        
+            return(self.S_O2_T - self.S_O2_O2*c_HbX - self.S_O2_CO2*c_HbY)*p_X - self.W_O2*c_HbX
         elif X == 'CO2':
-            
-            c_1 = 2.538E20
-            c_2 = 5E30
-        
-            return c_1*(c_t-c_HbX-c_HbY)*p_X - c_2*c_HbX
+            return(self.S_CO2_T - self.S_CO2_O2*c_HbX - self.S_CO2_CO2*c_HbY)*p_X - self.W_CO2*c_HbX
         else:
             raise ValueError('Gas species in f must be O2 or CO2.')
 
-    def sim_t(self, hb=True, save=True, guess=None, solver=None, preconditioner=None, opt=None):
+    def sim_t(self, hb=True, save=True, guess=None, solver=None, preconditioner=None, opt=None, stab_param=None):
         '''Solves the steady state blood-side transport (T) problem of the
         model.
         
@@ -341,13 +358,7 @@ class PerfusionGasExchangeModel():
 
         # Instance function space for the multi-field problem
         element = VectorElement('P', tetrahedron, 1, dim=4) # Era 3 previamente
-        self.M_h = FunctionSpace(self.mesh, element)       
-        
-        # Revisar esto
-        # elem2 = VectorElement('P', tetrahedron, 2, dim=1)
-        # elem1 = VectorElement('P', tetrahedron, 1, dim=1)
-        # mixed = MixedElement([elem1, elem1, elem2, elem2])
-        # self.M_h = FunctionSpace(self.mesh, mixed)
+        self.M_h = FunctionSpace(self.mesh, element)  
 
         ds = Measure('ds', domain=self.mesh, subdomain_data=self.boundaries)
 
@@ -365,93 +376,38 @@ class PerfusionGasExchangeModel():
 
         n = FacetNormal(self.mesh)
         
-        # Define residuals
+        # Define residuals 
 
-        G_p_O2 = d_pla_O2*inner(grad(self.p_O2), grad(v))*dx
-        G_p_O2 += -d_ba_O2/h_ba*Constant(p_air_O2)*v*ds(3)
-        G_p_O2 += d_ba_O2/h_ba*self.p_O2*v*ds(3)
-        G_p_O2 += inner(self.p_O2*self.u, n)*v*ds(2)
-        G_p_O2 += -inner(self.p_O2*self.u, grad(v))*dx
+        G_p_O2 = inner(grad(self.p_O2), grad(v))*dx
+        G_p_O2 += -self.R_O2/self.Tau*Constant(p_air_O2)*v*ds(3)
+        G_p_O2 += self.R_O2*self.p_O2*v*ds(3)
+        G_p_O2 += self.Pe_O2*inner(self.p_O2*self.u, n)*v*ds(2)
+        G_p_O2 += -self.Pe_O2*inner(self.p_O2*self.u, grad(v))*dx # Término convectivo
         if hb:
             G_p_O2 += self.f('O2', self.p_O2, self.c_HbO2, self.c_HbCO2)*v*dx
 
-        G_p_CO2 = d_pla_CO2*inner(grad(self.p_CO2), grad(w))*dx
-        G_p_CO2 += -d_ba_CO2/h_ba*Constant(p_air_CO2)*w*ds(3)
-        G_p_CO2 += d_ba_CO2/h_ba*self.p_CO2*w*ds(3)
-        G_p_CO2 += inner(self.p_CO2*self.u, n)*w*ds(2)
-        G_p_CO2 += -inner(self.p_CO2*self.u, grad(w))*dx
+        G_p_CO2 = inner(grad(self.p_CO2), grad(w))*dx
+        G_p_CO2 += -self.R_CO2/self.Tau*Constant(p_air_CO2)*w*ds(3)
+        G_p_CO2 += self.R_CO2*self.p_CO2*w*ds(3)
+        G_p_CO2 += self.Pe_O2*inner(self.p_CO2*self.u, n)*w*ds(2)
+        G_p_CO2 += -self.Pe_O2*inner(self.p_CO2*self.u, grad(w))*dx # Término convectivo
         if hb:
             G_p_CO2 += self.f('CO2', self.p_CO2, self.c_HbCO2, self.c_HbO2)*w*dx
 
         if hb:
             G_c_O2 = self.g('O2', self.p_O2, self.c_HbO2, self.c_HbCO2)*eta*dx
-            G_c_O2 += inner(self.c_HbO2*self.u, grad(eta))*dx
+            G_c_O2 += inner(self.c_HbO2*self.u, grad(eta))*dx # Término convectivo
             G_c_O2 += -inner(self.c_HbO2*self.u, n)*eta*ds(2)
 
-            G_c_CO2 = self.g(
-                'CO2', self.p_CO2, self.c_HbCO2, self.c_HbO2
-            )*xi*dx
-            G_c_CO2 += inner(self.c_HbCO2*self.u, grad(xi))*dx
+            G_c_CO2 = self.g('CO2', self.p_CO2, self.c_HbCO2, self.c_HbO2)*xi*dx
+            G_c_CO2 += inner(self.c_HbCO2*self.u, grad(xi))*dx # Término convectivo
             G_c_CO2 += -inner(self.c_HbCO2*self.u, n)*xi*ds(2)
+
         else:
             G_c_O2 = self.c_HbO2*eta*dx
             G_c_CO2 = self.c_HbCO2*xi*dx
 
         G = G_p_O2 + G_p_CO2 + G_c_O2 + G_c_CO2      
-        
-
-#         # Define residuals
-
-#         G_p_O2 = d_pla_O2*inner(grad(self.p_O2), grad(v))*dx
-#         G_p_O2 += -d_ba_O2/h_ba*Constant(p_air_O2)*v*ds(3)
-#         G_p_O2 += d_ba_O2/h_ba*self.p_O2*v*ds(3)
-#         G_p_O2 += inner(self.p_O2*self.u, n)*v*ds(2)
-#         G_p_O2 += -inner(self.p_O2*self.u, grad(v))*dx
-
-#         if hb:
-#             if opt is None or opt == 0 or opt == 4:
-#                 G_p_O2 += self.f('O2', self.p_O2, self.c_HbO2, self.c_HbCO2)*v*dx # opt == 0
-
-#         G_p_CO2 = d_pla_CO2*inner(grad(self.p_CO2), grad(w))*dx
-#         G_p_CO2 += -d_ba_CO2/h_ba*Constant(p_air_CO2)*w*ds(3)
-#         G_p_CO2 += d_ba_CO2/h_ba*self.p_CO2*w*ds(3)
-#         G_p_CO2 += inner(self.p_CO2*self.u, n)*w*ds(2)
-#         G_p_CO2 += -inner(self.p_CO2*self.u, grad(w))*dx
-
-#         if hb:
-#             if opt is None or opt == 0 or opt == 4:
-#                 G_p_CO2 += self.f('CO2', self.p_CO2, self.c_HbCO2, self.c_HbO2)*w*dx # opt == 0
-
-#         if hb:
-#             if opt is None:
-#                 G_c_O2 = self.g('O2', self.p_O2, self.c_HbO2, self.c_HbCO2)*eta*dx      # opt == 1
-#                 G_c_O2 += inner(self.c_HbO2*self.u, grad(eta))*dx                       # opt == 2
-#                 G_c_O2 += -inner(self.c_HbO2*self.u, n)*eta*ds(2)                       # opt == 3
-#                 G_c_CO2 = self.g('CO2', self.p_CO2, self.c_HbCO2, self.c_HbO2)*xi*dx    # opt == 1
-#                 G_c_CO2 += inner(self.c_HbCO2*self.u, grad(xi))*dx                      # opt == 2
-#                 G_c_CO2 += -inner(self.c_HbCO2*self.u, n)*xi*ds(2)                      # opt == 3
-#             elif opt == 1:
-#                 G_c_O2 = self.g('O2', self.p_O2, self.c_HbO2, self.c_HbCO2)*eta*dx 
-#                 G_c_CO2 = self.g('CO2', self.p_CO2, self.c_HbCO2, self.c_HbO2)*xi*dx 
-#             elif opt == 2:
-#                 G_c_O2 += inner(self.c_HbO2*self.u, grad(eta))*dx 
-#                 G_c_CO2 += inner(self.c_HbCO2*self.u, grad(xi))*dx         
-#             elif opt == 3:
-#                 G_c_O2 += -inner(self.c_HbO2*self.u, n)*eta*ds(2)    
-#                 G_c_CO2 += -inner(self.c_HbCO2*self.u, n)*xi*ds(2)   
-#             elif opt == 4:
-#                 G_c_O2 = self.g('O2', self.p_O2, self.c_HbO2, self.c_HbCO2)*eta*dx      # opt == 1
-#                 G_c_O2 += inner(self.c_HbO2*self.u, grad(eta))*dx                       # opt == 2
-#                 G_c_O2 += -inner(self.c_HbO2*self.u, n)*eta*ds(2)                       # opt == 3
-#                 G_c_CO2 = self.g('CO2', self.p_CO2, self.c_HbCO2, self.c_HbO2)*xi*dx    # opt == 1
-#             else:
-#                 raise ValueError("Option not valid for non-linear transport problem.")
-                
-#         else:
-#             G_c_O2 = self.c_HbO2*eta*dx
-#             G_c_CO2 = self.c_HbCO2*xi*dx
-
-#         G = G_p_O2 + G_p_CO2 + G_c_O2 + G_c_CO2
 
         if save:
             if guess is None:
@@ -469,18 +425,18 @@ class PerfusionGasExchangeModel():
         # Declare Dirichlet boundary conditions for (T)
         self.t_dbc = [
             DirichletBC(
-                self.M_h.sub(0), Constant(self.params['p_O2_in']), self.gamma_in
+                self.M_h.sub(0), Constant(self.L*self.params['p_O2_in']/(self.mu*self.U)), self.gamma_in
             ),
             DirichletBC(
-                self.M_h.sub(1), Constant(self.params['p_CO2_in']),
+                self.M_h.sub(1), Constant(self.L*self.params['p_CO2_in']/(self.mu*self.U)),
                 self.gamma_in
             ),
             DirichletBC(
-                self.M_h.sub(2), Constant(self.params['c_HbO2_in']),
+                self.M_h.sub(2), Constant(1),
                 self.gamma_in
             ),
             DirichletBC(
-                self.M_h.sub(3), Constant(self.params['c_HbCO2_in']),
+                self.M_h.sub(3), Constant(1),
                 self.gamma_in
             )
         ]
@@ -496,7 +452,6 @@ class PerfusionGasExchangeModel():
                 }}
             )
 
-            
         else:
             if preconditioner is None:
                 print(f"Solving with solver = {solver} and without preconditioner.")
@@ -511,44 +466,7 @@ class PerfusionGasExchangeModel():
 
             elif preconditioner == "K":
                 print("Starting Krylov solver formulation")
-                # P2 = VectorElement("Lagrange", mesh.ufl_cell(), 2)
-                # P1 = FiniteElement("Lagrange", mesh.ufl_cell(), 1)
-                # TH = P2 * P1
-                # W = FunctionSpace(mesh, TH)
-                # (u, p) = TrialFunctions(W)
-                # (v, q) = TestFunctions(W)
-                # preconditioner form b
-                # b = inner(grad(u), grad(v))*dx + p*q*dx
-                # Assemble system
-                # A, bb = assemble_system(a, L, bcs)
-                # Assemble preconditioner system
-                # P, btmp = assemble_system(b, L, bcs)
-                # Create Krylov solver and AMG preconditioner
-                # solver = KrylovSolver(krylov_method, "amg")
-                # Associate operator (A) and preconditioner matrix (P)
-                # solver.set_operators(A, P)
-                # U = Function(W)
-                # solver.solve(U.vector(), bb)
                 
-                # En este caso
-                # v, w, eta, xi = TestFunctions(self.M_h)
-                # element = VectorElement('P', tetrahedron, 2, dim=4)
-                # self.M_h = FunctionSpace(self.mesh, element)     
-                # x = project(guess, self.M_h)
-                # self.p_O2, self.p_CO2, self.c_HbO2, self.c_HbCO2 = split(x) # trial functions
-                # v, w, eta, xi = TestFunctions(self.M_h)
-    
-                #   Krylov method  |  Description
-                # --------------------------------------------------------------
-                # bicgstab       |  Biconjugate gradient stabilized method
-                # cg             |  Conjugate gradient method
-                # default        |  default Krylov method
-                # gmres          |  Generalized minimal residual method
-                # minres         |  Minimal residual method
-                # richardson     |  Richardson method
-                # tfqmr          |  Transpose-free quasi-minimal residual method
-                # primero trial, después test
-            
                 F = Constant(0)*v*dx
                 b =  inner(grad(self.p_O2),grad(v))     + inner(grad(self.p_CO2),grad(w))
                 b += inner(grad(self.c_HbO2),grad(eta)) + inner(grad(self.c_HbCO2),grad(xi))
