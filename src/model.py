@@ -64,9 +64,9 @@ class PerfusionGasExchangeModel():
             if box_nodes is None:
                 raise ValueError("Parameter box_nodes_amount should be non-zero.")
             else:
-                max_dims = [box_side_length, box_side_length, box_side_length]
+                max_dims = [box_side_length[0], box_side_length[1], box_side_length[2]]
                 min_dims = [0,0,0]
-                self.mesh = BoxMesh(Point(0,0,0), Point(box_side_length,box_side_length,box_side_length), box_nodes, box_nodes, box_nodes)
+                self.mesh = BoxMesh(Point(0,0,0), Point(20,20,200), 20,20,200)
                 print("Created b")
 
         print("Coordinates have shape ", np.shape(self.mesh.coordinates()))
