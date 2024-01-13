@@ -13,9 +13,10 @@ import meshio
 import os
 import sys
 
-from utils import *
-from db_sats import *
-from parameters import instance_params
+sys.path.append('../')
+from src.utils import *
+from src.db_sats import *
+from src.parameters import instance_params
 
 class PerfusionGasExchangeModel():
 
