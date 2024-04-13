@@ -1,10 +1,10 @@
 def instance_params():
     perfusion_params = {
-                "mu": 3.5*0.00750062E-3,
-                "kappa": 3.5*0.00750062E-3*5000,
-                "pmin":8.0,
-                "uin":160.0
-            }
+        "mu": 22.5E-6,                    # mmHg s
+        "kappa": 0.13126,                 # um^2
+        "pmin": 8.0,                      # mmHg
+        "uin": 160.0                      # um/s
+    }
 
     dash_params = {
         "alpha_CO2": 3.27E-5,             # M mmHg^-1

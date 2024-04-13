@@ -31,7 +31,7 @@ class PerfusionGasExchangeModel():
         self.pc_type = pc_type
         self.pc_factor_mat_solver_type = pc_factor_mat_solver_type
 
-    def Setup(self, domain, atol=1E-10, max_dims=[0,0,0], min_dims=[0,0,0], imported=False):
+    def Setup(self, domain, atol=1E-10, max_dims=[0,0,0], min_dims=[0,0,0], imported=False, infinite=False):
 
         # topology, cells, geometry = plot.vtk_mesh(domain, domain.topology.dim)
         
@@ -50,13 +50,15 @@ class PerfusionGasExchangeModel():
         self.imported = imported
 
         def inlet(x):
-            return np.isclose(x[0], self.min_dims[0], atol=atol)
+            return np.isclose(x[0], self.min_dims[0], atol=self.atol)
         def outlet(x):
-            return np.isclose(x[0], self.max_dims[0], atol=atol)
+            return np.isclose(x[0], self.max_dims[0], atol=self.atol)
         def all(x):
             return np.full(x.shape[1], True, dtype=bool)
         def both(x):
             return np.logical_or(inlet(x), outlet(x))
+        def sides(x):
+            return np.logical_or(np.isclose(x[2], self.min_dims[2], atol=self.atol), np.isclose(x[2], self.max_dims[2], atol=self.atol))
 
         self.fdim = domain.topology.dim - 1
 
@@ -65,14 +67,37 @@ class PerfusionGasExchangeModel():
         all_facets = mesh.locate_entities_boundary(domain, self.fdim, all)
         both_facets = mesh.locate_entities_boundary(domain, self.fdim, both)
         air_facets = np.setdiff1d(all_facets, both_facets)
-
-        marked_facets = np.hstack([inlet_facets, outlet_facets, air_facets])
-        marked_values = np.hstack([np.full_like(inlet_facets, 1), 
+        if infinite:
+            side_facets = mesh.locate_entities_boundary(domain, self.fdim, sides)
+            marked_facets = np.hstack([inlet_facets, outlet_facets, side_facets])
+            marked_values = np.hstack([np.full_like(inlet_facets, 1), 
                                    np.full_like(outlet_facets, 2),
-                                   np.full_like(air_facets, 3)])
-        
+                                   np.full_like(side_facets, 3)])
+            # print(side_facets)
+            print(f"Total number = {all_facets.shape[0]}")
+            print(f"Inlet number = {inlet_facets.shape[0]}")
+            print(f"Outlet number = {outlet_facets.shape[0]}")
+            print(f"Air number = {air_facets.shape[0]}")
+            print(f"Side number = {side_facets.shape[0]}")
+        else:
+            marked_facets = np.hstack([inlet_facets, outlet_facets, air_facets])
+            marked_values = np.hstack([np.full_like(inlet_facets, 1), 
+                                    np.full_like(outlet_facets, 2),
+                                    np.full_like(air_facets, 3)])
+            # print(air_facets)
+            print(f"Total number = {all_facets.shape[0]}")
+            print(f"Inlet number = {inlet_facets.shape[0]}")
+            print(f"Outlet number = {outlet_facets.shape[0]}")
+            print(f"Air number = {air_facets.shape[0]}")
+
         sorted_facets = np.argsort(marked_facets)
         self.facet_tag = mesh.meshtags(domain, self.fdim, marked_facets[sorted_facets], marked_values[sorted_facets])
+
+        metadata = {"quadrature_degree": 4}
+
+        self.ds = ufl.Measure('ds', domain=domain, subdomain_data=self.facet_tag, metadata=metadata)
+        self.dx = ufl.Measure("dx", domain=domain, metadata=metadata)
+        self.n = ufl.FacetNormal(domain)
 
     def parameter_setup(self):
 
@@ -236,7 +261,7 @@ class PerfusionGasExchangeModel():
         # Carbon dioxide
         F_CO2 =  d_pla_CO2 * ufl.inner(ufl.grad(c_CO2), ufl.grad(w)) * dx           # Dif 1
         F_CO2 += (d_ba_CO2 / h_ba) * w * (beta_CO2*p_CO2) * ds(3)                   # Dif 2 (variable)
-        F_CO2 -= (d_ba_CO2 / h_ba) * w * beta_CO2 * p_CO2_air * ds(3)               # Dif 2 (constante)
+        F_CO2 -= (d_ba_CO2 / h_ba) * w * beta_CO2 * p_CO2_air * ds(3)               # Dif 3 (constante)
         F_CO2 += ufl.inner(self.u * c_CO2, n) * w * ds(2)                           # Adv 1
         F_CO2 -= ufl.inner(self.u * c_CO2, ufl.grad(w)) * dx                        # Adv 2
 
@@ -279,29 +304,24 @@ class PerfusionGasExchangeModel():
         log.set_log_level(log.LogLevel.ERROR)
         _p_O2, _p_CO2 = p_XY.split()
         
-        if plot:
-            plot_scalar_field(V.sub(0), _p_O2)
-            plot_scalar_field(V.sub(1), _p_CO2)
+        # if plot:
+        #     plot_scalar_field(V.sub(0).collapse()[0], _p_O2)
+        #     plot_scalar_field(V.sub(1).collapse()[0], _p_CO2)
 
-        p_O2_solution = fem.Function(fem.FunctionSpace(domain, ('Lagrange', 1)), name="p_O2")
-        p_CO2_solution = fem.Function(fem.FunctionSpace(domain, ('Lagrange', 1)), name="p_CO2")
+        V_mesh = fem.functionspace(domain, ('Lagrange', 1))
 
-        project(_p_O2, p_O2_solution)
-        project(_p_CO2, p_CO2_solution)
+        # p_O2_solution = fem.Function(fem.FunctionSpace(domain, ('Lagrange', 1)), name="p_O2")
+        # p_CO2_solution = fem.Function(fem.FunctionSpace(domain, ('Lagrange', 1)), name="p_CO2")
+        p_O2_solution = fem.Function(V_mesh, name="p_O2")
+        p_O2_solution.interpolate(fem.Expression(_p_O2, V_mesh.element.interpolation_points()))
+
+        p_CO2_solution = fem.Function(V_mesh, name="p_CO2")
+        p_CO2_solution.interpolate(fem.Expression(_p_CO2, V_mesh.element.interpolation_points()))
+
+        # project(_p_O2, p_O2_solution)
+        # project(_p_CO2, p_CO2_solution)
 
         if save:
-            # print(type(p_XY))
-            
-            # print(type(_p_O2))   
-
-            # with io.VTKFile(domain.comm, os.path.join(self.results_path, "gas_exchange/p_O2.pvd"), "w") as file:
-            #     file.write_mesh(domain)
-            #     file.write_function(_p_O2, 0.)
-
-            # with io.VTKFile(domain.comm, os.path.join(self.results_path, "gas_exchange/p_CO2.pvd"), "w") as file:
-            #     file.write_mesh(domain)
-            #     file.write_function(_p_CO2, 0.)
-
             scalar_field_to_xdmf(domain, p_O2_solution, 
                         folder = os.path.join(self.results_path, "gas_exchange/"), 
                         name = "p_O2.xdmf")
@@ -315,21 +335,19 @@ class PerfusionGasExchangeModel():
             t1 = time.time()
 
             # S_HbO2
-            S_HbO2_out = fem.Function(fem.FunctionSpace(domain, ('Lagrange',1)), name="S_HbO2")
-            project(S_HbO2, S_HbO2_out) 
-
-            S_HbO2_xdmf = io.XDMFFile(domain.comm, os.path.join(self.results_path, "gas_exchange/S_HbO2.xdmf"), "w")
-            S_HbO2_xdmf.write_mesh(domain)
-            S_HbO2_xdmf.write_function(S_HbO2_out, 0.)
+            S_HbO2_solution = fem.Function(V_mesh, name="S_HbO2")
+            S_HbO2_solution.interpolate(fem.Expression(S_HbO2, V_mesh.element.interpolation_points()))
+            scalar_field_to_xdmf(domain, S_HbO2_solution, 
+                        folder = os.path.join(self.results_path, "gas_exchange/"), 
+                        name = "S_HbO2.xdmf")
 
             # S_HbCO2
-            S_HbCO2_out = fem.Function(fem.FunctionSpace(domain, ('Lagrange',1)), name="S_HbCO2") 
-            project(S_HbCO2, S_HbCO2_out)
-
-            S_HbCO2_xdmf = io.XDMFFile(domain.comm, os.path.join(self.results_path, "gas_exchange/S_HbCO2.xdmf"), "w")
-            S_HbCO2_xdmf.write_mesh(domain)
-            S_HbCO2_xdmf.write_function(S_HbCO2_out, 0.)
-
+            S_HbCO2_solution = fem.Function(V_mesh, name="S_HbCO2")
+            S_HbCO2_solution.interpolate(fem.Expression(S_HbCO2, V_mesh.element.interpolation_points()))
+            scalar_field_to_xdmf(domain, S_HbCO2_solution, 
+                        folder = os.path.join(self.results_path, "gas_exchange/"), 
+                        name = "S_HbCO2.xdmf")
+            
             # # grad(p_O2)
             # grad_p_O2_out = fem.Function(fem.VectorFunctionSpace(domain, ('CG',1)), name="grad(p_O2)") 
             # project(ufl.grad(p_O2), grad_p_O2_out)
@@ -363,54 +381,74 @@ class PerfusionGasExchangeModel():
             # j_CO2_xdmf.write_function(j_CO2_out, 0.) 
 
             # c_O2
-            c_O2_out = fem.Function(fem.FunctionSpace(domain, ('Lagrange',1)), name="c_O2")
-            project(c_O2, c_O2_out) 
+            # c_O2_out = fem.Function(V_mesh, name="c_O2")
+            # project(c_O2, c_O2_out) 
 
-            c_O2_xdmf = io.XDMFFile(domain.comm, os.path.join(self.results_path, "gas_exchange/c_O2.xdmf"), "w")
-            c_O2_xdmf.write_mesh(domain)
-            c_O2_xdmf.write_function(c_O2_out, 0.)
+            # c_O2_xdmf = io.XDMFFile(domain.comm, os.path.join(self.results_path, "gas_exchange/c_O2.xdmf"), "w")
+            # c_O2_xdmf.write_mesh(domain)
+            # c_O2_xdmf.write_function(c_O2_out, 0.)
+
+            c_O2_solution = fem.Function(V_mesh, name="c_O2")
+            c_O2_solution.interpolate(fem.Expression(c_O2, V_mesh.element.interpolation_points()))
+            scalar_field_to_xdmf(domain, c_O2_solution, 
+                        folder = os.path.join(self.results_path, "gas_exchange/"), 
+                        name = "c_O2.xdmf")
 
             # c_CO2
-            c_CO2_out = fem.Function(fem.FunctionSpace(domain, ('Lagrange',1)), name="c_CO2") 
-            project(c_CO2, c_CO2_out)
+            # c_CO2_out = fem.Function(V_mesh, name="c_CO2") 
+            # project(c_CO2, c_CO2_out)
 
-            c_CO2_xdmf = io.XDMFFile(domain.comm, os.path.join(self.results_path, "gas_exchange/c_CO2.xdmf"), "w")
-            c_CO2_xdmf.write_mesh(domain)
-            c_CO2_xdmf.write_function(c_CO2_out, 0.)
+            # c_CO2_xdmf = io.XDMFFile(domain.comm, os.path.join(self.results_path, "gas_exchange/c_CO2.xdmf"), "w")
+            # c_CO2_xdmf.write_mesh(domain)
+            # c_CO2_xdmf.write_function(c_CO2_out, 0.)
+
+            
+            c_CO2_solution = fem.Function(V_mesh, name="c_CO2")
+            c_CO2_solution.interpolate(fem.Expression(c_CO2, V_mesh.element.interpolation_points()))
+            scalar_field_to_xdmf(domain, c_CO2_solution, 
+                        folder = os.path.join(self.results_path, "gas_exchange/"), 
+                        name = "c_CO2.xdmf")
 
             # bicarbonate CO2 content
-            bic_out = fem.Function(fem.FunctionSpace(domain, ('Lagrange',1)), name="bic") 
-            project(bic*p_CO2, bic_out)
+            # bic_out = fem.Function(V_mesh, name="bic") 
+            # project(bic*p_CO2, bic_out)
 
-            bic_xdmf = io.XDMFFile(domain.comm, os.path.join(self.results_path, "gas_exchange/bic.xdmf"), "w")
-            bic_xdmf.write_mesh(domain)
-            bic_xdmf.write_function(bic_out, 0.)    
+            # bic_xdmf = io.XDMFFile(domain.comm, os.path.join(self.results_path, "gas_exchange/bic.xdmf"), "w")
+            # bic_xdmf.write_mesh(domain)
+            # bic_xdmf.write_function(bic_out, 0.)    
+
+            bic_solution = fem.Function(V_mesh, name="bic")
+            bic_solution.interpolate(fem.Expression(bic*p_CO2, V_mesh.element.interpolation_points()))
+            scalar_field_to_xdmf(domain, bic_solution, 
+                        folder = os.path.join(self.results_path, "gas_exchange/"), 
+                        name = "bic.xdmf")
+
 
             print(f"Finished postprocessing at t = {time.time() - t1} s.")   
 
-            self.S_HbO2 = S_HbO2_out
-            self.S_HbCO2 = S_HbCO2_out
-            self.c_O2 = c_O2_out
-            self.c_CO2 = c_CO2_out
-            self.bic = bic_out
-            self.p_O2 = p_O2_solution
-            self.p_CO2 = p_CO2_solution
+            # self.S_HbO2 = S_HbO2_out
+            # self.S_HbCO2 = S_HbCO2_out
+            # self.c_O2 = c_O2_out
+            # self.c_CO2 = c_CO2_out
+            # self.bic = bic_out
+            # self.p_O2 = p_O2_solution
+            # self.p_CO2 = p_CO2_solution
 
         if plot_lines:
                 
             _, _, geometry = dolfinx.plot.vtk_mesh(domain, domain.topology.dim)
             max_dims = np.around([max(geometry[:,0]), max(geometry[:,1]), max(geometry[:,2])], 5)
             min_dims = np.around([min(geometry[:,0]), min(geometry[:,1]), min(geometry[:,2])], 5)
-            xs = np.linspace((max_dims[0]+min_dims[0])/2, max_dims[0], 3)
-            print(f"xs = {xs}")
+            zs = np.linspace((max_dims[2]+min_dims[2])/2, max_dims[2], 3)
+            print(f"zs = {zs}")
             y_fixed = (max_dims[1]+min_dims[1])/2
             print(f"y_fixed = {y_fixed}")
 
-            func_dict = {"S_HbO2": S_HbO2_out,
-                         "S_HbCO2": S_HbCO2_out,
-                         "c_O2": c_O2_out, 
-                         "c_CO2": c_CO2_out,
-                         "bic": bic_out,
+            func_dict = {"S_HbO2": S_HbO2_solution,
+                         "S_HbCO2": S_HbCO2_solution,
+                         "c_O2": c_O2_solution, 
+                         "c_CO2": c_CO2_solution,
+                         "bic": bic_solution,
                          "p_O2": p_O2_solution,
                          "p_CO2": p_CO2_solution}
 
@@ -419,15 +457,16 @@ class PerfusionGasExchangeModel():
             results_dict = {key: {} for key in func_dict.keys()} # {bic: {4: results_4, 6: results_6, 8: results_8}}
             # print(f"results_dict = {results_dict}")
 
-            for x in xs:
+            for z in zs:
                 # print(f"taking values along x = {x}")
-                all_func_names_x, all_func_values_x, z = plot_over_lines(domain, func_dict, x=x, y=y_fixed)
+                all_func_names_x, all_func_values_x, x = plot_over_lines(domain, func_dict, y=y_fixed, z=z)
                 # print(f"all_func_names_x = {all_func_names_x}")
                 for i in range(len(all_func_values_x)):
-                    results_dict[all_func_names_x[i]][f"{x}"] = all_func_values_x[i]
+                    results_dict[all_func_names_x[i]][f"{z}"] = all_func_values_x[i]
 
             self.results_dict = results_dict
             self.func_dict = func_dict
-            self.z = z
-
+            self.x = x
+            self.zs = zs
+            
         return p_XY

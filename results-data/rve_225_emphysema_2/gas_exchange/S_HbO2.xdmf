@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE Xdmf SYSTEM "Xdmf.dtd" []>
+<Xdmf Version="3.0" xmlns:xi="https://www.w3.org/2001/XInclude">
+  <Domain>
+    <Grid Name="Grid" GridType="Uniform">
+      <Topology TopologyType="Tetrahedron" NumberOfElements="104995" NodesPerElement="4">
+        <DataItem Dimensions="104995 4" NumberType="Int" Format="HDF">S_HbO2.h5:/Mesh/Grid/topology</DataItem>
+      </Topology>
+      <Geometry GeometryType="XYZ">
+        <DataItem Dimensions="30420 3" Format="HDF">S_HbO2.h5:/Mesh/Grid/geometry</DataItem>
+      </Geometry>
+    </Grid>
+    <Grid Name="S_HbO2" GridType="Collection" CollectionType="Temporal">
+      <Grid Name="S_HbO2" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0" />
+        <Attribute Name="S_HbO2" AttributeType="Scalar" Center="Node">
+          <DataItem Dimensions="30420 1" Format="HDF">S_HbO2.h5:/Function/S_HbO2/0</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+  </Domain>
+</Xdmf>

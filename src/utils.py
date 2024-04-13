@@ -106,7 +106,6 @@ def vector_field_to_xdmf(domain, vector_field, folder, name='mesh.xdmf', field_n
         # vector_field.name = field_name
         file.write_function(vector_field)
 
-
 def project(v, target_func, bcs=[]):
     # Ensure we have a mesh and attach to measure
     V = target_func.function_space
@@ -140,7 +139,58 @@ def domain_average(domain, v):
     vol = domain.comm.allreduce(fem.assemble_scalar(fem.form(fem.Constant(domain, dolfinx.default_real_type(1.0)) * ufl.dx)), op=MPI.SUM)
     return (1 / vol) * domain.comm.allreduce(fem.assemble_scalar(fem.form(v * ufl.dx)), op=MPI.SUM)
 
-def plot_over_lines(domain, field_dict: dict, x=0, y=0):
+def calculate_area(domain, ds, tag):
+    return domain.comm.allreduce(fem.assemble_scalar(fem.form(fem.Constant(domain, dolfinx.default_real_type(1.0)) * ds(tag))), op=MPI.SUM)
+
+def calculate_flux(domain, ds, tag, f, v, n):
+    return domain.comm.allreduce(fem.assemble_scalar(fem.form(ufl.inner(v, n) * f * ds(tag))), op=MPI.SUM)
+
+def calculate_integral_over_domain(domain, dx, f):
+    return domain.comm.allreduce(fem.assemble_scalar(fem.form(f * dx)), op=MPI.SUM)
+
+def calculate_integral_over_surface(domain, ds, tags, f):
+    result = 0
+    for tag in tags:
+        result += domain.comm.allreduce(fem.assemble_scalar(fem.form(f * ds(tag))), op=MPI.SUM)
+    return result
+    
+### Physical properties
+
+def O2_absorbed(model, domain, ds, air_tag = 3):
+
+    factor = 22.4 * 60 # mL/mmol * s/min
+    rve_volume = 225**3 # um3
+    lung_volume = 2500E12 # um3
+    volume_factor = lung_volume / rve_volume
+
+    f = -1 * model.t_params['d_ba_O2'] * model.dash_params['beta_O2'] * (1/model.t_params['h_ba']) * (model.t_params['p_O2_air'] - model.p_O2)
+
+    integral = calculate_integral_over_surface(domain, ds, [air_tag], f)
+    
+    return factor * volume_factor * integral
+
+def DL_O2(model, O2_absorbed):
+
+    return O2_absorbed / np.abs(model.t_params['p_O2_air'] - model.t_params['p_O2_in'])
+
+def CO2_released(model, domain, ds, air_tag = 3):
+    
+    factor = 22.4 * 60 # mL/mmol * s/min
+    rve_volume = 225**3 # um3
+    lung_volume = 2500E12 # um3
+    volume_factor = lung_volume / rve_volume
+
+    f = -1 * model.t_params['d_ba_CO2'] * model.dash_params['beta_CO2'] * (1/model.t_params['h_ba']) * (model.t_params['p_CO2_air'] - model.p_CO2)
+
+    integral = calculate_integral_over_surface(domain, ds, [air_tag], f)
+    
+    return factor * volume_factor * integral
+
+def DL_CO2(model, CO2_released):
+
+    return CO2_released / np.abs(model.t_params['p_CO2_air'] - model.t_params['p_CO2_in'])
+
+def plot_over_lines(domain, field_dict: dict, y=0, z=0):
     """
     Make plots for curves at slab points.
     """
@@ -152,17 +202,17 @@ def plot_over_lines(domain, field_dict: dict, x=0, y=0):
     # https://jsdokken.com/dolfinx-tutorial/chapter1/membrane_code.html#making-curve-plots-throughout-the-domain
 
     tol = 0.001
-    npoints = 200
+    npoints = 1000
     
-    z = np.linspace(min_dims[2] + tol, max_dims[2] - tol, npoints)
-    _x = x * np.ones_like(z)
-    _y = y * np.ones_like(z)
+    x = np.linspace(min_dims[0] + tol, max_dims[0] - tol, npoints)
+    _y = y * np.ones_like(x)
+    _z = z * np.ones_like(x)
 
 
     points = np.zeros((3, npoints))
-    points[0] = _x
+    points[0] = x
     points[1] = _y
-    points[2] = z
+    points[2] = _z
     # print(f"points = {points}")
 
     bb_tree = dolfinx.geometry.bb_tree(domain, domain.topology.dim)
@@ -191,5 +241,5 @@ def plot_over_lines(domain, field_dict: dict, x=0, y=0):
         all_func_names.append(func_name)
         all_func_values.append(func_values)
 
-    return all_func_names, all_func_values, z
+    return all_func_names, all_func_values, x
 

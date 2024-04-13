@@ -130,3 +130,10 @@ dmypy.json
 raw-and-results-data/octupled/octupled_working_fixed.h5
 raw-and-results-data/octupled/octupled_working_fixed.xdmf
 local-results-data/
+tests/tests_2023.ipynb
+tests/tests_rvemesh.ipynb
+test/old-csv-results
+raw-data/mesh40
+raw-data/mesh75
+raw-data/mesh225_eroded
+tests/figs
