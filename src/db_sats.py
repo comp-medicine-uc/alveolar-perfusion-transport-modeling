@@ -6,7 +6,14 @@ def S_HbXY(P_O2, P_CO2, dash_params):
     Saturations S_HbO2 and S_HbCO2 as functions of
     gas partial pressures P_O2 and P_CO2. It is assumed
     that partial pressures are equal in plasma and inside
-    red blood cells (Dash & Bassingthwaighte, 2010).
+    red blood cells.
+
+    Functions defined in Dash, Bassingthwaighte & Korman articles:
+    - R. K. Dash, B. Korman, J. B. Bassingthwaighte. (2016). Simple accurate mathematical models of blood HbO2 and HbCO2 dissociation curves at
+    varied physiological conditions: Evaluation and comparison with other models, European Journal of Applied Physiology 116 (1)
+    97-113. doi:10.1007/s00421-015-3228-3.
+    - R. K. Dash, J. B. Bassingthwaighte. (2010). Erratum to: Blood HbO2 and HbCO2 Dissociation Curves at Varied O2, CO2, pH, 2,3-DPG and
+    Temperature Levels, Annals of Biomedical Engineering 38 (4) 1683-1701. doi:10.1007/s10439-010-9948-y.
     '''
 
     # Known parameters (reaction rates, Fick's law constants)

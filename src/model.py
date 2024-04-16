@@ -5,7 +5,7 @@ import ufl
 import time
 from mpi4py import MPI
 from petsc4py import PETSc
-import dolfinx
+import dolfinximpor
 from dolfinx import fem, mesh, plot, nls, log, io
 import dolfinx.fem.petsc
 import dolfinx.nls.petsc
