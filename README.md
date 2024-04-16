@@ -1,8 +1,8 @@
-# Computational simulations of an alveolar perfusion and gas transport mathematical model
+# A nonlinear convection-diffusion model of microscale lung capillary perfusion and gas exchange
 
-[Bastián Herrera](https://github.com/bnherrerac), _[@comp-medicine-uc](https://github.com/comp-medicine-uc)_
+[Bastián Herrera](https://github.com/bnherrerac) & [Daniel Hurtado](https://github.com/dehurtado), _[@comp-medicine-uc](https://github.com/comp-medicine-uc)_
 
-FEniCS-based computational simulation of alveolar perfusion and gas transport on 3D alveolar meshes.
+Computational simulations of microscale pulmonary perfusion and O$`_2`$-CO$`_2`$ gas transport on 3D alveolar meshes reconstructed from $`\mu`$-CT murine lung images.
 
 ## Abstract
 
@@ -24,7 +24,7 @@ Source code is written and runs in Python 3.12 and in MATLAB R2023a. The followi
 - [`numpy`](https://numpy.org) 1.26.0
 - [`scipy`](https://scipy.org) 1.13.0
 - [`matplotlib`](https://matplotlib.org) 3.8.4
-- [`FEniCSX`](https://fenicsproject.org/) 0.7.2
+- [`FEniCSx`](https://fenicsproject.org/) 0.7.2
 - [`TetGen bindigs for Python`](https://tetgen.pyvista.org) 0.6.1
 - [`Trimesh`](https://trimsh.org/trimesh.html) 4.3.0
 - [`PyVista`](https://docs.pyvista.org) 0.43.5
