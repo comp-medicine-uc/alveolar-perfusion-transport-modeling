@@ -10,10 +10,10 @@ import pymeshfix as pfix
 # Nodes and triangular elements created using iso2mesh in MATLAB, 
 # exported via .mat files
 
-nodes = sio.loadmat('../raw-data/emphysema_nodes_elems/nodes_225_emphysema_control.mat')
+nodes = sio.loadmat('../raw-data/emphysema_nodes_elems/fine_nodes_225_control.mat')
 # print(nodes)
 nodes = nodes['mod_nodes']
-elems = sio.loadmat('../raw-data/emphysema_nodes_elems/elems_225_emphysema_control.mat')
+elems = sio.loadmat('../raw-data/emphysema_nodes_elems/fine_elems_225_control.mat')
 elems = elems['mod_elems']
 elems -= 1 # MATLAB to Python indexing conversion
 print(elems.shape)
@@ -39,7 +39,7 @@ tetra_mesh = tetgen.TetGen(clean_nodes, clean_elems)
 tnodes, telems = tetra_mesh.tetrahedralize(order=1, minratio=1.1, quality=True)
 
 # Plots 3D mesh using PyVista
-tetra_mesh.grid.plot(show_edges=True)
+# tetra_mesh.grid.plot(show_edges=True)
 
 # Returns max and min values for all directions, to copy them to FEniCS source code
 max_x = np.max(tnodes[:,0])
@@ -53,9 +53,11 @@ print("min values =", [min_x, min_y, min_z])
 
 # Writes vtu file, reads it, and generates .xdmf file using meshio
 
-tetra_mesh.write('C:/Users/bherr/Downloads/tests/trimesh/rve_225_emphysema_control.vtu')
-mesh = meshio.read('C:/Users/bherr/Downloads/tests/trimesh/rve_225_emphysema_control.vtu')
-mesh.write('C:/Users/bherr/Downloads/tests/trimesh/rve_225_emphysema_control.xdmf')
+outname = 'fine_rve_225_' + 'control'
+
+tetra_mesh.write('../raw-data/' + outname + '/' + outname + '.vtu')
+# mesh = meshio.read('../raw-data/' + outname + '/' + outname + '.vtu')
+# mesh.write('../raw-data/' + outname + '/' + outname + '.xdmf')
 
 # print("tnodes=\n", tnodes)
 # print("telems=\n", telems)

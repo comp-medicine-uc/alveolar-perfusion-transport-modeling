@@ -5,7 +5,6 @@ import ufl
 import time
 from mpi4py import MPI
 from petsc4py import PETSc
-import dolfinximpor
 from dolfinx import fem, mesh, plot, nls, log, io
 import dolfinx.fem.petsc
 import dolfinx.nls.petsc
@@ -67,28 +66,28 @@ class PerfusionGasExchangeModel():
         all_facets = mesh.locate_entities_boundary(domain, self.fdim, all)
         both_facets = mesh.locate_entities_boundary(domain, self.fdim, both)
         air_facets = np.setdiff1d(all_facets, both_facets)
-        if infinite:
-            side_facets = mesh.locate_entities_boundary(domain, self.fdim, sides)
-            marked_facets = np.hstack([inlet_facets, outlet_facets, side_facets])
-            marked_values = np.hstack([np.full_like(inlet_facets, 1), 
-                                   np.full_like(outlet_facets, 2),
-                                   np.full_like(side_facets, 3)])
-            # print(side_facets)
-            print(f"Total number = {all_facets.shape[0]}")
-            print(f"Inlet number = {inlet_facets.shape[0]}")
-            print(f"Outlet number = {outlet_facets.shape[0]}")
-            print(f"Air number = {air_facets.shape[0]}")
-            print(f"Side number = {side_facets.shape[0]}")
-        else:
-            marked_facets = np.hstack([inlet_facets, outlet_facets, air_facets])
-            marked_values = np.hstack([np.full_like(inlet_facets, 1), 
-                                    np.full_like(outlet_facets, 2),
-                                    np.full_like(air_facets, 3)])
-            # print(air_facets)
-            print(f"Total number = {all_facets.shape[0]}")
-            print(f"Inlet number = {inlet_facets.shape[0]}")
-            print(f"Outlet number = {outlet_facets.shape[0]}")
-            print(f"Air number = {air_facets.shape[0]}")
+        # if infinite:
+        #     side_facets = mesh.locate_entities_boundary(domain, self.fdim, sides)
+        #     marked_facets = np.hstack([inlet_facets, outlet_facets, side_facets])
+        #     marked_values = np.hstack([np.full_like(inlet_facets, 1), 
+        #                            np.full_like(outlet_facets, 2),
+        #                            np.full_like(side_facets, 3)])
+        #     # print(side_facets)
+        #     print(f"Total number = {all_facets.shape[0]}")
+        #     print(f"Inlet number = {inlet_facets.shape[0]}")
+        #     print(f"Outlet number = {outlet_facets.shape[0]}")
+        #     print(f"Air number = {air_facets.shape[0]}")
+        #     print(f"Side number = {side_facets.shape[0]}")
+        # else:
+        marked_facets = np.hstack([inlet_facets, outlet_facets, air_facets])
+        marked_values = np.hstack([np.full_like(inlet_facets, 1), 
+                                np.full_like(outlet_facets, 2),
+                                np.full_like(air_facets, 3)])
+        # print(air_facets)
+        print(f"Total number = {all_facets.shape[0]}")
+        print(f"Inlet number = {inlet_facets.shape[0]}")
+        print(f"Outlet number = {outlet_facets.shape[0]}")
+        print(f"Air number = {air_facets.shape[0]}")
 
         sorted_facets = np.argsort(marked_facets)
         self.facet_tag = mesh.meshtags(domain, self.fdim, marked_facets[sorted_facets], marked_values[sorted_facets])
