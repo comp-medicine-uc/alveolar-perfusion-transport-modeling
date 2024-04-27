@@ -1,4 +1,4 @@
-# A nonlinear convection-diffusion model of microscale lung capillary perfusion and gas exchange
+# Modeling lung capillary perfusion and gas exchange in alveolar microstructures
 
 [Bastián Herrera](https://github.com/bnherrerac) & [Daniel Hurtado](https://github.com/dehurtado), _[@comp-medicine-uc](https://github.com/comp-medicine-uc)_
 
