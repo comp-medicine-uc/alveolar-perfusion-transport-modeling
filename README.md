@@ -1,4 +1,4 @@
-# A nonlinear convection-diffusion model of microscale lung capillary perfusion and gas exchange
+# Modeling lung capillary perfusion and gas exchange in alveolar microstructures
 
 [Bastián Herrera](https://github.com/bnherrerac) & [Daniel Hurtado](https://github.com/dehurtado), _[@comp-medicine-uc](https://github.com/comp-medicine-uc)_
 
@@ -11,7 +11,7 @@ Pulmonary capillary perfusion and gas exchange are the fundamental physical proc
 ## Directories
 
 - `manuscript`: Latest version of the article.
-- `raw-data`: Raw images and sources for pulmonary RVE simulations.}
+- `raw-data`: Raw images and sources for pulmonary RVE simulations.
 - `results-data`: Numerical simulation results.
 - `src`: Python and MATLAB source files.
 - `tests`: Main files that implement examples and tests.
