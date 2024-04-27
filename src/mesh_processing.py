@@ -16,6 +16,7 @@ nodes = nodes['mod_nodes']
 elems = sio.loadmat('../raw-data/emphysema_nodes_elems/fine_elems_225_control.mat')
 elems = elems['mod_elems']
 elems -= 1 # MATLAB to Python indexing conversion
+print(nodes.shape)
 print(elems.shape)
 
 # Mesh cleaning (removes degeneracies, self-intersections and isolated nodes)
