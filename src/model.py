@@ -5,7 +5,7 @@ import ufl
 import time
 from mpi4py import MPI
 from petsc4py import PETSc
-from dolfinx import fem, mesh, plot, nls, log, io
+from dolfinx import fem, mesh, plot, nls, log, io, la
 import dolfinx.fem.petsc
 import dolfinx.nls.petsc
 import meshio
@@ -13,7 +13,9 @@ import os
 import sys
 
 sys.path.append('../')
+
 from src.utils import *
+from src.utils import project
 from src.db_sats import *
 from src.parameters import instance_params
 
@@ -30,20 +32,30 @@ class PerfusionGasExchangeModel():
         self.pc_type = pc_type
         self.pc_factor_mat_solver_type = pc_factor_mat_solver_type
 
-    def Setup(self, domain, atol=1E-10, max_dims=[0,0,0], min_dims=[0,0,0], imported=False, infinite=False):
+    def Setup(self, domain, atol=1E-10, max_dims=[0,0,0], min_dims=[0,0,0], imported=True, infinite=False):
 
-        # topology, cells, geometry = plot.vtk_mesh(domain, domain.topology.dim)
-        
-        # self.max_dims = np.around([max(geometry[:,0]), max(geometry[:,1]), max(geometry[:,2])], 5)
-        # self.min_dims = np.around([min(geometry[:,0]), min(geometry[:,1]), min(geometry[:,2])], 5)
+        metadata = {"quadrature_degree": 4}
 
-        self.max_dims = max_dims
-        self.min_dims = min_dims
+        comm = MPI.COMM_WORLD
+        self_comm = MPI.COMM_SELF
+        comm_size = comm.Get_size()
+        rank = comm.Get_rank()
+
+        if imported:
+            diagnosis = read_diagnosis(self.mesh_path, MPI.COMM_WORLD.Get_rank())
+            self.max_dims = diagnosis[0]
+            self.min_dims = diagnosis[1]
+            self.porosity = float(diagnosis[5])
+        else:
+            self.max_dims = max_dims
+            self.min_dims = min_dims
+            self.porosity = 0
 
         assert np.amax(np.concatenate((self.max_dims, self.min_dims))) != 0
 
-        print(f"max_dims = {self.max_dims}")
-        print(f"min_dims = {self.min_dims}")
+        # if MPI.COMM_WORLD.Get_rank() == 0: 
+        #     print(f"max_dims = {self.max_dims}")
+        #     print(f"min_dims = {self.min_dims}")
 
         self.atol = atol
         self.imported = imported
@@ -56,8 +68,8 @@ class PerfusionGasExchangeModel():
             return np.full(x.shape[1], True, dtype=bool)
         def both(x):
             return np.logical_or(inlet(x), outlet(x))
-        def sides(x):
-            return np.logical_or(np.isclose(x[2], self.min_dims[2], atol=self.atol), np.isclose(x[2], self.max_dims[2], atol=self.atol))
+        # def sides(x):
+        #     return np.logical_or(np.isclose(x[2], self.min_dims[2], atol=self.atol), np.isclose(x[2], self.max_dims[2], atol=self.atol))
 
         self.fdim = domain.topology.dim - 1
 
@@ -66,33 +78,38 @@ class PerfusionGasExchangeModel():
         all_facets = mesh.locate_entities_boundary(domain, self.fdim, all)
         both_facets = mesh.locate_entities_boundary(domain, self.fdim, both)
         air_facets = np.setdiff1d(all_facets, both_facets)
-        # if infinite:
-        #     side_facets = mesh.locate_entities_boundary(domain, self.fdim, sides)
-        #     marked_facets = np.hstack([inlet_facets, outlet_facets, side_facets])
-        #     marked_values = np.hstack([np.full_like(inlet_facets, 1), 
-        #                            np.full_like(outlet_facets, 2),
-        #                            np.full_like(side_facets, 3)])
-        #     # print(side_facets)
-        #     print(f"Total number = {all_facets.shape[0]}")
-        #     print(f"Inlet number = {inlet_facets.shape[0]}")
-        #     print(f"Outlet number = {outlet_facets.shape[0]}")
-        #     print(f"Air number = {air_facets.shape[0]}")
-        #     print(f"Side number = {side_facets.shape[0]}")
-        # else:
+
         marked_facets = np.hstack([inlet_facets, outlet_facets, air_facets])
         marked_values = np.hstack([np.full_like(inlet_facets, 1), 
                                 np.full_like(outlet_facets, 2),
                                 np.full_like(air_facets, 3)])
-        # print(air_facets)
-        print(f"Total number = {all_facets.shape[0]}")
-        print(f"Inlet number = {inlet_facets.shape[0]}")
-        print(f"Outlet number = {outlet_facets.shape[0]}")
-        print(f"Air number = {air_facets.shape[0]}")
+        
+        # Face numbers
+
+        tfs = comm.gather(all_facets, root=0)
+        ifs = comm.gather(inlet_facets, root=0)
+        ofs = comm.gather(outlet_facets, root=0)
+        afs = comm.gather(air_facets, root=0)
+
+        if rank == 0:
+
+            tfn = np.concatenate(tuple(tfs[i] for i in range(comm_size)), axis=None).shape[0]
+            ifn = np.concatenate(tuple(ifs[i] for i in range(comm_size)), axis=None).shape[0]
+            ofn = np.concatenate(tuple(ofs[i] for i in range(comm_size)), axis=None).shape[0]
+            afn = np.concatenate(tuple(afs[i] for i in range(comm_size)), axis=None).shape[0]
+
+            print(f"Porosity = {np.round(self.porosity, 3)}")
+            print(f"Total boundary face number = {tfn}")
+            print(f"Inlet face number = {ifn}")
+            print(f"Outlet face number = {ofn}")
+            print(f"Air face number = {afn}")
+
+            # Assert that inlet and outlet are well-defined.
+            assert ifn != 0
+            assert ofn != 0
 
         sorted_facets = np.argsort(marked_facets)
         self.facet_tag = mesh.meshtags(domain, self.fdim, marked_facets[sorted_facets], marked_values[sorted_facets])
-
-        metadata = {"quadrature_degree": 4}
 
         self.ds = ufl.Measure('ds', domain=domain, subdomain_data=self.facet_tag, metadata=metadata)
         self.dx = ufl.Measure("dx", domain=domain, metadata=metadata)
@@ -105,8 +122,7 @@ class PerfusionGasExchangeModel():
         self.dash_params = dash_params
         self.t_params = transport_params
 
-    
-    def Perfusion(self, domain, plot=True, save=True):
+    def Perfusion(self, domain, plot=True, save=True, verbose=True):
         
         ### Problem setup
 
@@ -135,15 +151,18 @@ class PerfusionGasExchangeModel():
 
         # Problem instancing
         problem = dolfinx.fem.petsc.LinearProblem(a, L, bcs=[pressure_bc], petsc_options={"ksp_type": "preonly", "pc_type": "lu"})
-        print("Problem instanced.")
+        if MPI.COMM_WORLD.Get_rank() == 0: print("-------   Perfusion problem instanced.  -------")
 
         ### Solving
 
         # Pressure
-        log.set_log_level(log.LogLevel.INFO)
+        if verbose:
+            log.set_log_level(log.LogLevel.INFO)
+        else:
+            log.set_log_level(log.LogLevel.ERROR)
         ph = problem.solve()
         log.set_log_level(log.LogLevel.ERROR)
-        print("Pressure field found.")
+        if MPI.COMM_WORLD.Get_rank() == 0: print("Pressure field found.")
         if plot: plot_scalar_field(V, ph)
 
         # Velocity
@@ -175,13 +194,13 @@ class PerfusionGasExchangeModel():
 
         return ph, u
     
-    def GasExchange(self, domain, guess=None, save=True, plot=True, p_val = 1, postprocess=True, plot_lines=True):
+    def GasExchange(self, domain, guess=None, save=True, plot=True, p_val = 1, postprocess=True, plot_lines=True, verbose=True):
 
         # Two Lagrange P1 spaces are used.        
 
         element_type = "CG"
         self.element_type = element_type
-        print("Finite element is " + element_type)
+        # print("Finite element is " + element_type)
 
         P1 = ufl.FiniteElement(element_type, domain.ufl_cell(), 1)
         ME = ufl.MixedElement([P1, P1])
@@ -231,9 +250,10 @@ class PerfusionGasExchangeModel():
         c_O2 = ufl.variable(W_bl*beta_O2*p_O2)                      # W_bl*beta_O2*p_O2 + 4*Hb_bl*S_HbO2
         c_CO2 = ufl.variable(W_bl*beta_CO2*p_CO2 + bic*p_CO2)       # W_bl*beta_CO2*p_CO2 + bic*p_CO2 + 4*Hb_bl*S_HbCO2
 
+        if MPI.COMM_WORLD.Get_rank() == 0: print(f"------- Gas exchange problem instanced. ------- lambda = {np.round(p_val, 3)}")
+
         if guess is not None:
-            print("Starting nonlinear problem with previous guess.")
-            print(f"p_val = {p_val}")
+            # print(fr"Starting nonlinear problem with previous guess")
             c_O2 += p_val*4*Hb_bl*S_HbO2
             c_CO2 += p_val*4*Hb_bl*S_HbCO2
 
@@ -274,31 +294,66 @@ class PerfusionGasExchangeModel():
         bc_CO2 = fem.dirichletbc(dolfinx.default_scalar_type(p_CO2_in), inlet_dofs_CO2, V.sub(1))
         bcs = [bc_O2, bc_CO2]
 
-        # Nonlinear problem
-        # print("Assembling problem")
-        problem = dolfinx.fem.petsc.NonlinearProblem(F, p_XY, bcs)
-        solver = dolfinx.nls.petsc.NewtonSolver(domain.comm, problem)
-        solver.atol = 1E-8
-        solver.rtol = 1E-8
-        solver.convergence_criterion = "incremental"
-        # print("Problem assembled.")
-        ksp = solver.krylov_solver
-        opts = PETSc.Options()
-        option_prefix = ksp.getOptionsPrefix()
-        try:
-            opts[f"{option_prefix}ksp_type"] = self.ksp_type
-            opts[f"{option_prefix}pc_type"] = self.pc_type
-            opts[f"{option_prefix}pc_factor_mat_solver_type"] = self.pc_factor_mat_solver_type
-        except:
-            raise ValueError('Option not allowed.')
-        ksp.setFromOptions()
+
+        # # Nonlinear problem - KSP
+        # problem = dolfinx.fem.petsc.NonlinearProblem(F, p_XY, bcs)
+        # solver = dolfinx.nls.petsc.NewtonSolver(domain.comm, problem)
+        # solver.atol = 1E-8
+        # solver.rtol = 1E-8
+        # solver.convergence_criterion = "incremental"
+        # ksp = solver.krylov_solver
+        # opts = PETSc.Options()
+        # option_prefix = ksp.getOptionsPrefix()
+        # try:
+        #     opts[f"{option_prefix}ksp_type"] = self.ksp_type
+        #     opts[f"{option_prefix}pc_type"] = self.pc_type
+        #     opts[f"{option_prefix}pc_factor_mat_solver_type"] = self.pc_factor_mat_solver_type
+        # except:
+        #     raise ValueError('Option not allowed.')
+        # ksp.setFromOptions()
+
+        # # Solve problem
+        # if verbose:
+        #     log.set_log_level(log.LogLevel.INFO)
+        # else:
+        #     log.set_log_level(log.LogLevel.ERROR)
+        # num_its, converged = solver.solve(p_XY)
+        # assert(converged)
+        # if MPI.COMM_WORLD.Get_rank() == 0: print(f"O2 and CO2 partial pressures found in {num_its} iterations.")
+
+
+
+
+
         
+        # Nonlinear problem - SNES
+        problem = NonlinearPDE_SNESProblem(F, p_XY, bcs)
+        b = la.create_petsc_vector(V.dofmap.index_map, V.dofmap.index_map_bs)
+        J = dolfinx.fem.petsc.create_matrix(problem.a)
+
+        # Create Newton solver and solve
+        snes = PETSc.SNES().create()
+        snes.setFunction(problem.F, b)
+        snes.setJacobian(problem.J, J)
+
+        snes.setTolerances(rtol=1.0e-9, max_it=10)
+        snes.getKSP().setType("preonly")
+        snes.getKSP().setTolerances(rtol=1.0e-9)
+        snes.getKSP().getPC().setType("lu")
+
         # Solve problem
-        log.set_log_level(log.LogLevel.INFO)
-        num_its, converged = solver.solve(p_XY)
-        assert(converged)
-        print(f"Problem solved in {num_its} iterations.")
+        if verbose:
+            log.set_log_level(log.LogLevel.INFO)
+        else:
+            log.set_log_level(log.LogLevel.ERROR)
+        snes.solve(None, p_XY.vector)
+        assert snes.getConvergedReason() > 0
+        assert snes.getIterationNumber() < 6
+        if MPI.COMM_WORLD.Get_rank() == 0: print(f"O2 and CO2 partial pressures found in {snes.getIterationNumber()} iterations.")
         
+
+
+
         ## Postprocessing
         log.set_log_level(log.LogLevel.ERROR)
         _p_O2, _p_CO2 = p_XY.split()
@@ -309,16 +364,11 @@ class PerfusionGasExchangeModel():
 
         V_mesh = fem.functionspace(domain, ('Lagrange', 1))
 
-        # p_O2_solution = fem.Function(fem.FunctionSpace(domain, ('Lagrange', 1)), name="p_O2")
-        # p_CO2_solution = fem.Function(fem.FunctionSpace(domain, ('Lagrange', 1)), name="p_CO2")
         p_O2_solution = fem.Function(V_mesh, name="p_O2")
         p_O2_solution.interpolate(fem.Expression(_p_O2, V_mesh.element.interpolation_points()))
 
         p_CO2_solution = fem.Function(V_mesh, name="p_CO2")
         p_CO2_solution.interpolate(fem.Expression(_p_CO2, V_mesh.element.interpolation_points()))
-
-        # project(_p_O2, p_O2_solution)
-        # project(_p_CO2, p_CO2_solution)
 
         if save:
             scalar_field_to_xdmf(domain, p_O2_solution, 
@@ -330,7 +380,7 @@ class PerfusionGasExchangeModel():
                         name = "p_CO2.xdmf")
             
         if postprocess:
-            print(f"Starting postprocessing.")
+            if MPI.COMM_WORLD.Get_rank() == 0: print(f"Starting postprocessing.")
             t1 = time.time()
 
             # S_HbO2
@@ -380,13 +430,6 @@ class PerfusionGasExchangeModel():
             # j_CO2_xdmf.write_function(j_CO2_out, 0.) 
 
             # c_O2
-            # c_O2_out = fem.Function(V_mesh, name="c_O2")
-            # project(c_O2, c_O2_out) 
-
-            # c_O2_xdmf = io.XDMFFile(domain.comm, os.path.join(self.results_path, "gas_exchange/c_O2.xdmf"), "w")
-            # c_O2_xdmf.write_mesh(domain)
-            # c_O2_xdmf.write_function(c_O2_out, 0.)
-
             c_O2_solution = fem.Function(V_mesh, name="c_O2")
             c_O2_solution.interpolate(fem.Expression(c_O2, V_mesh.element.interpolation_points()))
             scalar_field_to_xdmf(domain, c_O2_solution, 
@@ -394,14 +437,6 @@ class PerfusionGasExchangeModel():
                         name = "c_O2.xdmf")
 
             # c_CO2
-            # c_CO2_out = fem.Function(V_mesh, name="c_CO2") 
-            # project(c_CO2, c_CO2_out)
-
-            # c_CO2_xdmf = io.XDMFFile(domain.comm, os.path.join(self.results_path, "gas_exchange/c_CO2.xdmf"), "w")
-            # c_CO2_xdmf.write_mesh(domain)
-            # c_CO2_xdmf.write_function(c_CO2_out, 0.)
-
-            
             c_CO2_solution = fem.Function(V_mesh, name="c_CO2")
             c_CO2_solution.interpolate(fem.Expression(c_CO2, V_mesh.element.interpolation_points()))
             scalar_field_to_xdmf(domain, c_CO2_solution, 
@@ -409,13 +444,6 @@ class PerfusionGasExchangeModel():
                         name = "c_CO2.xdmf")
 
             # bicarbonate CO2 content
-            # bic_out = fem.Function(V_mesh, name="bic") 
-            # project(bic*p_CO2, bic_out)
-
-            # bic_xdmf = io.XDMFFile(domain.comm, os.path.join(self.results_path, "gas_exchange/bic.xdmf"), "w")
-            # bic_xdmf.write_mesh(domain)
-            # bic_xdmf.write_function(bic_out, 0.)    
-
             bic_solution = fem.Function(V_mesh, name="bic")
             bic_solution.interpolate(fem.Expression(bic*p_CO2, V_mesh.element.interpolation_points()))
             scalar_field_to_xdmf(domain, bic_solution, 
@@ -423,15 +451,15 @@ class PerfusionGasExchangeModel():
                         name = "bic.xdmf")
 
 
-            print(f"Finished postprocessing at t = {time.time() - t1} s.")   
+            if MPI.COMM_WORLD.Get_rank() == 0: print(f"Finished postprocessing at t = {np.round(time.time() - t1, 4)} s.")   
 
             # self.S_HbO2 = S_HbO2_out
             # self.S_HbCO2 = S_HbCO2_out
             # self.c_O2 = c_O2_out
             # self.c_CO2 = c_CO2_out
             # self.bic = bic_out
-            # self.p_O2 = p_O2_solution
-            # self.p_CO2 = p_CO2_solution
+            self.p_O2 = p_O2_solution
+            self.p_CO2 = p_CO2_solution
 
         if plot_lines:
                 
@@ -439,9 +467,9 @@ class PerfusionGasExchangeModel():
             max_dims = np.around([max(geometry[:,0]), max(geometry[:,1]), max(geometry[:,2])], 5)
             min_dims = np.around([min(geometry[:,0]), min(geometry[:,1]), min(geometry[:,2])], 5)
             zs = np.linspace((max_dims[2]+min_dims[2])/2, max_dims[2], 3)
-            print(f"zs = {zs}")
+            # print(f"zs = {zs}")
             y_fixed = (max_dims[1]+min_dims[1])/2
-            print(f"y_fixed = {y_fixed}")
+            # print(f"y_fixed = {y_fixed}")
 
             func_dict = {"S_HbO2": S_HbO2_solution,
                          "S_HbCO2": S_HbCO2_solution,
@@ -451,15 +479,12 @@ class PerfusionGasExchangeModel():
                          "p_O2": p_O2_solution,
                          "p_CO2": p_CO2_solution}
 
-            print(f"functions: {func_dict}")
+            # print(f"functions: {func_dict}")
 
             results_dict = {key: {} for key in func_dict.keys()} # {bic: {4: results_4, 6: results_6, 8: results_8}}
-            # print(f"results_dict = {results_dict}")
 
             for z in zs:
-                # print(f"taking values along x = {x}")
                 all_func_names_x, all_func_values_x, x = plot_over_lines(domain, func_dict, y=y_fixed, z=z)
-                # print(f"all_func_names_x = {all_func_names_x}")
                 for i in range(len(all_func_values_x)):
                     results_dict[all_func_names_x[i]][f"{z}"] = all_func_values_x[i]
 

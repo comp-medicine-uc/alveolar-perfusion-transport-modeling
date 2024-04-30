@@ -6,10 +6,15 @@ import time
 from mpi4py import MPI
 from petsc4py import PETSc
 import dolfinx
-from dolfinx import fem, mesh, plot, nls, log, io
+from dolfinx import fem, mesh, la, plot, nls, log, io
 from dolfinx import cpp as _cpp
+import dolfinx.fem.petsc
 import meshio
 import os
+import sys
+
+sys.path.append('../')
+# from src.model import PerfusionGasExchangeModel
 
 def plot_mesh(domain):
 
@@ -153,42 +158,55 @@ def calculate_integral_over_surface(domain, ds, tags, f):
     for tag in tags:
         result += domain.comm.allreduce(fem.assemble_scalar(fem.form(f * ds(tag))), op=MPI.SUM)
     return result
+
+def diagnose_mesh(domain, dx):
+    _, _, geometry = plot.vtk_mesh(domain, domain.topology.dim)
+        
+    max_dims = np.around([max(geometry[:,0]), max(geometry[:,1]), max(geometry[:,2])], 5)
+    min_dims = np.around([min(geometry[:,0]), min(geometry[:,1]), min(geometry[:,2])], 5)
+
+    print(f"max_dims = {np.round(max_dims, 5)}")
+    print(f"min_dims = {np.round(min_dims, 5)}")
     
-### Physical properties
+    tissue_volume = calculate_integral_over_domain(domain, dx, 1)
+    all_volume = np.prod(max_dims - min_dims)
+    air_volume = all_volume - tissue_volume
 
-def O2_absorbed(model, domain, ds, air_tag = 3):
+    porosity = air_volume/all_volume
 
-    factor = 22.4 * 60 # mL/mmol * s/min
-    rve_volume = 225**3 # um3
-    lung_volume = 2500E12 # um3
-    volume_factor = lung_volume / rve_volume
+    print(f"all volume = {np.round(all_volume, 5)}")
+    print(f"tissue volume = {np.round(tissue_volume, 5)}")
+    print(f"air volume = {np.round(air_volume, 5)}")
+    print(f"porosity = {np.round(porosity, 5)}")
 
-    f = -1 * model.t_params['d_ba_O2'] * model.dash_params['beta_O2'] * (1/model.t_params['h_ba']) * (model.t_params['p_O2_air'] - model.p_O2)
+    return {"max_dims": max_dims, "min_dims": min_dims, "tissue_volume": tissue_volume, 
+            "all_volume": all_volume, "air_volume": air_volume, "porosity": porosity}
 
-    integral = calculate_integral_over_surface(domain, ds, [air_tag], f)
-    
-    return factor * volume_factor * integral
+def read_diagnosis(meshname, rank):
 
-def DL_O2(model, O2_absorbed):
+    metrics = []
 
-    return O2_absorbed / np.abs(model.t_params['p_O2_air'] - model.t_params['p_O2_in'])
-
-def CO2_released(model, domain, ds, air_tag = 3):
-    
-    factor = 22.4 * 60 # mL/mmol * s/min
-    rve_volume = 225**3 # um3
-    lung_volume = 2500E12 # um3
-    volume_factor = lung_volume / rve_volume
-
-    f = -1 * model.t_params['d_ba_CO2'] * model.dash_params['beta_CO2'] * (1/model.t_params['h_ba']) * (model.t_params['p_CO2_air'] - model.p_CO2)
-
-    integral = calculate_integral_over_surface(domain, ds, [air_tag], f)
-    
-    return factor * volume_factor * integral
-
-def DL_CO2(model, CO2_released):
-
-    return CO2_released / np.abs(model.t_params['p_CO2_air'] - model.t_params['p_CO2_in'])
+    with open("../tests/csv-results/geometry_data.csv", "r") as file:
+        for row in file:
+            items = row.split(",")
+            if items[0] in meshname:
+                metrics.append([float(i) for i in items[1].strip("]").strip("[").strip().replace("  ", " ").replace(" ", ",").split(",")])
+                metrics.append([float(i) for i in items[2].strip("]").strip("[").strip().replace("  ", " ").replace(" ", ",").split(",")])
+                metrics.append(items[3])
+                metrics.append(items[4])
+                metrics.append(items[5])
+                metrics.append(items[6])
+        
+    if rank == 0:
+        print(f"###### Geometry metrics ######")
+        print(f"max_dims = {metrics[0]}")
+        print(f"min_dims = {metrics[1]}")
+        print(f"all_volume = {metrics[2]}")
+        print(f"tissue_volume = {metrics[3]}")
+        print(f"air_volume = {metrics[4]}")
+        print(f"porosity = {metrics[5]}")
+    return metrics
+               
 
 def plot_over_lines(domain, field_dict: dict, y=0, z=0):
     """
@@ -233,13 +251,94 @@ def plot_over_lines(domain, field_dict: dict, y=0, z=0):
 
     all_func_names = []
     all_func_values = []
-    print(f"Evaluating...")
+    # print(f"Evaluating...")
     for func_name, func in field_dict.items():
-        print(f"... current function: {func_name}")
+        # print(f"... current function: {func_name}")
         func_values = func.eval(points_on_proc, cells)
-        print("evaluated.")
+        # print("evaluated.")
         all_func_names.append(func_name)
         all_func_values.append(func_values)
 
     return all_func_names, all_func_values, x
 
+
+import numpy as np
+
+import ufl
+from dolfinx import cpp as _cpp
+from dolfinx import la
+from dolfinx.fem import (Function, FunctionSpace, dirichletbc, form,
+                         locate_dofs_geometrical)
+from dolfinx.fem.petsc import (apply_lifting, assemble_matrix, assemble_vector,
+                               create_matrix, create_vector, set_bc)
+from dolfinx.mesh import create_unit_square
+from ufl import TestFunction, TrialFunction, derivative, dx, grad, inner
+
+from mpi4py import MPI
+from petsc4py import PETSc
+
+
+class NonlinearPDEProblem:
+    """Nonlinear problem class for a PDE problem."""
+
+    def __init__(self, F, u, bc):
+        V = u.function_space
+        du = TrialFunction(V)
+        self.L = form(F)
+        self.a = form(derivative(F, u, du))
+        self.bc = bc
+
+    def form(self, x):
+        x.ghostUpdate(addv=PETSc.InsertMode.INSERT, mode=PETSc.ScatterMode.FORWARD)
+
+    def F(self, x, b):
+        """Assemble residual vector."""
+        with b.localForm() as b_local:
+            b_local.set(0.0)
+        assemble_vector(b, self.L)
+        apply_lifting(b, [self.a], bcs=[[self.bc]], x0=[x], scale=-1.0)
+        b.ghostUpdate(addv=PETSc.InsertMode.ADD, mode=PETSc.ScatterMode.REVERSE)
+        set_bc(b, [self.bc], x, -1.0)
+
+    def J(self, x, A):
+        """Assemble Jacobian matrix."""
+        A.zeroEntries()
+        assemble_matrix(A, self.a, bcs=[self.bc])
+        A.assemble()
+
+    def matrix(self):
+        return create_matrix(self.a)
+
+    def vector(self):
+        return create_vector(self.L)
+
+
+class NonlinearPDE_SNESProblem: # https://github.com/FEniCS/dolfinx/blob/f55eadde9bba6272d5a111aac97bcb4d7f2b5231/python/test/unit/nls/test_newton.py#L155-L196
+    
+    def __init__(self, F, u, bc):
+        V = u.function_space
+        du = ufl.TrialFunction(V)
+        self.L = fem.form(F)
+        self.a = fem.form(ufl.derivative(F, u, du))
+        self.bc = bc
+        self._F, self._J = None, None
+        self.u = u
+
+    def F(self, snes, x, F):
+        """Assemble residual vector."""
+        x.ghostUpdate(addv=PETSc.InsertMode.INSERT, mode=PETSc.ScatterMode.FORWARD)
+        x.copy(self.u.vector)
+        self.u.vector.ghostUpdate(addv=PETSc.InsertMode.INSERT, mode=PETSc.ScatterMode.FORWARD)
+
+        with F.localForm() as f_local:
+            f_local.set(0.0)
+        dolfinx.fem.petsc.assemble_vector(F, self.L)
+        dolfinx.fem.petsc.apply_lifting(F, [self.a], bcs=[[self.bc]], x0=[x], scale=-1.0)
+        F.ghostUpdate(addv=PETSc.InsertMode.ADD, mode=PETSc.ScatterMode.REVERSE)
+        dolfinx.fem.petsc.set_bc(F, [self.bc], x, -1.0)
+
+    def J(self, snes, x, J, P):
+        """Assemble Jacobian matrix."""
+        J.zeroEntries()
+        dolfinx.fem.petsc.assemble_matrix(J, self.a, bcs=[self.bc])
+        J.assemble()
