@@ -63,7 +63,7 @@ def rve_test(mesh_path, results_folder, exp_folder, max_dims=[0,0,0], min_dims=[
                                     results_path=results_folder,
                                     exp_path=exp_folder,
                                     params=None,
-                                    ksp_type='ibcgs', pc_type='gamg', pc_factor_mat_solver_type='mumps')
+                                    ksp_type='cg', pc_type='lu', pc_factor_mat_solver_type='mumps')
 
     model.Setup(domain, atol = 10, imported=True)
     model.parameter_setup()

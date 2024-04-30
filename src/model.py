@@ -296,63 +296,57 @@ class PerfusionGasExchangeModel():
 
 
         # # Nonlinear problem - KSP
-        # problem = dolfinx.fem.petsc.NonlinearProblem(F, p_XY, bcs)
-        # solver = dolfinx.nls.petsc.NewtonSolver(domain.comm, problem)
-        # solver.atol = 1E-8
-        # solver.rtol = 1E-8
-        # solver.convergence_criterion = "incremental"
-        # ksp = solver.krylov_solver
-        # opts = PETSc.Options()
-        # option_prefix = ksp.getOptionsPrefix()
-        # try:
-        #     opts[f"{option_prefix}ksp_type"] = self.ksp_type
-        #     opts[f"{option_prefix}pc_type"] = self.pc_type
-        #     opts[f"{option_prefix}pc_factor_mat_solver_type"] = self.pc_factor_mat_solver_type
-        # except:
-        #     raise ValueError('Option not allowed.')
-        # ksp.setFromOptions()
-
-        # # Solve problem
-        # if verbose:
-        #     log.set_log_level(log.LogLevel.INFO)
-        # else:
-        #     log.set_log_level(log.LogLevel.ERROR)
-        # num_its, converged = solver.solve(p_XY)
-        # assert(converged)
-        # if MPI.COMM_WORLD.Get_rank() == 0: print(f"O2 and CO2 partial pressures found in {num_its} iterations.")
-
-
-
-
-
-        
-        # Nonlinear problem - SNES
-        problem = NonlinearPDE_SNESProblem(F, p_XY, bcs)
-        b = la.create_petsc_vector(V.dofmap.index_map, V.dofmap.index_map_bs)
-        J = dolfinx.fem.petsc.create_matrix(problem.a)
-
-        # Create Newton solver and solve
-        snes = PETSc.SNES().create()
-        snes.setFunction(problem.F, b)
-        snes.setJacobian(problem.J, J)
-
-        snes.setTolerances(rtol=1.0e-9, max_it=10)
-        snes.getKSP().setType("preonly")
-        snes.getKSP().setTolerances(rtol=1.0e-9)
-        snes.getKSP().getPC().setType("lu")
+        problem = dolfinx.fem.petsc.NonlinearProblem(F, p_XY, bcs)
+        solver = dolfinx.nls.petsc.NewtonSolver(domain.comm, problem)
+        solver.atol = 1E-8
+        solver.rtol = 1E-8
+        solver.convergence_criterion = "incremental"
+        ksp = solver.krylov_solver
+        opts = PETSc.Options()
+        option_prefix = ksp.getOptionsPrefix()
+        try:
+            opts[f"{option_prefix}ksp_type"] = self.ksp_type
+            opts[f"{option_prefix}pc_type"] = self.pc_type
+            opts[f"{option_prefix}pc_factor_mat_solver_type"] = self.pc_factor_mat_solver_type
+        except:
+            raise ValueError('Option not allowed.')
+        ksp.setFromOptions()
 
         # Solve problem
         if verbose:
             log.set_log_level(log.LogLevel.INFO)
         else:
             log.set_log_level(log.LogLevel.ERROR)
-        snes.solve(None, p_XY.vector)
-        assert snes.getConvergedReason() > 0
-        assert snes.getIterationNumber() < 6
-        if MPI.COMM_WORLD.Get_rank() == 0: print(f"O2 and CO2 partial pressures found in {snes.getIterationNumber()} iterations.")
-        
+        num_its, converged = solver.solve(p_XY)
+        assert(converged)
+        if MPI.COMM_WORLD.Get_rank() == 0: print(f"O2 and CO2 partial pressures found in {num_its} iterations.")
 
 
+        # Experimental - nonlinear problem using SNES - does not work!
+        # problem = NonlinearPDE_SNESProblem(F, p_XY, bcs)
+        # b = la.create_petsc_vector(V.dofmap.index_map, V.dofmap.index_map_bs)
+        # J = dolfinx.fem.petsc.create_matrix(problem.a)
+
+        # # Create Newton solver and solve
+        # snes = PETSc.SNES().create()
+        # snes.setFunction(problem.F, b)
+        # snes.setJacobian(problem.J, J)
+
+        # snes.setTolerances(rtol=1.0e-9, max_it=10)
+        # snes.getKSP().setType("preonly")
+        # snes.getKSP().setTolerances(rtol=1.0e-9)
+        # snes.getKSP().getPC().setType("lu")
+
+        # # Solve problem
+        # if verbose:
+        #     log.set_log_level(log.LogLevel.INFO)
+        # else:
+        #     log.set_log_level(log.LogLevel.ERROR)
+        # snes.solve(None, p_XY.vector)
+        # assert snes.getConvergedReason() > 0
+        # assert snes.getIterationNumber() < 6
+        # if MPI.COMM_WORLD.Get_rank() == 0: print(f"O2 and CO2 partial pressures found in {snes.getIterationNumber()} iterations.")
+    
 
         ## Postprocessing
         log.set_log_level(log.LogLevel.ERROR)
