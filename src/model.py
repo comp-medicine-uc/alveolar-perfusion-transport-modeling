@@ -465,11 +465,12 @@ class PerfusionGasExchangeModel():
             y_fixed = (max_dims[1]+min_dims[1])/2
             # print(f"y_fixed = {y_fixed}")
 
-            func_dict = {"S_HbO2": S_HbO2_solution,
-                         "S_HbCO2": S_HbCO2_solution,
-                         "c_O2": c_O2_solution, 
-                         "c_CO2": c_CO2_solution,
-                         "bic": bic_solution,
+            func_dict = {
+                # "S_HbO2": S_HbO2_solution,
+                #          "S_HbCO2": S_HbCO2_solution,
+                #          "c_O2": c_O2_solution, 
+                #          "c_CO2": c_CO2_solution,
+                #          "bic": bic_solution,
                          "p_O2": p_O2_solution,
                          "p_CO2": p_CO2_solution}
 
