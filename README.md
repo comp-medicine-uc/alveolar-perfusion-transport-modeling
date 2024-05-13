@@ -16,6 +16,28 @@ Pulmonary capillary perfusion and gas exchange are the fundamental physical proc
 - `src`: Python and MATLAB source files.
 - `tests`: Main files that implement examples and tests.
 
+## Results
+We now present the main results of this article. Single-capillary perfusion and gas exchange in a simple slab-like domain are shown below. 
+
+![Single-capillary perfusion and gas exchange.](https://github.com/comp-medicine-uc/alveolar-perfusion-transport-modeling/blob/main/results-data/article_figures/fig2_slab_results.png)
+
+We performed sensitivity analysis of gas exchange dynamics, varying the inlet blood velocity $u_{in}$ and the blood pH.
+
+![Gas exchange under different values of $u_{in}$.](https://github.com/comp-medicine-uc/alveolar-perfusion-transport-modeling/blob/main/results-data/article_figures/fig4_u_in_variation.png)
+![Gas exchange under different values of blood pH.](https://github.com/comp-medicine-uc/alveolar-perfusion-transport-modeling/blob/main/results-data/article_figures/fig5_ph_variation.png)
+
+We developed a meshing algorithm to reconstruct lung RVEs of $225$ $\mu$m of side length from $\mu$-CT murine lung images. We further progressively erode the images to reproduce emphysematous lung features, by increasing lung porosity $\phi$.
+
+![Meshing protocol](https://github.com/comp-medicine-uc/alveolar-perfusion-transport-modeling/blob/main/results-data/article_figures/fig1_meshing.png)
+
+In these geometries, we now perform numerical simulations microscale perfusion and gas exchange.
+
+![Microscale perfusion and gas exchange results.](https://github.com/comp-medicine-uc/alveolar-perfusion-transport-modeling/blob/main/results-data/article_figures/fig6_rve_results.png)
+
+Finally, we extrapolate our microscale results to the whole-lung, and calculate total lung diffusing capacities for O$_2$ and CO$_2$ as
+$$DL_{O_2} = \frac{V_{lung}}{V_{RVE}}\frac{1}{p_{O_2}^{air} - p_{O_2}^{in}}\int_{S_{air}} \frac{d_{O_2}^{b-a}\beta_{O_2}}{h^{b-a}}\left(p_{O_2}^{air}-p_{O_2}\right)ds$$
+![Microscale perfusion and gas exchange results.](https://github.com/comp-medicine-uc/alveolar-perfusion-transport-modeling/blob/main/results-data/article_figures/fig6_rve_results.png)
+
 ## Dependencies
 
 Source code is written and runs in Python 3.12 and in MATLAB R2023a. The following libraries are employed:
