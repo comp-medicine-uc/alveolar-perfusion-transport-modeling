@@ -34,9 +34,11 @@ In these geometries, we now perform numerical simulations microscale perfusion a
 
 ![Microscale perfusion and gas exchange results.](https://github.com/comp-medicine-uc/alveolar-perfusion-transport-modeling/blob/main/results-data/article_figures/fig6_rve_results.png)
 
-Finally, we extrapolate our microscale results to the whole-lung, and calculate total lung diffusing capacities for O$_2$ and CO$_2$ as
-$$DL_{O_2} = \frac{V_{lung}}{V_{RVE}}\frac{1}{p_{O_2}^{air} - p_{O_2}^{in}}\int_{S_{air}} \frac{d_{O_2}^{b-a}\beta_{O_2}}{h^{b-a}}\left(p_{O_2}^{air}-p_{O_2}\right)ds$$
-![Microscale perfusion and gas exchange results.](https://github.com/comp-medicine-uc/alveolar-perfusion-transport-modeling/blob/main/results-data/article_figures/fig6_rve_results.png)
+Finally, we extrapolate our microscale results to the whole-lung, and calculate total lung diffusing capacities for O$`_2`$ and CO$`_2`$ as
+$$DL_{O_2} = \frac{V_{lung}}{V_{RVE}}\frac{1}{p_{O_2}^{air} - p_{O_2}^{in}}\int_{S_{air}} \frac{d_{O_2}^{b-a}\beta_{O_2}}{h^{b-a}}\left(p_{O_2}^{air}-p_{O_2}\right)ds.$$
+Numerical estimations of $DL_{O_2}$ under different degrees of emphysema are shown below.
+
+![Microscale perfusion and gas exchange results.](https://github.com/comp-medicine-uc/alveolar-perfusion-transport-modeling/blob/main/results-data/article_figures/fig7_diffusing_capacity.png)
 
 ## Dependencies
 
