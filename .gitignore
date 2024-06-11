@@ -137,6 +137,7 @@ raw-data/mesh40
 raw-data/mesh75
 raw-data/mesh225_eroded
 tests/figs
+tests/newfigs
 tests/local_tests
 src/fonts/Helvetica.ttf
 raw-data/fine_meshes
