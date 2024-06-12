@@ -26,7 +26,7 @@ We performed sensitivity analysis of gas exchange dynamics, varying the inlet bl
 ![Gas exchange under different values of $u_{in}$.](https://github.com/comp-medicine-uc/alveolar-perfusion-transport-modeling/blob/main/results-data/article_figures/fig4_u_in_variation.png)
 ![Gas exchange under different values of blood pH.](https://github.com/comp-medicine-uc/alveolar-perfusion-transport-modeling/blob/main/results-data/article_figures/fig5_ph_variation.png)
 
-We developed a meshing algorithm to reconstruct lung RVEs of $225$ $\mu$ m of side length from $\mu$-CT murine lung images. We further progressively erode the images to reproduce emphysematous lung features, by increasing lung porosity $\phi$.
+We developed a meshing algorithm to reconstruct lung RVEs of $225$ $\mu m$ of side length from $\mu$-CT murine lung images. We further progressively erode the images to reproduce emphysematous lung features, by increasing lung porosity $\phi$.
 
 ![Meshing protocol](https://github.com/comp-medicine-uc/alveolar-perfusion-transport-modeling/blob/main/results-data/article_figures/fig1_meshing.png)
 
