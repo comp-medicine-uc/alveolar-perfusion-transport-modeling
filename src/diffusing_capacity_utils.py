@@ -26,6 +26,7 @@ def O2_absorbed(model, domain, ds, air_tag = 3):
     rve_volume = 225**3 # um3
     lung_volume = 2500E12 # um3
     volume_factor = lung_volume / rve_volume
+    print(f"volume factor = {volume_factor}")
 
     f = model.t_params['d_ba_O2'] * model.dash_params['beta_O2'] * (1/model.t_params['h_ba']) * (model.t_params['p_O2_air'] - model.p_O2)
 
@@ -43,6 +44,7 @@ def CO2_released(model, domain, ds, air_tag = 3):
     rve_volume = 225**3 # um3
     lung_volume = 2500E12 # um3
     volume_factor = lung_volume / rve_volume
+    print(f"volume factor = {volume_factor}")
 
     f = -1 * model.t_params['d_ba_CO2'] * model.dash_params['beta_CO2'] * (1/model.t_params['h_ba']) * (model.t_params['p_CO2_air'] - model.p_CO2)
 
@@ -65,7 +67,7 @@ def rve_test(mesh_path, results_folder, exp_folder, max_dims=[0,0,0], min_dims=[
                                     params=None,
                                     ksp_type='cg', pc_type='lu', pc_factor_mat_solver_type='mumps')
 
-    model.Setup(domain, atol = 10, imported=True)
+    model.Setup(domain, atol = 0.1, imported=True)
     model.parameter_setup()
 
     model.p_params["uin"] = uin
@@ -97,16 +99,3 @@ def rve_test(mesh_path, results_folder, exp_folder, max_dims=[0,0,0], min_dims=[
     DL_CO2_value = DL_CO2(model, CO2_released_value)
 
     return O2_absorbed_value, CO2_released_value, DL_O2_value, DL_CO2_value, model.porosity
-
-# def multi_rve_test(mesh_path_list, results_folder, exp_folder_list, max_dims_list, min_dims_list, uin=250, N=8, verbose=True):
-
-#     outs = []
-
-#     for mesh_path, exp_folder, i in zip(mesh_path_list, exp_folder_list, range(len(exp_folder_list))):
-
-#         O2_absorbed_value, CO2_released_value, DL_O2_value, DL_CO2_value = rve_test(mesh_path, results_folder, exp_folder, max_dims_list[i], min_dims_list[i], uin=uin, N=N, verbose=verbose)
-
-#         outs[i] = {'O2_absorbed': O2_absorbed_value,
-#                    'CO2_released': CO2_released_value,
-#                    'DL_O2': DL_O2_value,
-#                    'DL_CO2': DL_CO2_value}

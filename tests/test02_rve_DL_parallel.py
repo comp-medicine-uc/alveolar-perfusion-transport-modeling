@@ -57,11 +57,10 @@ emph_3_info = [
     [-2.3110430240631104, 0.07416199892759323, -0.025009000673890114]
 ]
 
-# porosities = [0.621, 0.711, 0.794, 0.867]
 
 all_info = [control_info, emph_1_info, emph_2_info, emph_3_info]
 
-# Experiment number (locally, I can only run one case at a time)
+# Experiment number
 i = int(sys.argv[1])
 
 # Simulation
@@ -76,7 +75,7 @@ O2_absorbed_value, CO2_released_value, DL_O2_value, DL_CO2_value, porosity = rve
                                                                             all_info[i][3], 
                                                                             all_info[i][4], 
                                                                             N=12,
-                                                                            verbose=False)
+                                                                            verbose=True)
 
 if MPI.COMM_WORLD.Get_rank() == 0:
     print(f"################ Results for i = {i} ################")

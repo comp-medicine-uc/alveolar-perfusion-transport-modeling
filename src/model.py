@@ -322,32 +322,6 @@ class PerfusionGasExchangeModel():
         if MPI.COMM_WORLD.Get_rank() == 0: print(f"O2 and CO2 partial pressures found in {num_its} iterations.")
 
 
-        # Experimental - nonlinear problem using SNES - does not work!
-        # problem = NonlinearPDE_SNESProblem(F, p_XY, bcs)
-        # b = la.create_petsc_vector(V.dofmap.index_map, V.dofmap.index_map_bs)
-        # J = dolfinx.fem.petsc.create_matrix(problem.a)
-
-        # # Create Newton solver and solve
-        # snes = PETSc.SNES().create()
-        # snes.setFunction(problem.F, b)
-        # snes.setJacobian(problem.J, J)
-
-        # snes.setTolerances(rtol=1.0e-9, max_it=10)
-        # snes.getKSP().setType("preonly")
-        # snes.getKSP().setTolerances(rtol=1.0e-9)
-        # snes.getKSP().getPC().setType("lu")
-
-        # # Solve problem
-        # if verbose:
-        #     log.set_log_level(log.LogLevel.INFO)
-        # else:
-        #     log.set_log_level(log.LogLevel.ERROR)
-        # snes.solve(None, p_XY.vector)
-        # assert snes.getConvergedReason() > 0
-        # assert snes.getIterationNumber() < 6
-        # if MPI.COMM_WORLD.Get_rank() == 0: print(f"O2 and CO2 partial pressures found in {snes.getIterationNumber()} iterations.")
-    
-
         ## Postprocessing
         log.set_log_level(log.LogLevel.ERROR)
         _p_O2, _p_CO2 = p_XY.split()
@@ -447,11 +421,11 @@ class PerfusionGasExchangeModel():
 
             if MPI.COMM_WORLD.Get_rank() == 0: print(f"Finished postprocessing at t = {np.round(time.time() - t1, 4)} s.")   
 
-            # self.S_HbO2 = S_HbO2_out
-            # self.S_HbCO2 = S_HbCO2_out
-            # self.c_O2 = c_O2_out
-            # self.c_CO2 = c_CO2_out
-            # self.bic = bic_out
+            self.S_HbO2 = S_HbO2_solution
+            self.S_HbCO2 = S_HbCO2_solution
+            self.c_O2 = c_O2_solution
+            self.c_CO2 = c_CO2_solution
+            self.bic = bic_solution
             self.p_O2 = p_O2_solution
             self.p_CO2 = p_CO2_solution
 
@@ -461,20 +435,16 @@ class PerfusionGasExchangeModel():
             max_dims = np.around([max(geometry[:,0]), max(geometry[:,1]), max(geometry[:,2])], 5)
             min_dims = np.around([min(geometry[:,0]), min(geometry[:,1]), min(geometry[:,2])], 5)
             zs = np.linspace((max_dims[2]+min_dims[2])/2, max_dims[2], 3)
-            # print(f"zs = {zs}")
             y_fixed = (max_dims[1]+min_dims[1])/2
-            # print(f"y_fixed = {y_fixed}")
 
             func_dict = {
-                # "S_HbO2": S_HbO2_solution,
-                #          "S_HbCO2": S_HbCO2_solution,
-                #          "c_O2": c_O2_solution, 
-                #          "c_CO2": c_CO2_solution,
-                #          "bic": bic_solution,
+                "S_HbO2": S_HbO2_solution,
+                         "S_HbCO2": S_HbCO2_solution,
+                         "c_O2": c_O2_solution, 
+                         "c_CO2": c_CO2_solution,
+                         "bic": bic_solution,
                          "p_O2": p_O2_solution,
                          "p_CO2": p_CO2_solution}
-
-            # print(f"functions: {func_dict}")
 
             results_dict = {key: {} for key in func_dict.keys()} # {bic: {4: results_4, 6: results_6, 8: results_8}}
 

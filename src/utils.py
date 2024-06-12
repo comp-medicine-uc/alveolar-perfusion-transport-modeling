@@ -210,14 +210,13 @@ def read_diagnosis(meshname, rank):
 
 def plot_over_lines(domain, field_dict: dict, y=0, z=0):
     """
-    Make plots for curves at slab points.
+    Make plots for curves at slab points. Adaptation of
+    https://jsdokken.com/dolfinx-tutorial/chapter1/membrane_code.html#making-curve-plots-throughout-the-domain
     """
     _, _, geometry = plot.vtk_mesh(domain, domain.topology.dim)
         
     max_dims = np.around([max(geometry[:,0]), max(geometry[:,1]), max(geometry[:,2])], 5)
     min_dims = np.around([min(geometry[:,0]), min(geometry[:,1]), min(geometry[:,2])], 5)
-    
-    # https://jsdokken.com/dolfinx-tutorial/chapter1/membrane_code.html#making-curve-plots-throughout-the-domain
 
     tol = 0.001
     npoints = 1000
@@ -226,17 +225,16 @@ def plot_over_lines(domain, field_dict: dict, y=0, z=0):
     _y = y * np.ones_like(x)
     _z = z * np.ones_like(x)
 
-
     points = np.zeros((3, npoints))
     points[0] = x
     points[1] = _y
     points[2] = _z
-    # print(f"points = {points}")
 
     bb_tree = dolfinx.geometry.bb_tree(domain, domain.topology.dim)
 
     cells = []
     points_on_proc = []
+
     # Find cells whose bounding-box collide with the the points
     cell_candidates = dolfinx.geometry.compute_collisions_points(bb_tree, points.T)
     # Choose one of the cells that contains the point
@@ -247,7 +245,6 @@ def plot_over_lines(domain, field_dict: dict, y=0, z=0):
             cells.append(colliding_cells.links(i)[0])
 
     points_on_proc = np.array(points_on_proc, dtype=np.float64)
-    # print(f"points_on_proc = {points_on_proc}")
 
     all_func_names = []
     all_func_values = []
@@ -260,85 +257,3 @@ def plot_over_lines(domain, field_dict: dict, y=0, z=0):
         all_func_values.append(func_values)
 
     return all_func_names, all_func_values, x
-
-
-import numpy as np
-
-import ufl
-from dolfinx import cpp as _cpp
-from dolfinx import la
-from dolfinx.fem import (Function, FunctionSpace, dirichletbc, form,
-                         locate_dofs_geometrical)
-from dolfinx.fem.petsc import (apply_lifting, assemble_matrix, assemble_vector,
-                               create_matrix, create_vector, set_bc)
-from dolfinx.mesh import create_unit_square
-from ufl import TestFunction, TrialFunction, derivative, dx, grad, inner
-
-from mpi4py import MPI
-from petsc4py import PETSc
-
-
-class NonlinearPDEProblem:
-    """Nonlinear problem class for a PDE problem."""
-
-    def __init__(self, F, u, bc):
-        V = u.function_space
-        du = TrialFunction(V)
-        self.L = form(F)
-        self.a = form(derivative(F, u, du))
-        self.bc = bc
-
-    def form(self, x):
-        x.ghostUpdate(addv=PETSc.InsertMode.INSERT, mode=PETSc.ScatterMode.FORWARD)
-
-    def F(self, x, b):
-        """Assemble residual vector."""
-        with b.localForm() as b_local:
-            b_local.set(0.0)
-        assemble_vector(b, self.L)
-        apply_lifting(b, [self.a], bcs=[[self.bc]], x0=[x], scale=-1.0)
-        b.ghostUpdate(addv=PETSc.InsertMode.ADD, mode=PETSc.ScatterMode.REVERSE)
-        set_bc(b, [self.bc], x, -1.0)
-
-    def J(self, x, A):
-        """Assemble Jacobian matrix."""
-        A.zeroEntries()
-        assemble_matrix(A, self.a, bcs=[self.bc])
-        A.assemble()
-
-    def matrix(self):
-        return create_matrix(self.a)
-
-    def vector(self):
-        return create_vector(self.L)
-
-
-class NonlinearPDE_SNESProblem: # https://github.com/FEniCS/dolfinx/blob/f55eadde9bba6272d5a111aac97bcb4d7f2b5231/python/test/unit/nls/test_newton.py#L155-L196
-    
-    def __init__(self, F, u, bc):
-        V = u.function_space
-        du = ufl.TrialFunction(V)
-        self.L = fem.form(F)
-        self.a = fem.form(ufl.derivative(F, u, du))
-        self.bc = bc
-        self._F, self._J = None, None
-        self.u = u
-
-    def F(self, snes, x, F):
-        """Assemble residual vector."""
-        x.ghostUpdate(addv=PETSc.InsertMode.INSERT, mode=PETSc.ScatterMode.FORWARD)
-        x.copy(self.u.vector)
-        self.u.vector.ghostUpdate(addv=PETSc.InsertMode.INSERT, mode=PETSc.ScatterMode.FORWARD)
-
-        with F.localForm() as f_local:
-            f_local.set(0.0)
-        dolfinx.fem.petsc.assemble_vector(F, self.L)
-        dolfinx.fem.petsc.apply_lifting(F, [self.a], bcs=[[self.bc]], x0=[x], scale=-1.0)
-        F.ghostUpdate(addv=PETSc.InsertMode.ADD, mode=PETSc.ScatterMode.REVERSE)
-        dolfinx.fem.petsc.set_bc(F, [self.bc], x, -1.0)
-
-    def J(self, snes, x, J, P):
-        """Assemble Jacobian matrix."""
-        J.zeroEntries()
-        dolfinx.fem.petsc.assemble_matrix(J, self.a, bcs=[self.bc])
-        J.assemble()
